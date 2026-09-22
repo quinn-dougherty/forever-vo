@@ -1,7 +1,7 @@
 ## Interface: 16001
 ## Title: Forever Voiceover
 ## Notes: Voiced quests and NPC dialogue for World of Warcraft: Forever, from locally generated voice packs.
-## Version: 0.1.1
+## Version: 0.1.2
 ## Author: Quinn Dougherty
 ## IconTexture: Interface\Icons\Ability_Warrior_BattleShout
 ## SavedVariables: ForeverVODB, ForeverVOCaptureDB
