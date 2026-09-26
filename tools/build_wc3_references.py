@@ -32,6 +32,7 @@ import subprocess
 import sys
 from pathlib import Path
 
+from tools.build_voice_references import concat_to_wav
 from tools.config import VOICES_DIR
 
 TARGET_SECONDS = 20.0
@@ -122,13 +123,8 @@ def main(argv: list[str] | None = None) -> int:
         print(f"{species:24} {len(chosen):2} clips, {total:5.1f}s  from {', '.join(sorted({p.parent.name for p in chosen}))}")
         if args.dry_run:
             continue
-        lst = VOICES_DIR / "raw-wc3" / species / "concat.txt"
-        lst.parent.mkdir(parents=True, exist_ok=True)
-        lst.write_text("".join(f"file '{p.resolve()}'\n" for p in chosen), encoding="utf-8")
-        dest = VOICES_DIR / f"{species}.wav"
-        subprocess.run(
-            ["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(lst),
-             "-ac", "1", "-ar", "24000", "-af", "loudnorm", str(dest)], check=True)
+        # Shared so this builder also refuses a concat ffmpeg truncated and called a success
+        concat_to_wav(species, chosen, list_dir=VOICES_DIR / "raw-wc3" / species)
         made += 1
 
     print(f"\n{made} reference clip(s) written to {VOICES_DIR}")

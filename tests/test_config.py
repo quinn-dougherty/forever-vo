@@ -23,7 +23,7 @@ def test_repo_config_loads() -> None:
     config = load_config()
     assert config.voices.narrator == "narrator"
     assert config.voices.narrator_voices[0] == "narrator"
-    assert config.tts.voices["dwarf-male"].reference == "npc-3597"
+    assert config.tts.voices["dwarf-female"].exaggeration == 0.75
     assert config.readers.trusted_since == (0, 1, 4)
     assert config.release.curseforge_projects["addon"] == 1705010
 

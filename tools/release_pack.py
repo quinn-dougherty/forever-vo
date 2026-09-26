@@ -44,6 +44,7 @@ parallelism are [release] in forever-vo.toml.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import shutil
@@ -332,6 +333,30 @@ def upload(pack: str, zip_path: Path, version: str, stats: dict, release_type: s
     print(f"uploaded to CurseForge project {project} as file {response.json().get('id')}")
 
 
+def content_tag(stats: dict) -> str:
+    """A digest of what the pack's files *say*, not just which files there are.
+
+    The release fingerprint was the list of names, so a release was due only when a
+    name appeared or vanished. Regenerating a file changes its audio and never its
+    name - a corrected text, a retuned voice, a reference cut from different clips -
+    so hours of GPU could land in the working folder and `--if-changed` would decide
+    nothing had happened. sound_index already carries the fingerprint generate.py
+    computes per file, which covers all three, so this is a hash of that rather than
+    of thousands of mp3s.
+    """
+    index = json.loads(SOUND_INDEX.read_text(encoding="utf-8")) if SOUND_INDEX.exists() else {}
+
+    def stamp(name: str) -> str:
+        entry = index.get(name)
+        if not isinstance(entry, dict):
+            return "?"
+        return f"{entry.get('t') or '?'}:{entry.get('v') or '?'}"
+
+    names = sorted(stats["files"]) + sorted(stats.get("narratorFiles", ()))
+    joined = "\n".join(f"{name}={stamp(name)}" for name in names)
+    return hashlib.blake2b(joined.encode("utf-8"), digest_size=8).hexdigest()
+
+
 def main(argv: list[str] | None = None) -> int:
     argv = sys.argv[1:] if argv is None else argv
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -359,11 +384,15 @@ def main(argv: list[str] | None = None) -> int:
 
     state = json.loads(STATE_FILE.read_text()) if STATE_FILE.exists() else {}
     fingerprint = sorted(stats["files"]) + sorted(stats.get("narratorFiles", ()))
+    content = content_tag(stats)
     if args.if_changed:
         last = state.get(args.pack, {})
         previous = set(last.get("files", []))
         new_files = len(set(fingerprint) - previous)
-        changed = last.get("files") != fingerprint
+        # Either a file appeared or went, or one of them now says something different.
+        # A state written before content was recorded has none, and re-releasing once
+        # is the right answer there: what it holds cannot be shown to be current.
+        changed = last.get("files") != fingerprint or last.get("content") != content
         # A new encoding re-releases every file, so it is due whatever --min-new says.
         reencoded = last.get("encoding") != encoding_tag(release)
         age_days = (today() - date.fromisoformat(last["date"])).days if last.get("date") else 10**6
@@ -379,7 +408,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.upload:
         upload(args.pack, zip_path, version, stats, release_type, release)
     state[args.pack] = {"version": version, "date": today().isoformat(), "files": fingerprint, "zip": str(zip_path),
-                        "encoding": encoding_tag(release)}
+                        "encoding": encoding_tag(release), "content": content}
     STATE_FILE.write_text(json.dumps(state, indent=1), encoding="utf-8")
     return 0
 

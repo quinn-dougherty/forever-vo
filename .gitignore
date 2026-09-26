@@ -29,3 +29,7 @@ tools/data/verified-listfile.csv
 dist/
 tools/data/audition/
 tools/data/voicecheck/
+
+# the audition page's lock and its validation trial files
+forever-vo.toml.lock
+forever-vo.toml.*.audition

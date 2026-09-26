@@ -560,15 +560,48 @@ owner's machine picks the files up on the next sync.
 
 ## Voices
 
+**Accent and delivery come from the source clips in the reference audio.
+`exaggeration` and `cfg_weight` are for colour and variety.** This is settled;
+do not propose the knobs as the fix for a wrong accent, a flat delivery or a
+voice that sounds like the wrong race. The owner has been told otherwise more
+than once and it was wrong each time.
+
+What the evidence is. goblin-male read as a gnome: four settings pairs from
+0.45/0.5 to 1.0/0.2, two takes each on two references, moved the accent not at
+all, while changing which clips fed the reference took the same voice from
+"bad delivery and accent" to level with the shipped pack. Fifteen different
+head clips produced British, Southern and General American in turn - the
+reference decided it every time, stably across takes, and no setting did.
+Where a knob has worked it was alongside a reference of connected speech, never
+instead of one (#18 dwarves: "it takes both changes together"). A strong
+regional accent may not survive cloning at all whatever you feed it - retail
+goblin's New York never did - so the honest answer is sometimes "this voice
+cannot have that accent", not "try 0.75/0.3".
+
+Order of attack for a voice that sounds wrong: the clips in the first 6 s
+(`[voices.sources.<voice>]`, picked by ear in `uv run audition`), then the rest
+of the 10 s window, then the knobs.
+
 - Race voices: `tools/voices/<race>-<gender>.wav` for the archetype most of a
-  race is cast with, and `<race>-<gender>-s<set>.wav` for the others. Built
-  on the owner's machine 2026-09-25 after #42: 49 archetype clips, 7 dropped
-  for a thin head, every plain race clip rebuilt, species and named clips
-  unchanged; the clips from before are kept in `tools/voices/before-42/`
-  (gitignored) for A/B listening. That build restaged 9,132 lines re-cast to
-  an archetype (the voice-change check, plus dwarves under "text changed"
-  because the archetype's fingerprint drops the `reference` knob) and
-  nothing on a plain voice, since clip audio is not in the fingerprint (#51).
+  race is cast with, and one clip per other archetype, named for what Blizzard
+  files it as: `dwarf-male-guard`, `human-male-official`, `gnome-female-happy`.
+  The word comes from the CASC folder of that set's own recordings
+  (`tools/soundpaths.py`, map committed at `tools/data/sound_sets.json`,
+  refreshed with `fvo-soundpaths --refresh`); a set whose folder is shared with
+  a more-used set, or belongs to another race, or is unnamed keeps
+  `-s<NPCSounds row>` - 54 of the 182 castable archetypes get a word, 44 of the
+  49 built. A voice is `<race>-<gender>`, so a third segment is what makes an
+  archetype: `wowdata.base_voice` and `is_archetype` are the only things that
+  know it, and nothing matches `-s\d+` any more. They were `-s<set>` throughout
+  when first built on the owner's machine 2026-09-25 after #42: 49 archetype
+  clips, 7 dropped for a thin head, every plain race clip rebuilt, species and
+  named clips unchanged; the clips from before are kept in
+  `tools/voices/before-42/` (gitignored) for A/B listening. That build restaged
+  9,132 lines re-cast to an archetype (the voice-change check, plus dwarves
+  under "text changed" because the archetype's fingerprint drops the
+  `reference` knob) and nothing on a plain voice, since clip audio is not in
+  the fingerprint (#51) - so the rename costs those lines a second restaging,
+  and any already rendered under an `-s<set>` name are rendered again.
   The retail `SoundKitEntry` CSV is large and wago.tools timed out on it once;
   a `curl` into `tools/data/db2/<build>/` with a long timeout is the workaround. Sorting
   candidate clips longest-first used to hand the head to whichever set had the
@@ -596,6 +629,15 @@ owner's machine picks the files up on the next sync.
   speech-only last), because the Classic bark actor and the Cataclysm emote
   actor are different people. A `pooled-barks` clip holds no speech slice, or
   it would keep the longest jokes for a clip that never reads them.
+- **Clips chosen by ear beat every rule tried.** `[voices.sources.<voice>]` in
+  `forever-vo.toml` lists FileDataIDs, head first, and `build_picked_reference`
+  concatenates exactly those: no sorting by duration, no 0.8-8.0 s filter, no
+  `TARGET_SECONDS`, no thin-head deletion, since each of those would undo the
+  choice. Picks are honoured by `--named` too and join the stale sweep's keep
+  set, or a rebuild would clobber or delete them. They join the fingerprint,
+  keyed on the clip actually cloned from, so a re-pick restages that voice by
+  itself - the clip's *bytes* still do not. Pick them in the audition page's
+  Source clips panel, or with `fvo-refclips`.
 - Named NPCs: `npc-<displayID>.wav` for greeting kits used by 3 or fewer
   models (64 of them: Varimathras, Thrall, Sylvanas, Cairne...). Thrall has
   just two greetings, so his clone is rougher.
@@ -643,7 +685,11 @@ owner's machine picks the files up on the next sync.
   her /joke and /flirt lines (`EmotesTextSound`, emotes 328 FLIRT and 329 JOKE,
   the only long connected player-voice recordings the client has) lost to the
   montage at the same settings, so for that voice the settings alone did it.
-  jhaubrich is working on the joke/flirt clips more generally.
+  dwarf-male carried the same fix as `reference = "npc-3597"` at 0.75 / 0.3
+  until 2026-09-25, when its clips were picked by ear instead and the entry
+  went: a `reference` pointing elsewhere means the picks are never read. Both
+  results are about the reference, which is the rule at the top of this
+  section.
 - `--assume-voice` on `generate.py` voices cache-only quests whose giver is
   unknown (used once for Zephras Isle with `skyborne-male`); the voice-change
   check fixes them once a capture names the giver.

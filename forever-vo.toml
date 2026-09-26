@@ -59,6 +59,149 @@ dracthyr = "bloodelf"
 orcmalekid = "humanmalekid-male"
 orcfemalekid = "humanfemalekid-female"
 
+[voices.sources.bloodelf-female]
+clips = [539351, 539211, 539423]
+
+[voices.sources.bloodelf-male]
+clips = [539300, 539161]
+
+[voices.sources.dwarf-female]
+clips = [
+    547861,
+    547849,
+    547856,
+    547823,
+    547822,
+    539989,
+    540017,
+    539993,
+]
+
+[voices.sources.dwarf-male]
+clips = [540084, 540030, 540025, 540045, 540051]
+
+[voices.sources.gnome-female]
+clips = [540406, 540424, 540423, 540426, 540443]
+
+[voices.sources.gnome-male]
+clips = [540464, 540467, 540495, 540468]
+
+[voices.sources.goblin-female]
+clips = [541867, 541825, 541770, 550655, 550662, 550680]
+
+[voices.sources.goblin-male]
+clips = [
+    550772,
+    550820,
+    550819,
+    550817,
+    550818,
+    550812,
+    550808,
+    550807,
+    550809,
+    550806,
+    550813,
+    550805,
+]
+
+[voices.sources.human-female]
+clips = [540633, 540639, 540622, 540643, 540617]
+
+[voices.sources.human-male]
+clips = [540710]
+
+[voices.sources.nightelf-female]
+clips = [556536, 541059, 541035, 541067]
+
+[voices.sources.nightelf-male]
+clips = [541134, 556577, 556574, 556587]
+
+[voices.sources.orc-male]
+clips = [
+    557806,
+    557800,
+    557807,
+    557803,
+    557809,
+    557799,
+    557802,
+    557805,
+    557814,
+    557804,
+    541433,
+]
+
+[voices.sources.scourge-male]
+clips = [542773, 542757, 563198, 563199]
+
+[voices.sources.troll-female]
+clips = [562839, 562843, 543245, 543257, 562835, 562837]
+
+[voices.sources.tauren-male]
+clips = [
+    543033,
+    561587,
+    561583,
+    561579,
+    561581,
+    561573,
+    561572,
+    543065,
+]
+
+[voices.sources.dwarf-female-guard]
+clips = [
+    547838,
+    547823,
+    547842,
+    547822,
+    547828,
+    539968,
+    539970,
+]
+
+[voices.sources.dwarf-female-maternal]
+clips = [
+    540017,
+    547838,
+    547843,
+    547847,
+    547837,
+    547835,
+    547845,
+    547840,
+]
+
+[voices.sources.dwarf-female-young]
+clips = [
+    539989,
+    547856,
+    547853,
+    547854,
+    547852,
+    547857,
+    547858,
+    547861,
+]
+
+[voices.sources.dwarf-male-standard]
+clips = [540030, 540049, 547890, 547888]
+
+[voices.sources.gnome-female-happy]
+clips = [
+    540423,
+    540444,
+    550388,
+    550378,
+    550384,
+    550382,
+    550387,
+    550373,
+    550381,
+    550386,
+]
+
 [tts]
 # Chatterbox conditioning for every voice that has no entry below. tempo is not
 # a model knob (Chatterbox has none): it is a pitch-preserving time stretch at
@@ -71,20 +214,17 @@ tempo = 1.0
 # Dwarves came out of Chatterbox sounding American (#18). The reference clips
 # are short NPC greetings, so the model keeps the timbre but drifts to its own
 # neutral accent unless pushed, and pushing only works on a reference of a few
-# long connected clips rather than the usual montage of barks: npc-3597 is a
-# named dwarf's four connected lines. It takes both changes together; either
-# alone comes out muddled. Tuning a voice restages exactly that voice's files
-# (the settings join the text fingerprint), including the voices that borrow
-# its clip.
-[tts.voices.dwarf-male]
-reference = "npc-3597"
-exaggeration = 0.75
-cfg_weight = 0.3
-
-# dwarf-female keeps its greeting montage: on #18's test line, two takes each of
-# the montage and of a 26 s clip built from her /joke and /flirt lines, at the
-# defaults and at 0.75 / 0.3, the owner picked both montage takes at 0.75 / 0.3
-# as the clear winners (2026-09-24). So for this voice the settings alone do it.
+# long connected clips rather than the usual montage of barks. Tuning a voice
+# restages exactly that voice's files (the settings join the text fingerprint),
+# including the voices that borrow its clip.
+#
+# dwarf-male used to carry that fix here as `reference = "npc-3597"` (a named
+# dwarf's four connected lines) at 0.75 / 0.3. It has no entry now: its clips
+# are chosen by ear in [voices.sources.dwarf-male], which only takes effect
+# with no `reference` pointing elsewhere, and it runs at the defaults. If the
+# American accent comes back, the clips are the first thing to look at and the
+# knobs the second: settings alone have never recovered an accent here, while
+# a reference of connected speech rather than barks repeatedly has.
 [tts.voices.dwarf-female]
 exaggeration = 0.75
 cfg_weight = 0.3
@@ -105,6 +245,75 @@ cfg_weight = 0.3
 # was good four times of four. Sharptalon reads best as two words: "Sharp
 # Talon" beat the plain spelling and "Sharptallon" in the tauren-female voice,
 # and a space does not leave the pause a hyphen can (#38).
+
+[tts.voices.goblin-male]
+exaggeration = 0.9
+cfg_weight = 0.8
+
+[tts.voices.goblin-female]
+exaggeration = 0.7
+cfg_weight = 0.5
+
+[tts.voices.human-female]
+exaggeration = 0.7
+cfg_weight = 0.3
+tempo = 1.1
+
+[tts.voices.human-male]
+exaggeration = 0.5
+cfg_weight = 0.3
+tempo = 1.1
+
+[tts.voices.nightelf-female]
+exaggeration = 0.6
+cfg_weight = 0.3
+
+[tts.voices.orc-female]
+exaggeration = 0.7
+cfg_weight = 0.5
+
+[tts.voices.orc-male]
+exaggeration = 0.3
+cfg_weight = 0.6
+
+[tts.voices.scourge-female]
+exaggeration = 0.3
+cfg_weight = 0.6
+
+[tts.voices.scourge-male]
+exaggeration = 0.4
+cfg_weight = 0.4
+
+[tts.voices.troll-female]
+exaggeration = 0.6
+cfg_weight = 0.5
+
+[tts.voices.dwarf-female-guard]
+exaggeration = 0.2
+cfg_weight = 0.5
+tempo = 1.2
+
+[tts.voices.dwarf-female-maternal]
+exaggeration = 0.6
+cfg_weight = 0.9
+tempo = 1.1
+
+[tts.voices.dwarf-female-young]
+exaggeration = 0.75
+cfg_weight = 0.6
+
+[tts.voices.dwarf-male-guard]
+exaggeration = 0.1
+cfg_weight = 0.5
+
+[tts.voices.dwarf-male-standard]
+exaggeration = 0.3
+cfg_weight = 0.7
+
+[tts.voices.gnome-female-happy]
+exaggeration = 0.7
+cfg_weight = 0.3
+tempo = 1.2
 [pronunciations]
 "Ahn'Qiraj" = "Ahn Kih-rahj"
 Gnomeregan = "Nomer-gahn"

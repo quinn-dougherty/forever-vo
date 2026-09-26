@@ -23,6 +23,14 @@
   button { cursor: pointer; }
   button.primary { background: var(--gold); color: #1a1408; border-color: var(--gold); font-weight: 600; }
   button:disabled { opacity: .45; cursor: default; }
+  /* A button that is working keeps its label and grows a spinner, so a greyed-out
+     button reads as "busy" rather than "broken" - the model load alone is ~30 s. */
+  @keyframes fvo-spin { to { transform: rotate(360deg); } }
+  button.busy { opacity: .85; }
+  button.busy::after { content: ""; display: inline-block; width: .75em; height: .75em;
+    margin-left: .5em; vertical-align: -.05em; border: 2px solid currentColor;
+    border-right-color: transparent; border-radius: 50%; animation: fvo-spin .7s linear infinite; }
+  @media (prefers-reduced-motion: reduce) { button.busy::after { animation-duration: 2.4s; } }
   label { display: block; color: var(--dim); font-size: 12px; margin: 8px 0 3px; }
   .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
   .row > * { flex: 1; }
@@ -46,6 +54,33 @@
   #toast { position: fixed; right: 20px; bottom: 20px; background: var(--panel); border: 1px solid var(--gold); padding: 10px 14px; border-radius: 4px; display: none; max-width: 480px; }
   #current { padding: 8px 10px; border: 1px solid var(--line); border-radius: 4px; background: var(--panel); }
   #current .m { color: var(--dim); font-size: 12px; }
+  details#clips { margin-top: 20px; border-top: 1px solid var(--line); padding-top: 10px; }
+  details#clips summary { cursor: pointer; color: var(--gold); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
+  #clips-body tr { cursor: pointer; }
+  #clips-body tr:hover { background: var(--panel); }
+  #clips-body tr.picked { background: var(--panel); }
+  #clips-body td.pos { color: var(--gold); font-weight: 600; width: 3em; }
+  #clips-body td.at { font-family: ui-monospace, monospace; font-size: 12px; }
+  #clips-wrap { max-height: 46vh; overflow: auto; border: 1px solid var(--line); border-radius: 4px; }
+  .pill { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 10px; border: 1px solid var(--line); margin-left: 6px; }
+  .pill.t3 { border-color: var(--ok); color: var(--ok); }
+  .pill.s3 { border-color: var(--gold); color: var(--gold); }
+  .pill.out { border-color: var(--line); color: var(--dim); }
+  button.help { flex: 0 0 auto; width: 22px; height: 22px; padding: 0; border-radius: 50%; line-height: 1; color: var(--gold); border-color: var(--gold); }
+  #clips-help, #knobs-help { border: 1px solid var(--line); border-left: 2px solid var(--gold); border-radius: 4px; padding: 10px 14px; margin: 8px 0; background: var(--panel); }
+  #clips-help h4, #knobs-help h4 { margin: 0 0 6px; font-size: 12px; color: var(--gold); text-transform: uppercase; letter-spacing: .06em; }
+  #clips-help p, #clips-help li, #knobs-help p, #knobs-help li { color: var(--dim); font-size: 12px; margin: 4px 0; }
+  #clips-help ul, #knobs-help ul { margin: 4px 0; padding-left: 18px; }
+  #clips-help b, #knobs-help b { color: var(--ink); font-weight: 500; }
+  #clips-help code, #knobs-help code { color: var(--ink); }
+  #clips-help table, #knobs-help table { margin: 6px 0; }
+  #clips-history { margin: 6px 0; }
+  #clips-history button { font-size: 12px; padding: 2px 8px; margin: 0 6px 4px 0; }
+  #clips-history button.current { border-color: var(--gold); color: var(--gold); }
+  #clips-help td, #knobs-help td { padding: 3px 8px 3px 0; border: 0; font-size: 12px; color: var(--dim); vertical-align: top; }
+  #clips-help td:first-child, #knobs-help td:first-child { font-family: ui-monospace, monospace; color: var(--ink); white-space: nowrap; }
+  #knobs-help td:last-child { max-width: 70ch; }
+  #clips-help td:first-child { font-family: ui-monospace, monospace; color: var(--ink); white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -57,7 +92,7 @@
   <aside>
     <h2>Find a line</h2>
     <input id="q" placeholder="quest title, NPC, words, or a base name like 415-accept" autocomplete="off">
-    <div class="row" style="margin-top:6px"><button id="random">Random line in this voice</button></div>
+    <div class="row" style="margin-top:6px"><button id="random">Random line</button><button id="in-voice">All lines in this voice</button></div>
     <ul id="results"></ul>
     <p class="note">Every word must match. Pick a line to load its spoken text and voice; free text below works too. The random button draws a quest line spoken in the selected voice.</p>
 
@@ -90,10 +125,39 @@
       <div><label for="takes">Takes each</label><input id="takes" type="number" min="1" max="5" value="2"></div>
     </div>
     <div class="row">
-      <div><label for="exag">Exaggeration values</label><input id="exag" value="0.45, 0.75"></div>
-      <div><label for="cfg">cfg_weight values</label><input id="cfg" value="0.5, 0.3"></div>
-      <div><label for="tempo">Tempo values (1.0 as generated; a time stretch, pitch kept)</label><input id="tempo" value="1.0"></div>
+      <div><label for="exag">Exaggeration values (0&ndash;2)</label><input id="exag" value="0.45, 0.75"></div>
+      <div><label for="cfg">cfg_weight values (0&ndash;1)</label><input id="cfg" value="0.5, 0.3"></div>
+      <div><label for="tempo">Tempo values (0.5&ndash;2.0; 1.0 as generated, a time stretch with pitch kept)</label><input id="tempo" value="1.0"></div>
+      <button id="knobs-help-toggle" class="help" title="What these three do">?</button>
       <button id="go" class="primary">Generate</button>
+    </div>
+    <div id="knobs-help" hidden>
+      <h4>What these three do</h4>
+      <p>They shape <b>how a line is delivered</b>. They do not decide the accent or the
+        character of the voice &mdash; that comes from the clips the reference is cut from,
+        below.</p>
+      <table>
+        <tr><td>exaggeration</td><td>0&ndash;2. A real conditioning input to the model
+          (<code>emotion_adv</code>): how much expression to put in. Higher is more
+          emphatic, and past about 1 it starts to sound performed.</td></tr>
+        <tr><td>cfg_weight</td><td>0&ndash;1. Classifier-free guidance. At each token the
+          model predicts twice, once with your text and reference and once without, and
+          pushes away from the second: <code>logits = cond + cfg &times; (cond &minus; uncond)</code>.
+          Higher tracks the prompt harder, and clips pauses as it goes;
+          <b>lower is Chatterbox's own advice for a rushed voice</b>, which is why the
+          tuned voices here sit at 0.3. At 0 there is no guidance at all.</td></tr>
+        <tr><td>tempo</td><td>0.5&ndash;2.0. Not a model knob &mdash; Chatterbox has no pace
+          control. A pitch-preserving stretch applied when the mp3 is written, and the
+          stretched length is what the addon pages text against. Try a lower cfg_weight
+          first.</td></tr>
+      </table>
+      <p>The two interact: guidance amplifies whatever the conditioning says, so raising
+        exaggeration <i>and</i> cfg_weight compounds. The pairing in this pack &mdash; 0.75
+        exaggeration with 0.3 cfg_weight &mdash; is deliberately the other way round: more
+        expression, less pressure on it.</p>
+      <p class="warn">Not an accent control. Four settings pairs over eight takes of
+        goblin-male moved its accent not at all, while changing the source clips took the
+        same voice from &ldquo;sounds like a gnome&rdquo; to level with the shipped pack.</p>
     </div>
     <p class="note" id="resolved"></p>
 
@@ -103,6 +167,49 @@
       <tbody id="takes-body"></tbody>
     </table>
     <p class="note" id="progress"></p>
+
+    <details id="clips" open>
+      <summary>Source clips &mdash; what this voice's reference is cut from</summary>
+      <div class="row" style="margin-top:8px">
+        <button id="clips-load">Load candidates</button>
+        <button id="clips-reset">Clear picks</button>
+        <button id="clips-build" class="primary">Build and keep</button>
+        <audio id="clips-ref" controls preload="none" style="flex:0 0 auto"></audio>
+        <button id="clips-help-toggle" class="help" title="What the model actually reads">?</button>
+      </div>
+      <div id="clips-help" hidden>
+        <h4>What the model actually reads</h4>
+        <p>Chatterbox reads the reference twice, with different budgets, and the rest barely counts:</p>
+        <table>
+          <tr><td>first 6s</td><td><b>t3</b>, the text&rarr;token model &mdash; rhythm, stress, pace, accent. <b>How it is said.</b></td></tr>
+          <tr><td>first 10s</td><td><b>s3gen</b>, the decoder &mdash; timbre, grain, weight. <b>How it sounds.</b></td></tr>
+          <tr><td>whole clip</td><td>one averaged speaker vector. Weak &mdash; a 28s clip is not 28s of influence.</td></tr>
+        </table>
+        <ul>
+          <li><b>Best clip first.</b> The first six seconds do most of the work, and the first clip owns most of them.</li>
+          <li><b>Fill six seconds.</b> Under that, t3 gets a partial window and falls back on its own prior, which is how an accent goes missing.</li>
+          <li><b>Connected speech at the head.</b> A sentence carries rhythm; &ldquo;Hello there!&rdquo; carries none. Shouts and death cries at the head are what this panel exists to fix.</li>
+          <li><b>6&ndash;10s only shapes timbre.</b> The speaker's own greetings are fine there.</li>
+          <li><b>Past 10s is nearly free and nearly useless.</b> Do not mistake a long clip for a strong one &mdash; watch the pills, not the total.</li>
+          <li><b>One speaker across the first 10s.</b> Mixing two actors made goblin-male worse the more of the second went in.</li>
+          <li><b>The source clips matter more than the settings.</b> Exaggeration and cfg_weight are worth having, but they did not move the accent: four settings over eight takes of goblin-male changed nothing, while changing which clips fed it took the voice from &ldquo;sounds like a gnome&rdquo; to level with the shipped pack. Fix the clip first; reach for the knobs after.</li>
+          <li><b>A strong regional accent may not survive at all.</b> Fifteen different head clips, four settings and bark-free references all failed to carry retail goblin's New York. Timbre and delivery transfer reliably; an accent the model has no prior for may not, whatever you feed it.</li>
+        </ul>
+      </div>
+      <p class="note" id="clips-status"></p>
+      <p class="note" id="clips-warn"></p>
+      <p class="note" id="clips-budget"></p>
+      <div id="clips-history"></div>
+      <div id="clips-wrap">
+        <table>
+          <thead><tr><th>Order</th><th>Source</th><th>FileDataID</th><th>Length</th><th>Starts at</th><th>Listen</th></tr></thead>
+          <tbody id="clips-body"></tbody>
+        </table>
+      </div>
+      <p class="note">Click a row to add it, click again to drop it. Click order is the
+        order in the clip, head first &mdash; only the first seconds of a reference reach
+        the model, so what you put at the top is the voice.</p>
+    </details>
   </section>
 </main>
 <div id="toast"></div>
@@ -111,6 +218,13 @@
 const $ = (id) => document.getElementById(id);
 let state = null;
 let current = null;   // the picked LineRow, or null for free text
+
+// Disable and spin together, so the two can never disagree.
+function busy(el, on) {
+  if (!el) return;
+  el.disabled = !!on;
+  el.classList.toggle("busy", !!on);
+}
 
 function toast(message, cls) {
   const t = $("toast"); t.textContent = message; t.className = cls || ""; t.style.display = "block";
@@ -132,12 +246,55 @@ function applyState(s) {
   $("p-list").textContent = Object.entries(s.pronunciations).map(([w, sp]) => `${w} → ${sp}`).join(", ") || "none";
   const voice = $("voice"), ref = $("reference");
   const keepVoice = voice.value, keepRef = ref.value;
-  voice.innerHTML = s.voices.map(v => `<option value="${v}">${v}${s.resolved[v].tuned ? " ★" : ""}</option>`).join("");
+  voice.innerHTML = voiceOptions(s);
   ref.innerHTML = `<option value="">the voice's own (${"as configured"})</option>` + s.voices.map(v => `<option value="${v}">${v}.wav</option>`).join("");
   if (first) { voice.value = s.voices.includes("dwarf-female") ? "dwarf-female" : s.voices[0]; }
   else { voice.value = keepVoice; ref.value = keepRef; }
-  if (first) { $("exag").value = `${s.defaults.exaggeration}, 0.75`; $("cfg").value = `${s.defaults.cfg_weight}, 0.3`; }
+  if (first) loadVoiceSettings();
   showResolved();
+}
+
+// Grouped, because the list runs to a few hundred: the race voices first, then every
+// archetype the game casts - including the ones with no clip yet, which is where picking
+// clips matters most, since wowdata.archetype_voice puts NPCs on an archetype as soon as
+// its file exists.
+function voiceOptions(s) {
+  const rows = s.pickable || s.voices.map(v => ({ voice: v, clip: true, displays: null }));
+  const group = (label, list) => list.length
+    ? `<optgroup label="${label}">` + list.map(r => {
+        const star = s.resolved[r.voice] && s.resolved[r.voice].tuned ? " ★" : "";
+        const who = r.label ? ` — ${esc(r.label)}` : "";
+        // what the voice is worth picking for: how many creature displays it answers
+        // for, and how many lines it actually speaks
+        const bits = [];
+        if (r.displays) bits.push(`${r.displays} display${r.displays === 1 ? "" : "s"}`);
+        if (r.lines) bits.push(`${r.lines} line${r.lines === 1 ? "" : "s"}`);
+        if (!r.clip) bits.unshift("no clip yet");
+        const note = bits.length ? ` — ${bits.join(", ")}` : "";
+        return `<option value="${r.voice}">${r.voice}${who}${star}${note}</option>`;
+      }).join("") + "</optgroup>"
+    : "";
+  const isArch = r => r.archetype;
+  const isNpc = r => r.voice.startsWith("npc-");
+  return group("Race voices", rows.filter(r => !isArch(r) && !isNpc(r)))
+       + group("Archetypes — with a clip", rows.filter(r => isArch(r) && r.clip))
+       + group("Archetypes — not built yet", rows.filter(r => isArch(r) && !r.clip))
+       + group("Named NPCs", rows.filter(isNpc));
+}
+
+// The three boxes keep whatever was typed last, and "Keep these settings" writes them:
+// switch to a voice someone tuned by ear and press it, and 0.75 / 0.3 is replaced by
+// the numbers left over from the voice before. They are loaded from the voice itself
+// on every change of voice, so Keep can only ever write that voice's own settings back
+// or a deliberate edit of them. Not on the 15 s refresh, which would discard a sweep
+// being typed.
+function loadVoiceSettings() {
+  if (!state) return;
+  const r = state.resolved[$("voice").value];
+  const d = state.defaults;
+  $("exag").value = `${r ? r.exaggeration : d.exaggeration}`;
+  $("cfg").value = `${r ? r.cfg_weight : d.cfg_weight}`;
+  $("tempo").value = `${r ? r.tempo : d.tempo}`;
 }
 
 function showResolved() {
@@ -159,7 +316,7 @@ $("q").addEventListener("input", () => {
   searchTimer = setTimeout(async () => {
     const q = $("q").value.trim();
     if (!q) { $("results").innerHTML = ""; return; }
-    try { renderResults(await api(`/api/lines?q=${encodeURIComponent(q)}`)); }
+    try { renderResults((await api(`/api/lines?q=${encodeURIComponent(q)}`)).rows); }
     catch (e) { toast(e.message, "warn"); }
   }, 250);
 });
@@ -172,6 +329,21 @@ function renderResults(rows) {
   items.forEach(li => li.addEventListener("click", () => pick(rows[+li.dataset.i], li)));
   return items;
 }
+
+// A voice's own lines, longest first: a reference that holds up on a greeting can still
+// fall apart on a paragraph, and these are the words it will actually have to say.
+$("in-voice").addEventListener("click", async () => {
+  const voice = $("voice").value;
+  try {
+    const d = await api(`/api/lines?voice=${encodeURIComponent(voice)}`);
+    if (!d.rows.length) { toast(`no lines are spoken in ${voice}`, "warn"); $("results").innerHTML = ""; return; }
+    renderResults(d.rows);
+    $("q").value = "";
+    toast(d.total > d.rows.length
+      ? `${voice}: the ${d.rows.length} longest of ${d.total} lines`
+      : `${voice}: ${d.total} line${d.total === 1 ? "" : "s"}`, "ok");
+  } catch (e) { toast(e.message, "warn"); }
+});
 
 $("random").addEventListener("click", async () => {
   try {
@@ -195,12 +367,30 @@ function pick(row, li) {
   showResolved();
 }
 
-$("voice").addEventListener("change", showResolved);
+$("voice").addEventListener("change", () => {
+  loadVoiceSettings();
+  showResolved();
+  if (clipsVoice && $("voice").value !== clipsVoice) {
+    clipsRows = []; picks = []; clipsVoice = null;
+    $("clips-body").innerHTML = ""; $("clips-status").textContent = ""; $("clips-warn").textContent = "";
+    $("clips-budget").textContent = ""; $("clips-ref").removeAttribute("src");
+  }
+});
 $("reference").addEventListener("change", showResolved);
 
-function numbers(value) {
+// The server rejects a setting outside its bounds, but it should not have to: a typo
+// in one of these boxes is caught here, naming the field and what it allows, rather
+// than coming back as a failed request.
+const BOUNDS = { exag: [0, 2, "Exaggeration"], cfg: [0, 1, "cfg_weight"], tempo: [0.5, 2, "Tempo"] };
+
+function numbers(value, field) {
   const out = value.split(/[,\s]+/).filter(Boolean).map(Number);
   if (!out.length || out.some(isNaN)) throw new Error("give numbers separated by commas");
+  if (field && BOUNDS[field]) {
+    const [lo, hi, name] = BOUNDS[field];
+    const bad = out.filter(n => n < lo || n > hi);
+    if (bad.length) throw new Error(`${name} must be between ${lo} and ${hi}; you gave ${bad.join(", ")}`);
+  }
   return out;
 }
 
@@ -208,10 +398,11 @@ $("go").addEventListener("click", async () => {
   let body;
   try {
     body = { text: $("text").value, voice: $("voice").value, reference: $("reference").value || null,
-             exaggeration: numbers($("exag").value), cfg_weight: numbers($("cfg").value), tempo: numbers($("tempo").value),
+             exaggeration: numbers($("exag").value, "exag"), cfg_weight: numbers($("cfg").value, "cfg"),
+             tempo: numbers($("tempo").value, "tempo"),
              takes: +$("takes").value };
   } catch (e) { toast(e.message, "warn"); return; }
-  $("go").disabled = true; $("takes-body").innerHTML = ""; $("progress").textContent = "starting (the first take loads the model, about half a minute)…";
+  busy($("go"), true); $("takes-body").innerHTML = ""; $("progress").textContent = "starting (the first take loads the model, about half a minute)…";
   try {
     const response = await fetch("/api/generate", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
     if (!response.ok) throw new Error((await response.json()).detail || response.statusText);
@@ -222,7 +413,7 @@ $("go").addEventListener("click", async () => {
       let nl; while ((nl = buffer.indexOf("\n")) >= 0) { const line = buffer.slice(0, nl); buffer = buffer.slice(nl + 1); if (line.trim()) onEvent(JSON.parse(line)); }
     }
   } catch (e) { toast(e.message, "warn"); }
-  $("go").disabled = false; refresh(); loadSessions();
+  busy($("go"), false); refresh(); loadSessions();
 });
 
 function onEvent(ev) {
@@ -237,29 +428,44 @@ function onEvent(ev) {
   tr.querySelector("audio").addEventListener("error", () => { tr.querySelector("audio").outerHTML = `<span class="warn">could not load; the server may have restarted (reload the page and pick the run under Recent takes)</span>`; });
   const cell = tr.lastElementChild;
   const keep = document.createElement("button"); keep.textContent = "Keep these settings";
-  keep.title = `Write [tts.voices.${$("voice").value}] with these settings${ev.reference ? " and this clip" : ""} into forever-vo.toml`;
+  keep.title = `Write [tts.voices.${$("voice").value}] with these settings${ev.reference ? " and this clip" : ""} ` +
+    `into forever-vo.toml.\n\nThe settings join that voice's fingerprint, so its lines go stale and the ` +
+    `next generate run redoes them — exactly that voice's files, and the voices that borrow its clip.`;
   keep.addEventListener("click", async () => {
+    busy(keep, true);
     try {
       applyState(await api("/api/keep-tuning", { method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ voice: $("voice").value, exaggeration: ev.exaggeration, cfg_weight: ev.cfg_weight, tempo: ev.tempo || 1, reference: ev.reference }) }));
       toast(`Kept for ${$("voice").value}. The next generate run restages that voice's files.`, "ok");
       document.querySelectorAll("button.write").forEach(b => b.disabled = !isSaved(b.dataset.recipe));
     } catch (e) { toast(e.message, "warn"); }
+    busy(keep, false);
   });
   cell.appendChild(keep);
   if (current) {
     const write = document.createElement("button"); write.textContent = "Write to pack"; write.className = "write";
     write.dataset.recipe = JSON.stringify([ev.clip, ev.exaggeration, ev.cfg_weight, ev.tempo || 1]);
-    write.title = "Regenerate this line's pack file under the saved settings (keep first if these are not saved yet)";
+    write.title =
+      "Generate this line once more under the SAVED settings and put that file in the pack, " +
+      "then record its fingerprint so the nightly run neither redoes it nor misses it.\n\n" +
+      "It is not this take. Generation is not seeded — the same text and settings give a " +
+      "different take every time — so what lands in the pack is a fresh roll, close to what " +
+      "you heard but not identical.\n\n" +
+      "The fingerprint is not a seed either: it is a hash of the spoken text and any " +
+      "non-default tuning, and it only answers whether the file needs making again.\n\n" +
+      "It writes the corpus text in the line's own voice, ignoring edits to the box above " +
+      "and the voice selector (#67). Correct the text by capturing it in game; a hand-typed " +
+      "edit would be reverted by the next run anyway.\n\n" +
+      "Disabled until this row's recipe is the saved one — keep the settings first.";
     write.disabled = !isSaved(write.dataset.recipe);
     write.addEventListener("click", async () => {
-      write.disabled = true;
+      busy(write, true);
       try {
         const r = await api("/api/write-pack", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ base: current.base }) });
         toast(`Wrote ${r.base} (${r.seconds}s) into the pack and stamped its fingerprint.`, "ok");
         current.pack_url = r.pack_url; pick(current, $("results").querySelector("li.active") || document.createElement("li"));
       } catch (e) { toast(e.message, "warn"); }
-      write.disabled = false;
+      busy(write, false);
     });
     cell.appendChild(write);
   }
@@ -300,10 +506,126 @@ $("sessions").addEventListener("change", () => {
 });
 
 $("rebuild").addEventListener("click", async () => {
-  $("rebuild").disabled = true;
+  busy($("rebuild"), true);
   try { const r = await api("/api/rebuild-tables", { method: "POST" }); toast(r.ok ? "Pack tables rebuilt." : "Rebuild reported a problem; see the server log.", r.ok ? "ok" : "warn"); }
   catch (e) { toast(e.message, "warn"); }
-  $("rebuild").disabled = false;
+  busy($("rebuild"), false);
+});
+
+// --- Source clips -----------------------------------------------------------
+// Panel state lives here and is never re-derived from /api/state, because applyState
+// runs every 15 s and would otherwise wipe a half-made pick. It is invalidated in one
+// place: the voice select's change handler. applyState restores voice.value by
+// assignment, which fires no change event, so a refresh cannot reach this.
+let clipsVoice = null, clipsRows = [], picks = [], clipsWindows = { t3: 6, s3gen: 10 }, clipsPoll = null;
+
+function clipsSeconds(fdid) { const r = clipsRows.find(c => c.fdid === fdid); return r ? r.seconds : 0; }
+
+function renderClips() {
+  const body = $("clips-body");
+  if (!clipsRows.length) { body.innerHTML = ""; $("clips-budget").textContent = ""; return; }
+  let at = 0; const offsets = new Map();
+  picks.forEach(f => { offsets.set(f, at); at += clipsSeconds(f); });
+  body.innerHTML = clipsRows.map(c => {
+    const i = picks.indexOf(c.fdid);
+    const off = offsets.get(c.fdid);
+    const band = off === undefined ? "" : off < clipsWindows.t3 ? "t3" : off < clipsWindows.s3gen ? "s3" : "out";
+    return `<tr data-f="${c.fdid}" class="${i >= 0 ? "picked" : ""}">` +
+      `<td class="pos">${i >= 0 ? i + 1 : ""}</td><td>${esc(c.kind)}</td><td class="n">${c.fdid}</td>` +
+      `<td class="n">${c.seconds.toFixed(1)}s</td>` +
+      `<td class="at">${off === undefined ? "" : off.toFixed(1) + "s"}` +
+      `${band ? `<span class="pill ${band}">${band === "t3" ? "t3" : band === "s3" ? "s3gen" : "averaged"}</span>` : ""}</td>` +
+      `<td><audio controls preload="none" src="${c.url}" style="width:210px"></audio></td></tr>`;
+  }).join("");
+  body.querySelectorAll("tr").forEach(tr => tr.addEventListener("click", ev => {
+    if (ev.target.closest("audio")) return;
+    const f = +tr.dataset.f, i = picks.indexOf(f);
+    if (i >= 0) picks.splice(i, 1); else picks.push(f);
+    renderClips();
+  }));
+  const total = picks.reduce((t, f) => t + clipsSeconds(f), 0);
+  const inT3 = picks.filter(f => offsets.get(f) < clipsWindows.t3).length;
+  const inS3 = picks.filter(f => offsets.get(f) < clipsWindows.s3gen).length;
+  $("clips-budget").innerHTML = picks.length
+    ? `${picks.length} picked, ${total.toFixed(1)}s &middot; ${inT3} reaching the ${clipsWindows.t3}s t3 window &middot; ` +
+      `${inS3} the ${clipsWindows.s3gen}s s3gen one &middot; ${picks.length - inS3} past both, nudging an average` +
+      (total < clipsWindows.t3 ? ` <span class="warn">&mdash; under a full t3 window</span>` : "")
+    : "Nothing picked yet.";
+}
+
+// Every build is kept, so trying a clip at the head is reversible: click an older
+// pick to load it back into the table without building, then build if it was better.
+function renderHistory(history, picked) {
+  const box = $("clips-history");
+  if (!history || !history.length) { box.innerHTML = ""; return; }
+  const same = (a, b) => a.length === b.length && a.every((x, i) => x === b[i]);
+  box.innerHTML = `<span class="note">Earlier picks: </span>` + history.map((h, i) =>
+    `<button data-i="${i}" class="${same(h.clips, picks) ? "current" : ""}" ` +
+    `title="${h.clips.join(", ")}">${h.recipe ? "automatic build" : h.at} · ${h.clips.length} clip${h.clips.length === 1 ? "" : "s"} · ${h.seconds}s</button>`
+  ).join("");
+  box.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
+    const h = history[+b.dataset.i];
+    const missing = h.clips.filter(f => !clipsRows.some(c => c.fdid === f));
+    picks = h.clips.filter(f => clipsRows.some(c => c.fdid === f));
+    renderClips();
+    renderHistory(history, picks);
+    toast(missing.length
+      ? `Loaded ${picks.length} of ${h.clips.length}; ${missing.length} are not among the candidates.`
+      : `Loaded the pick from ${h.at}. Build to make it the reference again.`, missing.length ? "warn" : "ok");
+  }));
+}
+
+async function loadClips(refresh) {
+  const voice = $("voice").value;
+  clipsVoice = voice;
+  try {
+    const d = await api(`/api/clips/${encodeURIComponent(voice)}${refresh === true ? "?refresh=1" : ""}`);
+    if ($("voice").value !== voice) return;
+    clipsWindows = d.windows;
+    $("clips-status").textContent = `${voice}: ${d.status}`;
+    if (d.status.startsWith("failed")) busy($("clips-load"), false);
+    $("clips-warn").innerHTML = d.warnings.map(w => `<span class="warn">${esc(w)}</span>`).join("<br>");
+    $("clips-ref").src = d.reference_url || "";
+    // before the candidates, not after: the history is the reason to open the panel
+    // when a voice has been built before, and the fetch behind the table takes minutes
+    renderHistory(d.history, picks);
+    if (d.clips.length) {
+      clipsRows = d.clips;
+      if (refresh !== false || !picks.length) picks = d.picked.filter(f => clipsRows.some(c => c.fdid === f));
+      const missing = d.picked.length - picks.length;
+      if (missing > 0) $("clips-status").textContent += ` (${missing} saved pick(s) not among the candidates)`;
+      renderClips();
+      renderHistory(d.history, picks);   // again, now that picks are seeded
+      if (clipsPoll) { clearInterval(clipsPoll); clipsPoll = null; }
+      busy($("clips-load"), false);
+    } else if (d.status === "loading" && !clipsPoll) {
+      clipsPoll = setInterval(() => loadClips(false), 3000);
+    }
+  } catch (e) { toast(e.message, "warn"); busy($("clips-load"), false); }
+}
+
+$("clips-load").addEventListener("click", () => {
+  $("clips-status").textContent = "downloading and probing every candidate; the first time for a voice takes a while…";
+  // spins until the rows land, which for a race voice is minutes of downloads
+  busy($("clips-load"), true);
+  loadClips(true);
+});
+$("clips-reset").addEventListener("click", () => { picks = []; renderClips(); });
+$("clips-help-toggle").addEventListener("click", () => { $("clips-help").hidden = !$("clips-help").hidden; });
+$("knobs-help-toggle").addEventListener("click", () => { $("knobs-help").hidden = !$("knobs-help").hidden; });
+$("clips-build").addEventListener("click", async () => {
+  if (!picks.length) { toast("pick at least one clip", "warn"); return; }
+  busy($("clips-build"), true);
+  try {
+    const r = await api("/api/clips/build", { method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ voice: clipsVoice, clips: picks, keep: true }) });
+    applyState(r);
+    $("clips-ref").src = r.reference_url;
+    $("clips-status").textContent = `built ${r.built}, ${r.seconds}s`;
+    renderHistory(r.history, picks);
+    toast(r.restage, "ok");
+  } catch (e) { toast(e.message, "warn"); }
+  busy($("clips-build"), false);
 });
 
 refresh();

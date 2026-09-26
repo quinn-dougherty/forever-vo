@@ -13,8 +13,10 @@ from tools.audition import (
     LineRow,
     random_line,
     search,
+    sources_warnings,
     write_pronunciation,
     write_tuning,
+    write_voice_sources,
 )
 from tools.config import CONFIG_TOML, load_config
 
@@ -34,7 +36,7 @@ def test_write_tuning_adds_and_removes_a_voice_and_keeps_comments(toml_copy: Pat
     after = toml_copy.read_text(encoding="utf-8")
     assert "# Dwarves came out of Chatterbox sounding American (#18)." in after
     assert "[tts.voices.gnome-male]" in after
-    assert config.tts.voices["dwarf-male"].reference == "npc-3597"   # untouched
+    assert config.tts.voices["dwarf-female"].exaggeration == 0.75    # untouched
 
     # back to the defaults with no clip: the entry goes and the document reads as before
     config = write_tuning(toml_copy, "gnome-male", config.tts.exaggeration, config.tts.cfg_weight, None)
@@ -90,3 +92,39 @@ def test_random_line_stays_in_the_voice_and_prefers_quests() -> None:
     assert {base("dwarf-male") for _ in range(20)} == {"415-accept"}   # quests first, never the gossip line
     assert base("gnome-female") == "77-aaaa0000"                        # gossip when that is all the voice has
     assert base("orc-male") is None
+
+
+def test_write_voice_sources_adds_and_removes_and_keeps_the_reference_field(toml_copy: Path) -> None:
+    # a voice the real file has no picks for, so the round trip is about this write and
+    # not about whatever has been chosen by ear since
+    voice = next(v for v in ("tauren-male", "gnome-male", "orc-female")
+                 if v not in load_config(toml_copy).voices.sources)
+    load_config.cache_clear()
+    before = toml_copy.read_text(encoding="utf-8")
+    config = write_voice_sources(toml_copy, voice, [539282, 539211, 556543])
+    assert config.voices.sources[voice].clips == [539282, 539211, 556543]
+    text = toml_copy.read_text(encoding="utf-8")
+    assert f"[voices.sources.{voice}]" in text
+    assert "# Dwarves came out of Chatterbox sounding American (#18)." in text
+    # [voices.sources.<v>] is what a clip is made of; [tts.voices.<v>].reference is a
+    # different clip to clone from, and writing one must not disturb the other
+    assert config.tts.voices == load_config(CONFIG_TOML).tts.voices
+
+    config = write_voice_sources(toml_copy, voice, [])
+    assert voice not in config.voices.sources
+    assert tomlkit.parse(toml_copy.read_text(encoding="utf-8")).unwrap() == tomlkit.parse(before).unwrap()
+
+
+def test_write_voice_sources_keeps_the_build(toml_copy: Path) -> None:
+    config = write_voice_sources(toml_copy, "tauren-male", [541910], build="12.1.0.69933")
+    assert config.voices.sources["tauren-male"].build == "12.1.0.69933"
+    config = write_voice_sources(toml_copy, "tauren-male", [541910])
+    assert config.voices.sources["tauren-male"].build is None
+
+
+def test_sources_warnings_names_a_clip_the_voice_does_not_actually_read(toml_copy: Path) -> None:
+    config = write_tuning(toml_copy, "tauren-male", 0.45, 0.5, "npc-3597")
+    # a voice whose tuning clones from elsewhere: picking clips for its own wav is moot
+    assert any("npc-3597" in w for w in sources_warnings(config, "tauren-male"))
+    # human-male is the narrator's clip as well as its own
+    assert any("narrator" in w for w in sources_warnings(config, "human-male"))

@@ -26,19 +26,43 @@ needed. Raw clips are kept under tools/voices/raw/.
 from __future__ import annotations
 
 import functools
-import re
+import os
 import subprocess
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from tools.config import BETA_BUILD, GENDER_DICT, RACE_DICT, RETAIL_BUILD, VOICES_DIR
-from tools.wowdata import dominant_sound_set, fetch_file, load_db2, sound_set_displays
+from tools.config import (
+    BETA_BUILD,
+    GENDER_DICT,
+    RACE_DICT,
+    RETAIL_BUILD,
+    VOICES_DIR,
+    load_config,
+)
+from tools.wowdata import (
+    archetype_names,
+    archetype_of,
+    base_voice,
+    dominant_sound_set,
+    fetch_file,
+    is_archetype,
+    load_db2,
+    sound_set_displays,
+)
 
 RAW_DIR = VOICES_DIR / "raw"
 TARGET_SECONDS = 20.0
 MAX_CLIP_SECONDS = 15.0   # long enough for a spoken emote line; a bark is 1-3 s
 MAX_FILES_PER_VOICE = 40   # download cap per voice; greeting kits repeat a lot
+T3_SECONDS = 6.0           # chatterbox's t3 encoder reads this much of a reference
+S3GEN_SECONDS = 10.0       # s3gen this much; past it a clip only nudges an averaged embedding
+# ffmpeg concat stops consuming inputs at the first file it cannot open, writes
+# everything before it, and exits 0 - so a truncated clip in the middle of a list
+# yields a short reference that sounds fine and reports success. Compare the output
+# against the inputs to catch it; loudnorm and the container change move the total a
+# little, so allow a small slack rather than demanding an exact match.
+CONCAT_SLACK_SECONDS = 0.3
 
 
 def files_by_kit(build: str = BETA_BUILD) -> dict[int, list[int]]:
@@ -206,7 +230,7 @@ def archetype_fdids() -> dict[str, list[int]]:
         for sound_id, _ in kept:
             fdids = set_fdids(sound_id)
             if fdids:
-                voices[f"{voice}-s{sound_id}"] = fdids
+                voices[archetype_names(voice)[sound_id]] = fdids
     return voices
 
 
@@ -215,7 +239,14 @@ NAMED_MAX_DISPLAYS = 3   # a greeting kit shared by this few models belongs to a
 
 def named_npc_fdids() -> dict[str, list[int]]:
     """voice name npc-<displayID> -> greeting FileDataIDs for NPCs with their own recorded lines
-    (Varimathras, Thrall, Sylvanas, ...). Race voices come from kits shared by many models."""
+    (Varimathras, Thrall, Sylvanas, ...). Race voices come from kits shared by many models.
+
+    Hello and goodbye only. SoundID_2 is the "pissed" kit - what the NPC says when you
+    click it repeatedly - and it used to come in beside them: 41 files across 11 sets,
+    reaching 20 of the 91 named clips. An angry take is the wrong thing to clone a quest
+    giver from wherever it lands, and candidates are sorted longest first, which ranks a
+    3.5 s shout above most greetings (median 1.2 s).
+    """
     kits = files_by_kit()
     npc_sounds = load_db2("NPCSounds")
     displays_by_sound: dict[int, list[int]] = defaultdict(list)
@@ -228,7 +259,7 @@ def named_npc_fdids() -> dict[str, list[int]]:
         if len(displays) > NAMED_MAX_DISPLAYS:
             continue
         fdids: list[int] = []
-        for col in ("SoundID_0", "SoundID_1", "SoundID_2"):  # hello, goodbye, pissed
+        for col in ("SoundID_0", "SoundID_1"):  # hello, goodbye; _2 is "pissed", _3 ack
             for fdid in kits.get(int(npc_sounds[sound_id].get(col) or 0), []):
                 if fdid not in fdids:
                     fdids.append(fdid)
@@ -280,7 +311,7 @@ ARCHETYPE_MIN_HEAD = 3.5
 SPEECH_HEAD_SECONDS = 5.5
 # A SPEECH_ONLY clip has no barks to fall back on, so it fills the s3gen window
 # with speech rather than stopping at the head budget.
-SPEECH_ONLY_SECONDS = 10.0
+SPEECH_ONLY_SECONDS = S3GEN_SECONDS
 
 
 def speech_heads(sources: dict[str, list[int]]) -> dict[str, tuple[list[tuple[int, str]], int]]:
@@ -325,7 +356,8 @@ def speech_heads(sources: dict[str, list[int]]) -> dict[str, tuple[list[tuple[in
                 # its sub-threshold sets put it last of four and left tauren-female
                 # heading with a 2.0 s clip.
                 return 1 << 30
-            return counts.get(int(name.rsplit("-s", 1)[1]), 0)
+            found = archetype_of(name)
+            return counts.get(found[1], 0) if found else 0
 
         if len(pool) < len(names) * SPEECH_HEAD_CLIPS:
             print(f"{race_gender}: {len(pool)} spoken lines for {len(names)} voices, "
@@ -350,19 +382,101 @@ def archetype_ranks(sources: dict[str, list[int]]) -> dict[str, int]:
     """Archetype clips numbered 0, 1, ... within their race, most displays first."""
     by_race: dict[str, list[str]] = defaultdict(list)
     for name in sources:
-        if re.fullmatch(r".+-s\d+", name):
+        if is_archetype(name):
             by_race[base_voice(name)].append(name)
     ranks: dict[str, int] = {}
     for race, names in by_race.items():
         counts = sound_set_displays().get(race) or Counter()
-        ordered = sorted(names, key=lambda n: -counts.get(int(n.rsplit("-s", 1)[1]), 0))
+        def displays_of(name: str, counts: Counter[int] = counts) -> int:
+            found = archetype_of(name)
+            return -counts.get(found[1], 0) if found else 0
+
+        ordered = sorted(names, key=displays_of)
         ranks.update({name: i for i, name in enumerate(ordered)})
     return ranks
 
 
-def base_voice(name: str) -> str:
-    """`tauren-female-s70` -> `tauren-female`; anything else unchanged."""
-    return name.rsplit("-s", 1)[0] if re.fullmatch(r".+-s\d+", name) else name
+def concat_line(path: Path) -> str:
+    """One line of an ffmpeg concat list. A quote in a path would end the argument."""
+    return "file '{}'\n".format(str(path.resolve()).replace("'", r"'\''"))
+
+
+def write_concat(voice: str, paths: list[Path], name: str = "concat.txt",
+                 list_dir: Path | None = None) -> Path:
+    """The ffmpeg concat list for one clip, kept beside that voice's raw audio.
+
+    The picked and the automatic builders use different names: both wrote concat.txt and
+    clobbered each other, which also cost the file its one other use - a record of what
+    actually went into the wav sitting next to it.
+    """
+    list_file = (list_dir or RAW_DIR / voice) / name
+    list_file.parent.mkdir(parents=True, exist_ok=True)
+    list_file.write_text("".join(concat_line(p) for p in paths), encoding="utf-8")
+    return list_file
+
+
+def concat_to_wav(voice: str, paths: list[Path], list_name: str = "concat.txt", *,
+                  list_dir: Path | None = None, out: Path | None = None) -> Path:
+    """Concatenates `paths` in order into tools/voices/<voice>.wav, or raises.
+
+    Every input is probed first and the result is measured against their total, because
+    ffmpeg reports success for a concat it truncated (see CONCAT_SLACK_SECONDS). Built to
+    a temporary file and renamed, so a failure leaves the previous reference in place
+    rather than replacing it with a shorter one.
+    """
+    if not paths:
+        raise ValueError(f"{voice}: nothing to concatenate")
+    expected = 0.0
+    for path in paths:
+        try:
+            seconds = duration(path)
+        except subprocess.CalledProcessError as e:
+            raise RuntimeError(f"{voice}: {path} will not probe, refusing to build from it") from e
+        if seconds <= 0:
+            raise RuntimeError(f"{voice}: {path} is empty, refusing to build from it")
+        expected += seconds
+    list_file = write_concat(voice, paths, list_name, list_dir)
+    out = out or VOICES_DIR / f"{voice}.wav"
+    tmp = out.with_suffix(f".wav.{os.getpid()}.part")
+    try:
+        subprocess.run(
+            # -f wav because the temporary name ends in .part, which ffmpeg cannot
+            # infer a container from
+            ["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(list_file),
+             "-ac", "1", "-ar", "24000", "-af", "loudnorm", "-f", "wav", str(tmp)],
+            check=True,
+        )
+        got = duration(tmp)
+        if abs(got - expected) > max(CONCAT_SLACK_SECONDS, expected * 0.02):
+            raise RuntimeError(f"{voice}: concatenated {got:.1f}s of an expected {expected:.1f}s; "
+                               f"one of {len(paths)} inputs did not make it in "
+                               f"(see {list_file})")
+        os.replace(tmp, out)
+    finally:
+        tmp.unlink(missing_ok=True)
+    return out
+
+
+def build_picked_reference(voice: str, paths: list[Path]) -> Path:
+    """One reference from clips chosen by ear, in the order given.
+
+    Nothing here sorts, filters or budgets: the order is the choice. build_reference is
+    deliberately not reused - it sorts by duration, drops everything outside 0.8-8.0 s
+    (which is every spoken emote line), stops at TARGET_SECONDS, and deletes a `-s<N>`
+    clip whose measured head is under ARCHETYPE_MIN_HEAD, which a plain concat never has.
+    """
+    out = concat_to_wav(voice, paths, "picked.txt")
+    offset = 0.0
+    t3 = s3gen = 0
+    for path in paths:
+        if offset < T3_SECONDS:
+            t3 += 1
+        if offset < S3GEN_SECONDS:
+            s3gen += 1
+        offset += duration(path)
+    print(f"{out.name}: {len(paths)} clips picked by ear, {offset:.1f}s "
+          f"({t3} reaching the {T3_SECONDS:.0f}s t3 window, {s3gen} the {S3GEN_SECONDS:.0f}s s3gen one)")
+    return out
 
 
 def build_reference(voice: str, files: list[Path], head: list[Path] | None = None,
@@ -424,20 +538,12 @@ def build_reference(voice: str, files: list[Path], head: list[Path] | None = Non
     if not chosen or (total < 4.0 and voice.startswith("npc-")):
         print(f"{voice}: not enough usable audio ({total:.1f}s)")
         return None
-    list_file = RAW_DIR / voice / "concat.txt"
-    list_file.parent.mkdir(parents=True, exist_ok=True)
-    list_file.write_text("".join(f"file '{p.resolve()}'\n" for p in chosen), encoding="utf-8")
-    out = VOICES_DIR / f"{voice}.wav"
-    subprocess.run(
-        ["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(list_file),
-         "-ac", "1", "-ar", "24000", "-af", "loudnorm", str(out)],
-        check=True,
-    )
+    out = concat_to_wav(voice, chosen)
     # Measured while the head is assembled, not as chosen[:SPEECH_HEAD_CLIPS] afterwards:
     # a voice whose budget fits only one speech clip would otherwise count the first
     # bark behind it as speech - goblin-male reported a 6.8 s head that was 5.4 s of
     # joke and 1.4 s of "Hey there!" - and a thin archetype could clear the gate on it.
-    if re.fullmatch(r".+-s\d+", voice) and head_seconds < ARCHETYPE_MIN_HEAD:
+    if is_archetype(voice) and head_seconds < ARCHETYPE_MIN_HEAD:
         # Not enough speech to hold a delivery; wowdata.archetype_voice falls back to
         # the race voice when the clip is absent, and that one has the longest head
         out.unlink(missing_ok=True)
@@ -471,18 +577,43 @@ def main(argv: list[str] | None = None) -> int:
         sources.update(named_npc_fdids())
         wanted.discard("npc")
 
+    # Clips chosen by ear win over every recipe, in both modes: --named rebuilds each
+    # npc-<displayID> unconditionally, and one of those is a production reference
+    # ([tts.voices.dwarf-male] clones from npc-3597), so a pick has to survive it.
+    picked = {name: entry for name, entry in load_config().voices.sources.items() if entry.clips}
+    if named_only:
+        picked = {name: entry for name, entry in picked.items() if name.startswith("npc-")}
+
     if not wanted and not named_only:
-        keep = set(sources) | {p.stem for p in VOICES_DIR.glob("npc-*.wav")}
-        for stale in sorted(VOICES_DIR.glob("*-s*.wav")):
-            if stale.stem not in keep:
+        # A pick for a set no recipe mints is absent from `sources`, and
+        # wowdata.archetype_voice casts on the file being there, so sweeping it away
+        # would silently recast those NPCs onto the race voice.
+        keep = set(sources) | set(picked) | {p.stem for p in VOICES_DIR.glob("npc-*.wav")}
+        for stale in sorted(VOICES_DIR.glob("*.wav")):
+            if is_archetype(stale.stem) and stale.stem not in keep:
                 # wowdata.archetype_voice resolves on existence alone, so a clip left
                 # behind by an earlier set of constants still casts NPCs
                 print(f"removing stale {stale.name}")
                 stale.unlink()
     ranks = archetype_ranks(sources)
-    for voice in sorted(sources):
+    for voice in sorted(set(sources) | set(picked)):
         race = voice.split("-")[0]
         if wanted and race not in wanted and voice not in wanted:
+            continue
+        entry = picked.get(voice)
+        if entry:
+            chosen = []
+            for fdid in entry.clips:
+                try:
+                    chosen.append(fetch_file(fdid, RAW_DIR / voice / f"{fdid}.ogg",
+                                             build=entry.build or BETA_BUILD))
+                except FileNotFoundError as e:
+                    print("skip:", e)
+            if len(chosen) != len(entry.clips):
+                # Refuse rather than quietly build a shorter clip than was chosen
+                print(f"{voice}: {len(entry.clips) - len(chosen)} picked clip(s) missing, not rebuilt")
+                continue
+            build_picked_reference(voice, chosen)
             continue
         folder = RAW_DIR / voice
         paths = []

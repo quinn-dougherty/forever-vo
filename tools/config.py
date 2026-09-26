@@ -82,6 +82,25 @@ class Strict(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
 
+class VoiceSources(Strict):
+    """[voices.sources.<voice>]: the client clips that voice's reference wav is cut from.
+
+    Composing a reference automatically fills the window without hearing what goes into
+    it, and a greeting kit is not all conversation - a set's longest line is often a
+    shout or a death cry, and that becomes the voice. Picking by ear beat every rule
+    tried, so a voice may name its clips outright, head first, and the builder then
+    sorts, filters and budgets nothing.
+
+    Not to be confused with [tts.voices.<voice>].reference, which names an existing wav
+    to clone from. This names what a wav is made of.
+
+    FileDataIDs rather than positions in a listing, so a client update cannot silently
+    repoint a pick at different audio.
+    """
+    clips: list[int] = []
+    build: str | None = None     # the wago build to fetch them from; the beta client by default
+
+
 class Voices(Strict):
     """[voices]: which clip a speaker is cloned from when it has none of its own."""
     narrator: str = "narrator"                  # reads quests from objects and items; keeps the plain sound path
@@ -89,6 +108,7 @@ class Voices(Strict):
     fallbacks: dict[str, str] = {}              # race without a clip -> race whose clip it borrows
     zone_hints: dict[str, str] = {}             # zone name -> race, when the client tables give none
     species_aliases: dict[str, str] = {}        # model folder -> voice name, where a close clip exists
+    sources: dict[str, VoiceSources] = {}       # voice -> clips picked by ear, overriding the recipes
 
     @property
     def narrator_voices(self) -> list[str]:

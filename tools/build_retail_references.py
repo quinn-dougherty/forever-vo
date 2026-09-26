@@ -25,6 +25,7 @@ from pathlib import Path
 
 import requests
 
+from tools.build_voice_references import concat_to_wav
 from tools.config import DATA_DIR, VOICES_DIR, WAGO_BASE
 
 RETAIL_BUILD = "12.1.0.69875"
@@ -137,15 +138,8 @@ def duration(path: Path) -> float:
 
 
 def build(label: str, clips: list[Path]) -> Path:
-    lst = RAW_DIR / label / "concat.txt"
-    lst.write_text("".join(f"file '{p.resolve()}'\n" for p in clips), encoding="utf-8")
-    dest = VOICES_DIR / f"{label}.wav"
-    subprocess.run(
-        ["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(lst),
-         "-ac", "1", "-ar", "24000", "-af", "loudnorm", str(dest)],
-        check=True,
-    )
-    return dest
+    # Shared so this builder also refuses a concat ffmpeg truncated and called a success
+    return concat_to_wav(label, clips, list_dir=RAW_DIR / label)
 
 
 def main(argv: list[str] | None = None) -> int:

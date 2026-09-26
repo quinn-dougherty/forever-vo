@@ -29,6 +29,7 @@ from pathlib import Path
 
 from tools.config import DATA_DIR, SOUND_INDEX, VOICES_DIR, load_config
 from tools.textclean import clean, has_gender_branch, split_gender
+from tools.wowdata import base_voice
 
 CAPTURE_JSON = DATA_DIR / "capture.json"
 
@@ -117,7 +118,7 @@ def cmd_rate(args) -> int:
     if args.voice:
         # a voice's archetypes are the same voice for this purpose
         by_voice = {v: r for v, r in by_voice.items()
-                    if v in args.voice or re.sub(r"-s\d+$", "", v) in args.voice}
+                    if v in args.voice or base_voice(v) in args.voice}
     rows = sorted(by_voice.items(), key=lambda kv: statistics.median(kv[1]))
     print(f"{'voice':<18} {'lines':>6} {'words/min':>10} {'spread (p10-p90)':>20}")
     for voice, rates in rows:
