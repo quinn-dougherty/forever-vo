@@ -98,8 +98,8 @@ end
 --- $n, $c and $r are resolved against the character reading the line before any
 --- addon can see the text, so a line first seen on a rogue is stored saying
 --- "rogue" and would be voiced that way for everyone. Capitalisation is kept, so
---- a capitalised match becomes $N/$C/$R and the pipeline reads it as a
---- sentence-initial "Adventurer". Defaults to the current character.
+--- a capitalised match becomes $N/$C/$R. Speech drops $n and $c instead of
+--- reading them as a name. Defaults to the current character.
 ---
 --- The name is matched case-sensitively and class and race are not. The client
 --- always renders a character name capitalised, whatever the server wrote, so a

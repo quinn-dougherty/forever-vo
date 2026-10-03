@@ -12,36 +12,57 @@ import re
 
 from tools.config import Pronunciations, load_config
 
-# Same substitutions as upstream tts_cli/tts_utils.py REPLACE_DICT.
-#
-# $c (the player's class) renders as "adventurer" like $n, which has two known
-# faults: a line carrying both says "adventurer" twice, and "adventurer" is
-# vowel-initial, so the 74 lines written "a $c" ("I cannot train a $c such as
-# yourself") come out "a adventurer". "friend" fixes both -- consonant-initial,
-# what Classic NPCs actually call you, and correct in every position the corpus
-# uses -- at the cost of 2 possessive lines ("your first friend's robes").
-#
-# Deliberately NOT changed yet: 1,246 lines carry $c and 318 of them already
-# have audio, so swapping the word costs ~1.1 h of GPU that the first full
-# generation needs more. The fingerprints are seeded (generate.py --reindex), so
-# whenever this changes, `generate.py --stale-only` finds exactly the affected
-# files by itself. Revisit once the bulk backlog is done.
-#
-# One word for everyone either way: the audio is rendered once, so a per-player
-# choice would mean a full extra copy of every $c line (~1,270 files, ~4.6 h)
-# per option, and the word cannot be spliced in at runtime -- the client only
-# has PlaySoundFile, and the clip would need to exist in each of the ~38 cloned
-# voices to match the line around it.
+# $b/$B and $r/$R only. $n/$N (the player's name) and $c/$C (their class) are
+# not spoken: strip_addresses deletes them. "Adventurer" on every greeting wore
+# the line out, and another noun in its place would be the same word in every
+# voice. $r stays "traveler"; that word was not the complaint.
 REPLACE = {
     "$b": "\n",
     "$B": "\n",
-    "$n": "adventurer",
-    "$N": "Adventurer",
-    "$c": "adventurer",
-    "$C": "Adventurer",
     "$r": "traveler",
     "$R": "Traveler",
 }
+
+# A direct address: the placeholder, or the singular word "adventurer" (never
+# "adventurers"), optionally "Master"/"brave"/... immediately in front, and a
+# possessive "'s" stuck to the token. An ordinary noun ("an adventurer like
+# you", "you 'adventurer' types") has no comma or sentence break setting it
+# off, so the rules below leave it: cutting the word there leaves a hole.
+_ADJECTIVE = (
+    "noble|fair|brave|young|good|dear|little|mighty|hearty|valiant|fine|strong|master"
+)
+_PLACEHOLDER = r"\$[nNcC](?:'s)?"
+_LITERAL = r"\badventurer\b(?:'s)?"
+_TOKEN = rf"(?:{_PLACEHOLDER}|{_LITERAL})"
+_PHRASE = rf"(?:\b(?:{_ADJECTIVE})\b\s+)?{_TOKEN}"
+# Comma before the address. Keep a sentence end that belonged to it
+# ("Thank you, $N!" -> "Thank you!"); a comma after stays put, so
+# "Oh, $N, you" becomes "Oh, you" and "Please, $N, find" becomes "Please, find".
+# Whitespace after the token is consumed only together with the sentence end.
+# Otherwise ", $c - I'm" loses the space and comes out "Greetings- I'm".
+_COMMA_BEFORE = re.compile(
+    rf",\s*{_PHRASE}(?:\s*(\.\.\.|[.!?…]))?",
+    re.IGNORECASE,
+)
+# Address at the start of a sentence: the whole text, after a newline ($B was
+# already substituted), or after . ! ? or an ellipsis. The prefix is kept. A
+# comma, bang, question, period, or ellipsis that only closed the address goes.
+_LEAD = re.compile(
+    rf"(^|\n+|\.\.\.\s*|(?<!\.)[.!?…]\s*){_PHRASE}\s*(?:\.\.\.|[,.!?…]+)?\s*",
+    re.IGNORECASE,
+)
+_LEFTOVER = re.compile(_PLACEHOLDER, re.IGNORECASE)
+_SPACE_BEFORE_PUNCT = re.compile(r"[ \t]+([,.!?;:…])")
+# Comma only. A $g branch ends in a semicolon ("$g lad:lass;."), and collapsing
+# that semicolon into the period makes the branch unreadable.
+_COMMA_THEN_END = re.compile(r",[ \t]*(\.\.\.|[.!?…])")
+_DANGLING_WORD = re.compile(
+    r"\b(?:a|an|the|for|of)[ \t]*(\.\.\.|[,.!?…])",
+    re.IGNORECASE,
+)
+# A period that is itself part of "..." is not a sentence end, so "simple... it's"
+# stays lowercase.
+_SENTENCE_START = re.compile(r"(^|\n+|(?<!\.)[.!?…][ \t]+)([a-z])")
 
 _GENDER = re.compile(r"\$[Gg]\s*([^:;]+?)\s*:\s*([^:;]+?)\s*;")
 _STAGE_DIRECTION = re.compile(r"<[^<>]*>\s?")
@@ -59,10 +80,49 @@ def split_gender(text: str) -> tuple[str, str]:
     return _GENDER.sub(r"\1", text), _GENDER.sub(r"\2", text)
 
 
+def _tidy_address(text: str) -> str:
+    """Spaces and punctuation left behind once an address word is gone.
+
+    A dangling a/an/the/for/of before punctuation goes too, and repeats:
+    "traveled for a $c." has already lost "$c", and "for a." is not worth saying.
+    """
+    for _ in range(6):
+        updated = _SPACE_BEFORE_PUNCT.sub(r"\1", text)
+        updated = _COMMA_THEN_END.sub(r"\1", updated)
+        updated = _DANGLING_WORD.sub(r"\1", updated)
+        updated = re.sub(r"[ \t]{2,}", " ", updated)
+        updated = _SENTENCE_START.sub(
+            lambda m: m.group(1) + m.group(2).upper(), updated
+        )
+        if updated == text:
+            break
+        text = updated
+    return text.strip()
+
+
+def strip_addresses(text: str) -> str:
+    """Delete spoken "Adventurer" and the punctuation that only set it off.
+
+    Placeholders always go, so "a $c trainer" becomes "a trainer" and a name
+    used as a noun ("$N is up to us") is simply gone. The literal word goes
+    only as a direct address ("Greetings, adventurer.", "Adventurer!"). A line
+    with neither is returned untouched, so tidy rules cannot restage every
+    other file.
+    """
+    if not re.search(r"\$[nNcC]|\badventurer\b", text, re.IGNORECASE):
+        return text
+    updated = _COMMA_BEFORE.sub(lambda m: m.group(1) or "", text)
+    updated = _LEAD.sub(lambda m: m.group(1) or "", updated)
+    updated = _LEFTOVER.sub("", updated)
+    if updated == text:
+        return text
+    return _tidy_address(updated)
+
+
 def _substitute(text: str) -> str:
     for key, value in REPLACE.items():
         text = text.replace(key, value)
-    return text
+    return strip_addresses(text)
 
 
 def _finish(text: str, pronunciations: Pronunciations) -> str:
