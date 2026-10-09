@@ -2203,7 +2203,12 @@ def main(argv: list[str] | None = None) -> int:
                 for voice in config.voices.narrator_alternates:
                     leftover = sound_path(item.subfolder, base, voice)
                     if leftover.exists():
-                        leftover.unlink()
+                        # Every shard walks every item here, so another may
+                        # have removed it since
+                        try:
+                            leftover.unlink()
+                        except FileNotFoundError:
+                            continue
                         sound_index.pop(index_key(base, voice), None)
                         dirty.add(index_key(base, voice))
                         skipped["stale narrator alternate removed"] = (
