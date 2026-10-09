@@ -1,0 +1,66 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "235": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1000764,
+   "name": "Salma Saldean",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "483": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1000764,
+   "name": "Elaine Trias",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-1485",
+ "quests": {
+  "36-progress": {
+   "build": "70291",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1436,
+   "name": "Salma Saldean",
+   "npc": "235",
+   "questID": 36,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "I'm going to miss that Verna Furlbrow so much.  I don't suppose you happened to see her on your way here?",
+   "time": 1791520462,
+   "title": "Westfall Stew",
+   "wanted": null,
+   "zone": "Westfall"
+  },
+  "97220-progress": {
+   "build": "70291",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1453,
+   "name": "Elaine Trias",
+   "npc": "483",
+   "questID": 97220,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "You looking to fill a crate with our finest aged wheels?",
+   "time": 1791519634,
+   "title": "Philmor's Favor",
+   "wanted": null,
+   "zone": "Stormwind City"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
