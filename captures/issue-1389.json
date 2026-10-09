@@ -1,0 +1,86 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "926|2583dfa7": {
+   "build": "70291",
+   "class": "Paladin",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Bromos Grummner",
+   "npc": "926",
+   "questID": null,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "The Light be with ya, $c. How can I help ya?",
+   "time": 1791515795,
+   "title": null,
+   "wanted": null,
+   "zone": "Anvilmar"
+  }
+ },
+ "npcs": {
+  "713": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Balir Frosthammer",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "926": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Bromos Grummner",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1389",
+ "quests": {
+  "170-progress": {
+   "build": "70291",
+   "class": "Paladin",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Balir Frosthammer",
+   "npc": "713",
+   "questID": 170,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Tenacious little buggers, aren't they?",
+   "time": 1791515637,
+   "title": "A New Threat",
+   "wanted": null,
+   "zone": "Dun Morogh"
+  },
+  "3107-progress": {
+   "build": "70291",
+   "class": "Paladin",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Bromos Grummner",
+   "npc": "926",
+   "questID": 3107,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "So, you've made it! And not a second too soon. There's much to be done in Coldridge Valley and beyond. I'm gonna need your help as much as you're gonna need mine!\n\nYou're a Knight of the Silver Hand now, be ready to play the part.",
+   "time": 1791515720,
+   "title": "Consecrated Rune",
+   "wanted": null,
+   "zone": "Anvilmar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
