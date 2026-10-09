@@ -15,3 +15,6 @@
 154-accept = {seed = 326667850, chunk_chars = 300, same_seed = false, heard = "b234ad60+cfg_weight=0.3,clips=a1ba39fd,exaggeration=0.8,reference=spirithealer-female,speed=0.98", spoken = "df5a9cfbd5e1d252"}
 149-progress = {seed = 1371820572, chunk_chars = 300, same_seed = false, heard = "787117ce+cfg_weight=0.3,clips=a1ba39fd,exaggeration=0.8,reference=spirithealer-female,speed=0.98", spoken = "88cc7e679d712689"}
 302-994abcf7 = {seed = 1434019348, chunk_chars = 300, same_seed = false, heard = "994abcf7+cfg_weight=0.3,clips=a1ba39fd,exaggeration=0.8,speed=0.98", spoken = "844203448f39c02e"}
+878-accept = {seed = 1714205873, chunk_chars = 300, same_seed = false, heard = "eb28e7f6+cfg_weight=0.3,clips=a7bc7c70,exaggeration=0.95,speed=0.99", spoken = "ac0f5c9ceece68af"}
+878-progress = {seed = 236279354, chunk_chars = 300, same_seed = false, heard = "634a2914+cfg_weight=0.3,clips=a7bc7c70,exaggeration=0.95,speed=0.99", spoken = "8568d83e4b203b9e"}
+878-complete = {seed = 820188998, chunk_chars = 300, same_seed = false, heard = "12efce44+cfg_weight=0.3,clips=a7bc7c70,exaggeration=0.95,speed=0.99", spoken = "93dc3b51a456124f"}

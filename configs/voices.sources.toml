@@ -678,3 +678,16 @@ gaps = [0.1, 0.1]
 
 [voices.sources.banshee-female]
 clips = [1730301, 1730302, 1730303, 1730304]
+
+[voices.sources.quillboar-male]
+clips = [
+    1989289,
+    1989283,
+    1989253,
+    1989287,
+    1989281,
+    1989279,
+    1989254,
+    1989252,
+]
+

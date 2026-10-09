@@ -42,6 +42,11 @@ clip_folders = [
     "weeping_banshee",
     "moira_thaurissan",
     "malfurion_stormrage",
+    # quilboar dialogue, Battle for Azeroth (14 male and 17 female lines) and
+    # Shadowlands (13 male), for quillboar-male and quillboar-female: Mangletooth
+    # and the rest were read by human-male, quilboar having no clip (#1301)
+    "quilboar",
+    "generic_quilboar",
 ]
 
 # Races without a reference clip borrow a related one; the narrator without a
@@ -225,3 +230,4 @@ scourge-female-standard = "cfg_weight=0.6,clip=scourge-female-standard,exaggerat
 nightelf-female-priestess = "cfg_weight=0.35,clip=nightelf-female-priestess,clips=f342d661,exaggeration=0.6"
 nightelf-female-sentinel = "clip=nightelf-female-sentinel,exaggeration=0.4,tempo=1.1"
 banshee-female = "cfg_weight=0.3,clip=banshee-female,clips=a1ba39fd,exaggeration=0.8,speed=0.98"
+quillboar-male = "cfg_weight=0.3,clip=quillboar-male,clips=a7bc7c70,exaggeration=0.95,speed=0.99"
