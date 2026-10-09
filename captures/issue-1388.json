@@ -1,0 +1,85 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "251905": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478487,
+   "name": "Zerril Softbreeze",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "251992": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478487,
+   "name": "Fenn Fairweather",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1388",
+ "quests": {
+  "92553-progress": {
+   "build": "70291",
+   "class": "Mage",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Zerril Softbreeze",
+   "npc": "251905",
+   "questID": 92553,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "No matter how much things change here on Zephras and how uncertain things get, I always say that a pipe full of dried peacebloom and nice full belly is a comfort that can't be beat!",
+   "time": 1791497764,
+   "title": "Restocking the Larders",
+   "wanted": null,
+   "zone": "Zephras Isle"
+  },
+  "96646-complete": {
+   "build": "70291",
+   "class": "Mage",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Zerril Softbreeze",
+   "npc": "251905",
+   "questID": 96646,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "With this, you'll be able to set up a camp anywhere out in the wilderness. What you've learned is just the basics, so you won't be able to place too many furnishings around it.\r\n\r\nRaise your cooking skill and you might just be able to learn to make even bigger fires.\r\n\r\nYou can also learn the basics of furnishing your campsites from other tradeskill trainers if you're savvy in their skills.",
+   "time": 1791497825,
+   "title": "Camping 101: Cooking",
+   "wanted": null,
+   "zone": "Zephras Isle"
+  },
+  "97967-complete": {
+   "build": "70291",
+   "class": "Mage",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Fenn Fairweather",
+   "npc": "251992",
+   "questID": 97967,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "There you have it, you can now craft your very own Fish Bowl. Most folk don't care much for camps being set up in the center of town, so you'll need to head into the wilderness if you want to test it out.\r\n\r\nOh, and just remember, no camp is complete without a campfire. You'll need one of those before you start up your camp. Most cooks can teach you to make a fire. If you haven't already, you might want to check in with someone who can train you in the culinary arts to learn the basics.",
+   "time": 1791497602,
+   "title": "Camping 101: Fishing",
+   "wanted": null,
+   "zone": "Zephras Isle"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
