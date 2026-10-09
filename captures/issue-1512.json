@@ -1,0 +1,140 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "1680|279d82d3": {
+   "build": "70291",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1433,
+   "name": "Matthew Hooper",
+   "npc": "1680",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Your skill exceeds mine, though  I've heard that Old Man Heming in Booty Bay has copies of \"The Bass and You\".  That is sure to help you increase your skill.",
+   "time": 1791581605,
+   "title": null,
+   "wanted": null,
+   "zone": "Redridge Mountains"
+  },
+  "3087|52392408": {
+   "build": "70291",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1433,
+   "name": "Crystal Boughman",
+   "npc": "3087",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Seek out Shandrina in Silverwind Refuge.  She can sell you the \"Expert Cookbook\".",
+   "time": 1791582041,
+   "title": null,
+   "wanted": null,
+   "zone": "Redridge Mountains"
+  },
+  "6491|22357dc5": {
+   "build": "70291",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1436,
+   "name": "Spirit Healer",
+   "npc": "6491",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "It is not yet your time. I shall aid your journey back to the realm of the living... for a price.",
+   "time": 1791577048,
+   "title": null,
+   "wanted": null,
+   "zone": "Westfall"
+  }
+ },
+ "npcs": {
+  "1680": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Matthew Hooper",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3087": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1000764,
+   "name": "Crystal Boughman",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "342": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1000764,
+   "name": "Martie Jainrose",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "6491": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 126042,
+   "name": "Spirit Healer",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-1512",
+ "quests": {
+  "34-complete": {
+   "build": "70291",
+   "class": "Hunter",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1433,
+   "name": "Martie Jainrose",
+   "npc": "342",
+   "questID": 34,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Finally the menace is laid to rest!  Thank you, $N, you have done me a great service.  The garden shall be in full bloom this season!",
+   "time": 1791581995,
+   "title": "An Unwelcome Guest",
+   "wanted": null,
+   "zone": "Redridge Mountains"
+  },
+  "34-progress": {
+   "build": "70291",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1433,
+   "name": "Martie Jainrose",
+   "npc": "342",
+   "questID": 34,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Is Bellygrub still at it or were you able to rid Lakeshire of the pest once and for all?",
+   "time": 1791581992,
+   "title": "An Unwelcome Guest",
+   "wanted": null,
+   "zone": "Redridge Mountains"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
