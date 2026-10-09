@@ -1,0 +1,85 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "352|c23f1156": {
+   "build": "70291",
+   "class": "Druid",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1453,
+   "name": "Dungar Longdrink",
+   "npc": "352",
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "These great beasts know paths that ye can't find on foot, they'll get ye there fast and maybe show ye something new at the same time.",
+   "time": 1791512119,
+   "title": null,
+   "wanted": null,
+   "zone": "Stormwind City"
+  },
+  "5504|8fca8484": {
+   "build": "70291",
+   "class": "Druid",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1453,
+   "name": "Sheldras Moontree",
+   "npc": "5504",
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "If you desire, in addition to training, I have it within my power to erase the knowledge of your talents from your mind.  Be warned that every time you undergo this procedure the more difficult it is to perform, and therefore the more expensive it becomes.",
+   "time": 1791511960,
+   "title": null,
+   "wanted": null,
+   "zone": "Stormwind City"
+  },
+  "5504|e653c173": {
+   "build": "70291",
+   "class": "Druid",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1453,
+   "name": "Sheldras Moontree",
+   "npc": "5504",
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "Welcome, my sister.  If you are here to train, then I would be delighted to train you.\n\nThere will be a time soon where the call of the Emerald Dream will take hold in you.  You will hibernate for many years and walk amongst the purest of forms.  It is there and then that your ultimate training will take place.",
+   "time": 1791511959,
+   "title": null,
+   "wanted": null,
+   "zone": "Stormwind City"
+  }
+ },
+ "npcs": {
+  "352": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Dungar Longdrink",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "5504": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 974343,
+   "name": "Sheldras Moontree",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1387",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
