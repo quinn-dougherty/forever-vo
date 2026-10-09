@@ -1,0 +1,39 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "3707": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1022938,
+   "name": "Ken'jai",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1411",
+ "quests": {
+  "3085-progress": {
+   "build": "70291",
+   "class": "Priest",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Ken'jai",
+   "npc": "3707",
+   "questID": 3085,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "So ya made it... good good! Da spirits tol' me you be comin' to see Ken'jai soon enough. Let me be one o' da first to welcome ya to da Valley of Trials. Dis place not be your home fer long, but while it is, why dontcha make da best o' it.",
+   "time": 1791536302,
+   "title": "Hallowed Tablet",
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
