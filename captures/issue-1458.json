@@ -1,0 +1,39 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "271546|7dbe534f": {
+   "build": "70291",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Mountaineer Gretchen",
+   "npc": "271546",
+   "questID": null,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Lookin' fer the courier? Just flew off like a wee bird.\r\n\r\nCan't say I blame the poor sod. These wendigos are nasty business.",
+   "time": 1791558285,
+   "title": null,
+   "wanted": null,
+   "zone": "Dun Morogh"
+  }
+ },
+ "npcs": {
+  "271546": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 950080,
+   "name": "Mountaineer Gretchen",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-1458",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
