@@ -1,0 +1,93 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "265809": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Brakk",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "266940": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Turroc",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3191": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Cook Torka",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1420",
+ "quests": {
+  "96604-accept": {
+   "build": "70291",
+   "class": "Priest",
+   "differs": true,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Brakk",
+   "npc": "265809",
+   "questID": 96604,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "Lok-tar, $c. I can see you've got the look of an adventurer about you. This is good. The world needs more of us restless souls, seeking fortune and glory.\r\n\r\nYou'll need to learn to thrive in the wilds to be successful in this line of work. Not sure how your outdoor skills are but I can probably teach you a thing or two, if you'd be apt to learn.\r\n\r\nHave a seat near the fire and get comfortable. I'll walk you through it.",
+   "time": 1791542874,
+   "title": "The Great Outdoors",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "96604-complete": {
+   "build": "70291",
+   "class": "Priest",
+   "differs": true,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Brakk",
+   "npc": "265809",
+   "questID": 96604,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "So now that we've learned the basics, go learn a tradeskill from the trainers in the village nearby. They will also teach you how to create a camp fixture suitable to your new profession.",
+   "time": 1791543000,
+   "title": "The Great Outdoors",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "96655-progress": {
+   "build": "70291",
+   "class": "Priest",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Cook Torka",
+   "npc": "3191",
+   "questID": 96655,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "A good campfire is the foundation to any good camp.",
+   "time": 1791543415,
+   "title": "Camping 101: Cooking",
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
