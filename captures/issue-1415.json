@@ -1,0 +1,39 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "3600|fed57ab8": {
+   "build": "70291",
+   "class": "Priest",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Laurna Morninglight",
+   "npc": "3600",
+   "questID": null,
+   "race": "Night Elf",
+   "sex": "f",
+   "source": "community",
+   "text": "My wisdom is yours, as is my knowledge. What can I do for you, $N?",
+   "time": 1791540707,
+   "title": null,
+   "wanted": null,
+   "zone": "Teldrassil"
+  }
+ },
+ "npcs": {
+  "3600": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 120590,
+   "name": "Laurna Morninglight",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-1415",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
