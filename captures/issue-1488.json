@@ -1,0 +1,120 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "1247|b63e4e81": {
+   "build": "70291",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Innkeeper Belm",
+   "npc": "1247",
+   "questID": null,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Fill yer tankard and pull up a chair. We've stories to tell and kegs to empty.",
+   "time": 1791571213,
+   "title": null,
+   "wanted": null,
+   "zone": "Dun Morogh"
+  },
+  "1699|b48f927f": {
+   "build": "70291",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Gremlock Pilsnor",
+   "npc": "1699",
+   "questID": null,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "I can teach you how to cook!",
+   "time": 1791571237,
+   "title": null,
+   "wanted": null,
+   "zone": "Dun Morogh"
+  },
+  "2326|a28d29e1": {
+   "build": "70291",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Thamner Pol",
+   "npc": "2326",
+   "questID": null,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "I can train you in First Aid techniques.",
+   "time": 1791571230,
+   "title": null,
+   "wanted": null,
+   "zone": "Dun Morogh"
+  },
+  "265813|550c4a52": {
+   "build": "70291",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Eric Brighthammer",
+   "npc": "265813",
+   "questID": null,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Greetings, traveler.",
+   "time": 1791571174,
+   "title": null,
+   "wanted": null,
+   "zone": "Dun Morogh"
+  }
+ },
+ "npcs": {
+  "1247": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Innkeeper Belm",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "1699": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Gremlock Pilsnor",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "2326": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Thamner Pol",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "265813": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Eric Brighthammer",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1488",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
