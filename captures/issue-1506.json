@@ -1,0 +1,39 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "251903": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478487,
+   "name": "Rathiril Sunlance",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1506",
+ "quests": {
+  "92596-accept": {
+   "build": "70291",
+   "class": "Mage",
+   "differs": true,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Rathiril Sunlance",
+   "npc": "251903",
+   "questID": 92596,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "The aura of arcane energy that surrounds you is strong, even for a $c such as yourself. \r\n\r\nCome, let us sit and speak some on the nature of the arcane and the plight of our homeland.",
+   "time": 1791548829,
+   "title": "The High Order",
+   "wanted": null,
+   "zone": "Zephras Isle"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
