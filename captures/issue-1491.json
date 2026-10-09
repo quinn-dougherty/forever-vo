@@ -1,0 +1,93 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "1569|0059710e": {
+   "build": "70291",
+   "class": "Паладин",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Жрец Тьмы Сарвис",
+   "npc": "1569",
+   "questID": null,
+   "race": "Нежить",
+   "sex": "m",
+   "source": "community",
+   "text": "Ни одна раса Азерота не страдала так, как мы, |3-6($c). Мы все уже привыкли смеяться в лицо смерти.",
+   "time": 1791571479,
+   "title": null,
+   "wanted": null,
+   "zone": "Тирисфальские леса"
+  },
+  "244808|00001505": {
+   "build": "70291",
+   "class": "Паладин",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Арамис Хаммерхенд",
+   "npc": "244808",
+   "questID": null,
+   "race": "Нежить",
+   "sex": "m",
+   "source": "community",
+   "text": "С возвращением к Свету, друг. Тебе требуется обучение?",
+   "time": 1791572672,
+   "title": null,
+   "wanted": null,
+   "zone": "Тирисфальские леса"
+  },
+  "246143|00001505": {
+   "build": "70291",
+   "class": "Паладин",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Испуганный паладин",
+   "npc": "246143",
+   "questID": null,
+   "race": "Нежить",
+   "sex": "m",
+   "source": "community",
+   "text": "Нет! Нет-нет-нет! Отрекшаяся? Лучше смерть! \r\n\r\n<Испуганный паладин поднимает оружие и готовится к атаке!>",
+   "time": 1791572078,
+   "title": null,
+   "wanted": null,
+   "zone": "Тирисфальские леса"
+  }
+ },
+ "npcs": {
+  "1569": {
+   "addon": "0.1.9",
+   "creatureType": "Гуманоид",
+   "modelFileID": 959310,
+   "name": "Жрец Тьмы Сарвис",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "244808": {
+   "addon": "0.1.9",
+   "creatureType": "Гуманоид",
+   "modelFileID": 959310,
+   "name": "Арамис Хаммерхенд",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "246143": {
+   "addon": "0.1.9",
+   "creatureType": "Гуманоид",
+   "modelFileID": 997378,
+   "name": "Испуганный паладин",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-1491",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
