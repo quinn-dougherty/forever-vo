@@ -1,0 +1,66 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "821": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Captain Danuvin",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "878": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Scout Galiaan",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1501",
+ "quests": {
+  "102-progress": {
+   "build": "70291",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1436,
+   "name": "Captain Danuvin",
+   "npc": "821",
+   "questID": 102,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "Have you collected 8 paws from those treacherous Gnolls yet?",
+   "time": 1791572360,
+   "title": "Patrolling Westfall",
+   "wanted": null,
+   "zone": "Sentinel Tower"
+  },
+  "153-progress": {
+   "build": "70291",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1436,
+   "name": "Scout Galiaan",
+   "npc": "878",
+   "questID": 153,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "Bring me 15 red leather bandanas and I'll pay you well.",
+   "time": 1791572319,
+   "title": "Red Leather Bandanas",
+   "wanted": null,
+   "zone": "Westfall"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
