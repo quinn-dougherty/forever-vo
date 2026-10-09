@@ -1,0 +1,132 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "251361|d239a636": {
+   "build": "70291",
+   "class": "Jägerin",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Rorian der Tagsucher",
+   "npc": "251361",
+   "questID": null,
+   "race": "Himmelsgeborene des Hohen Ordens",
+   "sex": "f",
+   "source": "community",
+   "text": "Was wollt Ihr von mir, Kind von Zephras?",
+   "time": 1791548944,
+   "title": null,
+   "wanted": null,
+   "zone": "Die Insel Zephras"
+  },
+  "251371|fc9d2ed7": {
+   "build": "70291",
+   "class": "Jägerin",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Falorne Fallwind",
+   "npc": "251371",
+   "questID": null,
+   "race": "Himmelsgeborene des Hohen Ordens",
+   "sex": "f",
+   "source": "community",
+   "text": "Ah, eine weitere Initiandin des Hohen $R. Seid gegrüßt!",
+   "time": 1791548967,
+   "title": null,
+   "wanted": null,
+   "zone": "Die Insel Zephras"
+  }
+ },
+ "npcs": {
+  "251361": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478487,
+   "name": "Rorian der Tagsucher",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "251368": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1100087,
+   "name": "Elatrell Featherlight",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "251371": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478487,
+   "name": "Falorne Fallwind",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1423",
+ "quests": {
+  "92460-complete": {
+   "build": "70291",
+   "class": "Jägerin",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Rorian der Tagsucher",
+   "npc": "251361",
+   "questID": 92460,
+   "race": "Himmelsgeborene des Hohen Ordens",
+   "sex": "f",
+   "source": "community",
+   "text": "Stürmische Grüße, $N. Es ist mir eine Ehre, Euch heute das Relikt zu überreichen, das Euer Erwachsenwerden markiert. Damit erkennen wir das Potenzial an, das Ihr den Shen'dorei bietet. Unser Volk hat im Verlauf seiner komplexen Geschichte viel Not gelitten und wurde oft verfolgt.\r\n\r\nHeute erhaltet Ihr dieses Relikt. Es ist eines von vielen, die von jenen getragen wurden, die vor Euch kamen. Eines Tages, wenn Eure Asche im Wind zerstreut wird, wird es an jemand Neuen weitergereicht, um die Tradition fortzuführen.\r\n\r\nNehmt dieses Relikt an Euch und wisst, dass heimische Winde Euch begleiten, wo immer Eure Reise Euch auch hinführt.",
+   "time": 1791548947,
+   "title": "Erwachsen werden",
+   "wanted": null,
+   "zone": "Die Insel Zephras"
+  },
+  "92461-accept": {
+   "build": "70291",
+   "class": "Jägerin",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Rorian der Tagsucher",
+   "npc": "251361",
+   "questID": 92461,
+   "race": "Himmelsgeborene des Hohen Ordens",
+   "sex": "f",
+   "source": "community",
+   "text": "Diese Zeiten sind für unser Volk von Unsicherheit geprägt. Wir sehen uns ungeahnten Herausforderungen gegenüber, die gewagte Lösungen erfordern. Gleichzeitig müssen wir hier im Thendalhain jedoch auch Alltägliches bewältigen. Nehmen wir zum Beispiel die jüngste, nicht mehr tragbare Vermehrung der Vuldren.\r\n\r\nDie Vuldren sind ein unverzichtbarer Teil unseres Ökosystems. Etwaige Störungen des Gleichgewichts müssen jedoch behoben werden, um die zerbrechliche Harmonie aller Lebewesen im Thendalhain zu bewahren.\r\n\r\nGeht Richtung Osten und dezimiert dort einige Vuldren.",
+   "time": 1791548949,
+   "title": "Harmonisches Gleichgewicht",
+   "wanted": null,
+   "zone": "Die Insel Zephras"
+  },
+  "92462-accept": {
+   "build": "70291",
+   "class": "Jägerin",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Elatrell Featherlight",
+   "npc": "251368",
+   "questID": 92462,
+   "race": "Himmelsgeborene des Hohen Ordens",
+   "sex": "f",
+   "source": "community",
+   "text": "Einer unserer Waldläufer hat kürzlich einen Befall durch Zirrusfliegen hier im Thendalhain gemeldet.\r\n\r\nZirrusfliegen können gefährlich werden, wenn der Schwarm zu groß wird. Begebt Euch daher bitte zum östlichen Ende des Hains und vernichtet so viele von ihnen wie möglich.",
+   "time": 1791548969,
+   "title": "Befallsbegutachtung",
+   "wanted": null,
+   "zone": "Die Insel Zephras"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
