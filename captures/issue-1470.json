@@ -1,0 +1,101 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "268701": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Thatog",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3139": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Gar'Thok",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3191": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Cook Torka",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3293": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 119376,
+   "name": "Rezlak",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1470",
+ "quests": {
+  "815-progress": {
+   "build": "70291",
+   "class": "Priest",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Cook Torka",
+   "npc": "3191",
+   "questID": 815,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "Breakfast, lunch, dinner! Who cares which meal it is? It still has to be cooked by someone--namely me!",
+   "time": 1791554922,
+   "title": "Break a Few Eggs",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "834-progress": {
+   "build": "70291",
+   "class": "Priest",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Rezlak",
+   "npc": "3293",
+   "questID": 834,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "I'm great at what I do, don't get me wrong, but this is ridiculous! What am I supposed to do, build sand castles?",
+   "time": 1791560064,
+   "title": "Winds in the Desert",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "837-progress": {
+   "build": "70291",
+   "class": "Priest",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Gar'Thok",
+   "npc": "3139",
+   "questID": 837,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "Though they do possess some intelligence and some organization, I find it constantly amazing that the quilboars were able to capture and hold so much territory in Kalimdor. Perhaps they are more crafty an enemy than I give them credit for...",
+   "time": 1791549326,
+   "title": "Encroachment",
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
