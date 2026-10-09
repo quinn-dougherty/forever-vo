@@ -1,0 +1,120 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "3139|82bfeb72": {
+   "build": "70291",
+   "class": "Mage",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Gar'Thok",
+   "npc": "3139",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Throm'ka, $c. There is little time for talk and much work to be done.",
+   "time": 1791584328,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "3142|99ae9589": {
+   "build": "70291",
+   "class": "Mage",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Orgnil Soulscar",
+   "npc": "3142",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Hail.  Be brief, for we both have much to do.",
+   "time": 1791584318,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "3191|0c543544": {
+   "build": "70291",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Cook Torka",
+   "npc": "3191",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Cooking is a life long pursuit and I see we share the same passion!",
+   "time": 1791583440,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "5880|f341dff7": {
+   "build": "70291",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Un'Thuwa",
+   "npc": "5880",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Greetings, $c.  Are you here to learn of the hidden arts?",
+   "time": 1791584590,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "npcs": {
+  "3139": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Gar'Thok",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3142": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Orgnil Soulscar",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3191": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Cook Torka",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "5880": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1022938,
+   "name": "Un'Thuwa",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1517",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
