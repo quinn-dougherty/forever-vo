@@ -1,0 +1,39 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "11378": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 121287,
+   "name": "Foreman Thazz'ril",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1606",
+ "quests": {
+  "5441-accept": {
+   "build": "70291",
+   "class": "Warrior",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Foreman Thazz'ril",
+   "npc": "11378",
+   "questID": 5441,
+   "race": "Troll",
+   "sex": "m",
+   "source": "community",
+   "text": "Cursed peons!  They work hard gathering lumber from the trees of the valley, but they're always taking naps!  I need someone to help keep the peons in line.\n\nYou look like the right $r for my task.  Here, you take this blackjack and use it on any lazy peons you find sleeping on the job.  A good smack will get them right back to work!  Return the blackjack when you're done.\n\nLousy slacking peons...",
+   "time": 1791614447,
+   "title": "Lazy Peons",
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
