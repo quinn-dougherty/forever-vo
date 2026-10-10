@@ -1,0 +1,39 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "3338": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 949470,
+   "name": "Sergra Darkthorn",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-1628",
+ "quests": {
+  "845-progress": {
+   "build": "70338",
+   "class": "Priest",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Sergra Darkthorn",
+   "npc": "3338",
+   "questID": 845,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "How many zhevra have you slain?",
+   "time": 1791646238,
+   "title": "The Zhevra",
+   "wanted": null,
+   "zone": "The Barrens"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
