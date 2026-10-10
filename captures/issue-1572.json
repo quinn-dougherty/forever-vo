@@ -1,0 +1,39 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "352|c23f1156": {
+   "build": "70338",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1453,
+   "name": "Dungar Longdrink",
+   "npc": "352",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "These great beasts know paths that ye can't find on foot, they'll get ye there fast and maybe show ye something new at the same time.",
+   "time": 1791610319,
+   "title": null,
+   "wanted": null,
+   "zone": "Stormwind City"
+  }
+ },
+ "npcs": {
+  "352": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Dungar Longdrink",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1572",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
