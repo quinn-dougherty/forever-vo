@@ -1,0 +1,112 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "460": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 900914,
+   "name": "Alamar Grimm",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "658": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Sten Stoutarm",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "714": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Talin Keeneye",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1576",
+ "quests": {
+  "1599-progress": {
+   "build": "70338",
+   "class": "Warlock",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Alamar Grimm",
+   "npc": "460",
+   "questID": 1599,
+   "race": "Gnome",
+   "sex": "f",
+   "source": "community",
+   "text": "Those feather charms the novices carry have some sort of magical power to them. It will be interesting to research them. I wouldn't have expected it from the trolls.",
+   "time": 1791628029,
+   "title": "Beginnings",
+   "wanted": null,
+   "zone": "Anvilmar"
+  },
+  "179-progress": {
+   "build": "70338",
+   "class": "Warlock",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Sten Stoutarm",
+   "npc": "658",
+   "questID": 179,
+   "race": "Gnome",
+   "sex": "f",
+   "source": "community",
+   "text": "Wolves giving you a bit of trouble? You'd do well to avoid the fangs and claws and other sharp bits, yes?",
+   "time": 1791627122,
+   "title": "Dwarven Outfitters",
+   "wanted": null,
+   "zone": "Dun Morogh"
+  },
+  "233-progress": {
+   "build": "70338",
+   "class": "Warlock",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Talin Keeneye",
+   "npc": "714",
+   "questID": 233,
+   "race": "Gnome",
+   "sex": "f",
+   "source": "community",
+   "text": "Yes? Do you have something for me?",
+   "time": 1791628118,
+   "title": "Coldridge Valley Mail Delivery",
+   "wanted": null,
+   "zone": "Dun Morogh"
+  },
+  "3115-progress": {
+   "build": "70338",
+   "class": "Warlock",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Alamar Grimm",
+   "npc": "460",
+   "questID": 3115,
+   "race": "Gnome",
+   "sex": "f",
+   "source": "community",
+   "text": "Wonderful! You got my memorandum obviously.\n\nIgnore the fools around you, $N. The Holy Light?! The sword and shield?! These aren't paths for ones as open minded as us. Look at what \"normal\" magic did to our home. Coupled with  those damned tinkerers, our race almost became extinct. And now we have to rely on the dwarves-- they'd rather spend time allying with humans than help us rebuild our own home. We're like second-class citizens. Have you seen the way they look at us?",
+   "time": 1791627176,
+   "title": "Tainted Memorandum",
+   "wanted": null,
+   "zone": "Anvilmar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
