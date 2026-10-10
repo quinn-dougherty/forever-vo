@@ -1,0 +1,39 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "3368|5a0b913d": {
+   "build": "70338",
+   "class": "Priest",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1454,
+   "name": "Borstan",
+   "npc": "3368",
+   "questID": null,
+   "race": "Undead",
+   "sex": "f",
+   "source": "community",
+   "text": "I have the finest meats in Orgrimmar.",
+   "time": 1791639332,
+   "title": null,
+   "wanted": null,
+   "zone": "Orgrimmar"
+  }
+ },
+ "npcs": {
+  "3368": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Borstan",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1602",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
