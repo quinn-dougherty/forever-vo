@@ -1,0 +1,39 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "252378|22fc14cb": {
+   "build": "70334",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Yorana Windyreed",
+   "npc": "252378",
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "Storms curse these Al'Aketh fanatics!",
+   "time": 1791572877,
+   "title": null,
+   "wanted": null,
+   "zone": "Zephras Isle"
+  }
+ },
+ "npcs": {
+  "252378": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478494,
+   "name": "Yorana Windyreed",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-1527",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
