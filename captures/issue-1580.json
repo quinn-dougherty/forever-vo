@@ -1,0 +1,113 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "4321|c5ceacbe": {
+   "build": "70338",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1445,
+   "name": "Baldruc",
+   "npc": "4321",
+   "questID": null,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Where would you like to fly to?",
+   "time": 1791623259,
+   "title": null,
+   "wanted": null,
+   "zone": "Dustwallow Marsh"
+  },
+  "4967|c46890e2": {
+   "build": "70338",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1445,
+   "name": "Archmage Tervosh",
+   "npc": "4967",
+   "questID": null,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Well met, $N. We must be brief because there is much to do.",
+   "time": 1791623060,
+   "title": null,
+   "wanted": null,
+   "zone": "Dustwallow Marsh"
+  }
+ },
+ "npcs": {
+  "4321": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 118355,
+   "name": "Baldruc",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "4967": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 119940,
+   "name": "Archmage Tervosh",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "4968": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 119563,
+   "name": "Lady Jaina Proudmoore",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-1580",
+ "quests": {
+  "1267-complete": {
+   "build": "70338",
+   "class": "Shaman",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1445,
+   "name": "Lady Jaina Proudmoore",
+   "npc": "4968",
+   "questID": 1267,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Let me be first to thank you for all you've done, $N. You have been an incredible blessing to my people and the people of Stormwind. I am sorry I couldn't make your acquaintance under better circumstances.\n\nUnderstand also that I cannot overtly thank you for your efforts, but I assure you again, it is appreciated.\n\nWhen you visit Theramore in the future, seek me out and I shall try to keep you apprised of the situation.\n\nThank you again, $N.",
+   "time": 1791623064,
+   "title": "The Missing Diplomat",
+   "wanted": null,
+   "zone": "Dustwallow Marsh"
+  },
+  "1324-complete": {
+   "build": "70338",
+   "class": "Shaman",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1445,
+   "name": "Archmage Tervosh",
+   "npc": "4967",
+   "questID": 1324,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "I assure you, we're all quite upset about current events, but allow us to take him back to Theramore for some questioning, and we'll see about finding the King.\n\nI'm sure my lady Proudmoore would like to thank you for your help. Speak to her when you have a moment.",
+   "time": 1791623061,
+   "title": "The Missing Diplomat",
+   "wanted": null,
+   "zone": "Dustwallow Marsh"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
