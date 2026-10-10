@@ -16,6 +16,7 @@ pack.gossip = {
 		{ f="68-1cd5e06e", h="1cd5e06e", t="You can find Aldwin Laughlin at the Stormwind Vistor's Center in the Trade District.", d=4.721, v="human-male-official", s={ ["f"]=4.050 } },
 		{ f="68-23729c5d", h="23729c5d", t="Bah, rogues have done nothing but make our job here in Stormwind harder. I wish I could drag both Osborne and Mathias both out of Old Town and right to the Stockade.", d=9.417, v="human-male-official", s={ ["f"]=8.336 } },
 		{ f="68-27751eb6", h="27751eb6", t="Go to the Mage Quarter and seek out Fyrenz Stargazer, just northwest of the mage tower.", d=5.532, v="human-male-official", s={ ["f"]=5.800 } },
+		{ f="68-2b59109b", h="2b59109b", t="A $c?  Hmmm... well, I've heard that Keryn Sylvius hangs around those shady types.  You might want to talk to her and see what you can learn.", d=8.694, v="human-male-official", s={ ["f"]=7.504 } },
 		{ f="68-2d1f1a88", h="2d1f1a88", t="Warriors can usually be found either at the Pig and Whistle Tavern or the Barracks in Old Town. Tell ya though, the tavern is probably a better place look.", d=7.887, v="human-male-official", s={ ["f"]=7.904 } },
 		{ f="68-2e7612e4", h="2e7612e4", t="Sounds like you want to talk to Maginor Dumas! You can usually find him in the Wizard's Sanctum in the Mage Quarter. Course, you never know when or where those magi will portal off to.", d=10.264, v="human-male-official", s={ ["f"]=9.141 } },
 		{ f="68-31050836", h="31050836", t="Well, you can find Theridan or Maldryn by the moonwell in the Park.  Just head to the western area of Stormwind, north of the Mage District, but west of the Cathedral Square.", d=10.325, v="human-male-official", s={ ["f"]=9.687 } },
@@ -27,6 +28,7 @@ pack.gossip = {
 		{ f="68-3d65abf2", h="3d65abf2", t="Jenova Stoneshield over in the Dwarven District is the one you're looking for.  She tends to hunters' pets while they seek training from her father.", d=6.741, v="human-male-official", s={ ["f"]=6.954 } },
 		{ f="68-4128d46a", h="4128d46a", t="Looking for some training, eh? I could train you better then anyone in Stormwind but the guard prohibits it. I guess you will have to settle for one of those has beens hanging out around the Barracks or at the Pig and Whistle Tavern in Old Town.", d=11.322, v="human-male-official", s={ ["f"]=11.355 } },
 		{ f="68-438de950", h="438de950", t="You've heard about the Tram have you?  What a ride that thing is!  You'll find it in the Dwarven District towards the back.  Oh, and be sure to keep your arms and legs inside the tram while the tram is in motion.", d=11.090, v="human-male-official", s={ ["f"]=11.246 } },
+		{ f="68-49dd2419", h="49dd2419", t="Tucked away in the Mage Quarter, there is a little shop called Alchemy Needs.  You're bound to see all sort of strange shops on your way through the Mage Quarter, but if you stick to the outer rim you'll be sure to find it.", d=10.560, v="human-male-official", s={ ["f"]=11.319 } },
 		{ f="68-4dafa94c", h="4dafa94c", t="There's nothing quite like communing with nature... or at least that's what the night elves tell me.  I'm not much for talking to flowers and trees, but I'm sure Tannysa could help you out.  She's over in the Mage Quarter outside of Alchemy Needs.", d=11.395, v="human-male-official", s={ ["f"]=10.631 } },
 		{ f="68-4dbda7fc", h="4dbda7fc", t="In the King's audience chamber you will find the Lady Hoteshem.  She can assist you in getting to Arathi Basin where The League of Arathor is in need of assistance against The Defilers.", d=9.567, v="human-male-official", s={ ["f"]=9.244 } },
 		{ f="68-4e0ec384", h="4e0ec384", t="Which profession trainer are you looking for?", d=2.645, v="human-male-official", s={ ["f"]=2.230 } },
@@ -132,7 +134,7 @@ pack.gossip = {
 		{ f="264-b3b21323", h="b3b21323", t="At ease, $C.  If you are just passing though I suggest you stick to the roads and only travel by day. If your business is here in Darkshire, consider lending your abilities to The Night Watch.  Our skill is unquestionable but our numbers are small.", d=13.880, v="human-female-warrior" },
 	},
 	[265] = {
-		{ f="265-94d9e780", h="94d9e780", t="I have sensed your coming for quite some time, $N.  It was written in the pattern of the stars.", d=7.120, v="human-female-official" },
+		{ f="265-94d9e780", h="94d9e780", t="I have sensed your coming for quite some time, $N.  It was written in the pattern of the stars.", d=7.120, v="human-female-official", s={ ["m"]=6.335 } },
 	},
 	[268] = {
 		{ f="268-0fde333f", h="0fde333f", t="I don't currently know much more about the Valor family than what the book you brought me says.    Perhaps it could lend us some clues as to where we might look.", d=7.088, v="human-male-official" },
@@ -172,7 +174,7 @@ pack.gossip = {
 		{ f="302-994abcf7", h="994abcf7", t="The memory of my beauty makes its loss unbearable!", d=4.531, v="banshee-female" },
 	},
 	[313] = {
-		{ f="313-be6b48f2", h="be6b48f2", t="Welcome to the Tower of Azora, young $C.  I am Theocritus.  Do you have business with me?  Or...do I have business with you, perhaps?", d=9.719, v="human-male-official" },
+		{ f="313-be6b48f2", h="be6b48f2", t="Welcome to the Tower of Azora, young $C.  I am Theocritus.  Do you have business with me?  Or...do I have business with you, perhaps?", d=9.719, v="human-male-official", s={ ["f"]=8.305 } },
 	},
 	[328] = {
 		{ f="328-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=22.647, v="human-male-standard" },
@@ -184,6 +186,7 @@ pack.gossip = {
 		{ f="331-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=17.515, v="human-male-official" },
 		{ f="331-544e5c2b", h="544e5c2b", t="Well met, $c.  My advice to you is this: As you travel the world, be wary of magic for it will burn the untrained.", d=8.463, v="human-male-official" },
 		{ f="331-8fca8484", h="8fca8484", t="If you desire, in addition to training, I have it within my power to erase the knowledge of your talents from your mind.  Be warned that every time you undergo this procedure the more difficult it is to perform, and therefore the more expensive it becomes.", d=14.437, v="human-male-official" },
+		{ f="331-9c6df40b", h="9c6df40b", t="Greetings mage.  Shall I provide you with further insight into the world of magic?", d=5.423, v="human-male-official" },
 		{ f="331-c036be65", h="c036be65", t="Greetings mage.  Shall I provide you with further insight into the world of magic?", d=4.796, v="human-male-official" },
 	},
 	[332] = {
@@ -196,8 +199,9 @@ pack.gossip = {
 		{ f="341-415489c9", h="415489c9", t="I don't have much time for idle talk, MURIN.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=11.945, v="human-male-standard", s={ ["f"]=10.076 } },
 		{ f="341-5d781570", h="5d781570", t="I don't have much time for idle talk, ANAKIN.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=13.186, v="human-male-standard", s={ ["f"]=11.678 } },
 		{ f="341-61263643", h="61263643", t="I don't have much time for idle talk, HGUUL.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=13.653, v="human-male-standard", s={ ["f"]=10.960 } },
-		{ f="341-7ee1dc44", h="7ee1dc44", t="I don't have much time for idle talk, MIKE.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=13.193, v="human-male-standard" },
+		{ f="341-7ee1dc44", h="7ee1dc44", t="I don't have much time for idle talk, MIKE.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=13.193, v="human-male-standard", s={ ["f"]=9.863 } },
 		{ f="341-8dd007ae", h="8dd007ae", t="I don't have much time for idle talk, CAL.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=13.414, v="human-male-standard", s={ ["f"]=10.045 } },
+		{ f="341-a80917b6", h="a80917b6", t="I don't have much time for idle talk, DJINNE.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=13.077, v="human-male-standard", s={ ["f"]=10.489 } },
 		{ f="341-f2cb4ae5", h="f2cb4ae5", t="I don't have much time for idle talk, WAYLANDER.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=11.484, v="human-male-standard", s={ ["f"]=11.069 } },
 	},
 	[342] = {
@@ -207,6 +211,7 @@ pack.gossip = {
 		{ f="342-b3581ed7", h="b3581ed7", t="Hail, FROSTY!  Welcome to my humble garden.  The weather has been perfect lately.  Let us hope it holds steady for a ripe harvest.", d=8.040, v="human-female-warrior" },
 		{ f="342-c3b776bb", h="c3b776bb", t="Hail, SHOOTING!  Welcome to my humble garden.  The weather has been perfect lately.  Let us hope it holds steady for a ripe harvest.", d=7.760, v="human-female-warrior" },
 		{ f="342-e1667b79", h="e1667b79", t="Hail, CITROUS!  Welcome to my humble garden.  The weather has been perfect lately.  Let us hope it holds steady for a ripe harvest.", d=7.920, v="human-female-warrior" },
+		{ f="342-e8fc6f6d", h="e8fc6f6d", t="Hail, ISALARA!  Welcome to my humble garden.  The weather has been perfect lately.  Let us hope it holds steady for a ripe harvest.", d=8.080, v="human-female-warrior" },
 	},
 	[344] = {
 		{ f="344-d18fd3a5", h="d18fd3a5", t="Who is this $c who goes before the Court of Lakshire in the Kingdom of Stormwind?  State your business within this township, $R.  The orc threat to the Kingdom is far too great to squander time in idle conversation.", d=12.846, v="human-male-official" },
@@ -371,6 +376,9 @@ pack.gossip = {
 	[738] = {
 		{ f="738-00545e9d", h="00545e9d", t="This is a dangerous place, $N. Be careful around here.", d=5.548, v="human-male-standard" },
 	},
+	[773] = {
+		{ f="773-30546fd3", h="30546fd3", t="$C, eh? I am Krazek, Baron Revilgaz's secretary. I know everything about the goings on in this jungle and beyond. Perhaps you'd be interested in knowing the going price on oil in Ratchet? No? Looking for work, maybe? I can help you there.", d=14.442, v="goblin-male-zany" },
+	},
 	[786] = {
 		{ f="786-b76e4f1a", h="b76e4f1a", t="Greetings, lad. I'm Grelin Whitebeard. I'm here to examine the threat posed by the growing numbers of trolls in Coldridge Valley. What have I found? It's a bit troubling...", d=17.560, v="dwarf-male-guard" },
 	},
@@ -532,6 +540,9 @@ pack.gossip = {
 		{ f="1215-ca38a19f", h="ca38a19f", t="You've made a good start, but you still have a great deal to learn, $n.", d=4.806, v="human-male-official" },
 		{ f="1215-d0b84990", h="d0b84990", t="You've already learned everything I can teach you, $n. Talk to the night elf Lilyssia Nightbreeze in the Mage Quarter of Stormwind if you want to continue your studies. I hear she's a good teacher.", d=10.826, v="human-male-official" },
 	},
+	[1217] = {
+		{ f="1217-980ce69c", h="980ce69c", t="Harumph!  As if I don't have enough to do out here in the muck, without all these distractions!", d=5.480, v="dwarf-male-standard" },
+	},
 	[1226] = {
 		{ f="1226-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=22.710, v="dwarf-male-standard" },
 		{ f="1226-1294365c", h="1294365c", t="The Light protect you, $c.", d=2.560, v="dwarf-male-standard" },
@@ -573,6 +584,7 @@ pack.gossip = {
 		{ f="1241-4a926ca6", h="4a926ca6", t="Good day to ye lad. Can I be of service?", d=3.720, v="dwarf-male-guard" },
 		{ f="1241-91b167bf", h="91b167bf", t="Here for training eh? Just began my training meself, but I would be glad ta teach ye what I can.", d=8.880, v="dwarf-male-guard" },
 		{ f="1241-92c8fd4d", h="92c8fd4d", t="Ye learn fast $g lad : lass;, much faster than I can keep up with. If ye want ta continue yer training, I suggest ye see my teacher. His name's Rotgath, Rotgath Stonebeard and ye'll find him in Ironforge at The Great Forge.", d=17.600, v="dwarf-male-guard", g=true },
+		{ f="1241-9a68c288", h="9a68c288", t="Good day to ye lass. Can I be of service?", d=4.400, v="dwarf-male-guard" },
 	},
 	[1243] = {
 		{ f="1243-e3f843f4", h="e3f843f4", t="Hegnar Rumbleshot, at your service!", d=3.560, v="dwarf-male-guard" },
@@ -607,6 +619,7 @@ pack.gossip = {
 	},
 	[1261] = {
 		{ f="1261-74b255a9", h="74b255a9", t="You've not had a steed until you've taken the reigns of a finely bred Barak Tor'ol mountain ram, my friend.  Please, feel free to inspect these fine companions to any adventurer.  They'll serve you well, believe me.", d=13.920, v="dwarf-male-standard" },
+		{ f="1261-8ff1b0d7", h="8ff1b0d7", t="Ho, friend! I'd be happy to offer you a riding ram, but first you should train with Ultham over there. These stout beauties are not easily ridden, but once you know how to ride one you will not find a better companion.", d=14.920, v="dwarf-male-standard" },
 		{ f="1261-d31143aa", h="d31143aa", t="Not so fast, $g guy : lady;... I'll not be handing out the reigns of a mighty ram steed to someone that's not a proven ally of the dwarves of Ironforge.  Once you've been recognized as exalted to Ironforge, I'll gladly show you what varieties of rams I have for sale.", d=15.520, v="dwarf-male-standard", g=true },
 	},
 	[1265] = {
@@ -633,6 +646,7 @@ pack.gossip = {
 		{ f="1289-fe52f4ea", h="fe52f4ea", t="Just browsing my wares or is there something specific I can help you find today?", d=5.333, v="human-male-warrior" },
 	},
 	[1292] = {
+		{ f="1292-aebd25b1", h="aebd25b1", t="Do I look like I have the time or energy to coddle every tourist that wanders through my door? Tell me what you need, and make it quick.", d=6.720, v="human-female-warrior" },
 		{ f="1292-ec1a6e0b", h="ec1a6e0b", t="I don't get too many Skinners in here looking for training, but I guess I could teach you something if you're ready.", d=4.920, v="human-female-warrior" },
 	},
 	[1294] = {
@@ -847,7 +861,7 @@ pack.gossip = {
 		{ f="1423-29183583", h="29183583", t="Erma does all the caring for animals around here.  She's right outside the Lion's Pride Inn if you need to speak with her.", d=6.285, v="human-male-official", s={ ["f"]=5.937 } },
 		{ f="1423-3ee43388", h="3ee43388", t="I believe Aldwin Laughlin is still the resident Guild Master of Stormwind.  Look for his residence on your left as you pass the inner gate of Stormwind.", d=9.684, v="human-male-official", s={ ["f"]=8.189 } },
 		{ f="1423-444794a8", h="444794a8", t="You can usually find Brother Wilhelm in back of the smithy trading stories with Lyria.  He's always up for teaching fellow paladins new skills.", d=7.818, v="human-male-official", s={ ["f"]=7.019 } },
-		{ f="1423-47f10f16", h="47f10f16", t="Brother Wilhelm often trains with Lyria Du Lac out in back of the smithy in Goldshire.  You could probably learn a thing or two about being a paladin from him.", d=8.801, v="human-male-official" },
+		{ f="1423-47f10f16", h="47f10f16", t="Brother Wilhelm often trains with Lyria Du Lac out in back of the smithy in Goldshire.  You could probably learn a thing or two about being a paladin from him.", d=8.801, v="human-male-official", s={ ["f"]=8.953 } },
 		{ f="1423-4a03dc79", h="4a03dc79", t="I've heard that there's a dwarf in Stormwind who has achieved some fame for his hunting skill.  Maybe you should go see if he could help you.", d=6.943, v="human-male-official", s={ ["f"]=6.701 } },
 		{ f="1423-4de40afd", h="4de40afd", t="A rogue?  Hmmm... well, I've heard that Keryn Sylvius hangs around those shady types.  You might want to talk to her and see what you can learn.", d=8.381, v="human-male-official", s={ ["f"]=7.723 } },
 		{ f="1423-4e49ac21", h="4e49ac21", t="There are quite a few trainers available in Elwynn.  Which one are you looking for?", d=4.236, v="human-male-official", s={ ["f"]=3.687 } },
@@ -1612,7 +1626,7 @@ pack.gossip = {
 		{ f="1992-05f55f8a", h="05f55f8a", t="Only in Nature do we find purity.", d=2.760, v="dryad-female" },
 	},
 	[2055] = {
-		{ f="2055-288436fb", h="288436fb", t="The Royal Apothecary Society shall heed The Dark Lady's call to uncover the New Plague and drive Arthas and his heathen Scourge Army from the world once and for all.", d=13.960, v="scourge-male-standard" },
+		{ f="2055-288436fb", h="288436fb", t="The Royal Apothecary Society shall heed The Dark Lady's call to uncover the New Plague and drive Arthas and his heathen Scourge Army from the world once and for all.", d=13.960, v="scourge-male-standard", s={ ["f"]=14.240 } },
 	},
 	[2057] = {
 		{ f="2057-03d49bcb", h="03d49bcb", t="Are you here to help with the delivery? Miran's just about ready.", d=3.360, v="dwarf-male-grim" },
@@ -1695,6 +1709,7 @@ pack.gossip = {
 		{ f="2131-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=23.590, v="scourge-male-warrior" },
 		{ f="2131-a3cf0f26", h="a3cf0f26", t="The warrior's role is one of protection.  Just as we protect our compatriots in battle, we must also protect the interests of the Forsaken.", d=11.000, v="scourge-male-warrior" },
 		{ f="2131-aa3ace82", h="aa3ace82", t="Do not waste my time, $c.", d=3.000, v="scourge-male-warrior" },
+		{ f="2131-ed01dd60", h="ed01dd60", t="The warrior's role is one of protection.  Just as we protect our compatriots in battle, we must also protect the interests of the Forsaken.", d=9.040, v="scourge-male-warrior" },
 	},
 	[2132] = {
 		{ f="2132-2626d93e", h="2626d93e", t="Here to learn about potions? I've got plenty to teach you. I might be dead, but I haven't lost my brains. Yet.", d=10.480, v="scourge-female-magic" },
@@ -1705,6 +1720,7 @@ pack.gossip = {
 		{ f="2151-bdcb2ee4", h="bdcb2ee4", t="Hail, $C.  The roads of our fair forest are not entirely without peril.  Tread cautiously.", d=8.200, v="nightelf-female-priestess" },
 	},
 	[2198] = {
+		{ f="2198-6c0228ac", h="6c0228ac", t="Your legacy precedes you, $c. If you wish, I can allow you to rewrite that legacy into something new.", d=7.593, v="human-male-standard" },
 		{ f="2198-dc8290dc", h="dc8290dc", t="Greetings and salutations, hero!  I have the latest news from both continents and points beyond for your consideration.", d=8.474, v="human-male-standard" },
 	},
 	[2209] = {
@@ -1817,6 +1833,9 @@ pack.gossip = {
 	[2239] = {
 		{ f="2239-4513b5ec", h="4513b5ec", t="Do you mock me while I am unable to defend myself, bound to this ball of iron?", d=7.920, v="orc-male-guard" },
 		{ f="2239-7c058ec5", h="7c058ec5", t="One of the humans has the key to this infernal contraption. Eston I think they said his name was.", d=10.720, v="orc-male-guard" },
+	},
+	[2277] = {
+		{ f="2277-985afd1f", h="985afd1f", t="Hello, $N! What can I do for you?", d=2.407, v="human-male-official" },
 	},
 	[2299] = {
 		{ f="2299-c5ceacbe", h="c5ceacbe", t="Where would you like to fly to?", d=2.080, v="dwarf-male-standard" },
@@ -1984,6 +2003,7 @@ pack.gossip = {
 		{ f="2456-105cd232", h="105cd232", t="No one's ever stolen anything out of here. Not in the whole history of... the whole history!", d=6.383, v="human-male-standard" },
 		{ f="2456-2237a3b1", h="2237a3b1", t="Welcome to the Bank of Stormwind. We offer financial accounts and safety deposit boxes for valuable items. Do you already have an account with us sir?", d=10.273, v="human-male-standard" },
 		{ f="2456-34824363", h="34824363", t="Welcome to the Bank of Stormwind. We offer financial accounts and safety deposit boxes for valuable items. Do you already have an account with us $g sir : ma'am;?", d=10.273, v="human-male-standard", g=true },
+		{ f="2456-6928abbf", h="6928abbf", t="Welcome to the Bank of Stormwind. We offer financial accounts and safety deposit boxes for valuable items. Do you already have an account with us ma'am?", d=10.318, v="human-male-standard" },
 	},
 	[2457] = {
 		{ f="2457-105cd232", h="105cd232", t="No one's ever stolen anything out of here. Not in the whole history of... the whole history!", d=6.182, v="human-male-official" },
@@ -2033,6 +2053,9 @@ pack.gossip = {
 		{ f="2704-15da2919", h="15da2919", t="Heya mon.  You come right place learn how ta wield a new weapon.", d=5.240, v="troll-male-dark" },
 		{ f="2704-f0975974", h="f0975974", t="Ansekhwa, da tauren weapon master, is on da Thunder Bluff lower rise.  He teach one and two-handed maces, staves and guns.    Archibald, da undead weapon master in da War Quarter of da Undercity, train good with crossbows, daggers, one and two-handed swords and polearms.    Sayoc, da ugly orc right here, can teach da ways of bows, daggers, fist weapons, one and two-handed axes and thrown weapons mon.", d=34.590, v="troll-male-dark" },
 	},
+	[2705] = {
+		{ f="2705-e5331e82", h="e5331e82", t="Brewmeister Bilger brews only the best brew!  Woohoo!", d=3.880, v="dwarf-male-standard" },
+	},
 	[2706] = {
 		{ f="2706-368f0fed", h="368f0fed", t="Thanks to the Warchief, even here in the ruins of our former prison, some hope remains, and the Horde rises anew.", d=7.520, v="troll-male-shaman" },
 	},
@@ -2062,6 +2085,9 @@ pack.gossip = {
 	},
 	[2817] = {
 		{ f="2817-de8ac2c8", h="de8ac2c8", t="You must be hard up to be wandering these Badlands, $c.  Hard up like me.  Or maybe you're here because you're crazy.  Crazy, like me.", d=10.833, v="goblin-male-gruff" },
+	},
+	[2832] = {
+		{ f="2832-78a6229e", h="78a6229e", t="First drink's on me! The coin to pay for it, that is. On my hand. From you.", d=6.320, v="goblin-male-guard" },
 	},
 	[2834] = {
 		{ f="2834-279d82d3", h="279d82d3", t="Your skill exceeds mine, though  I've heard that Old Man Heming in Booty Bay has copies of \"The Bass and You\".  That is sure to help you increase your skill.", d=11.120, v="goblin-male-guard" },
@@ -2148,9 +2174,11 @@ pack.gossip = {
 		{ f="2995-bfaf54b7", h="bfaf54b7", t="When mounted on the back of a wind rider, one sees that its reputation for strength and speed is well earned.", d=6.167, v="tauren-male-warrior" },
 	},
 	[2998] = {
+		{ f="2998-0b7fce91", h="0b7fce91", t="You have the look of a woman who seeks knowledge. Perhaps you seek the teachings of the forge, and the hammer. Perhaps I can guide you down that path. But only once you have accepted the spirits, and listened to their calling.", d=18.280, v="tauren-male-elder" },
 		{ f="2998-19ec09c0", h="19ec09c0", t="Everything has a spirit, if you learn to listen to it you can get it to take any shape you want. Blacksmithing isn't about beating metal, forcing it to do your will. It's about listening to the spirit within the steel and guiding it to the shape you know it wants to take.", d=20.080, v="tauren-male-elder" },
 		{ f="2998-1b89f16f", h="1b89f16f", t="You have the look of a $g man : woman; who seeks knowledge. Perhaps you seek the teachings of the forge, and the hammer. Perhaps I can guide you down that path. But only once you have accepted the spirits, and listened to their calling.", d=18.400, v="tauren-male-elder", g=true },
 		{ f="2998-d12d69b6", h="d12d69b6", t="You have learned much, but I sense that there is more left for the spirits to teach you. I can place your foot on the path but cannot guide your steps. Go and find Saru Steelfury in Orgrimmar, the next stretch of your journey begins there.", d=22.720, v="tauren-male-elder" },
+		{ f="2998-d71c40e9", h="d71c40e9", t="You have great potential, but you must achieve understanding first, you must accept the spirits and listen to their calling. Only then will you be prepared for the path you must follow. Go speak with Thrag, I think perhaps you can learn a lot from one another.", d=22.200, v="tauren-male-elder" },
 	},
 	[3001] = {
 		{ f="3001-58405dcd", h="58405dcd", t="Greetings.", d=1.400, v="tauren-male-elder" },
@@ -2285,7 +2313,7 @@ pack.gossip = {
 	[3048] = {
 		{ f="3048-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=26.990, v="scourge-female-magic" },
 		{ f="3048-4670f054", h="4670f054", t="Greetings.  I'm an undead mage trainer, and you're a mage.", d=4.480, v="scourge-female-magic" },
-		{ f="3048-544e5c2b", h="544e5c2b", t="Well met, $c.  My advice to you is this: As you travel the world, be wary of magic for it will burn the untrained.", d=11.360, v="scourge-female-magic" },
+		{ f="3048-544e5c2b", h="544e5c2b", t="Well met, $c.  My advice to you is this: as you travel the world, be wary of magic for it will burn the untrained.", d=11.360, v="scourge-female-magic" },
 	},
 	[3049] = {
 		{ f="3049-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=28.350, v="scourge-male-warrior" },
@@ -2982,7 +3010,7 @@ pack.gossip = {
 		{ f="3224-fac317f1", h="fac317f1", t="Using the fruits of the Earth Mother to create potions to aid us in our eternal struggle is an honorable endeavor.  To learn of this you must travel north to our great home of Thunder Bluff.  When you arrive at the top seek out the assistance of one of the Bluffwatchers for more specific directions.", d=14.133, v="tauren-male-warrior" },
 	},
 	[3230] = {
-		{ f="3230-3b64a31f", h="3b64a31f", t="<Nazgrel grunts as he sizes you up.>    High Elves, here in Orgrimmar. I'd never bet on such a thing happening in my lifetime, but at this point nothing is surprising to me.    Yes, the Warchief instructed me to draft up instructions for you. Take this letter and follow the instructions within. Conduct yourself with honor and show due deference when you meet with our leaders, elf.    Once you've finished your journey, return to the Warchief.", d=30.244, v="orc-male-standard", P={ { d=2.760, n=true }, { d=29.897 } }, nP={ [1]={ [1]=3.080 } } },
+		{ f="3230-3b64a31f", h="3b64a31f", t="<Nazgrel grunts as he sizes you up.>    High elves, here in Orgrimmar. I'd never bet on such a thing happening in my lifetime, but at this point nothing is surprising to me.    Yes, the Warchief instructed me to draft up instructions for you. Take this letter and follow the instructions within. Conduct yourself with honor and show due deference when you meet with our leaders, elf.    Once you've finished your journey, return to the Warchief.", d=30.244, v="orc-male-standard", P={ { d=2.760, n=true }, { d=29.897 } }, nP={ [1]={ [1]=3.080 } } },
 		{ f="3230-8d5031bd", h="8d5031bd", t="Mind yourself in the presence of the Warchief, $c. The Kor'kron will suffer no insolence or insult here.", d=7.995, v="orc-male-standard" },
 	},
 	[3290] = {
@@ -3175,6 +3203,7 @@ pack.gossip = {
 	[3353] = {
 		{ f="3353-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=28.110, v="orc-male-guard" },
 		{ f="3353-128c5191", h="128c5191", t="Are you here for training?  Or are you just here to waste a warrior's time.", d=6.760, v="orc-male-guard" },
+		{ f="3353-640f312b", h="640f312b", t="Are you here for training?  Or are you just here to waste a warrior's time.", d=7.200, v="orc-male-guard" },
 		{ f="3353-97f614be", h="97f614be", t="I don't train your kind $c.  Find your own trainer before you anger me.", d=8.120, v="orc-male-guard" },
 	},
 	[3354] = {
@@ -3246,6 +3275,7 @@ pack.gossip = {
 	},
 	[3403] = {
 		{ f="3403-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=27.867, v="troll-female-old" },
+		{ f="3403-8fca8484", h="8fca8484", t="If you desire, in addition to training, I have it within my power to erase the knowledge of your talents from your mind.  Be warned that every time you undergo this procedure the more difficult it is to perform, and therefore the more expensive it becomes.", d=21.674, v="troll-female-old" },
 		{ f="3403-c189082e", h="c189082e", t="Da spirits be strong wit you, mon. What kin dis troll do for ya?", d=6.735, v="troll-female-old" },
 		{ f="3403-d54272c7", h="d54272c7", t="May da spirits protect you mon.", d=4.122, v="troll-female-old" },
 	},
@@ -3256,6 +3286,7 @@ pack.gossip = {
 	},
 	[3407] = {
 		{ f="3407-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=27.748, v="troll-female-laidback" },
+		{ f="3407-2a1798f1", h="2a1798f1", t="Come learn the ways of the hunter. Pride, honor, and tradition.", d=5.172, v="troll-female-laidback" },
 		{ f="3407-34e5b6e7", h="34e5b6e7", t="Come learn the ways of the hunter. Pride, honor, and tradition.", d=5.131, v="troll-female-laidback" },
 		{ f="3407-515c0157", h="515c0157", t="Hey mon, you be needin' to head on over to da $c trainer.", d=5.980, v="troll-female-laidback" },
 	},
@@ -3272,7 +3303,7 @@ pack.gossip = {
 		{ f="3412-fe9433e2", h="fe9433e2", t="Every day is a test, and this day is no different. If you pass this test, I will share some of my knowledge...", d=9.012, v="goblin-male-gruff" },
 	},
 	[3413] = {
-		{ f="3413-c879b3f9", h="c879b3f9", t="Hello, $N! If you don't see it in my shop, chances are good I can get it!", d=5.510, v="goblin-male-zany" },
+		{ f="3413-c879b3f9", h="c879b3f9", t="Hello, $N! If you don't see it in my shop, chances are good I can get it!", d=5.510, v="goblin-male-zany", s={ ["f"]=5.680 } },
 	},
 	[3419] = {
 		{ f="3419-dabc0513", h="dabc0513", t="For our people to survive, we must study the ways of nature and learn its secrets.", d=6.840, v="scourge-female-magic", s={ ["m"]=7.240 } },
@@ -3282,8 +3313,8 @@ pack.gossip = {
 	},
 	[3430] = {
 		{ f="3430-0e16a4d2", h="0e16a4d2", t="You! $R! Come here. <snort>  Time is short, and my end <snort> is near. Mangletooth shall win; you will see. <snort>  My capture can still aid <snort> my people. The Razormane tribe is more powerful than the Bristlebacks!  The Horde looks to find out who leads the raids on their people. You <snort> shall aid Mangletooth in return for the information only I know. Mangletooth can help you! <snort> But you must help Mangletooth.", d=25.040, v="quillboar-male" },
-		{ f="3430-71e13f0e", h="71e13f0e", t="My hatred is strong <snort>, but the time is right to tell you a tale, $r.  Long ago a battle took place between gods. Agamaggan, our great boar god, fell to the earth after being defeated in the War of the Ancients, his blood raining down and his bones torn asunder. <snort>  Great thorns reached up out of the earth where his blood touched the ground, and his skull adorns one of the caverns to the south.", d=27.699, v="human-male" },
-		{ f="3430-d6fdd5ef", h="d6fdd5ef", t="You have <snort> aided Mangletooth more than I would have dreamed, $r.$B$BThank you.$B$BAs long as I remain a captive here, you may bring me blood shards from the Bristleback quilboar and I will bless you with Agamaggan's power.", d=12.992, v="human-male" },
+		{ f="3430-71e13f0e", h="71e13f0e", t="My hatred is strong <snort>, but the time is right to tell you a tale, $r.  Long ago a battle took place between gods. Agamaggan, our great boar god, fell to the earth after being defeated in the War of the Ancients, his blood raining down and his bones torn asunder. <snort>  Great thorns reached up out of the earth where his blood touched the ground, and his skull adorns one of the caverns to the south.", d=25.444, v="quillboar-male" },
+		{ f="3430-d6fdd5ef", h="d6fdd5ef", t="You have <snort> aided Mangletooth more than I would have dreamed, $r.$B$BThank you.$B$BAs long as I remain a captive here, you may bring me blood shards from the Bristleback quilboar and I will bless you with Agamaggan's power.", d=9.899, v="quillboar-male" },
 	},
 	[3432] = {
 		{ f="3432-c1a3099b", h="c1a3099b", t="I came to the Crossroads from the south seeking help, $c, but I find only cowards who turn their backs on me--even the mighty Thork insults me so. He is a good leader, but his dismissal of my plea causes me greater anger.  He claims my rage makes me hasty--that it clouds my judgement--but I will not rest until I have vengeance!", d=31.110, v="orc-male-guard" },
@@ -3331,6 +3362,7 @@ pack.gossip = {
 		{ f="3494-35482387", h="35482387", t="I'm afraid you're out of my league, friend! You should go see Nogg in Orgrimmar, he'll take you to the next level!", d=7.240, v="goblin-male-guard" },
 		{ f="3494-394f8d74", h="394f8d74", t="I can't help ya'! You're ready to see someone who's been at it longer than I have! Let's see... you're an Alliance type, so you need to talk to Lilliam Sparkspindle in Stormwind.", d=12.600, v="goblin-male-guard" },
 		{ f="3494-76e6815c", h="76e6815c", t="Yeah, I'll show you a few things. We'll see how you do, maybe you'll surprise me!", d=5.960, v="goblin-male-guard" },
+		{ f="3494-a323d91f", h="a323d91f", t="I got nothin' more to teach! Not for somebody who knows as much as you do, anyway! You Horde types need to talk to Nogg in Orgrimmar!", d=10.400, v="goblin-male-guard" },
 		{ f="3494-de5515fe", h="de5515fe", t="What? You want something?", d=1.920, v="goblin-male-guard" },
 	},
 	[3516] = {
@@ -3600,6 +3632,9 @@ pack.gossip = {
 	[3845] = {
 		{ f="3845-10ec66f1", h="10ec66f1", t="We elves have a long history.  Let us hope this history does not return to haunt us.", d=5.895, v="nightelf-female-sentinel" },
 	},
+	[3848] = {
+		{ f="3848-416c9861", h="416c9861", t="The balance of nature is a delicate one, and easily tipped.  Are you brave enough to make things right?", d=10.440, v="nightelf-male-official" },
+	},
 	[3849] = {
 		{ f="3849-3e05566a", h="3e05566a", t="At last! Someone to free me from this cell!$b$bHigh Executor Hadrec sent us to gather information on the Keep so that a plan could be formulated to overthrow Arugal once and for all.$b$bBut the old wizard has many tricks up his sleeve and we were detected by a magical ward. I was thrown in this prison. Vincent was not so lucky.$b$bI must return to Hadrec to debrief him at once. But first I will pick the lock to the courtyard door for you. Perhaps you can try your luck against the foes that lurk beyond.", d=41.430, v="scourge-male-warrior" },
 	},
@@ -3848,12 +3883,14 @@ pack.gossip = {
 		{ f="4219-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=23.788, v="nightelf-male-warrior" },
 		{ f="4219-0acc4508", h="0acc4508", t="Welcome, my $g brother : sister;.  If you are here to train, then I would be delighted to train you.$B$BThere are rumors of strife within the Cenarion Circle, but you should pay such loose talk no heed.  Our Arch Druid, Fandral Staghelm, leads us and all of Teldrassil to glory!", d=23.434, v="nightelf-male-warrior", g=true },
 		{ f="4219-34f0a84a", h="34f0a84a", t="Welcome, my sister.  If you are here to train, then I would be delighted to train you.  There are rumors of strife within the Cenarion Circle, but you should pay such loose talk no heed.  Our Arch Druid, Fandral Staghelm, leads us and all of Teldrassil to glory!", d=21.091, v="nightelf-male-warrior" },
+		{ f="4219-8fca8484", h="8fca8484", t="If you desire, in addition to training, I have it within my power to erase the knowledge of your talents from your mind.  Be warned that every time you undergo this procedure the more difficult it is to perform, and therefore the more expensive it becomes.", d=17.738, v="nightelf-male-warrior" },
 		{ f="4219-cb3f3465", h="cb3f3465", t="The blessings of Cenarius be yours, $c.  Our leader, Arch Druid Staghelm, guides us and all of Teldrassil to a renewed life!", d=11.273, v="nightelf-male-warrior" },
 	},
 	[4241] = {
 		{ f="4241-b0e0696e", h="b0e0696e", t="It is my honor to provide for adventurers, for they are heroes in the making.", d=6.000, v="nightelf-male-official" },
 	},
 	[4256] = {
+		{ f="4256-d1bed30c", h="d1bed30c", t="If you ask me, there's no greater profession than a miner.  And if you ask me, there's no greater miner than a dwarf!", d=10.600, v="dwarf-male-guard" },
 		{ f="4256-ec4d19c0", h="ec4d19c0", t="If you ask me, there's no greater profession than a miner.  And if you ask me, there's no greater miner than a dwarf!", d=9.240, v="dwarf-male-guard" },
 	},
 	[4258] = {
@@ -3979,6 +4016,9 @@ pack.gossip = {
 	},
 	[4452] = {
 		{ f="4452-a84fd61d", h="a84fd61d", t="Come a little closer.  We have important matters to discuss, you and I.  And some of them we don't want everyone to hear...", d=6.240, v="dwarf-male-grim" },
+	},
+	[4453] = {
+		{ f="4453-f1c43d2c", h="f1c43d2c", t="Be careful where you put that foot of yours, mister. We're not all blessed with the lofty height of a $r.", d=4.578, v="gnome-male-zany" },
 	},
 	[4456] = {
 		{ f="4456-0be64368", h="0be64368", t="No, Longears isn't my real name.  And I'm not going to tell you what it is, so don't ask.", d=6.680, v="bloodelf-female" },
@@ -4244,7 +4284,7 @@ pack.gossip = {
 		{ f="4885-fccbd4ef", h="fccbd4ef", t="Sorry, but I am not disposed to sell horses to any individual who is not considered to be at least exalted to the Kingdom of Stormwind.  These steeds are the finest you'll find anywhere, and we certainly wouldn't want them in the hands of our enemies.$B$BNot saying you're an enemy, of course... just earn the trust of Stormwind and then we can do business.", d=22.859, v="human-male-warrior" },
 	},
 	[4895] = {
-		{ f="4895-8ee6c481", h="8ee6c481", t="He'll bring you mead$bHe'll bring you beer$bA grinning face from ear to ear$bHe's served us all from year to year$bWe call him Smiling Jim.", d=8.938, v="human-male-standard" },
+		{ f="4895-8ee6c481", h="8ee6c481", t="He'll bring you mead He'll bring you beer A grinning face from ear to ear He's served us all from year to year We call him Smiling Jim.", d=8.938, v="human-male-standard" },
 	},
 	[4900] = {
 		{ f="4900-6b1b64a8", h="6b1b64a8", t="Stop giving me that look. I may not be an adventurer like you, but that doesn't mean I can't have a few muscles. All that stirring makes your arms strong.", d=8.532, v="human-male-official" },
@@ -4377,6 +4417,7 @@ pack.gossip = {
 		{ f="5141-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=21.030, v="dwarf-male-grim" },
 		{ f="5141-1294365c", h="1294365c", t="The Light protect you, $c.", d=2.200, v="dwarf-male-grim" },
 		{ f="5141-5d01ce11", h="5d01ce11", t="I hope the Light is with you, $n. Is there anything I can do for you today?", d=5.000, v="dwarf-male-grim" },
+		{ f="5141-89544397", h="89544397", t="Serve the Light well, $c.", d=3.440, v="dwarf-male-grim" },
 	},
 	[5142] = {
 		{ f="5142-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=18.182, v="dwarf-female-maternal" },
@@ -4550,7 +4591,7 @@ pack.gossip = {
 	[5489] = {
 		{ f="5489-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=22.139, v="human-male-standard" },
 		{ f="5489-3df2cbb2", h="3df2cbb2", t="Do not turn your back on the Light, $c, it may be the one thing that saves you some day.", d=6.351, v="human-male-standard" },
-		{ f="5489-bab8ec77", h="bab8ec77", t="I trust the Light is with you, $n. Is there something that I can I help you with?", d=5.994, v="human-male-standard" },
+		{ f="5489-bab8ec77", h="bab8ec77", t="I trust the Light is with you, $N. Is there something that I can I help you with?", d=5.994, v="human-male-standard" },
 	},
 	[5491] = {
 		{ f="5491-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=19.986, v="human-male-official" },
@@ -4602,7 +4643,7 @@ pack.gossip = {
 	},
 	[5500] = {
 		{ f="5500-0bcb7e4c", h="0bcb7e4c", t="Ishnu-alah, brother. Have you any tidings from abroad? My heart yearns for news of Teldrassil.", d=6.680, v="nightelf-male-standard" },
-		{ f="5500-52c0a909", h="52c0a909", t="I am honored to share my knowledge with you, $n. See that you use it well.", d=8.240, v="nightelf-male-standard" },
+		{ f="5500-52c0a909", h="52c0a909", t="I am honored to share my knowledge with you, $N. See that you use it well.", d=8.240, v="nightelf-male-standard" },
 		{ f="5500-6ed4e4f6", h="6ed4e4f6", t="Ishnu-alah, $gbrother:sister;. Have you any tidings from abroad? My heart yearns for news of Teldrassil.", d=9.000, v="nightelf-male-standard", g=true },
 		{ f="5500-ae60e9f0", h="ae60e9f0", t="Ishnu-alah, sister. Have you any tidings from abroad? My heart yearns for news of Teldrassil.", d=7.000, v="nightelf-male-standard" },
 		{ f="5500-e64e6f5e", h="e64e6f5e", t="You must choose a more experienced teacher, for you have surpassed my abilities. I advise you to speak with Lilyssia Nightbreeze here: she has much knowledge to offer.", d=11.040, v="nightelf-male-standard" },
@@ -4624,6 +4665,7 @@ pack.gossip = {
 		{ f="5504-8fca8484", h="8fca8484", t="If you desire, in addition to training, I have it within my power to erase the knowledge of your talents from your mind.  Be warned that every time you undergo this procedure the more difficult it is to perform, and therefore the more expensive it becomes.", d=15.320, v="nightelf-male-standard" },
 		{ f="5504-a2527c6f", h="a2527c6f", t="Welcome, my brother.  If you are here to train, then I would be delighted to train you.  There will be a time soon where the call of the Emerald Dream will take hold in you.  You will hibernate for many years and walk amongst the purest of forms.  It is there and then that your ultimate training will take place.", d=19.510, v="nightelf-male-standard" },
 		{ f="5504-cf843c85", h="cf843c85", t="Even within cold, stone walls such as the ones that shelter this town, one may find tranquility and peace.  In fact, you may find them everywhere you are... simply look inside yourself for such balance.", d=15.000, v="nightelf-male-standard" },
+		{ f="5504-e653c173", h="e653c173", t="Welcome, my sister.  If you are here to train, then I would be delighted to train you.  There will be a time soon where the call of the Emerald Dream will take hold in you.  You will hibernate for many years and walk amongst the purest of forms.  It is there and then that your ultimate training will take place.", d=22.670, v="nightelf-male-standard" },
 		{ f="5504-e9881eb9", h="e9881eb9", t="Welcome, my $g brother : sister;.  If you are here to train, then I would be delighted to train you.$B$BThere will be a time soon where the call of the Emerald Dream will take hold in you.  You will hibernate for many years and walk amongst the purest of forms.  It is there and then that your ultimate training will take place.", d=21.550, v="nightelf-male-standard", g=true },
 	},
 	[5505] = {
@@ -4647,8 +4689,10 @@ pack.gossip = {
 	},
 	[5511] = {
 		{ f="5511-5ca9cced", h="5ca9cced", t="Ye have the look of a Blacksmith to ye. Soot under the nails, steel in yer bones. Aye, very much the blood of a Blacksmith in yer veins. Which means ye've come to me looking to learn a thing or two, well lad grab a hammer. Let's see what I can teach ye.", d=17.640, v="dwarf-male-guard" },
+		{ f="5511-61592d6f", h="61592d6f", t="Ye have the look of a Blacksmith to ye. Soot under the nails, steel in yer bones. Aye, very much the blood of a Blacksmith in yer veins. Which means ye've come to me looking to learn a thing or two, well lass grab a hammer. Let's see what I can teach ye.", d=16.680, v="dwarf-male-guard" },
 		{ f="5511-706ad084", h="706ad084", t="Ye have some skill about ye with hammer and anvil, but not enough. Go speak to Dane Lindgren, he'll get ye ready to learn what I have to teach ye.", d=9.720, v="dwarf-male-guard" },
 		{ f="5511-a7d766be", h="a7d766be", t="So ye want to be a Blacksmith eh? Grab an apron and a hammer $g lad : lass;, let's see what ye've got.", d=7.760, v="dwarf-male-guard", g=true },
+		{ f="5511-ca01cc0f", h="ca01cc0f", t="So ye want to be a Blacksmith eh? Grab an apron and a hammer lad, let's see what ye've got.", d=7.520, v="dwarf-male-guard" },
 		{ f="5511-cbb91364", h="cbb91364", t="I said ye had the blood of a blacksmith in ye, and I was right. Go to Ironforge, to The Great Forge, and find yerself a Dwarven smith by the name of Bengus Deepforge. My teacher, and one of the greatest smiths I've ever known.", d=16.920, v="dwarf-male-guard" },
 	},
 	[5512] = {
@@ -4724,6 +4768,7 @@ pack.gossip = {
 		{ f="5595-1c500d9f", h="1c500d9f", t="Skinning?  The only thing ye look like ye could skin is yer own knee!  Ha!  Now why don't you go see Balthus Stoneflayer so he can teach you how to properly skin some animals.  You'll find him in Finespindle's Leather Goods on the northern side of The Great Forge.", d=16.960, v="dwarf-male-guard" },
 		{ f="5595-1dc5d6b9", h="1dc5d6b9", t="A warlock, eh...  Well, if you've got a mind to be doing that sort of thing around here then ye best keep yer demons on a leash girlie.  I don't like demons, but I love putting mah axe to them.  Ye get me?      Now you just leave me be and go get lost in The Forlorn Cavern.  That's where you'll find that warlock, Thistleheart.", d=20.270, v="dwarf-male-guard" },
 		{ f="5595-21c84810", h="21c84810", t="Where is the Auction House?  Why it's right by the gates of Ironforge as you enter our fine city.  Ye'll find it just across from The Vault.", d=9.320, v="dwarf-male-guard" },
+		{ f="5595-293fb776", h="293fb776", t="A warlock, eh...  Well, if you've got a mind to be doing that sort of thing around here then ye best keep yer demons on a leash boyo.  I don't like demons, but I love putting mah axe to them.  Ye get me?      Now you just leave me be and go get lost in The Forlorn Cavern.  That's where you'll find that warlock, Thistleheart.", d=22.870, v="dwarf-male-guard" },
 		{ f="5595-2d6411c2", h="2d6411c2", t="Fimble Finespindle has a shop set up on the northwest side of The Great Forge.  I wager he could show ye how to make some fine armor.", d=10.360, v="dwarf-male-guard" },
 		{ f="5595-2fa06dc1", h="2fa06dc1", t="Yer looking for an Alchemy trainer are ye?  Just came from there, I did.  Ye'll find Ms. Berryfizz over in Tinker Town where the gnomes gather.    ::sigh:: ...why o' why didn't I take the blue potion.", d=12.880, v="dwarf-male-guard" },
 		{ f="5595-329c6da9", h="329c6da9", t="A valuable skill First Aid is.  Our resident trainer, Nissa Firestone, can show ye how it's done.  Look for her on the southern side of The Great Forge at the Ironforge Physician.", d=12.920, v="dwarf-male-guard" },
@@ -4761,6 +4806,7 @@ pack.gossip = {
 		{ f="5595-9d9dded2", h="9d9dded2", t="Oh, the tram, the tram...  everyone wants to ride the tram.  What happened to the good ol' days of flying on the back of a gryphon, gripping the saddle for dear life as you flew up high in the sky above?    Bah!  You go take the tram then... it's over in Tinker Town with the rest of the gnomish contraptions.", d=17.910, v="dwarf-male-guard" },
 		{ f="5595-a6a7e3ea", h="a6a7e3ea", t="Ye've come to the right place $glad : lass;!  People come here from all o'er the world to train to be a blacksmith.  Ye'll find Bengus Deepforge hammering away at an anvil in the middle of our fine city by The Great Forge itself.", d=14.320, v="dwarf-male-guard", g=true },
 		{ f="5595-ab5dd850", h="ab5dd850", t="Between Bixi and Buliwyf, there ain't many weapons they haven't had the pleasure of slashing or smashing an orc with.  You can find them hanging out at the Timberline Arms weapon shop if ye need some training.", d=13.080, v="dwarf-male-guard" },
+		{ f="5595-ac68ec99", h="ac68ec99", t="Yer looking to learn how to use a new weapon are ye?  Well, ye should be talking to Bixi or Buliwyf over at the Timberline Arms weapon shop then lad.  They know their weapons from axes to... uh... zweihanders.", d=15.080, v="dwarf-male-guard" },
 		{ f="5595-affb13bf", h="affb13bf", t="If yer of need of an Inn, The Stonefire Inn is where ye should be.  Ye'll find it just to the left of the entrance to Ironforge if ye be coming, or to the right if ye be going.  $B$BOh, and if yer going that way, then tell them to have a tankard ready for me.", d=16.600, v="dwarf-male-guard" },
 		{ f="5595-b137b70b", h="b137b70b", t="That wee wizardly lass, Bink, over in the Hall of Mysteries would probably be able to help ye out with any magical needs you have.    The Hall of Mysteries is just north of the gates of Ironforge.", d=13.720, v="dwarf-male-guard" },
 		{ f="5595-b3938781", h="b3938781", t="Och!  Ye should be careful what ye get enchanted lass.  I had me mug enchanted so it wouldn't spill a drop, but now I can't drink from it!  Such a tragedy.      You be sure to heed me advice when ye see Gimble.  He'll be in his shop right by the Gryphon Master at The Great Forge.", d=18.760, v="dwarf-male-guard" },
@@ -5057,6 +5103,7 @@ pack.gossip = {
 	[5887] = {
 		{ f="5887-3afcd372", h="3afcd372", t="I welcome you back, HEATH.", d=3.000, v="troll-male-shaman" },
 		{ f="5887-b5673fcf", h="b5673fcf", t="I welcome you back, SULACO.", d=2.280, v="troll-male-shaman" },
+		{ f="5887-c780d2be", h="c780d2be", t="I welcome you back, XIPHIAS.", d=3.000, v="troll-male-shaman" },
 	},
 	[5901] = {
 		{ f="5901-91558eae", h="91558eae", t="You've come further than many, $N. Respect the elements around you and you shall fare far greater than most.", d=9.680, v="tauren-female-shaman" },
@@ -5193,8 +5240,10 @@ pack.gossip = {
 		{ f="6171-8f2a6ec7", h="8f2a6ec7", t="You will be tested many times by the darkness that surrounds our lands, SWATACUS. But to ensure you are always prepared, we will often ask tasks of you so you are at the height of your own power.  Go with the Light, and remain virtuous.", d=15.361, v="human-male-official" },
 		{ f="6171-aa22aeb4", h="aa22aeb4", t="You will be tested many times by the darkness that surrounds our lands, COVERY. But to ensure you are always prepared, we will often ask tasks of you so you are at the height of your own power.  Go with the Light, and remain virtuous.", d=11.706, v="human-male-official" },
 		{ f="6171-da6dd041", h="da6dd041", t="You will be tested many times by the darkness that surrounds our lands, HGUUL. But to ensure you are always prepared, we will often ask tasks of you so you are at the height of your own power.  Go with the Light, and remain virtuous.", d=16.073, v="human-male-official" },
+		{ f="6171-ee5a8c82", h="ee5a8c82", t="You will be tested many times by the darkness that surrounds our lands, JEFFRY. But to ensure you are always prepared, we will often ask tasks of you so you are at the height of your own power.  Go with the Light, and remain virtuous.", d=14.594, v="human-male-official" },
 	},
 	[6179] = {
+		{ f="6179-bb05f662", h="bb05f662", t="Many tests await a $c of the Light, KAHZ. Be assured, our paths will cross many times in the future if you remain passionate and hold to those virtues that we praise.", d=11.867, v="dwarf-female-guard" },
 		{ f="6179-ca1fce87", h="ca1fce87", t="Many tests await a $c of the Light, MARGARET. Be assured, our paths will cross many times in the future if you remain passionate and hold to those virtues that we praise.", d=12.514, v="dwarf-female-guard" },
 	},
 	[6251] = {
@@ -5326,7 +5375,7 @@ pack.gossip = {
 		{ f="6569-58cd03a1", h="58cd03a1", t="Where Troggs and Leper Gnomes roam stands our home - Gnomeregan.  Our families lost, our homes displaced. Scattered.  Oh how I long for the days of carefree Gnomeregan life, but those days are no more. We must make our stand! We must save Gnomeregan!", d=11.681, v="gnome-male-zany" },
 	},
 	[6579] = {
-		{ f="6579-8258874f", h="8258874f", t="For Gnomeregan!", d=0.872, v="gnome-female-nerdy" },
+		{ f="6579-8258874f", h="8258874f", t="For Gnomeregan!", d=0.872, v="gnome-female-nerdy", s={ ["m"]=1.800 } },
 	},
 	[6586] = {
 		{ f="6586-bb2626e8", h="bb2626e8", t="What's a young $c like you out visiting an old farmer like me?", d=6.520, v="orc-male-guard" },
@@ -5644,6 +5693,7 @@ pack.gossip = {
 	},
 	[6740] = {
 		{ f="6740-03ca5480", h="03ca5480", t="Once the capital city of the Dark Iron dwarves, this volcanic labyrinth now serves as the seat of power for Ragnaros the Firelord. Ragnaros has uncovered the secret to creating life from stone and plans to build an army of unstoppable golems to aid him in conquering the whole of Blackrock Mountain. Obsessed with defeating Nefarian and his draconic minions, Ragnaros will go to any extreme to achieve final victory.   ", d=30.550, v="human-female-official" },
+		{ f="6740-0f322cd8", h="0f322cd8", t="The old kingdom of Lordaeron is perilous. We urge caution for anyone who dares to venture into the now decaying lands of Tirisfal Glades. If you must, find the Undercity; the upper courtyards are what you seek.", d=14.760, v="human-female-official" },
 		{ f="6740-174473b0", h="174473b0", t="Recently, a night elf druid named Naralex discovered a network of underground caverns within the heart of the Barrens. Believing he could use the caverns' springs to restore lushness to the Barrens, the druid began siphoning the energies of the fabled Emerald Dream. His vision somehow became a nightmare, however, and soon the Wailing Caverns changed into a den of vicious, deadly predators. It is said that Naralex still resides somewhere inside the labyrinth, trapped beyond the edges of the Emerald Dream.  ", d=35.710, v="human-female-official" },
 		{ f="6740-17e9d243", h="17e9d243", t="Uldaman is an ancient Titan vault that has laid buried within the earth since the world's creation. Dwarven excavations of the city have recently released the Titans' first failed creations: the troggs. Legends say that when the Titans deemed the trogg experiment a failure they tried again, resulting in the creation of the dwarven race. These secrets are recorded on the fabled Discs of Norgannon - massive artifacts that lie at the bottom of the ancient city, protected by giant constructs of living stone.  ", d=34.540, v="human-female-official" },
 		{ f="6740-19490f29", h="19490f29", t="Maraudon is one of the most sacred sites within Desolace. The great temple/cavern is the burial place of Zaetar, one of two immortal sons born to the demigod, Cenarius. Legend holds that Zaetar and the earth elemental princess, Theradras, sired the misbegotten centaur race. It is said that upon their emergence, the barbaric centaur turned on their father and killed him. Some believe that Theradras, in her grief, trapped Zaetar's spirit within the winding cavern - used its energies for some malign purpose. ", d=36.190, v="human-female-official" },
@@ -6099,6 +6149,9 @@ pack.gossip = {
 	[7232] = {
 		{ f="7232-2ebb471e", h="2ebb471e", t="What are ye daft? That's not a weapon, that's a dinner knife. I don't train amateurs.", d=4.880, v="dwarf-male-grim" },
 		{ f="7232-e03d94ba", h="e03d94ba", t="Can't ye see I'm busy? This had better be good.", d=3.400, v="dwarf-male-grim" },
+	},
+	[7233] = {
+		{ f="7233-0c7ac5e1", h="0c7ac5e1", t="Something plagues this tower. I've fallen ill and the other Venture Co. employees that work near or in the tower have also become sick.  Just last week, two of our patrollers died, only to instantly come back to life as mindless drones!  The lifeforce is draining from my body. I can feel myself losing control. Urges taking over... Bad urges... *Fizzule slaps himself in the face* Not yet... Listen... Mine is a position of power. This position privies me to some sensitive information. ", d=29.430, v="dwarf-male-grim" },
 	},
 	[7311] = {
 		{ f="7311-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=29.350, v="troll-male-dark" },
@@ -6673,7 +6726,7 @@ pack.gossip = {
 		{ f="8610-c5ceacbe", h="c5ceacbe", t="Where would you like to fly to?", d=2.257, v="orc-male-standard" },
 	},
 	[8659] = {
-		{ f="8659-b2489254", h="b2489254", t="I give you warm greetin's, $c, as does the Shattered Hand.$B$BDo not look so surprised, $n. There be shadows even on the highest perches of Orgrimmar--somethin' must hide there. The Shattered Hand take that role willingly. Thrall, even in his good heart, acknowledge that the Hand be necessary to ensure orc and troll safety.$B$BBut you not here to talk 'bout my business, you here for somethin' else.", d=36.910, v="troll-male-dark" },
+		{ f="8659-b2489254", h="b2489254", t="I give you warm greetin's, $c, as does the Shattered Hand.  Do not look so surprised, $N. There be shadows even on the highest perches of Orgrimmar--somethin' must hide there. The Shattered Hand take that role willingly. Thrall, even in his good heart, acknowledge that the Hand be necessary to ensure orc and troll safety.  But you not here to talk 'bout my business, you here for somethin' else.", d=36.910, v="troll-male-dark" },
 		{ f="8659-f590cabf", h="f590cabf", t="Un'Goro Crater be far to the south of Kalimdor. Beyond the Thousand Needles in Tanaris. Look for the large floating stones... they mark the entrance to the Crater. But be careful... it is no easy path. The raptors are not far from the entrance.", d=22.160, v="troll-male-dark" },
 	},
 	[8696] = {
@@ -7276,7 +7329,7 @@ pack.gossip = {
 		{ f="10537-c27b3101", h="c27b3101", t="We cannot take care of all the threats in this area alone. We could use another fighting hand, $N. ", d=10.880, v="tauren-male-elder" },
 	},
 	[10540] = {
-		{ f="10540-5004ab66", h="5004ab66", t="Ah yes, I heard of the Windshapers. It be good to be meetin' you now.    You know, my people been fighting elves for thousands of years. If you be half as fierce as your cousins from Darnassus or Quel'thalas, the Darkspear would be glad to call you friend.    I be wishin' you well in your travels, $c. We Darkspear know all too well what it's like to have no home, so I hope you be finding what your people need to save yours.", d=31.110, v="troll-male" },
+		{ f="10540-5004ab66", h="5004ab66", t="Ah yes, I heard of the Windshapers. It be good to be meetin' you now.    You know, my people been fighting elves for thousands of years. If you be half as fierce as your cousins from Darnassus or Quel'Thalas, the Darkspear would be glad to call you friend.    I be wishin' you well in your travels, $c. We Darkspear know all too well what it's like to have no home, so I hope you be finding what your people need to save yours.", d=31.110, v="troll-male" },
 		{ f="10540-7c6995ef", h="7c6995ef", t="I am Vol'jin, of the Darkspear. Do you be friend, or enemy?", d=6.040, v="troll-male" },
 	},
 	[10578] = {
@@ -7393,7 +7446,7 @@ pack.gossip = {
 		{ f="10881-dc8290dc", h="dc8290dc", t="Greetings and salutations, hero!  I have the latest news from both continents and points beyond for your consideration.", d=6.785, v="tauren-male-warrior" },
 	},
 	[10897] = {
-		{ f="10897-c5ceacbe", h="c5ceacbe", t="Where would you like to fly to?", d=2.554, v="nightelf-female-sentinel" },
+		{ f="10897-c5ceacbe", h="c5ceacbe", t="Where would you like to fly to?", d=2.554, v="nightelf-female-sentinel", s={ ["m"]=2.120 } },
 	},
 	[10917] = {
 		{ f="10917-7ca9481b", h="7ca9481b", t="Leave me.  My wounds are great and I fear they will overtake me.  Thank you, $n.  I will die here, but because of you... I'll die in peace.", d=11.838, v="human-male-warrior" },
@@ -8120,6 +8173,7 @@ pack.gossip = {
 	},
 	[11865] = {
 		{ f="11865-7022eed4", h="7022eed4", t="Ye want to be trained in the use of a weapon, do ye?  Well don't stand there slack-jawed, speak up laddie!", d=6.320, v="dwarf-male-grim" },
+		{ f="11865-702b6852", h="702b6852", t="Ye want to be trained in the use of a weapon, do ye?  Well don't stand there slack-jawed, speak up lassie!", d=5.880, v="dwarf-male-grim" },
 		{ f="11865-b5f74fe6", h="b5f74fe6", t="Bixi Wobblebonk, the gnome weapon master, is wandering about in this shop.  She can teach crossbow, daggers and throwing weapons.  Woo Ping, the human weapon master at Weller's Arsenal in Stormwind, teaches crossbow, daggers, one and two-handed swords, polearms, and staff.  Ilyenia Moonfire, the night elf weapon master, resides at the Warrior's Terrace in Darnassus where she teaches bow, daggers, fist weapons, staff and throwing weapons.", d=27.990, v="dwarf-male-grim" },
 		{ f="11865-e702ec11", h="e702ec11", t="Ye want to be trained in the use of a weapon, do ye?  Well don't stand there slack-jawed, speak up $gladdie : lassie;!", d=6.440, v="dwarf-male-grim", g=true },
 	},
@@ -8297,6 +8351,7 @@ pack.gossip = {
 	},
 	[12657] = {
 		{ f="12657-5ae37eb2", h="5ae37eb2", t="This dock here?  Well you can catch the ship that goes to that Night Elf place.  What's it's name?  Uhh Auberdine I think.  I don't really know for sure, I just load and unload stuff.", d=11.363, v="human-male-standard" },
+		{ f="12657-6231de28", h="6231de28", t="This dock here? Well, you can catch the ship that goes to Southshore, and then stops at that night elf place after. What's its name? Uhh... Auberdine, I think.    I don't really know for sure, I just load and unload stuff.", d=14.940, v="human-male-standard" },
 		{ f="12657-fc20b897", h="fc20b897", t="This dock here? Well, you can catch the ship that goes to Southshore, and then stops at that $r place after. What's its name? Uhh... Auberdine, I think.    I don't really know for sure, I just load and unload stuff.", d=14.301, v="human-male-standard" },
 	},
 	[12658] = {
@@ -10413,7 +10468,7 @@ pack.gossip = {
 	[246848] = {
 		{ f="246848-59873409", h="59873409", t="What is your curiosity looking for?", d=2.159, v="human-female", s={ ["m"]=2.844 } },
 		{ f="246848-5d6f0b28", h="5d6f0b28", t="What are you looking for?", d=1.820, v="human-female", s={ ["m"]=1.788 } },
-		{ f="246848-93d3f9d1", h="93d3f9d1", t="Greetings $N. Welcome to the kingdom of Dalaran. There are restrictions in place while the city remains under construction. If you have important matters that must be presented to the Kirin Tor you may speak with Arcanist Ginsberg in the overlook to the east.", d=14.224, v="human-female", s={ ["m"]=16.380 } },
+		{ f="246848-93d3f9d1", h="93d3f9d1", t="Greetings, $N. Welcome to the kingdom of Dalaran.   There are restrictions in place while the city remains under construction. If you have important matters that must be presented to the Kirin Tor, you may speak with Arcanist Ginsberg in the overlook to the east.", d=14.224, v="human-female", s={ ["m"]=16.380 } },
 		{ f="246848-aa74f3e4", h="aa74f3e4", t="Is there something I can help you with?", d=1.759, v="human-female", s={ ["m"]=2.776 } },
 		{ f="246848-ae06472b", h="ae06472b", t="It is still under construction and only a short walk up the northeast road. The Alterac mountains have brought unneeded attention from some wild creatures and our recent interest in Silverpine Forest has kept our patrols quite busy.  Some small rumors have even spread about a juvenile drake soaring over the mountains with a full eye.", d=18.247, v="human-female", s={ ["m"]=21.268 } },
 	},
@@ -10461,15 +10516,16 @@ pack.gossip = {
 	},
 	[249363] = {
 		{ f="249363-260391fc", h="260391fc", t="The Wind Spirits have left us.     Now, only mindless echoes now remain. Be wary, however. These winds are neither kind, nor gentle.", d=12.040, v="skyborne-female" },
+		{ f="249363-595011e8", h="595011e8", t="The Wind Spirits have left us.     Now, only mindless echoes remain. Be wary, however. These winds are neither kind, nor gentle.", d=11.200, v="skyborne-female" },
 	},
 	[249713] = {
 		{ f="249713-0c768ee1", h="0c768ee1", t="Shhh! You'll give away my hiding spot!", d=3.160, v="humanfemalekid-female" },
 	},
 	[250686] = {
-		{ f="250686-3c4152a4", h="3c4152a4", t="Praise to the Banshee Queen, it isn't often I have visitors out here.", d=6.040, v="scourge-female" },
+		{ f="250686-3c4152a4", h="3c4152a4", t="Praise to the Banshee Queen, it isn't often I have visitors out here.", d=6.040, v="scourge-female", s={ ["m"]=4.120 } },
 	},
 	[250929] = {
-		{ f="250929-4b2429f8", h="4b2429f8", t="<As you approach the enormous cyclone construct, you hear a faint buzzing emanating from beneath its massive armor plates. If you listen carefully you think you might be able to hear a few words being formed but they are too distorted to make out.>", d=15.760, v="narrator", n={ [1]=15.360 } },
+		{ f="250929-4b2429f8", h="4b2429f8", t="<As you approach the enormous cyclone construct, you hear a faint buzzing emanating from beneath its massive armor plates. If you listen carefully, you think you might be able to hear a few words being formed but they are too distorted to make out.>", d=15.760, v="narrator", n={ [1]=15.360 } },
 	},
 	[251001] = {
 		{ f="251001-379c835f", h="379c835f", t="Please do see that he reads it at once. I fear our Scourge problem has only just begun.    Come see me again in due time. I believe I have nearly uncovered something I could use a willing blade to help with.", d=14.520, v="scourge-male", s={ ["f"]=16.560 } },
@@ -10493,6 +10549,7 @@ pack.gossip = {
 		{ f="251373-86bf8d52", h="86bf8d52", t="If you have the aptitude for the druidic arts, I can train you.", d=4.880, v="skyborne-male" },
 	},
 	[251374] = {
+		{ f="251374-4d87d665", h="4d87d665", t="The spirits of the wind may have left us, but the power of the elements is not entirely out of reach for those with the patience to seek them out.    If you are initiated in the ways of the shaman, I can help you grasp them.", d=13.040, v="skyborne-male" },
 		{ f="251374-70bfd38d", h="70bfd38d", t="The spirits of the wind may have left us, but the power of the elements is not entirely out of reach for those with the patience to seek them out.    If you are initiated in the ways of the $c, I can help you grasp them.", d=14.280, v="skyborne-male" },
 	},
 	[251376] = {
@@ -10502,7 +10559,7 @@ pack.gossip = {
 		{ f="251379-ed4232c7", h="ed4232c7", t="The followers of the old Highborne ways have never been more hungry for knowledge and to reclaim what we've lost. If you would seek to wield the power of the arcane and have the aptitude, I can help you take your next steps.", d=14.680, v="skyborne-female" },
 	},
 	[251389] = {
-		{ f="251389-a046a01a", h="a046a01a", t="Slay your enemies and swoon your paramours with this one weird trick.    If you follow the path of the $c, I can teach you... for a cost, of course.", d=9.760, v="skyborne-male" },
+		{ f="251389-87ef59fc", h="87ef59fc", t="Slay your enemies and swoon your paramours with this one weird trick.    If you follow the path of the rogue, I can teach you... for a cost, of course.", d=10.440, v="skyborne-male" },
 	},
 	[251487] = {
 		{ f="251487-06790c88", h="06790c88", t="Zephras is in a state of decline, unfortunately. The elemental wind spirits that brought us here to Skywall so many thousands of years ago have vanished, causing us to lose much of the magic on which we've depended for millennia.    The island itself is also dangerously unstable, and we've even lost contact with the other island provinces of the shen'dorei. The few Windshapers that still possess the gift of skysight have attempted to contact our brothers and sisters on the other islands, but we have had no response.    Many among us are worried that the shen'dorei here on Zephras are all that is left of our people.", d=41.100, v="skyborne-female" },
@@ -10572,7 +10629,7 @@ pack.gossip = {
 		{ f="251968-4f475817", h="4f475817", t="<Ayessa Dawnsinger eyes you with barely-contained fury.>     You are either very bold, or very stupid to so brazenly step foot into our domain after spilling Windshaper blood. We are slow to forgive, and we never forget.     You should remove yourself from here at once. If we weren't in the center of Zephras, you would already be dead.", d=19.560, v="skyborne-female", P={ { d=4.040, n=true }, { d=19.120 } }, nP={ [1]={ [1]=3.880 } } },
 		{ f="251968-51e58459", h="51e58459", t="Hmm, I see. Very well then, $c. The Windshapers will provide aid. Please inform Valennia that she can count on us for this fight.    <Ayessa lowers her voice dangerously.>     Do not mistake our cooperation for any sort of forgiveness. You owe the Windshapers blood, and someday we will collect.", d=20.440, v="skyborne-female", P={ { d=12.120 }, { d=3.080, n=true }, { d=9.880 } }, nP={ [1]={ [2]=3.200 } } },
 		{ f="251968-88447c8b", h="88447c8b", t="Greetings, I am Ayessa Dawnsinger, the current Grand Skyseer of the Windshapers. What may I do for you?", d=9.400, v="skyborne-female" },
-		{ f="251968-97b43995", h="97b43995", t="If the High Order gave any mind at all to actually solving the problems we face and spent less time obsessing over the old magic, we'd be in a far better position as a people. It was Highborne magic that brought about the ruin of the kaldorei to begin with. Those self-absorbed fools seek to repeat those mistakes!    The fact that they attempted to make peace with the cult is bad enough, but spilling Windshaper blood is what is truly unforgivable. Were it not for the imminent threat of the cult, I'd gather up our forces and go put an end to Elaadrin and the High Order once and for all.", d=42.820, v="skyborne-female" },
+		{ f="251968-97b43995", h="97b43995", t="If the High Order gave any mind at all to actually solving the problems we face and spent less time obsessing over the old magic, we'd be in a far better position as a people. It was highborne magic that brought about the ruin of the kaldorei to begin with. Those self-absorbed fools seek to repeat those mistakes!    The fact that they attempted to make peace with the cult is bad enough, but spilling Windshaper blood is what is truly unforgivable. Were it not for the imminent threat of the cult, I'd gather up our forces and go put an end to Elaadrin and the High Order once and for all.", d=42.820, v="skyborne-female" },
 		{ f="251968-ca320a53", h="ca320a53", t="Hmm, I see. Very well then, $c. The Windshapers will provide aid. Please inform Valennia that she can count on us for this fight.", d=11.080, v="skyborne-female" },
 	},
 	[251991] = {
@@ -10590,7 +10647,7 @@ pack.gossip = {
 		{ f="252068-63df4aea", h="63df4aea", t="Soon all Shen'dorei will see the truth... and those that refuse will be swept away in the coming storm!", d=6.840, v="skyborne-female", s={ ["m"]=7.120 } },
 		{ f="252068-7763c9f1", h="7763c9f1", t="The Windlord's blessings flow through me!", d=3.080, v="skyborne-female", s={ ["m"]=2.520 } },
 		{ f="252068-7bf8836d", h="7bf8836d", t="Why are you asking me, unshaven novice?", d=3.840, v="skyborne-female", s={ ["m"]=3.800 } },
-		{ f="252068-8cd3381f", h="8cd3381f", t="Why are you bothering me, recruit? If you want to talk to other doe-eyed fools, try the inn on the north side of town.  The recruits that congregate there tend to have brains as smooth as their freshly shaved heads.    Oh, and shave that head of yours. The only thing the windlord abhors more than chatty recruits is chatty recruits with a full head of hair.    Now, be gone from my sight.", d=25.870, v="skyborne-female", s={ ["m"]=26.430 } },
+		{ f="252068-8cd3381f", h="8cd3381f", t="Why are you bothering me, recruit? If you want to talk to other doe-eyed fools, try the inn on the north side of town. The recruits that congregate there tend to have brains as smooth as their freshly shaved heads.    Oh, and shave that head of yours. The only thing the windlord abhors more than chatty recruits is chatty recruits with a full head of hair.    Now, be gone from my sight.", d=25.870, v="skyborne-female", s={ ["m"]=26.430 } },
 		{ f="252068-a66e8a24", h="a66e8a24", t="Does your heart beat in rhythm with the winds?", d=3.200, v="skyborne-female", s={ ["m"]=3.040 } },
 		{ f="252068-aed1b76a", h="aed1b76a", t="Do not trouble me, recruit. Submit yourself to Commander Cyclas or Skypriest Aanders if your hands are idle.", d=8.680, v="skyborne-female", s={ ["m"]=8.160 } },
 		{ f="252068-b26bb011", h="b26bb011", t="Are you new here? I have nothing to say to unshaven recruits save that you should sublimate your youthful eagerness into supplication and prayer.", d=9.800, v="skyborne-female", s={ ["m"]=10.160 } },
@@ -10668,17 +10725,17 @@ pack.gossip = {
 		{ f="252476-fcd03afb", h="fcd03afb", t="It is vital that we learn more about what the cult is planning, and with the turncoat dead, the information may have died with him...", d=8.560, v="skyborne-male" },
 	},
 	[252477] = {
-		{ f="252477-08807185", h="08807185", t="The bank and auction house can be found on the western side of Valanaar, near the Windshapers' skycutter dock.", d=7.320, v="skyborne-male", s={ ["f"]=6.200 } },
-		{ f="252477-37e215b2", h="37e215b2", t="Which class trainer are you looking for?", d=2.400, v="skyborne-male", s={ ["f"]=2.960 } },
-		{ f="252477-456d7a09", h="456d7a09", t="The Windshapers' transport to Azeroth can be found at the western-most dock along Valanaar's southern edge.", d=6.880, v="skyborne-male", s={ ["f"]=7.560 } },
-		{ f="252477-6d6f2083", h="6d6f2083", t="Greetings, citizen.", d=2.400, v="skyborne-male", s={ ["f"]=2.800 } },
-		{ f="252477-7fc1d917", h="7fc1d917", t="May I help you locate something, citizen?", d=2.920, v="skyborne-male", s={ ["f"]=2.960 } },
-		{ f="252477-80396915", h="80396915", t="That trainer can be found in a house near the High Order dock, on the southeastern edge of town.", d=5.200, v="skyborne-male", s={ ["f"]=6.920 } },
-		{ f="252477-8b1fd97e", h="8b1fd97e", t="What are you looking for, citizen?", d=1.880, v="skyborne-male", s={ ["f"]=2.960 } },
-		{ f="252477-aa6ba0a9", h="aa6ba0a9", t="Is there something I can help you find?", d=2.480, v="skyborne-male", s={ ["f"]=3.280 } },
-		{ f="252477-db018659", h="db018659", t="The town medic can be found inside the tower on the northeast edge of Valanaar.", d=5.560, v="skyborne-male", s={ ["f"]=6.160 } },
-		{ f="252477-ef767f20", h="ef767f20", t="Which profession?", d=2.680, v="skyborne-male", s={ ["f"]=1.560 } },
-		{ f="252477-ff26e6d3", h="ff26e6d3", t="The $c trainer can be found over in the High Order's lodge, on the southeastern edge of town.", d=6.280, v="skyborne-male", s={ ["f"]=6.920 } },
+		{ f="252477-08807185", h="08807185", t="The bank and auction house can be found on the western side of Valanaar, near the Windshapers' skycutter dock.", d=6.200, v="skyborne-female", s={ ["m"]=6.280 } },
+		{ f="252477-37e215b2", h="37e215b2", t="Which class trainer are you looking for?", d=3.320, v="skyborne-female", s={ ["m"]=2.640 } },
+		{ f="252477-456d7a09", h="456d7a09", t="The Windshapers' transport to Azeroth can be found at the western-most dock along Valanaar's southern edge.", d=6.800, v="skyborne-female", s={ ["m"]=7.160 } },
+		{ f="252477-6d6f2083", h="6d6f2083", t="Greetings, citizen.", d=1.600, v="skyborne-female", s={ ["m"]=1.680 } },
+		{ f="252477-7fc1d917", h="7fc1d917", t="May I help you locate something, citizen?", d=3.480, v="skyborne-female", s={ ["m"]=2.640 } },
+		{ f="252477-80396915", h="80396915", t="That trainer can be found in a house near the High Order dock, on the southeastern edge of town.", d=6.600, v="skyborne-female", s={ ["m"]=6.000 } },
+		{ f="252477-8b1fd97e", h="8b1fd97e", t="What are you looking for, citizen?", d=2.800, v="skyborne-female", s={ ["m"]=1.640 } },
+		{ f="252477-aa6ba0a9", h="aa6ba0a9", t="Is there something I can help you find?", d=4.040, v="skyborne-female", s={ ["m"]=2.440 } },
+		{ f="252477-db018659", h="db018659", t="The town medic can be found inside the tower on the northeast edge of Valanaar.", d=5.400, v="skyborne-female", s={ ["m"]=5.720 } },
+		{ f="252477-ef767f20", h="ef767f20", t="Which profession?", d=3.800, v="skyborne-female", s={ ["m"]=1.480 } },
+		{ f="252477-ff26e6d3", h="ff26e6d3", t="The $c trainer can be found over in the High Order's lodge, on the southeastern edge of town.", d=6.760, v="skyborne-female", s={ ["m"]=5.880 } },
 	},
 	[252478] = {
 		{ f="252478-1e95a038", h="1e95a038", t="The skycutters and ferries haven't run in years at this point. For all we know, there are no other islands left for us to get imports from. Still though, I'm here... just in case.", d=11.760, v="skyborne-female" },
@@ -10707,6 +10764,9 @@ pack.gossip = {
 		{ f="253004-d62b45b0", h="d62b45b0", t="Gales greetings, friend. Is there something I can help you with?", d=4.360, v="skyborne-female" },
 		{ f="253004-fb513610", h="fb513610", t="I hope that your interruption is for a good cause. I was in the middle of some important work.", d=6.040, v="skyborne-female" },
 	},
+	[253066] = {
+		{ f="253066-02560e06", h="02560e06", t="An outsider approaches me?    I doubt we have much to discuss, unless you are here to aid an old Kolkar.", d=7.489, v="human-male" },
+	},
 	[253092] = {
 		{ f="253092-e0247c5d", h="e0247c5d", t="I am told the farms of Westfall once supplied a bounty of crops for Stormwind. But now, the soil is barren and most of the farmers have fled.    On behalf of Darnassus I would like to offer my aid in replenishing this land. Will you assist me?", d=18.640, v="nightelf-female" },
 	},
@@ -10720,28 +10780,28 @@ pack.gossip = {
 		{ f="253372-4b6a69db", h="4b6a69db", t="<This cultist is dead. Upon close inspection, you notice that he seems to be clutching something to his chest, almost as if he was protecting it.>", P={ { d=9.040, n=true } }, nP={ [1]={ [1]=10.200 } } },
 	},
 	[253474] = {
-		{ f="253474-00bdfcec", h="00bdfcec", t="That trainer can be found on the southeastern edge of town, near the High Order's dock.", d=5.840, v="skyborne-female", s={ ["m"]=5.320 } },
-		{ f="253474-08807185", h="08807185", t="The bank and auction house can be found on the western side of Valanaar, near the Windshapers' skycutter dock.", d=6.680, v="skyborne-female", s={ ["m"]=6.240 } },
-		{ f="253474-0eb9c156", h="0eb9c156", t="The High Order's transport to Azeroth can be found at the furthest dock on the southeastern edge of Valanaar.", d=6.720, v="skyborne-female", s={ ["m"]=7.120 } },
-		{ f="253474-28030f47", h="28030f47", t="You can find the cooking trainer in a small house on the north end of town.", d=4.440, v="skyborne-female", s={ ["m"]=4.920 } },
-		{ f="253474-37e215b2", h="37e215b2", t="Which class trainer are you looking for?", d=3.200, v="skyborne-female", s={ ["m"]=3.040 } },
-		{ f="253474-404ff1f4", h="404ff1f4", t="That trainer can be found in the Crafter's Hall, on the west side of Valanaar.", d=5.280, v="skyborne-female", s={ ["m"]=5.320 } },
-		{ f="253474-456d7a09", h="456d7a09", t="The Windshapers' transport to Azeroth can be found at the western-most dock along Valanaar's southern edge.", d=6.920, v="skyborne-female", s={ ["m"]=6.760 } },
-		{ f="253474-4d63cc9b", h="4d63cc9b", t="You'll want to head over to the Hall of Arms on the north side of Valanaar.", d=4.520, v="skyborne-female", s={ ["m"]=5.080 } },
-		{ f="253474-6d6f2083", h="6d6f2083", t="Greetings, citizen.", d=1.880, v="skyborne-female", s={ ["m"]=1.760 } },
-		{ f="253474-7fc1d917", h="7fc1d917", t="May I help you locate something, citizen?", d=3.400, v="skyborne-female", s={ ["m"]=2.800 } },
-		{ f="253474-80396915", h="80396915", t="That trainer can be found in a house near the High Order dock, on the southeastern edge of town.", d=6.040, v="skyborne-female", s={ ["m"]=6.360 } },
-		{ f="253474-823817d9", h="823817d9", t="Engineer? What in Skywall is that?    Now that you mention it... I think I may have heard that drunk Sirrocas over at the inn talking about some sort of forest spirit that he claimed to have encountered that called itself an \"engineer.\"    That was the first I'd ever heard of such a thing.    I believe he said that this particular spirit could be found somewhere in Shadowgale Forest, but I can't recommend you go to that cursed place!", d=26.110, v="skyborne-female", s={ ["m"]=27.190 } },
-		{ f="253474-8957496f", h="8957496f", t="Be on your guard here in the highlands, citizen. There are many dangers between the beasts roaming the wild, murderous bandits, and the looming threat of the Al'Aketh.", d=10.880, v="skyborne-female", s={ ["m"]=10.040 } },
-		{ f="253474-8b1fd97e", h="8b1fd97e", t="What are you looking for, citizen?", d=2.240, v="skyborne-female", s={ ["m"]=2.040 } },
-		{ f="253474-96433e66", h="96433e66", t="A mailbox can be located just outside of the Inn, near the road leading north out of town.", d=6.480, v="skyborne-female", s={ ["m"]=6.200 } },
-		{ f="253474-9d79190e", h="9d79190e", t="The Inn can be found on the east side of the road leading northward out of town.", d=5.600, v="skyborne-female", s={ ["m"]=4.920 } },
-		{ f="253474-aa6ba0a9", h="aa6ba0a9", t="Is there something I can help you find?", d=3.520, v="skyborne-female", s={ ["m"]=2.200 } },
-		{ f="253474-ba9ef707", h="ba9ef707", t="You'll find Lotheluum Starbreeze on a cliff overlooking the waterfall on the eastern edge of town.", d=7.080, v="skyborne-female", s={ ["m"]=6.400 } },
-		{ f="253474-db018659", h="db018659", t="The town medic can be found inside the tower on the northeast edge of Valanaar.", d=5.920, v="skyborne-female", s={ ["m"]=4.880 } },
-		{ f="253474-e040148b", h="e040148b", t="The $c trainer can be found near the Windshaper's standing stones, on the western edge of town.", d=6.840, v="skyborne-female", s={ ["m"]=6.200 } },
-		{ f="253474-ef767f20", h="ef767f20", t="Which profession?", d=1.320, v="skyborne-female", s={ ["m"]=1.520 } },
-		{ f="253474-ff26e6d3", h="ff26e6d3", t="The $c trainer can be found over in the High Order's lodge, on the southeastern edge of town.", d=6.320, v="skyborne-female", s={ ["m"]=6.000 } },
+		{ f="253474-00bdfcec", h="00bdfcec", t="That trainer can be found on the southeastern edge of town, near the High Order's dock.", d=5.480, v="skyborne-male", s={ ["f"]=5.960 } },
+		{ f="253474-08807185", h="08807185", t="The bank and auction house can be found on the western side of Valanaar, near the Windshapers' skycutter dock.", d=6.880, v="skyborne-male", s={ ["f"]=7.400 } },
+		{ f="253474-0eb9c156", h="0eb9c156", t="The High Order's transport to Azeroth can be found at the furthest dock on the southeastern edge of Valanaar.", d=7.160, v="skyborne-male", s={ ["f"]=6.720 } },
+		{ f="253474-28030f47", h="28030f47", t="You can find the cooking trainer in a small house on the north end of town.", d=4.720, v="skyborne-male", s={ ["f"]=5.320 } },
+		{ f="253474-37e215b2", h="37e215b2", t="Which class trainer are you looking for?", d=2.440, v="skyborne-male", s={ ["f"]=3.200 } },
+		{ f="253474-404ff1f4", h="404ff1f4", t="That trainer can be found in the Crafter's Hall, on the west side of Valanaar.", d=5.880, v="skyborne-male", s={ ["f"]=4.840 } },
+		{ f="253474-456d7a09", h="456d7a09", t="The Windshapers' transport to Azeroth can be found at the western-most dock along Valanaar's southern edge.", d=7.160, v="skyborne-male", s={ ["f"]=7.560 } },
+		{ f="253474-4d63cc9b", h="4d63cc9b", t="You'll want to head over to the Hall of Arms on the north side of Valanaar.", d=4.640, v="skyborne-male", s={ ["f"]=4.840 } },
+		{ f="253474-6d6f2083", h="6d6f2083", t="Greetings, citizen.", d=1.560, v="skyborne-male", s={ ["f"]=1.840 } },
+		{ f="253474-7fc1d917", h="7fc1d917", t="May I help you locate something, citizen?", d=3.320, v="skyborne-male", s={ ["f"]=3.400 } },
+		{ f="253474-80396915", h="80396915", t="That trainer can be found in a house near the High Order dock, on the southeastern edge of town.", d=5.920, v="skyborne-male", s={ ["f"]=6.200 } },
+		{ f="253474-823817d9", h="823817d9", t="Engineer? What in Skywall is that?    Now that you mention it... I think I may have heard that drunk Sirrocas over at the inn talking about some sort of forest spirit that he claimed to have encountered that called itself an \"engineer.\"    That was the first I'd ever heard of such a thing.    I believe he said that this particular spirit could be found somewhere in Shadowgale Forest, but I can't recommend you go to that cursed place!", d=26.870, v="skyborne-male", s={ ["f"]=26.990 } },
+		{ f="253474-8957496f", h="8957496f", t="Be on your guard here in the highlands, citizen. There are many dangers between the beasts roaming the wild, murderous bandits, and the looming threat of the Al'Aketh.", d=9.080, v="skyborne-male", s={ ["f"]=10.840 } },
+		{ f="253474-8b1fd97e", h="8b1fd97e", t="What are you looking for, citizen?", d=1.720, v="skyborne-male", s={ ["f"]=3.000 } },
+		{ f="253474-96433e66", h="96433e66", t="A mailbox can be located just outside of the Inn, near the road leading north out of town.", d=6.640, v="skyborne-male", s={ ["f"]=6.240 } },
+		{ f="253474-9d79190e", h="9d79190e", t="The Inn can be found on the east side of the road leading northward out of town.", d=5.000, v="skyborne-male", s={ ["f"]=5.120 } },
+		{ f="253474-aa6ba0a9", h="aa6ba0a9", t="Is there something I can help you find?", d=2.720, v="skyborne-male", s={ ["f"]=3.480 } },
+		{ f="253474-ba9ef707", h="ba9ef707", t="You'll find Lotheluum Starbreeze on a cliff overlooking the waterfall on the eastern edge of town.", d=7.280, v="skyborne-male", s={ ["f"]=7.040 } },
+		{ f="253474-db018659", h="db018659", t="The town medic can be found inside the tower on the northeast edge of Valanaar.", d=6.120, v="skyborne-male", s={ ["f"]=5.440 } },
+		{ f="253474-e040148b", h="e040148b", t="The $c trainer can be found near the Windshaper's standing stones, on the western edge of town.", d=6.760, v="skyborne-male", s={ ["f"]=6.400 } },
+		{ f="253474-ef767f20", h="ef767f20", t="Which profession?", d=1.280, v="skyborne-male", s={ ["f"]=1.720 } },
+		{ f="253474-ff26e6d3", h="ff26e6d3", t="The $c trainer can be found over in the High Order's lodge, on the southeastern edge of town.", d=6.000, v="skyborne-male", s={ ["f"]=6.360 } },
 	},
 	[253576] = {
 		{ f="253576-febbe4e4", h="febbe4e4", t="Most of the cultists at the Sanctum of Storms seem to have come out to respond to our attack. I never would have expected this to go so well. This was almost too easy...    I think that the Windshapers and High Order have made their push. Valennia should be with them. You should head inside and find her. We'll stay here and keep watch while Valennia and the others finish what they came here to do.", d=24.550, v="skyborne-female" },
@@ -10758,6 +10818,9 @@ pack.gossip = {
 	[253849] = {
 		{ f="253849-6ace422f", h="6ace422f", t="Lorthuna is performing some sort of ritual up there. She may be trying to bring down the wards!    The help we sent for has not yet arrived, but we'll just have to manage with what we have. When you are ready, let me know and we'll go confront her.", d=15.520, v="skyborne-female" },
 	},
+	[253851] = {
+		{ f="253851-5428c94c", h="5428c94c", t="You are wasting my time.", d=2.158, v="human-male" },
+	},
 	[254081] = {
 		{ f="254081-86bf8d52", h="86bf8d52", t="If you have the aptitude for the druidic arts, I can train you.", d=5.240, v="skyborne-female" },
 	},
@@ -10771,6 +10834,7 @@ pack.gossip = {
 		{ f="254086-ed4232c7", h="ed4232c7", t="The followers of the old Highborne ways have never been more hungry for knowledge and to reclaim what we've lost. If you would seek to wield the power of the arcane and have the aptitude, I can help you take your next steps.", d=14.680, v="skyborne-male" },
 	},
 	[254087] = {
+		{ f="254087-87ef59fc", h="87ef59fc", t="Slay your enemies and swoon your paramours with this one weird trick.    If you follow the path of the rogue, I can teach you... for a cost, of course.", d=11.640, v="skyborne-female" },
 		{ f="254087-a046a01a", h="a046a01a", t="Slay your enemies and swoon your paramours with this one weird trick.    If you follow the path of the $c, I can teach you... for a cost, of course.", d=11.680, v="skyborne-female" },
 	},
 	[254088] = {
@@ -10818,6 +10882,9 @@ pack.gossip = {
 	},
 	[255877] = {
 		{ f="255877-837eac47", h="837eac47", t="You will need to find Nat Pagle in Dustwallow Marsh to get any better than you are currently.", d=5.648, v="human-male" },
+	},
+	[255897] = {
+		{ f="255897-888e5b2f", h="888e5b2f", t="Need something?", d=1.320, v="goblin-female" },
 	},
 	[255940] = {
 		{ f="255940-9cc50b7d", h="9cc50b7d", t="Welcome to the Calmbreeze Inn, traveler. Would you like some refreshment?", d=4.760, v="skyborne-male" },
@@ -10914,7 +10981,7 @@ pack.gossip = {
 	},
 	[256930] = {
 		{ f="256930-341966bb", h="341966bb", t="Most of my outfit did. Displaced from the ground falling out from under our feet. Some came from other islands entirely. I came from the city of Shen'dramar, on the big island. Well, what used to be the big island, I suppose.    My family and I managed to get on one of the last skycutters out of there before the entire island broke apart. We thought that Zephras would save us. Well, it didn't. They are all long dead and now I'm here, awaiting execution.", d=29.270, v="skyborne-male" },
-		{ f="256930-70ce7a83", h="70ce7a83", t="Desperation? Hunger? I'm not exactly here doing this because I like robbing and murdering. I lost my home, had no where to go, and I don't much care to shave my head and worship some imaginary wind god, so I became a bandit. The rest is obvious.", d=15.880, v="skyborne-male" },
+		{ f="256930-70ce7a83", h="70ce7a83", t="Desperation? Hunger? I'm not exactly here doing this because I like robbing and murdering. I lost my home, had nowhere to go, and I don't much care to shave my head and worship some imaginary wind god, so I became a bandit. The rest is obvious.", d=15.880, v="skyborne-male" },
 		{ f="256930-a5bd8b56", h="a5bd8b56", t="What are you looking at?", d=1.400, v="skyborne-male" },
 		{ f="256930-b893349b", h="b893349b", t="Largely, yes. The thing we all have in common is that we have nowhere else to go and that we prefer thieving over enslaving ourselves to some insane cult.", d=9.880, v="skyborne-male" },
 		{ f="256930-d07034d1", h="d07034d1", t="Killed a peacekeeper and stole some windstones.", d=3.040, v="skyborne-male" },
@@ -10933,12 +11000,15 @@ pack.gossip = {
 		{ f="257004-fb513610", h="fb513610", t="I hope that your interruption is for a good cause, I was in the middle of some important work.", d=6.120, v="skyborne-female" },
 	},
 	[257005] = {
+		{ f="257005-1a6886aa", h="1a6886aa", t="Ah, hello. You look as though you have a question for me.", d=5.760, v="skyborne-female" },
 		{ f="257005-45c78ce3", h="45c78ce3", t="Nostyec Aetwinter, mod. E wirsh ador eynes re an tiras an lo vil va novaedi E gol melka ras re y bor rothas aelgestron.", d=14.960, v="skyborne-female" },
+		{ f="257005-a3b7de8e", h="a3b7de8e", t="Another Alchemist, hmm. I doubt your skill is as great as my own so perhaps I can train you in a few proper techniques.", d=9.600, v="skyborne-female" },
 		{ f="257005-c65683ed", h="c65683ed", t="Winds tidings. What can I help you with?", d=3.520, v="skyborne-female" },
 		{ f="257005-d62b45b0", h="d62b45b0", t="Gales greetings, friend. Is there something I can help you with?", d=4.800, v="skyborne-female" },
 		{ f="257005-fb513610", h="fb513610", t="I hope that your interruption is for a good cause. I was in the middle of some important work.", d=6.320, v="skyborne-female" },
 	},
 	[257006] = {
+		{ f="257006-53a09e6f", h="53a09e6f", t="Y garde bor hir uden algos me nuff nostyec lon aldonoth, far Y nagan Y borne eynes nud danagarde lo rothas melka.", d=9.840, v="skyborne-female" },
 		{ f="257006-8cd6b7fd", h="8cd6b7fd", t="I don't get too many cooks in here looking for training, but I guess I could teach you something if you're ready.", d=6.400, v="skyborne-female" },
 		{ f="257006-8fa53a5b", h="8fa53a5b", t="Cooking on Zephras may seem difficult to the untrained eye, but I enjoy the creation of every dish. Even though our dwindling home is lacking many of our traditional kaldorei ingredients, it has been fun to create new variations of the recipes of our ancestors.    I hope that no matter where the winds take you, these recipes remind you of home.", d=23.390, v="skyborne-female" },
 		{ f="257006-cc01e817", h="cc01e817", t="It appears the winds have brought you my way! I am happy to train you in the ways of cooking if you have the inclination to learn.", d=9.000, v="skyborne-female" },
@@ -10952,6 +11022,7 @@ pack.gossip = {
 	},
 	[257008] = {
 		{ f="257008-1a6886aa", h="1a6886aa", t="Ah, hello. You look as though you have a question for me.", d=3.840, v="skyborne-male" },
+		{ f="257008-2d37e4b8", h="2d37e4b8", t="Me, o ealdor Veldbarad. Bor nud faergas me thor se o daegil aldonoth? Majis Y gol nuff nud o algos se ash?", d=10.480, v="skyborne-male" },
 		{ f="257008-358b7a1a", h="358b7a1a", t="Re, y ealdor Regenthor. Hir ras novaedi re uden va y vandar thorniss? Melka E gol ruff ras y garde va vil?", d=11.360, v="skyborne-male" },
 		{ f="257008-c65683ed", h="c65683ed", t="Winds tidings. What can I help you with?", d=3.080, v="skyborne-male" },
 		{ f="257008-d62b45b0", h="d62b45b0", t="Gales greetings, friend. Is there something I can help you with?", d=4.600, v="skyborne-male" },
@@ -11003,12 +11074,26 @@ pack.gossip = {
 	[257065] = {
 		{ f="257065-819f44a1", h="819f44a1", t="Do you seek the blessings of the Windlord?", d=3.040, v="skyborne-male" },
 	},
+	[257087] = {
+		{ f="257087-424bc3ca", h="424bc3ca", t="Need a lift? Our gryphons are always ready to take to the skies.", d=4.017, v="human-female" },
+	},
 	[257446] = {
 		{ f="257446-1e35c538", h="1e35c538", t="The stone an' soil speak truer than any tongue, if ye quiet the clatter in yer heart long enough to hear 'em.     If ye've the makings of a $c, I'll teach ye.", d=9.840, v="dwarf-male" },
 		{ f="257446-3123e450", h="3123e450", t="The stone an' soil speak truer than any tongue, if ye quiet the clatter in yer heart long enough to hear 'em.     If ye've the makings of a shaman, I'll teach ye.", d=9.080, v="dwarf-male" },
 	},
 	[257554] = {
 		{ f="257554-41088e5c", h="41088e5c", t="<The gaze of the ranger standing before you is fixed on the enormous anchor pylon in the distance.>", P={ { d=6.000, n=true } }, nP={ [1]={ [1]=6.880 } } },
+	},
+	[257558] = {
+		{ f="257558-f35dbc79", h="f35dbc79", t="Ah, it's been some time since we've had adventurers roam these halls. Welcome to Farholde Keep. Enjoy these comforts while you can. I'm sure you've seen the conditions we're forced to keep.    It seems every day we lose more of our home to the ever-growing infestation of Horde mongrels and Light-forsaken Twilight's Hammer cultists. With those cowards in Stormwind hiding behind their walls, we are forced to bring order to these beasts ourselves.    Perhaps you'd like to put some of those $c talents to use?", d=35.228, v="human-male" },
+	},
+	[257591] = {
+		{ f="257591-3e0f5f68", h="3e0f5f68", t="When these lands fell to the orcish Horde during the First War, the bulk of the Alliance military moved on to other concerns. They believed the land lost, and that the war efforts were better spent on the home front.    We agree. But the Riverglades are our home, $N. Without aid from the rest of the army, the cavalry men and women of Farholde mounted a bold campaign to retake our lands. Under the command of Demar, we know that someday these lands will belong to us once again.     This is not just a battle for control, $N. This is a war for our birthright.", d=30.982, v="human-female" },
+		{ f="257591-a0cd4ece", h="a0cd4ece", t="Greetings, $c. As advisor to Demar, I would be happy to answer any questions you have about Farholde Keep.", d=5.935, v="human-female" },
+	},
+	[257595] = {
+		{ f="257595-4a0923b3", h="4a0923b3", t="Are you interested in exploring one of these dungeons?", d=3.325, v="human-male" },
+		{ f="257595-c80041d2", h="c80041d2", t="Welcome to my Inn, weary traveler. What can I do for you?", d=4.653, v="human-male" },
 	},
 	[257597] = {
 		{ f="257597-32ab8342", h="32ab8342", t="Out of the hottest fire comes the strongest steel.", d=3.040, v="dwarf-male" },
@@ -11034,6 +11119,7 @@ pack.gossip = {
 		{ f="258113-1605f087", h="1605f087", t="The spirits have guided you to me. How may I be of service?", d=4.360, v="dwarf-female" },
 	},
 	[258130] = {
+		{ f="258130-5a52f936", h="5a52f936", t="<Before you lies the corpse of Jorel Windsinger.    Deep lacerations are cut into his legs, and lightning burns scorch his fur.    It is clear he put up a fight before succumbing to his wounds.>", d=13.840, v="narrator", n={ [1]=12.920 } },
 		{ f="258130-c2f6629b", h="c2f6629b", t="<Before you lies the corpse Jorel Windsinger.    Deep lacerations are cut into his legs, and lightning burns scorch his fur.    It is clear he put up a fight before succombing to his wounds.>", d=12.840, v="narrator", n={ [1]=13.960 } },
 	},
 	[258139] = {
@@ -11058,6 +11144,9 @@ pack.gossip = {
 	},
 	[258930] = {
 		{ f="258930-0e051c59", h="0e051c59", t="You've come for training in order to pass it on to your pets?", d=3.170, v="human-male" },
+	},
+	[259011] = {
+		{ f="259011-3a834e55", h="3a834e55", t="Unknown", d=1.440, v="skyborne-female" },
 	},
 	[259012] = {
 		{ f="259012-517aef13", h="517aef13", t="All of the $r islands became destabilized and began to move apart a few years ago. If that wasn't bad enough, now large pieces of Zephras are beginning to fall away. It's hard to imagine your home falling into the sky, but that is my reality now.", d=16.480, v="skyborne-female" },
@@ -11085,9 +11174,27 @@ pack.gossip = {
 		{ f="259620-a831a213", h="a831a213", t="As I said, the creature that attacked us fled when I singed its backside with lightning, but not before biting Banon. On our way back to town, the Gnolls surrounded us and took us captive.     It wasn't until they started to pull us out of the boat on Fenris Isle that... the change started.", d=17.320, v="skyborne-female" },
 		{ f="259620-cd848994", h="cd848994", t="Winds blessings, $c.", d=2.760, v="skyborne-female" },
 	},
+	[260080] = {
+		{ f="260080-5c5dcc2b", h="5c5dcc2b", t="Better to be prepared than to be dead.", d=2.196, v="human-female" },
+	},
 	[260093] = {
 		{ f="260093-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=23.710, v="scourge-male" },
 		{ f="260093-58279558", h="58279558", t="Do you require training in the ways of the light?", d=3.360, v="scourge-male" },
+	},
+	[260487] = {
+		{ f="260487-eebc7daf", h="eebc7daf", t="Hey hey hey! Watch where you're trackin' your shoes.    Tryin' to run a classy establishment here!", d=7.520, v="goblin-female" },
+	},
+	[260558] = {
+		{ f="260558-837eac47", h="837eac47", t="You will need to find Nat Pagle in Dustwallow Marsh to get any better than you are currently.", d=3.720, v="goblin-male" },
+	},
+	[260562] = {
+		{ f="260562-54362962", h="54362962", t="This town was a vacant lot before I showed up. Everything you see here was built by me. It belongs to ME!    Question is, what can YOU do for me?", d=7.720, v="goblin-male" },
+	},
+	[260566] = {
+		{ f="260566-722af728", h="722af728", t="Ain't nothing ever gonna compare to the smell of freshly discharged gunpowder, friend.", d=3.520, v="goblin-male" },
+	},
+	[260568] = {
+		{ f="260568-94d7fc8d", h="94d7fc8d", t="No fights goin' on today, pal. The Horde and the Alliance are too busy killin' each other out in the fields when there's perfectly good coin to be made doin' that in my arena! Go figure.    Come back when I get this place up and runnin'.", d=8.400, v="goblin-male" },
 	},
 	[260628] = {
 		{ f="260628-e754d42e", h="e754d42e", t="<Valennia winces in pain as she shifts to look at you.>    Don't look at me like that. I'll be fine. Despite the best efforts of the High Elder's fretful healers, I'll be up and ready to fight again in no time.    Now be gone with you... don't let this old soldier hold you up. The winds will bring you good fortune on your journey, I know it.", d=17.560, v="skyborne-female", P={ { d=3.800, n=true }, { d=17.440 } }, nP={ [1]={ [1]=4.440 } } },
@@ -11098,6 +11205,9 @@ pack.gossip = {
 	[261371] = {
 		{ f="261371-c0c247fc", h="c0c247fc", t="Those humans got what they deserved.     <Vrang spits on the ground.>", d=3.390, v="orc-male", P={ { d=2.997 }, { d=2.080, n=true } }, nP={ [1]={ [2]=2.000 } } },
 	},
+	[261485] = {
+		{ f="261485-8137ab65", h="8137ab65", t="<The Theramore Marine stands guard in stoic silence.>", P={ { d=3.880, n=true } }, nP={ [1]={ [1]=4.120 } } },
+	},
 	[262492] = {
 		{ f="262492-ca9aee41", h="ca9aee41", t="I've been expec...  <Rimblat coughs.>  Excuse me, old habit. I am Rimblat of the Earthen Ring. ", d=8.000, v="tauren-male", P={ { d=1.800 }, { d=1.440, n=true }, { d=4.840 } }, nP={ [1]={ [2]=1.320 } } },
 	},
@@ -11107,6 +11217,7 @@ pack.gossip = {
 	},
 	[262558] = {
 		{ f="262558-165bbe08", h="165bbe08", t="What has brought you to the Earthen Ring?", d=2.600, v="tauren-male" },
+		{ f="262558-996eca9b", h="996eca9b", t="May the spirits be with you.", d=2.280, v="tauren-male" },
 	},
 	[262560] = {
 		{ f="262560-297f06b6", h="297f06b6", t="Many serve the Earth Mother in different ways. The Earthen Ring and the Cenarion Circle share many similarities and are often aligned in goals, if not methods and customs.", d=13.080, v="tauren-female" },
@@ -11122,9 +11233,10 @@ pack.gossip = {
 		{ f="263399-b37c4e4d", h="b37c4e4d", t="Howdy there, traveler!", d=1.612, v="human-male" },
 	},
 	[263569] = {
-		{ f="263569-85179f46", h="85179f46", t="Greetings, traveler! I am Bryanna Embreeze. I am the main supplier for the Theramore Expeditionary Force.  As you improve your standing with the Theramore Expeditionary Force, I can offer you an additional selection of goods that you can use inside Darkspear Islands.", d=14.958, v="human-female" },
+		{ f="263569-85179f46", h="85179f46", t="Greetings, traveler! I am Bryanna Embreeze. I am the main supplier for the Theramore Expeditionary Force. As you improve your standing with the Theramore Expeditionary Force, I can offer you an additional selection of goods that you can use inside Darkspear Islands.", d=14.958, v="human-female" },
 	},
 	[263570] = {
+		{ f="263570-8ac1454b", h="8ac1454b", t="Greetings, traveler! I am Creeg Bothunk, the main supplier for the Darkspear Raiders. As you improve your standing with the Darkspear Raiders, I will be able to provide a variety of goods that you can use inside Darkspear Islands. Should you find yourself in need of item repair, I also provide those services.", d=25.350, v="troll-male" },
 		{ f="263570-954d4e6d", h="954d4e6d", t="Greetings, traveler! I am Creeg Bothunk, the main supplier for the Darkspear Raiders.  As you improve your standing with the  Darkspear Raiders, I will be able to provide a selection of goods that you can use inside Darkspear Islands.  Should you find yourself in need of item repair, I also provide those services.", d=25.350, v="troll-male" },
 	},
 	[263643] = {
@@ -11139,6 +11251,7 @@ pack.gossip = {
 		{ f="263645-fb408f08", h="fb408f08", t="Well, well... are you ready to fight for the Horde in Darkspear Islands?", d=6.400, v="troll-male" },
 	},
 	[263646] = {
+		{ f="263646-53fff4bc", h="53fff4bc", t="I am sorry, $c, but you are not experienced enough yet to enter Darkspear Islands.", d=7.680, v="troll-male" },
 		{ f="263646-fb408f08", h="fb408f08", t="Well, well...are you ready to fight for the Horde in Darkspear Islands?", d=5.640, v="troll-male" },
 	},
 	[263647] = {
@@ -11148,10 +11261,13 @@ pack.gossip = {
 		{ f="263664-550c4a52", h="550c4a52", t="Greetings, traveler.", d=1.600, v="skyborne-male" },
 	},
 	[263930] = {
+		{ f="263930-00bdfcec", h="00bdfcec", t="That trainer can be found on the southeastern edge of town, near the High Order's dock.", d=5.440, v="skyborne-male", s={ ["f"]=6.000 } },
+		{ f="263930-08807185", h="08807185", t="The bank and auction house can be found on the western side of Valanaar, near the Windshapers' skycutter dock.", d=6.480, v="skyborne-male", s={ ["f"]=6.320 } },
 		{ f="263930-6d6f2083", h="6d6f2083", t="Greetings, citizen.", d=1.840, v="skyborne-male", s={ ["f"]=1.800 } },
 		{ f="263930-7fc1d917", h="7fc1d917", t="May I help you locate something, citizen?", d=3.680, v="skyborne-male", s={ ["f"]=3.400 } },
 		{ f="263930-8b1fd97e", h="8b1fd97e", t="What are you looking for, citizen?", d=1.920, v="skyborne-male", s={ ["f"]=2.320 } },
 		{ f="263930-9d79190e", h="9d79190e", t="The Inn can be found on the east side of the road leading northward out of town.", d=4.960, v="skyborne-male", s={ ["f"]=5.960 } },
+		{ f="263930-aa6ba0a9", h="aa6ba0a9", t="Is there something I can help you find?", d=2.680, v="skyborne-male", s={ ["f"]=2.560 } },
 		{ f="263930-ca22bbdb", h="ca22bbdb", t="The town medic can be found inside the tower on the northeast edge of town.", d=5.040, v="skyborne-male", s={ ["f"]=5.640 } },
 		{ f="263930-ef767f20", h="ef767f20", t="Which profession?", d=1.840, v="skyborne-male", s={ ["f"]=2.720 } },
 	},
@@ -11170,6 +11286,7 @@ pack.gossip = {
 	[265756] = {
 		{ f="265756-0cf2d0bd", h="0cf2d0bd", t="Welcome to Fairweather Stables! I would love to provide you one of our fine galestriders, but it seems like you may not yet have enough experience to ride one.    They are temperamental at times and are prone to toss newer riders if not handled correctly. I would be more than happy to provide the training for you once you are a more seasoned adventurer and have enough coin!", d=21.150, v="skyborne-male" },
 		{ f="265756-b66c2800", h="b66c2800", t="<The strider peers at you; its gaze is impatient and it almost seems to bounce with excitement.>", P={ { d=5.800, n=true } }, nP={ [1]={ [1]=6.880 } } },
+		{ f="265756-eefee559", h="eefee559", t="Welcome to Fairweather Stables! I would love to provide you with one of our fine galestriders, but it seems like you may not yet have enough experience to ride one.    They are temperamental at times and are prone to toss newer riders if not handled correctly. I would be more than happy to provide the training for you once you are a more seasoned adventurer and have enough coin!", d=24.030, v="skyborne-male" },
 	},
 	[265809] = {
 		{ f="265809-550c4a52", h="550c4a52", t="Greetings, traveler.", d=2.584, v="orc-male" },
@@ -11197,7 +11314,7 @@ pack.gossip = {
 		{ f="266881-932ae4f0", h="932ae4f0", t="What business do you have in the Echo Isles, $c?", d=3.880, v="troll-female" },
 	},
 	[267007] = {
-		{ f="267007-31050836", h="31050836", t="Well, you can find Theridan or Maldryn by the moonwell in the Park.  Just head to the western area of Stormwind, north of the Mage District, but west of the Cathedral Square.", d=8.767, v="human-female" },
+		{ f="267007-31050836", h="31050836", t="Well, you can find Theridan or Maldryn by the moonwell in the Park.  Just head to the western area of Stormwind, north of the Mage District, but west of the Cathedral Square.", d=8.767, v="human-female", s={ ["m"]=11.099 } },
 		{ f="267007-37e215b2", h="37e215b2", t="Which class trainer are you looking for?", d=2.117, v="human-female", s={ ["m"]=3.029 } },
 		{ f="267007-7413cdc8", h="7413cdc8", t="All of a sudden you're a 'Defender of the Alliance' are you?! Well, I suppose you'll be wanting to head to the Champions' Hall now. It's over in Old Town, but they won't let you in unless you're an officer, so you might just have to settle for talking to Officer Areyn outside. Move along now.", d=14.187, v="human-female", s={ ["m"]=14.835 } },
 		{ f="267007-7d21b53a", h="7d21b53a", t="You can find Stormwind Harbor if you head through the Canals, between the Cathedral District and the Park.    Were you looking for a specific destination?", d=8.017, v="human-female", s={ ["m"]=9.344 } },
@@ -11302,13 +11419,16 @@ pack.gossip = {
 		{ f="267677-d741064d", h="d741064d", t="<The horse watches you calmly and swishes its long tail to shoo away some flies.>", d=5.000, v="narrator", n={ [1]=6.720 } },
 	},
 	[267683] = {
-		{ f="267683-b4b21be5", h="b4b21be5", t="<The tag on the mechanostrider reads:    Crimson-Blastdasher XL 300. Now with extra terrain grips and a sleek new color!>", d=9.120, v="narrator" },
+		{ f="267683-b4b21be5", h="b4b21be5", t="<The tag on the mechanostrider reads:    Crimson-Blastdasher XL 300. Now with extra terrain grips and a sleek new color!>", d=9.120, v="narrator", n={ [1]=11.160 } },
+	},
+	[267684] = {
+		{ f="267684-e29d08b7", h="e29d08b7", t="<The tag on the mechanostrider reads:    Nitro-Green-Hyperlighter 2000, now with twice the bulb brightness and dynamic photo-sensors!>", d=9.480, v="narrator", n={ [1]=9.320 } },
 	},
 	[267687] = {
 		{ f="267687-14707f63", h="14707f63", t="<The tag on the mechanostrider reads:    Electric Blue Mecha-turbo Runner 5000, now with extra movement tracking and terrain damping for a smooth ride!>", d=9.840, v="narrator", n={ [1]=13.080 } },
 	},
 	[267688] = {
-		{ f="267688-ad18a6ee", h="ad18a6ee", t="<The tag on the mechanostrider reads:    The Chromo-Classic Mechanostrider! Now with hydraulic equilibrium enhancers, and mithril tailpipe dampers.>", d=10.560, v="narrator", n={ [1]=10.440 } },
+		{ f="267688-ad18a6ee", h="ad18a6ee", t="<The tag on the mechanostrider reads:    The Chromo-Classic Mechanostrider! Now with hydraulic equilibrium enhancers and mithril tailpipe dampers.>", d=10.560, v="narrator", n={ [1]=10.440 } },
 	},
 	[267806] = {
 		{ f="267806-6f7f9937", h="6f7f9937", t="Psst! Hey, you! Yeah, you! You caught one of those rare tournament fish, didn't you? Don't be shy, I can smell it from here!    Listen, I know what it's like to reel in your last line, thinking you're about to claim your prize... only to catch the most amazing, gorgeous, WORTHLESS lunker known to goblin kind! Yeah, been there, lost my shot at the title three weeks in a row to that! Learned pretty darn quick they taste better than the tastyfish, though.    Now, I just participate for fun. That means I've got a few tastyfish on hand... and I am willing to trade for the vastly superior rare fish.    Seems like a win-win for you, huh?", d=27.100, v="goblin-male" },
@@ -11318,9 +11438,9 @@ pack.gossip = {
 		{ f="268047-c401ba80", h="c401ba80", t="$N, the Stormpike Guard is in need of your aid in the battle against the Frostwolf Clan in Alterac Valley, now more than ever.  The opportunities for honor and repute are greater than ever as well! Will you join the battle?", d=12.844, v="human-female" },
 	},
 	[268048] = {
-		{ f="268048-53fff4bc", h="53fff4bc", t="I am sorry, $c, but you are not experienced enough yet to enter Darkspear Islands.", d=7.560, v="troll-female", s={ ["m"]=8.800 } },
-		{ f="268048-e1c9a6bd", h="e1c9a6bd", t="Hail, $c.  There is a great need and even greater honor and renown to be had in Alterac Valley at this time. Will you join our fight against the Stormpike Guard?", d=12.360, v="troll-female" },
-		{ f="268048-fb906211", h="fb906211", t="$C, we could use more help out at Darkspear Islands against the Theramore Expeditionary Force. Are you willing to join in?", d=8.760, v="troll-female" },
+		{ f="268048-53fff4bc", h="53fff4bc", t="I am sorry, $c, but you are not experienced enough yet to enter Darkspear Islands.", d=8.520, v="troll-male", s={ ["f"]=6.920 } },
+		{ f="268048-e1c9a6bd", h="e1c9a6bd", t="Hail, $c.  There is a great need and even greater honor and renown to be had in Alterac Valley at this time. Will you join our fight against the Stormpike Guard?", d=13.760, v="troll-male", s={ ["f"]=12.880 } },
+		{ f="268048-fb906211", h="fb906211", t="$C, we could use more help out at Darkspear Islands against the Theramore Expeditionary Force. Are you willing to join in?", d=10.360, v="troll-male", s={ ["f"]=8.120 } },
 	},
 	[268511] = {
 		{ f="268511-ee845bad", h="ee845bad", t="Harbor work is open to everyone, but your personal safety is your own responsibility.", d=6.300, v="human-male" },
@@ -11357,6 +11477,9 @@ pack.gossip = {
 	[270637] = {
 		{ f="270637-3e0b4d08", h="3e0b4d08", t="So many Wildhammer lives lost... whole families erased...", d=5.080, v="dwarf-male" },
 	},
+	[271322] = {
+		{ f="271322-706c4394", h="706c4394", t="Are the Dark Irons gone?", d=1.833, v="human-female" },
+	},
 	[271465] = {
 		{ f="271465-92b9fbbb", h="92b9fbbb", t="Greetings, $c. Are you in need of arms?    I was trained by Antarion of Ban'aethal, using secrets handed down from the ancient master magesmiths of Kalimdor.    You'll find no finer weapons on Zephras Isle than mine.", d=13.920, v="skyborne-male" },
 	},
@@ -11378,7 +11501,9 @@ pack.gossip = {
 	},
 	[272101] = {
 		{ f="272101-5d6f0b28", h="5d6f0b28", t="What are you looking for?", d=2.360, v="scourge-female" },
+		{ f="272101-aaa369e6", h="aaa369e6", t="Our Alchemist's name is Carolai Anise.  You'll find her in a house at the northwest end of Brill.", d=10.840, v="scourge-female" },
 		{ f="272101-e7cb64ec", h="e7cb64ec", t="There's a Bat Handler inside the Undercity.  Head south down the road out of Brill, then west at the T-intersection.  The Ruins of Lordaeron will be on your left.  Go into them and then down into the Undercity.  You can ask an Undercity Guardian there for further assistance.", d=21.640, v="scourge-female" },
+		{ f="272101-ef767f20", h="ef767f20", t="Which profession?", d=1.800, v="scourge-female" },
 		{ f="272101-effe3a80", h="effe3a80", t="What could you possibly need a bank for?  Very well, you'll need to go through the Ruins of Lordaeron to the south of Brill.  In the back are a set of elevators leading down into the Undercity.  When you get there stop any of those lumbering Abominations they like to call an Undercity Guardian and ask it for better directions.", d=23.950, v="scourge-female" },
 	},
 	[272450] = {
@@ -11389,6 +11514,9 @@ pack.gossip = {
 	},
 	[272633] = {
 		{ f="272633-4a619efb", h="4a619efb", t="The ebb and flow of magic has been disrupted, of late. I hear that even the mages of Dalaran are perplexed. Is this disturbance arcane in nature, or are the elements themselves in unrest?", d=12.200, v="tauren-female" },
+	},
+	[272646] = {
+		{ f="272646-e1187d15", h="e1187d15", t="Can I help you find something?", d=1.687, v="human-female" },
 	},
 	[274757] = {
 		{ f="274757-21ab523d", h="21ab523d", t="Here in Darnassus you will find skilled trainers who have perfected the skills of their chosen class through ages of training and dedication.  I will guide you to one who can become your mentor, you have but to name your chosen path.", d=17.760, v="nightelf-female" },
@@ -11401,6 +11529,9 @@ pack.gossip = {
 	[274781] = {
 		{ f="274781-034389cd", h="034389cd", t="Brandur Ironhammer would be the one ye'd want to see.  Ye can find him in the Hall of Mysteries north of the gates of Ironforge.", d=7.160, v="dwarf-male", s={ ["f"]=8.360 } },
 		{ f="274781-1c500d9f", h="1c500d9f", t="Skinning?  The only thing ye look like ye could skin is yer own knee!  Ha!  Now why don't you go see Balthus Stoneflayer so he can teach you how to properly skin some animals.  You'll find him in Finespindle's Leather Goods on the northern side of The Great Forge.", d=15.280, v="dwarf-male", s={ ["f"]=16.360 } },
+		{ f="274781-21c84810", h="21c84810", t="Where is the Auction House?  Why it's right by the gates of Ironforge as you enter our fine city.  Ye'll find it just across from The Vault.", d=8.880, v="dwarf-male", s={ ["f"]=8.880 } },
+		{ f="274781-293fb776", h="293fb776", t="A $c, eh...  Well, if you've got a mind to be doing that sort of thing around here then ye best keep yer demons on a leash boyo.  I don't like demons, but I love putting mah axe to them.  Ye get me?      Now you just leave me be and go get lost in The Forlorn Cavern.  That's where you'll find that $c, Thistleheart.", d=20.550, v="dwarf-male", s={ ["f"]=19.990 } },
+		{ f="274781-329c6da9", h="329c6da9", t="A valuable skill First Aid is.  Our resident trainer, Nissa Firestone, can show ye how it's done.  Look for her on the southern side of The Great Forge at the Ironforge Physician.", d=11.040, v="dwarf-male", s={ ["f"]=11.120 } },
 		{ f="274781-3804779b", h="3804779b", t="Which class trainer might ye be looking for?", d=2.640, v="dwarf-male", s={ ["f"]=3.160 } },
 		{ f="274781-46dd318e", h="46dd318e", t="Do we have Mining trainers here?  Where do ye think ye are!?      Why you'll find one o' the best miners in all Dun Morogh at the Deepmountain Mining Guild on the northern side of The Great Forge.  There, Geofram Bouldertoe will show ye the true art of mining.", d=14.320, v="dwarf-male", s={ ["f"]=16.240 } },
 		{ f="274781-6e49a2d4", h="6e49a2d4", t="The Inn?  Ah, ye looking to toss back some of the best ales Ironforge has to offer?  The Stonefire Tavern is where ye'll want to go.    Ye'll find it just to the left of the entrance to Ironforge if ye be coming, or to the right if ye be going.", d=14.440, v="dwarf-male", s={ ["f"]=16.040 } },
@@ -11408,6 +11539,7 @@ pack.gossip = {
 		{ f="274781-ab5dd850", h="ab5dd850", t="Between Bixi and Buliwyf, there ain't many weapons they haven't had the pleasure of slashing or smashing an orc with.  You can find them hanging out at the Timberline Arms weapon shop if ye need some training.", d=9.960, v="dwarf-male", s={ ["f"]=11.200 } },
 		{ f="274781-ac68ec99", h="ac68ec99", t="Yer looking to learn how to use a new weapon are ye?  Well, ye should be talking to Bixi or Buliwyf over at the Timberline Arms weapon shop then lad.  They know their weapons from axes to... uh... zweihanders.", d=12.160, v="dwarf-male", s={ ["f"]=15.680 } },
 		{ f="274781-ce6a7b9d", h="ce6a7b9d", t="What do ye need directions to?", d=2.560, v="dwarf-male", s={ ["f"]=2.640 } },
+		{ f="274781-e6c8b4c9", h="e6c8b4c9", t="The seers of the old ways, aye I know 'em. The waters of The Forlorn Cavern are where ye can find Eldrun Stormbreaker, $C trainer fer the kin o' the elements.", d=10.120, v="dwarf-male", s={ ["f"]=11.760 } },
 		{ f="274781-f3452b83", h="f3452b83", t="Where better to look for a dark and brooding lot, than the dark section of Ironforge, aptly named The Forlorn Cavern.  Thistleheart is sure to be found there, likely summoning some manner of vile creature to do his bidding.", d=13.600, v="dwarf-male", s={ ["f"]=14.440 } },
 	},
 	[274942] = {
@@ -11420,6 +11552,7 @@ pack.gossip = {
 		{ f="275212-8443298b", h="8443298b", t="I'm afraid we're not up and running just yet. Please do check back later!", d=3.972, v="human-female" },
 	},
 	[275243] = {
+		{ f="275243-13191e97", h="13191e97", t="Apologies, madam. The bank isn't open yet. Please come back later, if you don't mind.", d=5.566, v="human-male" },
 		{ f="275243-a3886d45", h="a3886d45", t="Apologies, sir. The bank isn't open yet. Please come back later, if you don't mind.", d=5.675, v="human-male" },
 		{ f="275243-c50a1c3f", h="c50a1c3f", t="No matter how many times I tell them the bank isn't open yet, they continue to wait and complain. It's almost like that's what they came here to do.", d=10.803, v="human-male" },
 	},
@@ -11463,6 +11596,15 @@ pack.gossip = {
 	},
 	[276732] = {
 		{ f="276732-f26348b8", h="f26348b8", t="<The great cat lets out a small huff as you near it.>", P={ { d=3.600, n=true } }, nP={ [1]={ [1]=3.680 } } },
+	},
+	[276734] = {
+		{ f="276734-b56bba7c", h="b56bba7c", t="<The tag on the mechanostrider reads:    Mecha-Titanium Eco-strider 9000! Now with elongated wing shields and eco-friendly tailpipe dampers.>", d=10.400, v="narrator", n={ [1]=12.760 } },
+	},
+	[276735] = {
+		{ f="276735-f9255134", h="f9255134", t="<The tag on the mechanostrider reads:    H4z4rd Flashdasher 3X 4000. Now with new radiation sensors, and decontamination misters!>", d=10.120, v="narrator", n={ [1]=10.960 } },
+	},
+	[276736] = {
+		{ f="276736-638ff7c2", h="638ff7c2", t="<The tag on the mechanostrider reads:    Hyper-lite Veridian Fuseblazer 800, now faster and furiouser, with dynamic photo-sensors!>", d=10.080, v="narrator", n={ [1]=11.200 } },
 	},
 	[276737] = {
 		{ f="276737-939f012f", h="939f012f", t="<This ram watches you with interest before lowering its head.>", P={ { d=3.960, n=true } }, nP={ [1]={ [1]=4.720 } } },
