@@ -1,0 +1,93 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "2226": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Karos Razok",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "4551": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Michael Garrett",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "4556": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Gordon Wendham",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1624",
+ "quests": {
+  "6321-progress": {
+   "build": "70338",
+   "class": "Paladin",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1421,
+   "name": "Karos Razok",
+   "npc": "2226",
+   "questID": 6321,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "You appear to be on official business...",
+   "time": 1791638423,
+   "title": "Supplying the Sepulcher",
+   "wanted": null,
+   "zone": "Silverpine Forest"
+  },
+  "6322-progress": {
+   "build": "70338",
+   "class": "Paladin",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1458,
+   "name": "Michael Garrett",
+   "npc": "4551",
+   "questID": 6322,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "If you must travel a long distance, then a bat is your best option.",
+   "time": 1791640219,
+   "title": "Michael Garrett",
+   "wanted": null,
+   "zone": "Undercity"
+  },
+  "6323-progress": {
+   "build": "70338",
+   "class": "Paladin",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1458,
+   "name": "Gordon Wendham",
+   "npc": "4556",
+   "questID": 6323,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "I keep my weapons in top condition.  They are cleaned and ready for use.",
+   "time": 1791640091,
+   "title": "Ride to the Undercity",
+   "wanted": null,
+   "zone": "Undercity"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
