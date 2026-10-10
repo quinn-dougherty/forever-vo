@@ -1,0 +1,86 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "3387|da8a5dad": {
+   "build": "70338",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Jorn Skyseer",
+   "npc": "3387",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Although we call this land the Barrens, to one who knows where to look this place teems with life.",
+   "time": 1791646305,
+   "title": null,
+   "wanted": null,
+   "zone": "The Barrens"
+  },
+  "3615|ddd7878b": {
+   "build": "70338",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Devrak",
+   "npc": "3615",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "My wind riders are trained to fly quickly through the hot Barrens air.",
+   "time": 1791644947,
+   "title": null,
+   "wanted": null,
+   "zone": "The Barrens"
+  }
+ },
+ "npcs": {
+  "3387": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 122055,
+   "name": "Jorn Skyseer",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3615": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 121287,
+   "name": "Devrak",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1645",
+ "quests": {
+  "882-progress": {
+   "build": "70338",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Jorn Skyseer",
+   "npc": "3387",
+   "questID": 882,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "$N, have you bested Ishamuhale?",
+   "time": 1791646302,
+   "title": "Ishamuhale",
+   "wanted": null,
+   "zone": "The Barrens"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
