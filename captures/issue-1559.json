@@ -1,0 +1,120 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "1340|76d04af9": {
+   "build": "70291",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1432,
+   "name": "Mountaineer Kadrell",
+   "npc": "1340",
+   "questID": null,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Welcome to Thelsamar, your home away from home in Loch Modan!\n\nThelsamar is a nice place, but it's not all beer and salted meat for those who answer the call to duty!  If you're willing to face danger in the name of the Alliance, then read the poster outside the Thelsamar branch of the Explorers' League.",
+   "time": 1791558118,
+   "title": null,
+   "wanted": null,
+   "zone": "Loch Modan"
+  },
+  "1343|5751dde2": {
+   "build": "70291",
+   "class": "Shaman",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1432,
+   "name": "Mountaineer Stormpike",
+   "npc": "1343",
+   "questID": null,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Well, if it isn't a young, bristling $c, no doubt drawn here by talk of my exploits in fields of battle!\n\nNo time for stories now, for there are great, important deeds that need doing!  So if you're looking for glory, then luck shines on you today...",
+   "time": 1791557655,
+   "title": null,
+   "wanted": null,
+   "zone": "Loch Modan"
+  },
+  "269153|dab85bcc": {
+   "build": "70291",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1432,
+   "name": "Mountaineer Ylva",
+   "npc": "269153",
+   "questID": null,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "<The mountaineer clearly fought bravely before meeting her end at the weapons of the troggs.>",
+   "time": 1791558987,
+   "title": null,
+   "wanted": null,
+   "zone": "Loch Modan"
+  },
+  "6734|b63e4e81": {
+   "build": "70291",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1432,
+   "name": "Innkeeper Hearthstove",
+   "npc": "6734",
+   "questID": null,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Fill yer tankard and pull up a chair. We've stories to tell and kegs to empty.",
+   "time": 1791558071,
+   "title": null,
+   "wanted": null,
+   "zone": "Loch Modan"
+  }
+ },
+ "npcs": {
+  "1340": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Mountaineer Kadrell",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "1343": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Mountaineer Stormpike",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "269153": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 950080,
+   "name": "Mountaineer Ylva",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "6734": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Innkeeper Hearthstove",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1559",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
