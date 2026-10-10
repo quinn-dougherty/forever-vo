@@ -1,0 +1,119 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "2274": {
+   "addon": "0.1.9",
+   "creatureType": "Beast",
+   "modelFileID": 126487,
+   "name": "Stanley",
+   "sex": 1
+  },
+  "270438": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Deathstalker Masoj",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3341": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Gann Stonespire",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3419": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 997378,
+   "name": "Apothecary Zamah",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-1554",
+ "quests": {
+  "1067-progress": {
+   "build": "70338",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1456,
+   "name": "Apothecary Zamah",
+   "npc": "3419",
+   "questID": 1067,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "You have returned, $N.  Do you bring aid from Apothecary Lydon?",
+   "time": 1791579372,
+   "title": "Return to Thunder Bluff",
+   "wanted": null,
+   "zone": "Thunder Bluff"
+  },
+  "502-progress": {
+   "build": "70338",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1424,
+   "name": "Stanley",
+   "npc": "2274",
+   "questID": 502,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Woof?",
+   "time": 1791578895,
+   "title": "Elixir of Pain",
+   "wanted": null,
+   "zone": "Hillsbrad Foothills"
+  },
+  "843-progress": {
+   "build": "70338",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Gann Stonespire",
+   "npc": "3341",
+   "questID": 843,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Many innocent $r lost their lives or were forced off their ancestral birthplace when the dwarves of Bael Modan arrived. My land must be reclaimed!",
+   "time": 1791581661,
+   "title": "Gann's Reclamation",
+   "wanted": null,
+   "zone": "The Barrens"
+  },
+  "98094-progress": {
+   "build": "70338",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1424,
+   "name": "Deathstalker Masoj",
+   "npc": "270438",
+   "questID": 98094,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Timing is everything...",
+   "time": 1791578140,
+   "title": "Scout Support",
+   "wanted": null,
+   "zone": "Hillsbrad Foothills"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
