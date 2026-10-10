@@ -1,0 +1,66 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "1703|97c7cdfc": {
+   "build": "70291",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1455,
+   "name": "Uthrar Threx",
+   "npc": "1703",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Hold on there, I'm just an assistant. If ye want to start learnin' the fancy stuff, talk to old Stonebrew over there.",
+   "time": 1791643152,
+   "title": null,
+   "wanted": null,
+   "zone": "Ironforge"
+  },
+  "5153|4acd68fa": {
+   "build": "70291",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1455,
+   "name": "Jormund Stonebrow",
+   "npc": "5153",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Hmm... you show a little promise, I'll give you that. Okay then, where were we?",
+   "time": 1791643178,
+   "title": null,
+   "wanted": null,
+   "zone": "Ironforge"
+  }
+ },
+ "npcs": {
+  "1703": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Uthrar Threx",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "5153": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Jormund Stonebrow",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1613",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
