@@ -1,0 +1,93 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "240|3ccc4430": {
+   "build": "70338",
+   "class": "Warlock",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Marshal Dughan",
+   "npc": "240",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Ach, it's hard enough keeping order around here without all these new troubles popping up! I hope you have good news, $n...",
+   "time": 1791652712,
+   "title": null,
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  },
+  "241|2823b3ed": {
+   "build": "70338",
+   "class": "Warlock",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Remy \"Two Times\"",
+   "npc": "241",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Hey there, friend.  My name's Remy.  I'm from Redridge to the east, and came here looking for business, looking for business.  You got any...got any??",
+   "time": 1791652699,
+   "title": null,
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  },
+  "906|86b6c1ef": {
+   "build": "70338",
+   "class": "Warlock",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Maximillian Crowe",
+   "npc": "906",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "The arcane only corrupts those who are weak. Keep up on your training, or you may find a similar fate.",
+   "time": 1791652763,
+   "title": null,
+   "wanted": null,
+   "zone": "Lion's Pride Inn"
+  }
+ },
+ "npcs": {
+  "240": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Marshal Dughan",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "241": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Remy \"Two Times\"",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "906": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Maximillian Crowe",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1647",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
