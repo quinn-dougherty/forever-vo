@@ -1,0 +1,93 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "2094": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "James Halloran",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "267309": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Bainham",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "392": {
+   "addon": "0.1.9",
+   "creatureType": "Undead",
+   "modelFileID": 124516,
+   "name": "Captain Grayson",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1679",
+ "quests": {
+  "104-progress": {
+   "build": "70338",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1436,
+   "name": "Captain Grayson",
+   "npc": "392",
+   "questID": 104,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "Have you laid waste to the menace known as Old Murk-Eye yet?  He has been spotted roaming the coastline of Westfall.\n\nReturn to me when the foul beast is dead.",
+   "time": 1791636148,
+   "title": "The Coastal Menace",
+   "wanted": null,
+   "zone": "Westfall"
+  },
+  "469-progress": {
+   "build": "70338",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1437,
+   "name": "James Halloran",
+   "npc": "2094",
+   "questID": 469,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "Hello there, $c. Could I interest you in a pair of boots?  Perhaps some newly cured skins?",
+   "time": 1791661429,
+   "title": "Daily Delivery",
+   "wanted": null,
+   "zone": "Wetlands"
+  },
+  "97005-accept": {
+   "build": "70338",
+   "class": "Warrior",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Bainham",
+   "npc": "267309",
+   "questID": 97005,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "There are rumors of a colossal abomination that makes its lair at a cave to the northwest of here, on the plateau known as Thorn Hill. The Razormane call it Chol'aruk or \"The Ravener\" and those that have seen it say it's so massive that it can swallow an orc whole.\r\n\r\nFew believe such tales, but I do... because I've fought one like it myself. On the honor of those I lost to these things, this beast must die.\r\n\r\nGather strong allies and find the lair of Chol'aruk. Kill the abomination and bring me its head.",
+   "time": 1791663335,
+   "title": "Chol'aruk the Ravener",
+   "wanted": true,
+   "zone": "The Barrens"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
