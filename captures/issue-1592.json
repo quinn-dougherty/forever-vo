@@ -1,0 +1,140 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "3155|0402cd55": {
+   "build": "70338",
+   "class": "Rogue",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Rwag",
+   "npc": "3155",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "The Shattered Hand will see the Horde to their former glory, unhindered by the timidness of the Warchief.",
+   "time": 1791503760,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "npcs": {
+  "11378": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Foreman Thazz'ril",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3145": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 949470,
+   "name": "Zureetha Fargaze",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "3155": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Rwag",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "9796": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Galgar",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1592",
+ "quests": {
+  "4402-complete": {
+   "build": "70338",
+   "class": "Rogue",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Galgar",
+   "npc": "9796",
+   "questID": 4402,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Wonderful, $N! As promised, here is your cactus apple surprise. Pick one of these training manuals, too. I've got plenty to go around.",
+   "time": 1791504547,
+   "title": "Galgar's Cactus Apple Surprise",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "4402-progress": {
+   "build": "70338",
+   "class": "Rogue",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Galgar",
+   "npc": "9796",
+   "questID": 4402,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Have you finished collecting cactus apples?",
+   "time": 1791504546,
+   "title": "Galgar's Cactus Apple Surprise",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "5441-accept": {
+   "build": "70338",
+   "class": "Rogue",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Foreman Thazz'ril",
+   "npc": "11378",
+   "questID": 5441,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Cursed peons!  They work hard gathering lumber from the trees of the valley, but they're always taking naps!  I need someone to help keep the peons in line.\n\nYou look like the right $r for my task.  Here, you take this blackjack and use it on any lazy peons you find sleeping on the job.  A good smack will get them right back to work!  Return the blackjack when you're done.\n\nLousy slacking peons...",
+   "time": 1791504513,
+   "title": "Lazy Peons",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "792-progress": {
+   "build": "70338",
+   "class": "Rogue",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Zureetha Fargaze",
+   "npc": "3145",
+   "questID": 792,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "To prove yourself against the Burning Blade, you must first defeat its Vile Familiars.  Return to me when you have done this.",
+   "time": 1791503876,
+   "title": "Vile Familiars",
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
