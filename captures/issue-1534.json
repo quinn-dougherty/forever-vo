@@ -1,0 +1,87 @@
+{
+ "addon": "0.1.9",
+ "books": {
+  "d1948154": {
+   "build": "70334",
+   "class": "Druid",
+   "differs": null,
+   "event": "page",
+   "isObject": null,
+   "mapID": 2521,
+   "name": null,
+   "npc": null,
+   "page": 1,
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "Greetings, $N,\r\n\r\nSince the elemental wind spirits vanished, Zephras has been on a deadly precipice. The birds, the beasts, and even the roots beneath our feet call to us for aid.\r\n\r\nSeek me out on the ground floor of the great tree here in Thendal Village. I will counsel and train you in the druidic arts.\r\n\r\n-Xyton Silverwind, $C Trainer",
+   "time": 1791558543,
+   "title": "Folded Parchment",
+   "wanted": null,
+   "zone": "Zephras Isle"
+  }
+ },
+ "gossip": {},
+ "npcs": {
+  "251361": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478487,
+   "name": "Rorian the Dayseeker",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "251373": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478487,
+   "name": "Xyton Silverwind",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1534",
+ "quests": {
+  "92485-accept": {
+   "build": "70334",
+   "class": "Druid",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Rorian the Dayseeker",
+   "npc": "251361",
+   "questID": 92485,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "While you were away dealing with our vuldren problem, our resident $c trainer--Xyton Silverwind--left this note for you. Read it as soon as you can, and then seek out Silverwind on the ground floor of this great tree just behind me.\r\n\r\nHeed his words and his counsel, he can teach you much.",
+   "time": 1791558527,
+   "title": "A Student of Nature",
+   "wanted": true,
+   "zone": "Zephras Isle"
+  },
+  "92485-progress": {
+   "build": "70334",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Xyton Silverwind",
+   "npc": "251373",
+   "questID": 92485,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "Greetings, I am Xyton Silverwind, keeper of druidic lore.",
+   "time": 1791558556,
+   "title": "A Student of Nature",
+   "wanted": null,
+   "zone": "Zephras Isle"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
