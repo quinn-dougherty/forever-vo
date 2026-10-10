@@ -1,0 +1,86 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "10219|572db4df": {
+   "build": "70338",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1439,
+   "name": "Gwennyth Bly'Leggonde",
+   "npc": "10219",
+   "questID": null,
+   "race": "Night Elf",
+   "sex": "f",
+   "source": "community",
+   "text": "May Elune walk with you, $c.  The Temple of the Moon has come to help the troubled citizens of Auberdine.",
+   "time": 1791408600,
+   "title": null,
+   "wanted": null,
+   "zone": "Darkshore"
+  }
+ },
+ "npcs": {
+  "10219": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 921844,
+   "name": "Gwennyth Bly'Leggonde",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "3666": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 900914,
+   "name": "Wizbang Cranktoggle",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-1667",
+ "quests": {
+  "1579-progress": {
+   "build": "70338",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1439,
+   "name": "Wizbang Cranktoggle",
+   "npc": "3666",
+   "questID": 1579,
+   "race": "Night Elf",
+   "sex": "f",
+   "source": "community",
+   "text": "Did you find my gaffer jacks, $N?  Without my gaffer jacks I can't tune my stintle pegs!",
+   "time": 1791408627,
+   "title": "Gaffer Jacks",
+   "wanted": null,
+   "zone": "Darkshore"
+  },
+  "3524-progress": {
+   "build": "70338",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1439,
+   "name": "Gwennyth Bly'Leggonde",
+   "npc": "10219",
+   "questID": 3524,
+   "race": "Night Elf",
+   "sex": "f",
+   "source": "community",
+   "text": "It is only recently that these creatures started landing on the coast of Darkshore in such alarming numbers.  I can't help but think that this is an ill omen of some sort.  Recovering a sample of that creature's bones to the south would help us in Darnassus assess this situation!",
+   "time": 1791408603,
+   "title": "Washed Ashore",
+   "wanted": null,
+   "zone": "Darkshore"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
