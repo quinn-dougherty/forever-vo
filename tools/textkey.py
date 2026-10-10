@@ -36,8 +36,8 @@ def tokenize(
 ) -> str | None:
     """Mirror of Util.Tokenize: puts $n/$c/$r back where the client expanded them.
 
-    Capitalisation is kept, so a capitalised match becomes $N/$C/$R and
-    textclean reads it as a sentence-initial "Adventurer".
+    Capitalisation is kept, so a capitalised match becomes $N/$C/$R.
+    textclean drops $n and $c instead of speaking them.
 
     The name is matched case-sensitively, class and race are not: the client
     always renders a character name capitalised, so a lowercase match is never
