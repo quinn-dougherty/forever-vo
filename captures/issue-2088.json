@@ -1,0 +1,67 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "49808|54d44412": {
+   "build": "70338",
+   "class": "Priest",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1432,
+   "name": "Grenhild Darktalon",
+   "npc": "49808",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "f",
+   "source": "community",
+   "text": "Great ta meet ya.",
+   "time": 1791832561,
+   "title": null,
+   "wanted": null,
+   "zone": "Loch Modan"
+  }
+ },
+ "npcs": {
+  "1963": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 950080,
+   "name": "Vidra Hearthstove",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "49808": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 950080,
+   "name": "Grenhild Darktalon",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2088",
+ "quests": {
+  "418-accept": {
+   "build": "70338",
+   "class": "Priest",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1432,
+   "name": "Vidra Hearthstove",
+   "npc": "1963",
+   "questID": 418,
+   "race": "Gnome",
+   "sex": "f",
+   "source": "community",
+   "text": "There's never a shortage of empty bellies here in Thelsamar, kids running in and out, workers from the excavation coming in after  a hard day's work. We're famous for our blood sausages, I don't suppose you've ever tried them?\n\nNo? Well, around here you've got to work for your meals, and don't think just because you're a fancy $c, you'll be any exception.\n\nI'll need bear meat, boar intestines for the casings, and spider ichor for spice. You get me some of those, and leave the cooking to Vidra!",
+   "time": 1791832387,
+   "title": "Thelsamar Blood Sausages",
+   "wanted": null,
+   "zone": "Loch Modan"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
