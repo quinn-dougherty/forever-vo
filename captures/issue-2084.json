@@ -1,0 +1,36 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "-4141": {
+   "isObject": true,
+   "name": "Unknown"
+  }
+ },
+ "origin": "issue-2084",
+ "quests": {
+  "901-progress": {
+   "build": "70338",
+   "class": "Warlock",
+   "differs": null,
+   "event": "progress",
+   "isObject": true,
+   "mapID": 1413,
+   "name": "Unknown",
+   "npc": "-4141",
+   "questID": 901,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "The console lights are dimmed and the gauges and dials all read at their zero positions, everything idling.",
+   "time": 1791914617,
+   "title": "Samophlange",
+   "wanted": null,
+   "zone": "The Barrens"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
