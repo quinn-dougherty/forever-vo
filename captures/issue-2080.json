@@ -1,0 +1,94 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "1252": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Senir Whitebeard",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "1267": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Ragnar Thunderbrew",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "265813": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Eric Brighthammer",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2080",
+ "quests": {
+  "287-progress": {
+   "build": "70338",
+   "class": "Shaman",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Senir Whitebeard",
+   "npc": "1252",
+   "questID": 287,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "You can't find it? My directions were very clear! We don't have much time, you've got to hurry! Don't come back until you've found the cave.",
+   "time": 1791914203,
+   "title": "Frostmane Hold",
+   "wanted": null,
+   "zone": "Dun Morogh"
+  },
+  "384-progress": {
+   "build": "70338",
+   "class": "Shaman",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Ragnar Thunderbrew",
+   "npc": "1267",
+   "questID": 384,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "I'm going to need six crag boar ribs and a mug of Rhapsody Malt, $N.",
+   "time": 1791914256,
+   "title": "Beer Basted Boar Ribs",
+   "wanted": null,
+   "zone": "Dun Morogh"
+  },
+  "96608-progress": {
+   "build": "70338",
+   "class": "Shaman",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Eric Brighthammer",
+   "npc": "265813",
+   "questID": 96608,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Having the skills needed to survive the outdoors is critical. A well-rested and well-prepared adventurer has a much higher chance of surviving this lifestyle.",
+   "time": 1791914199,
+   "title": "The Great Outdoors",
+   "wanted": null,
+   "zone": "Dun Morogh"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
