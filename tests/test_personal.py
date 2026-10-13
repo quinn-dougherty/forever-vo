@@ -268,5 +268,5 @@ def test_personal_lua_harness() -> None:
         (p for name in ("lua5.1", "lua", "luajit") if (p := shutil.which(name))), None
     )
     if lua is None:
-        pytest.skip("Lua 5.1 not installed; the addon CI job runs this harness")
+        pytest.skip("Lua 5.1 not installed; run tests/personal_pack.lua separately")
     subprocess.run([lua, "tests/personal_pack.lua"], check=True)
