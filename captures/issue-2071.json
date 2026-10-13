@@ -1,0 +1,140 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "11116|e013de07": {
+   "build": "70338",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1441,
+   "name": "Innkeeper Abeqwa",
+   "npc": "11116",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "As the wind on the plains, you are always welcome here.",
+   "time": 1791833930,
+   "title": null,
+   "wanted": null,
+   "zone": "Thousand Needles"
+  },
+  "4722|e3432683": {
+   "build": "70338",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1441,
+   "name": "Rau Cliffrunner",
+   "npc": "4722",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Yes? What is it?",
+   "time": 1791831683,
+   "title": null,
+   "wanted": null,
+   "zone": "Thousand Needles"
+  }
+ },
+ "npcs": {
+  "10537": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 122055,
+   "name": "Cliffwatcher Longhorn",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "10539": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 122055,
+   "name": "Hagar Lightninghoof",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "11116": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 122055,
+   "name": "Innkeeper Abeqwa",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "4722": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 122055,
+   "name": "Rau Cliffrunner",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2071",
+ "quests": {
+  "1196-progress": {
+   "build": "70338",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1441,
+   "name": "Rau Cliffrunner",
+   "npc": "4722",
+   "questID": 1196,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "I don't suppose you've been sent by Zangen, hm?",
+   "time": 1791831684,
+   "title": "The Sacred Flame",
+   "wanted": null,
+   "zone": "Thousand Needles"
+  },
+  "4542-progress": {
+   "build": "70338",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1441,
+   "name": "Cliffwatcher Longhorn",
+   "npc": "10537",
+   "questID": 4542,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "What do you want, $c? An urgent message - for me?\r\n",
+   "time": 1791831671,
+   "title": "Message to Freewind Post",
+   "wanted": null,
+   "zone": "Thousand Needles"
+  },
+  "4821-progress": {
+   "build": "70338",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1441,
+   "name": "Hagar Lightninghoof",
+   "npc": "10539",
+   "questID": 4821,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "I must know more about this mysterious egg, who knows what will hatch from it.",
+   "time": 1791833889,
+   "title": "Alien Egg",
+   "wanted": null,
+   "zone": "Thousand Needles"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
