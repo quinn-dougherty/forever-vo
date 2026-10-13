@@ -1,0 +1,120 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "2980": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Grull Hawkwind",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "2981": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Chief Hawkwind",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "2982": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Seer Graytongue",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3060": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Gart Mistrunner",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2073",
+ "quests": {
+  "3094-progress": {
+   "build": "70338",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Gart Mistrunner",
+   "npc": "3060",
+   "questID": 3094,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "You have arrived. This is good. Our ancestors' spirits have become restless throughout Mulgore and beyond, but I cannot tell why. It will forever be your duty to learn to listen to nature's spirits, and act as their avatar. Be mindful of that.",
+   "time": 1791903163,
+   "title": "Verdant Note",
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "747-progress": {
+   "build": "70338",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Grull Hawkwind",
+   "npc": "2980",
+   "questID": 747,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Providing meat and feathers for the tribe is the first step in proving yourself as a hunter before the Chief.",
+   "time": 1791903136,
+   "title": "The Hunt Begins",
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "753-progress": {
+   "build": "70338",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Chief Hawkwind",
+   "npc": "2981",
+   "questID": 753,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "You look as though you have returned from the plains. Do you have any word from Greatmother Hawkwind?",
+   "time": 1791903186,
+   "title": "A Humble Task",
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "95805-progress": {
+   "build": "70338",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Seer Graytongue",
+   "npc": "2982",
+   "questID": 95805,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "<The smoke from the incense rises toward the sky.>",
+   "time": 1791903656,
+   "title": "Grace of An'she and Mu'sha",
+   "wanted": null,
+   "zone": "Mulgore"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
