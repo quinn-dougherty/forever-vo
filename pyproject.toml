@@ -62,6 +62,7 @@ tts-rocm = [
 audition = "tools.audition:main"       # uv run audition: the local page for trying voices and settings
 fvo-ingest = "tools.ingest:main"
 fvo-generate = "tools.generate:main"
+fvo-personal = "tools.personal:main"
 fvo-release-pack = "tools.release_pack:main"
 fvo-fetch-packs = "tools.fetch_packs:main"  # download the CurseForge voice packs into ./addons
 fvo-export = "tools.exportfile:main"

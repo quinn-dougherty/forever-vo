@@ -98,8 +98,10 @@ def split_gender(text: str) -> tuple[str, str]:
     return _GENDER.sub(r"\1", text), _GENDER.sub(r"\2", text)
 
 
-def _substitute(text: str) -> str:
+def _substitute(text: str, player_name: str | None = None) -> str:
     for key, value in REPLACE.items():
+        if player_name is not None and key in ("$n", "$N"):
+            value = player_name
         text = text.replace(key, value)
     return text
 
@@ -115,6 +117,7 @@ def clean(
     text: str,
     keep_stage_directions: bool = False,
     pronunciations: Pronunciations | None = None,
+    player_name: str | None = None,
 ) -> str:
     """The whole line as one reader says it. Stage directions (<the guard spits>)
     are the narrator's, not the speaker's, so they are dropped -- unless the
@@ -123,7 +126,7 @@ def clean(
     `pronunciations` defaults to the repository's configs/pronunciations.toml."""
     if pronunciations is None:
         pronunciations = load_config().pronunciations
-    text = _substitute(text)
+    text = _substitute(text, player_name)
     if keep_stage_directions:
         # a bare sound is unsaid here too, as in segments()
         text = _STAGE_DIRECTION_TEXT.sub(
@@ -166,7 +169,9 @@ def is_bare_sound(words: str) -> bool:
 
 
 def segments(
-    text: str, pronunciations: Pronunciations | None = None
+    text: str,
+    pronunciations: Pronunciations | None = None,
+    player_name: str | None = None,
 ) -> list[tuple[str, str]]:
     """The line in reading order as ("npc", words) and ("narrator", words) pieces,
     each cleaned like clean(): the speaker's own words and, between them, every
@@ -176,7 +181,7 @@ def segments(
     if pronunciations is None:
         pronunciations = load_config().pronunciations
     out: list[tuple[str, str]] = []
-    for piece in _STAGE_SPLIT.split(_substitute(text)):
+    for piece in _STAGE_SPLIT.split(_substitute(text, player_name)):
         if piece.startswith("<") and piece.endswith(">"):
             role, piece = "narrator", piece[1:-1]
         else:

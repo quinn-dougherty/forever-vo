@@ -78,6 +78,11 @@ priorities, so a pack of new or revised lines can sit on top of a base pack.
 
 ## Development
 
+Experimental personal character voices: generate a local pack that speaks your
+character name, then opt in under the addon's Audio settings. See
+[Personal character voices](docs/personal-voices.md) for setup, hardware selection,
+preview and installation. The shared packs remain the fallback.
+
 `nix` is optional, `uv` is mandatory.
 
 `uv run audition` opens a local page (port 8765) for hearing a line in a voice

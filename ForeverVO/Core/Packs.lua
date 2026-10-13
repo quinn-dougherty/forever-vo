@@ -181,7 +181,6 @@ function ns.RegisterPack(pack)
             table.insert(pages, hash)
         end
     end
-    Packs.voices = nil -- the menu is the union over packs; rebuild it on demand
     pack.nameToKey = {}
     for key, name in pairs(pack.npcs) do
         pack.nameToKey[name] = pack.nameToKey[name] or key
@@ -207,7 +206,7 @@ function Packs:SpeakerModel(key)
     if not key then
         return nil
     end
-    for _, pack in ipairs(self.list) do
+    for _, pack in self:Iterate() do
         local model = pack.models[key]
         if model then
             return model
@@ -223,7 +222,7 @@ function Packs:SpeakerSexes(key)
     if not key then
         return nil
     end
-    for _, pack in ipairs(self.list) do
+    for _, pack in self:Iterate() do
         local sexes = pack.sexes[key]
         if sexes then
             return sexes
@@ -233,11 +232,35 @@ function Packs:SpeakerSexes(key)
 end
 
 function Packs:Count()
-    return #self.list
+    local count = 0
+    for _ in self:Iterate() do count = count + 1 end
+    return count
+end
+
+-- A separate entry point makes a personal pack inert on older addon versions:
+-- its generated loader never calls RegisterPack unless this guard exists.
+function ns.RegisterPersonalPack(pack)
+    assert(type(pack.character) == "string" and pack.character ~= ""
+        and type(pack.realm) == "string" and pack.realm ~= "",
+        "ForeverVO.RegisterPersonalPack: character and realm are required")
+    pack.personal = true
+    ns.RegisterPack(pack)
 end
 
 function Packs:Iterate()
-    return ipairs(self.list)
+    local index = 0
+    return function()
+        while true do
+            index = index + 1
+            local pack = self.list[index]
+            if not pack then return nil end
+            if not pack.personal or (ns.db and ns.db.personalVoice
+                and Util.Plain(UnitName("player")) == pack.character
+                and Util.Plain(GetRealmName()) == pack.realm) then
+                return index, pack
+            end
+        end
+    end
 end
 
 --- The folders of retired packs still installed, to tell the player to delete them.
@@ -280,11 +303,8 @@ Packs.defaultNarrator = DEFAULT_NARRATOR
 --- The voices the player may pick for narrated quests: the default first, then
 --- every alternate the installed packs carry.
 function Packs:NarratorVoices()
-    if self.voices then
-        return self.voices
-    end
     local voices, seen = { DEFAULT_NARRATOR }, { [DEFAULT_NARRATOR] = true }
-    for _, pack in ipairs(self.list) do
+    for _, pack in self:Iterate() do
         for _, voice in ipairs(pack.narratorVoices) do
             if not seen[voice] then
                 seen[voice] = true
@@ -292,7 +312,6 @@ function Packs:NarratorVoices()
             end
         end
     end
-    self.voices = voices
     return voices
 end
 
@@ -407,7 +426,7 @@ function Packs:FindQuest(questID, event, sex, speakerKey)
     if not questID or not field then
         return nil
     end
-    for _, pack in ipairs(self.list) do
+    for _, pack in self:Iterate() do
         local entry = pack.quests[questID]
         local parts = entry and entry[field .. "P"]
         if entry and (entry[field] or parts) then
@@ -492,7 +511,7 @@ end
 
 --- The map a speaker was met on, from any pack (pack.maps).
 function Packs:SpeakerMap(key)
-    for _, pack in ipairs(self.list) do
+    for _, pack in self:Iterate() do
         local mapID = pack.maps[key]
         if mapID then
             return mapID
@@ -507,7 +526,7 @@ end
 --- of the player secret, and Marcy Baker took Dokimi's face and voice (#948).
 function Packs:QuestGiver(questID, event)
     local field = QUEST_FIELD[event]
-    for _, pack in ipairs(self.list) do
+    for _, pack in self:Iterate() do
         local entry = pack.quests[questID]
         local key = RecordedSpeaker(entry, event)
         if key then
@@ -551,7 +570,7 @@ function Packs:SpeakerName(key)
     if not key then
         return nil
     end
-    for _, pack in ipairs(self.list) do
+    for _, pack in self:Iterate() do
         local name = pack.npcs[key]
         if name then
             return name
@@ -563,7 +582,7 @@ function Packs:SpeakerKeyByName(name)
     if not name then
         return nil
     end
-    for _, pack in ipairs(self.list) do
+    for _, pack in self:Iterate() do
         local key = pack.nameToKey[name]
         if key then
             return key
@@ -589,7 +608,7 @@ function Packs:FindGossip(speakerKey, text, sex)
     local letter = Util.PlayerSexLetter()
     local bestEntry, bestPack, bestScore
 
-    for _, pack in ipairs(self.list) do
+    for _, pack in self:Iterate() do
         local entries = pack.gossip[speakerKey]
         if entries then
             for _, entry in ipairs(entries) do
@@ -655,7 +674,7 @@ function Packs:FindBook(title, text)
     local letter = Util.PlayerSexLetter()
     local bestEntry, bestHash, bestPack, bestScore
 
-    for _, pack in ipairs(self.list) do
+    for _, pack in self:Iterate() do
         local entry = pack.books[hash]
         if entry then
             bestEntry, bestHash, bestPack, bestScore = entry, hash, pack, 1
@@ -715,7 +734,7 @@ function Packs:NextBookPage(entry)
     if not hash then
         return nil
     end
-    for _, pack in ipairs(self.list) do
+    for _, pack in self:Iterate() do
         local page = pack.books[hash]
         if page then
             return hash, page, pack
@@ -735,7 +754,7 @@ function Packs:DebugQuest(questID, event)
     local base = format("%d-%s", questID, event)
     local _, _, _, _, playing = self:FindQuest(questID, event)
     local recorded
-    for _, pack in ipairs(self.list) do
+    for _, pack in self:Iterate() do
         local entry = pack.quests and pack.quests[questID]
         if entry and (entry[field] or entry[field .. "P"]) then
             if entry.g == true or (type(entry.g) == "string" and strfind(entry.g, field, 1, true)) then

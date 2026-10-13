@@ -1,6 +1,7 @@
 .env
 .venv
 .venv-rocm/
+.venv-personal-*/
 __pycache__/
 tools/data/db2/
 tools/data/casc/

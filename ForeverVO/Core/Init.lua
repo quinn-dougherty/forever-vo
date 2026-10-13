@@ -28,6 +28,7 @@ ns.defaults = {
     gossipRepeat = "gossipOnce",         -- always | gossipOnce | once | questGivers (Events.lua)
 
     -- Audio
+    personalVoice = false,               -- use the installed pack for this character and realm
     soundChannel = "Master",             -- Master | Dialog | SFX | Music | Ambience
     narratorVoice = "narrator",          -- voice for quests given by objects and items (see Packs.lua)
     muteGameDialog = true,

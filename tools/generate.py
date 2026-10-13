@@ -37,7 +37,6 @@ parts and no whole-line file.
 from __future__ import annotations
 
 import argparse
-import fcntl
 import functools
 import hashlib
 import json
@@ -65,6 +64,7 @@ from tools.config import (
     TtsSettings,
     load_config,
 )
+from tools.filelock import exclusive_lock
 from tools.ingest import _aligned
 from tools.luatable import lua_string
 from tools.textclean import (
@@ -275,6 +275,7 @@ class Item:
         npc: dict | None,
         catalog: VoiceCatalog,
         others: dict[str, dict | None] | None = None,
+        player_name: str | None = None,
     ):
         self.kind = kind  # "quests" | "gossip" | "books"
         self.key = key
@@ -296,6 +297,9 @@ class Item:
             )
         )
         self.raw_text = entry.get("text") or ""
+        self.player_name = (
+            player_name  # spoken only; source text and lookup keys stay generic
+        )
         self.event = entry.get("event") or (BOOK_EVENT if kind == "books" else "gossip")
         self.speaker_key = (
             None if kind == "books" else entry.get("npc")
@@ -341,6 +345,7 @@ class Item:
             text,
             keep_stage_directions=self.is_narrator,
             pronunciations=self.config.pronunciations,
+            player_name=self.player_name,
         )
 
     @functools.cached_property
@@ -419,7 +424,11 @@ class Item:
             parts = (
                 []
                 if self.is_narrator
-                else segments(text, pronunciations=self.config.pronunciations)
+                else segments(
+                    text,
+                    pronunciations=self.config.pronunciations,
+                    player_name=self.player_name,
+                )
             )
             if len(parts) == 1 and parts[0][0] == "npc":
                 parts = []
@@ -1290,8 +1299,7 @@ def ensure_picked_references(config: Config, dry_run: bool = False) -> set[str]:
         return set()
     failed: set[str] = set()
     VOICES_DIR.mkdir(parents=True, exist_ok=True)
-    with open(VOICES_DIR / ".build.lock", "w") as lock:
-        fcntl.flock(lock, fcntl.LOCK_EX)
+    with exclusive_lock(VOICES_DIR / ".build.lock"):
         for voice in stale:
             if picked_reference_current(voice, picked[voice]):
                 continue  # another shard built it while this one waited
@@ -1371,8 +1379,7 @@ def save_sound_index(sound_index: dict, keys: set[str] | None = None) -> None:
     so two saves cannot interleave or rename each other's half-written file."""
     SOUND_INDEX.parent.mkdir(parents=True, exist_ok=True)
     lock_path = SOUND_INDEX.with_suffix(".lock")
-    with open(lock_path, "w") as lock:
-        fcntl.flock(lock, fcntl.LOCK_EX)
+    with exclusive_lock(lock_path):
         merged: dict = {}
         if SOUND_INDEX.exists():
             try:

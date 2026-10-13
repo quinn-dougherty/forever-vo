@@ -282,6 +282,12 @@ ns.OnInit(function()
 
     -- Audio
     local audio = Settings.RegisterVerticalLayoutSubcategory(category, "Audio")
+    Checkbox(audio, "personalVoice", "Use my character name in speech",
+        "Use a locally generated personal voice pack for this character and realm. Lines it does not contain use your regular packs. Generate and install the personal pack first, then restart the game. Changing this option clears queued speech.",
+        function()
+            ns.Queue:Clear()
+            ns.Queue:TriggerEvent("OnPacksChanged")
+        end)
     local channels = {}
     for _, channel in ipairs(SOUND_CHANNELS) do
         table.insert(channels, { channel, channel })
