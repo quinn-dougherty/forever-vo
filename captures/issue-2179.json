@@ -1,0 +1,77 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "3338": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 949470,
+   "name": "Sergra Darkthorn",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2179",
+ "quests": {
+  "845-progress": {
+   "build": "70374",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Sergra Darkthorn",
+   "npc": "3338",
+   "questID": 845,
+   "race": "Orc",
+   "sex": "f",
+   "source": "community",
+   "text": "How many zhevra have you slain?",
+   "time": 1792002731,
+   "title": "The Zhevra",
+   "wanted": null,
+   "zone": "The Barrens"
+  },
+  "881-progress": {
+   "build": "70374",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Sergra Darkthorn",
+   "npc": "3338",
+   "questID": 881,
+   "race": "Orc",
+   "sex": "f",
+   "source": "community",
+   "text": "The great cat calls to you, $N.",
+   "time": 1792010478,
+   "title": "Echeyakee",
+   "wanted": null,
+   "zone": "The Barrens"
+  },
+  "903-progress": {
+   "build": "70374",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Sergra Darkthorn",
+   "npc": "3338",
+   "questID": 903,
+   "race": "Orc",
+   "sex": "f",
+   "source": "community",
+   "text": "How goes your hunt, $N?  Have you found the prowlers?",
+   "time": 1792010013,
+   "title": "Prowlers of the Barrens",
+   "wanted": null,
+   "zone": "The Barrens"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
