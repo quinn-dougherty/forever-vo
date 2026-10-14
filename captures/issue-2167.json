@@ -1,0 +1,132 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "3065|2d23ed1c": {
+   "build": "70374",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Yaw Sharpmane",
+   "npc": "3065",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "I do not have the knowledge you seek.",
+   "time": 1792007665,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "3067|0c543544": {
+   "build": "70374",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Pyall Silentstride",
+   "npc": "3067",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Cooking is a life long pursuit and I see we share the same passion!",
+   "time": 1792007407,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "3067|b48f927f": {
+   "build": "70374",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Pyall Silentstride",
+   "npc": "3067",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "I can teach you how to cook!",
+   "time": 1792007400,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "3069|93940fbb": {
+   "build": "70374",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Chaw Stronghide",
+   "npc": "3069",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Meat, skin, bones... a good hunter lets nothing go to waste. Every scrap of leather can be salvaged, perhaps to reinforce an ally's armor. Thus, each of us is strong alone, but together we become invincible.",
+   "time": 1792007384,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  }
+ },
+ "npcs": {
+  "3065": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 122055,
+   "name": "Yaw Sharpmane",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3067": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 122055,
+   "name": "Pyall Silentstride",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3069": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 122055,
+   "name": "Chaw Stronghide",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2167",
+ "quests": {
+  "96130-progress": {
+   "build": "70374",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Yaw Sharpmane",
+   "npc": "3065",
+   "questID": 96130,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Have you found the big wolf?",
+   "time": 1792007666,
+   "title": "Chakuyak",
+   "wanted": null,
+   "zone": "Mulgore"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
