@@ -1,0 +1,66 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "266881": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1018060,
+   "name": "Pa'zula",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "3191": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Cook Torka",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2177",
+ "quests": {
+  "815-progress": {
+   "build": "70374",
+   "class": "Mage",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Cook Torka",
+   "npc": "3191",
+   "questID": 815,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "Breakfast, lunch, dinner! Who cares which meal it is? It still has to be cooked by someone--namely me!",
+   "time": 1791946156,
+   "title": "Break a Few Eggs",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "96873-progress": {
+   "build": "70374",
+   "class": "Mage",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Pa'zula",
+   "npc": "266881",
+   "questID": 96873,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "What do you have for me, $N?",
+   "time": 1791945594,
+   "title": "A Pain in the Neck",
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
