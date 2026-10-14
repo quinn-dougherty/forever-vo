@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "270438": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Deathstalker Masoj",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2178",
+ "quests": {
+  "98095-complete": {
+   "build": "70374",
+   "class": "Paladin",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1424,
+   "name": "Deathstalker Masoj",
+   "npc": "270438",
+   "questID": 98095,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "Good work. We advance the plans.\r\n\r\nDeathstalkers dare.\r\n\r\nLet purpose guide your strikes, $N.",
+   "time": 1791974602,
+   "title": "Valuable Vantages",
+   "wanted": null,
+   "zone": "Hillsbrad Foothills"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
