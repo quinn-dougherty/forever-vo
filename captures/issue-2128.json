@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "1343|5751dde2": {
+   "build": "70374",
+   "class": "Mage",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1432,
+   "name": "Mountaineer Stormpike",
+   "npc": "1343",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Well, if it isn't a young, bristling $c, no doubt drawn here by talk of my exploits in fields of battle!\n\nNo time for stories now, for there are great, important deeds that need doing!  So if you're looking for glory, then luck shines on you today...",
+   "time": 1791971277,
+   "title": null,
+   "wanted": null,
+   "zone": "Loch Modan"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "1343": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Mountaineer Stormpike",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2128",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
