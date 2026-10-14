@@ -1,0 +1,141 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "3293|5bfb096f": {
+   "build": "70374",
+   "class": "Shaman",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Rezlak",
+   "npc": "3293",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "I'm happy Gazlowe gave me the opportunity to be here and all, but this place is more dangerous than I thought it'd be. It's also really hot. And dusty. And it smells kinda weird. Ah, well! Hopefully it will be good for business.",
+   "time": 1792000336,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "3338|e2ff6310": {
+   "build": "70374",
+   "class": "Shaman",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Sergra Darkthorn",
+   "npc": "3338",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "The land, the water, and the sky are all as one. It is your eyes that deceive you with such separation. The Earthmother is all those things and more.",
+   "time": 1791998390,
+   "title": null,
+   "wanted": null,
+   "zone": "The Barrens"
+  },
+  "3615|ddd7878b": {
+   "build": "70374",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Devrak",
+   "npc": "3615",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "My wind riders are trained to fly quickly through the hot Barrens air.",
+   "time": 1791998442,
+   "title": null,
+   "wanted": null,
+   "zone": "The Barrens"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "3293": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 119376,
+   "name": "Rezlak",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3338": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 949470,
+   "name": "Sergra Darkthorn",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "3615": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Devrak",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "5900": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1022938,
+   "name": "Telf Joolam",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2173",
+ "quests": {
+  "1464-complete": {
+   "build": "70374",
+   "class": "Shaman",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Telf Joolam",
+   "npc": "5900",
+   "questID": 1464,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "May fire burn within your heart, $N.\n\nThe elements await you.",
+   "time": 1792001464,
+   "title": "Fire Sapta",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "97281-accept": {
+   "build": "70374",
+   "class": "Shaman",
+   "differs": null,
+   "event": "accept",
+   "isObject": true,
+   "mapID": 1411,
+   "name": "Unknown",
+   "npc": null,
+   "questID": 97281,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "<Before you is a strange orb with a dull surface. When picked up a small electrical current seems to vibrate from within. Upon closer inspection, it looks as if a dark mist swirls within and every so often a small electrical spark can be seen.\r\n\r\nIt is clear the harpy was using it for some purpose. Perhaps Rezlak would be interested in this object?>",
+   "time": 1792000067,
+   "title": "A Simmering Storm",
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
