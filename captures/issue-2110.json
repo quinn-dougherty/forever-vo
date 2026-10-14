@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "256390|6a190ff9": {
+   "build": "70374",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1433,
+   "name": "Marcy Baker",
+   "npc": "256390",
+   "questID": null,
+   "race": "Night Elf",
+   "sex": "f",
+   "source": "community",
+   "text": "We've had trouble with shipments going missing across Azeroth. If you find any, I'd appreciate if you could return them to me.",
+   "time": 1791932076,
+   "title": null,
+   "wanted": null,
+   "zone": "Redridge Mountains"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "256390": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1000764,
+   "name": "Marcy Baker",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2110",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
