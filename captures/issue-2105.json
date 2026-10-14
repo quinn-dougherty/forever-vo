@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "1571|c5ceacbe": {
+   "build": "70374",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1437,
+   "name": "Shellei Brondir",
+   "npc": "1571",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Where would you like to fly to?",
+   "time": 1791936028,
+   "title": null,
+   "wanted": null,
+   "zone": "Wetlands"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "1571": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1000764,
+   "name": "Shellei Brondir",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2105",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
