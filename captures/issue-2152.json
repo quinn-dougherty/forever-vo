@@ -1,0 +1,39 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "1092": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Captain Rugelfuss",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2152",
+ "quests": {
+  "267-complete": {
+   "build": "70374",
+   "class": "Priest",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1432,
+   "name": "Captain Rugelfuss",
+   "npc": "1092",
+   "questID": 267,
+   "race": "Gnome",
+   "sex": "f",
+   "source": "community",
+   "text": "I am quite impressed, $N.  You have done the Dwarven race a great favor by defending our lands.  King Magni Bronzebeard himself would be proud!",
+   "time": 1791925913,
+   "title": "The Trogg Threat",
+   "wanted": null,
+   "zone": "Loch Modan"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
