@@ -1,0 +1,121 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "256386": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 949470,
+   "name": "Dokimi",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "3338": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 949470,
+   "name": "Sergra Darkthorn",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "3419": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 997378,
+   "name": "Apothecary Zamah",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "3453": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 119376,
+   "name": "Wharfmaster Dizzywig",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2130",
+ "quests": {
+  "853-progress": {
+   "build": "70374",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1456,
+   "name": "Apothecary Zamah",
+   "npc": "3419",
+   "questID": 853,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "You have something from Apothecary Helbrim?",
+   "time": 1791954984,
+   "title": "Apothecary Zamah",
+   "wanted": null,
+   "zone": "Thunder Bluff"
+  },
+  "881-progress": {
+   "build": "70374",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Sergra Darkthorn",
+   "npc": "3338",
+   "questID": 881,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "The great cat calls to you, $N.",
+   "time": 1791950034,
+   "title": "Echeyakee",
+   "wanted": null,
+   "zone": "The Barrens"
+  },
+  "896-progress": {
+   "build": "70374",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Wharfmaster Dizzywig",
+   "npc": "3453",
+   "questID": 896,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "If only we knew which one of the miners had found the emerald, it'd be a walk in the park...",
+   "time": 1791952145,
+   "title": "Miner's Fortune",
+   "wanted": null,
+   "zone": "The Barrens"
+  },
+  "91904-progress": {
+   "build": "70374",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Dokimi",
+   "npc": "256386",
+   "questID": 91904,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "Another delivery! Fantastic. Set it over by the pile and we can discuss your compensation.",
+   "time": 1791950348,
+   "title": "A Sealed Crate",
+   "wanted": null,
+   "zone": "The Barrens"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
