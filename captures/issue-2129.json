@@ -1,0 +1,67 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "10377": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Elu",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "10941": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 119376,
+   "name": "Wizlo Bearingshiner",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2129",
+ "quests": {
+  "4767-progress": {
+   "build": "70374",
+   "class": "Shaman",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1441,
+   "name": "Elu",
+   "npc": "10377",
+   "questID": 4767,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "$N, have you retrieved the wyvern eggs that I seek? I'm really anxious to start my wind rider training!",
+   "time": 1791901100,
+   "title": "Wind Rider",
+   "wanted": null,
+   "zone": "Thousand Needles"
+  },
+  "5151-progress": {
+   "build": "70374",
+   "class": "Shaman",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1441,
+   "name": "Wizlo Bearingshiner",
+   "npc": "10941",
+   "questID": 5151,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Do you have my hypercapacitor?",
+   "time": 1791899824,
+   "title": "Hypercapacitor Gizmo",
+   "wanted": null,
+   "zone": "Thousand Needles"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
