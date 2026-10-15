@@ -1,0 +1,63 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "-17182": {
+   "isObject": true,
+   "name": "Unknown"
+  },
+  "10216": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 118355,
+   "name": "Gubber Blump",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2199",
+ "quests": {
+  "1141-progress": {
+   "build": "70374",
+   "class": "Paladin",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1439,
+   "name": "Gubber Blump",
+   "npc": "10216",
+   "questID": 1141,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "There's plenty of good dishes you use Darkshore groupers for.  They're good to eat, but I think it's more fun catching them.\n\nYou caught any Darkshore groupers yet?",
+   "time": 1791914744,
+   "title": "The Family and the Fishing Pole",
+   "wanted": null,
+   "zone": "Darkshore"
+  },
+  "983-progress": {
+   "build": "70374",
+   "class": "Paladin",
+   "differs": null,
+   "event": "progress",
+   "isObject": true,
+   "mapID": 1439,
+   "name": "Unknown",
+   "npc": "-17182",
+   "questID": 983,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Buzzbox 827 sits with an eerie silence. A single flashing light indicates that it needs 6 Crawler Legs to be placed in its holding box.",
+   "time": 1791917298,
+   "title": "Buzzbox 827",
+   "wanted": null,
+   "zone": "Darkshore"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
