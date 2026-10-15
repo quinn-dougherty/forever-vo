@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "8931|c80041d2": {
+   "build": "70374",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1436,
+   "name": "Innkeeper Heather",
+   "npc": "8931",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "f",
+   "source": "community",
+   "text": "Welcome to my Inn, weary traveler. What can I do for you?",
+   "time": 1792085390,
+   "title": null,
+   "wanted": null,
+   "zone": "Westfall"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "8931": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1000764,
+   "name": "Innkeeper Heather",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2246",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
