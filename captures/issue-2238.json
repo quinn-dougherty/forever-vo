@@ -1,0 +1,112 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "14727": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1018060,
+   "name": "Vehena",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "3189": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1022938,
+   "name": "Kor'ghan",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3293": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 119376,
+   "name": "Rezlak",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2238",
+ "quests": {
+  "7833-progress": {
+   "build": "70374",
+   "class": "Mage",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1454,
+   "name": "Vehena",
+   "npc": "14727",
+   "questID": 7833,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "We are currently accepting donations for wool cloth.  A donation of sixty pieces of wool cloth will net you full recognition by the Darkspear Trolls for your generous actions.  Our stores are such on wool that we would only need sixty pieces from you total; we should be able to acquire enough from others in the realm to support our drive.\n\nIf you have the sixty pieces of wool cloth on you and are ready to donate them, I'm able to take them from you now.",
+   "time": 1792032550,
+   "title": "A Donation of Wool",
+   "wanted": null,
+   "zone": "Orgrimmar"
+  },
+  "813-progress": {
+   "build": "70374",
+   "class": "Mage",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1454,
+   "name": "Kor'ghan",
+   "npc": "3189",
+   "questID": 813,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "Remember, no matter what creature you hunt, you would do well to study it and understand its behavior. That knowledge could save your life.",
+   "time": 1792032776,
+   "title": "Finding the Antidote",
+   "wanted": null,
+   "zone": "Orgrimmar"
+  },
+  "834-progress": {
+   "build": "70374",
+   "class": "Mage",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Rezlak",
+   "npc": "3293",
+   "questID": 834,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "I'm great at what I do, don't get me wrong, but this is ridiculous! What am I supposed to do, build sand castles?",
+   "time": 1792020440,
+   "title": "Winds in the Desert",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "97282-accept": {
+   "build": "70374",
+   "class": "Mage",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Rezlak",
+   "npc": "3293",
+   "questID": 97282,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "\"Rezlack, when an opportunity comes knocking make sure you're ready to seize it.\" That's another gem Gazlowe taught me and that's exactly what I intend to do.\r\n\r\nThis orb doesn't seem damaged, it just looks like it's out of juice, but I've the idea to supercharge it back to full strength!\r\n\r\nThere are a bunch of thunder lizards in a gorge west of here. They have organs that hold a strong electrical charge that would be perfect for this.\r\n\r\nGo harvest some and bring them back to me!",
+   "time": 1792029940,
+   "title": "Stormy Potential",
+   "wanted": true,
+   "zone": "Durotar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
