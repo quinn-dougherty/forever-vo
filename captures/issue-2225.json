@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "3293": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 119376,
+   "name": "Rezlak",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2225",
+ "quests": {
+  "97282-progress": {
+   "build": "70374",
+   "class": "Mage",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Rezlak",
+   "npc": "3293",
+   "questID": 97282,
+   "race": "Orc",
+   "sex": "f",
+   "source": "community",
+   "text": "It might come as a surprise that with a name like thunder lizard they shoot lightning instead of roaring like thunder.\r\n\r\nWell, they do. Shoot lightning, I mean.\r\n\r\nTrust me, it's a lesson you only get to learn once if you're lucky.",
+   "time": 1792071024,
+   "title": "Stormy Potential",
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
