@@ -1,0 +1,67 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "1154|b7c42d9a": {
+   "build": "70374",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1432,
+   "name": "Marek Ironheart",
+   "npc": "1154",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Here at the Farstrider lodge, we prize hunting skills above all else. Wish to gain my approval? You'll have to earn it.\n\nYou look up to the challenge, lad!",
+   "time": 1792004652,
+   "title": null,
+   "wanted": null,
+   "zone": "Farstrider Lodge"
+  },
+  "167|58405dcd": {
+   "build": "70374",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1432,
+   "name": "Morhan Coppertongue",
+   "npc": "167",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Greetings.",
+   "time": 1792004271,
+   "title": null,
+   "wanted": null,
+   "zone": "Loch Modan"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "1154": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Marek Ironheart",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "167": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Morhan Coppertongue",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2205",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
