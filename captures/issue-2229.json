@@ -1,0 +1,121 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "252448|14de7cf6": {
+   "build": "70374",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Alvarion Windfield",
+   "npc": "252448",
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "It's always great to see you, $N.",
+   "time": 1792075268,
+   "title": null,
+   "wanted": null,
+   "zone": "Zephras Isle"
+  },
+  "252800|d3392a1d": {
+   "build": "70374",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Aamelia Windfield",
+   "npc": "252800",
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "The Windfield Orchard has seen better days...",
+   "time": 1791437129,
+   "title": null,
+   "wanted": null,
+   "zone": "Zephras Isle"
+  },
+  "253002|2c28162e": {
+   "build": "70374",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Fillion Flamebreeze",
+   "npc": "253002",
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "<The $R lying before you is unconscious.>",
+   "time": 1792075741,
+   "title": null,
+   "wanted": null,
+   "zone": "Zephras Isle"
+  },
+  "255940|9cc50b7d": {
+   "build": "70374",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Donaal Downbreeze",
+   "npc": "255940",
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "Welcome to the Calmbreeze Inn, traveler. Would you like some refreshment?",
+   "time": 1791437245,
+   "title": null,
+   "wanted": null,
+   "zone": "Zephras Isle"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "252448": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478487,
+   "name": "Alvarion Windfield",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "252800": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478494,
+   "name": "Aamelia Windfield",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "253002": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478487,
+   "name": "Fillion Flamebreeze",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "255940": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478487,
+   "name": "Donaal Downbreeze",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2229",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
