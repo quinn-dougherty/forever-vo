@@ -1,0 +1,106 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "1416|c14f3f06": {
+   "build": "70425",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1453,
+   "name": "Grimand Elmore",
+   "npc": "1416",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "If you've come looking for the finest craftsmanship on this or any other continent in the world, then you've come to the right place!\n\nGrimand Elmore, at your service!",
+   "time": 1792080802,
+   "title": null,
+   "wanted": null,
+   "zone": "Stormwind City"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "1416": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Grimand Elmore",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "248277": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1000764,
+   "name": "Merell Ross",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2292",
+ "quests": {
+  "1097-complete": {
+   "build": "70425",
+   "class": "Hunter",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1453,
+   "name": "Grimand Elmore",
+   "npc": "1416",
+   "questID": 1097,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "You're here to help with my delivery?  Very good!",
+   "time": 1792080796,
+   "title": "Elmore's Task",
+   "wanted": null,
+   "zone": "Stormwind City"
+  },
+  "353-accept": {
+   "build": "70425",
+   "class": "Hunter",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1453,
+   "name": "Grimand Elmore",
+   "npc": "1416",
+   "questID": 353,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "The Stormpikes are a respected dwarven clan, and are well known for their fine and discerning tastes.  So it's no wonder that Gringer Stormpike, a Mountaineer of Ironforge, commissioned me to craft him a weapon.\n\nThe weapon is finished, but... Mountaineer Stormpike is far away, in distant Loch Modan.  If you plan on traveling to the north, can you deliver this package to him?\n\nMy last message from Mountaineer Stormpike said he's stationed at the northern guard tower in Loch Modan.",
+   "time": 1792080803,
+   "title": "Stormpike's Delivery",
+   "wanted": null,
+   "zone": "Stormwind City"
+  },
+  "91740-progress": {
+   "build": "70425",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Merell Ross",
+   "npc": "248277",
+   "questID": 91740,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Yes?",
+   "time": 1792079990,
+   "title": "Croaky's Head",
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
