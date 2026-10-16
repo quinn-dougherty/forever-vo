@@ -1,0 +1,94 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "270582|e6b98502": {
+   "build": "70425",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1454,
+   "name": "Mon'ye",
+   "npc": "270582",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Greetings, $c.\r\n\r\nI can show you how to weave magic about yourself to change the appearance of your equipment, if you so desire. Do you wish to utilize my services?",
+   "time": 1792095438,
+   "title": null,
+   "wanted": null,
+   "zone": "Orgrimmar"
+  },
+  "274770|0d812247": {
+   "build": "70425",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Slizzy Kreeg",
+   "npc": "274770",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Watch your step. This little beast has been through enough.\r\n\r\nIt may have been left for dead, but soon it will begin its training. Once it is broken and battle-hardened, we will ride into battles as one, striking fear into the hearts of our enemies.",
+   "time": 1792094874,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "3293|5bfb096f": {
+   "build": "70425",
+   "class": "Shaman",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Rezlak",
+   "npc": "3293",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "I'm happy Gazlowe gave me the opportunity to be here and all, but this place is more dangerous than I thought it'd be. It's also really hot. And dusty. And it smells kinda weird. Ah, well! Hopefully it will be good for business.",
+   "time": 1792094431,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "270582": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 122414,
+   "name": "Mon'ye",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "274770": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 121087,
+   "name": "Slizzy Kreeg",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "3293": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 8125066,
+   "name": "Rezlak",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2278",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
