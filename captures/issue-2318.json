@@ -1,0 +1,123 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "-4141": {
+   "isObject": true,
+   "name": "Unknown"
+  },
+  "261366": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Walton",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "268701": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Thatog",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3348": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Kor'geld",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3439": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 124225,
+   "name": "Wizzlecrank's Shredder",
+   "sex": 1
+  }
+ },
+ "origin": "issue-2318",
+ "quests": {
+  "858-progress": {
+   "build": "70425",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Wizzlecrank's Shredder",
+   "npc": "3439",
+   "questID": 858,
+   "race": "Windshaper Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "Quick, we need to get out of here before someone gets suspicious!",
+   "time": 1791913715,
+   "title": "Ignition",
+   "wanted": null,
+   "zone": "The Barrens"
+  },
+  "901-progress": {
+   "build": "70425",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": true,
+   "mapID": 1413,
+   "name": "Unknown",
+   "npc": "-4141",
+   "questID": 901,
+   "race": "Windshaper Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "The console lights are dimmed and the gauges and dials all read at their zero positions, everything idling.",
+   "time": 1791913538,
+   "title": "Samophlange",
+   "wanted": null,
+   "zone": "The Barrens"
+  },
+  "95621-progress": {
+   "build": "70425",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Walton",
+   "npc": "261366",
+   "questID": 95621,
+   "race": "Windshaper Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "The remnants of Daelin Proudmoore's fleet who still fly his banner are just as rotten and barbaric as the admiral himself was before he died.\r\n\r\nI don't know why they are so far from Tiragarde, but it can't be good.",
+   "time": 1791912673,
+   "title": "Trouble in the Valley",
+   "wanted": null,
+   "zone": "The Barrens"
+  },
+  "97242-progress": {
+   "build": "70425",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1454,
+   "name": "Kor'geld",
+   "npc": "3348",
+   "questID": 97242,
+   "race": "Windshaper Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "We discover formulations and recipes by showing old ingredients to new generations, who experiment with them in their own way.",
+   "time": 1791915665,
+   "title": "Yelmak's Medley",
+   "wanted": true,
+   "zone": "Orgrimmar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
