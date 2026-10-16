@@ -1,0 +1,87 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "12616|c5ceacbe": {
+   "build": "70425",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1440,
+   "name": "Vhulgra",
+   "npc": "12616",
+   "questID": null,
+   "race": "Orc",
+   "sex": "f",
+   "source": "community",
+   "text": "Where would you like to fly to?",
+   "time": 1792159089,
+   "title": null,
+   "wanted": null,
+   "zone": "Ashenvale"
+  },
+  "12724|39b67c2e": {
+   "build": "70425",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1440,
+   "name": "Pixel",
+   "npc": "12724",
+   "questID": null,
+   "race": "Orc",
+   "sex": "f",
+   "source": "community",
+   "text": "This forest can be confusing! Be careful out there.",
+   "time": 1792159085,
+   "title": null,
+   "wanted": null,
+   "zone": "Ashenvale"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "12616": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 949470,
+   "name": "Vhulgra",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "12724": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 119369,
+   "name": "Pixel",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2312",
+ "quests": {
+  "6581-progress": {
+   "build": "70425",
+   "class": "Shaman",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1440,
+   "name": "Pixel",
+   "npc": "12724",
+   "questID": 6581,
+   "race": "Orc",
+   "sex": "f",
+   "source": "community",
+   "text": "Direct from Ratchet, the Warsong saw blades! Yep, I have them right here.\n\n..But what sort of payment do you have for me? You can't just take them, you know! My time isn't cheap!\n\nWhat I really need is a good gun to carry with me on my travels. A girl's gotta protect herself, you know? There's a gun I really like that I'm sure an engineer would have no problem making.\n\nSo, if you bring me a deadly blunderbuss, I'll give you the saw blade shipment. Do we have a deal?",
+   "time": 1792159081,
+   "title": "Warsong Saw Blades",
+   "wanted": null,
+   "zone": "Ashenvale"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
