@@ -1,0 +1,32 @@
+{
+ "addon": "0.1.10",
+ "books": {
+  "1994b929": {
+   "build": "70425",
+   "class": "Hunter",
+   "differs": null,
+   "event": "page",
+   "isObject": null,
+   "mapID": 2521,
+   "name": null,
+   "npc": null,
+   "page": 1,
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "Greetings, $N,\r\n\r\nYou've shown great promise as a $c, and I'd like to ensure that you receive proper guidance and training. \r\n\r\nThe rangers do a good job of keeping the wilds in check here in Thendal Grove, but beyond our borders... well, the same can't be said.\r\n\r\nCome find me near the center of the village as soon as you are able. The wilds are calling.\r\n\r\n-Tai'ree Farsight, $C Trainer",
+   "time": 1792127516,
+   "title": "Scribbled Note",
+   "wanted": null,
+   "zone": "Zephras Isle"
+  }
+ },
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {},
+ "origin": "issue-2271",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
