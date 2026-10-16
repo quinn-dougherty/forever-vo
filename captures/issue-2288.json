@@ -1,0 +1,67 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "12724|39b67c2e": {
+   "build": "70425",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1440,
+   "name": "Pixel",
+   "npc": "12724",
+   "questID": null,
+   "race": "Orc",
+   "sex": "f",
+   "source": "community",
+   "text": "This forest can be confusing! Be careful out there.",
+   "time": 1792140733,
+   "title": null,
+   "wanted": null,
+   "zone": "Ashenvale"
+  },
+  "12737|65e006ab": {
+   "build": "70425",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1440,
+   "name": "Mastok Wrilehiss",
+   "npc": "12737",
+   "questID": null,
+   "race": "Orc",
+   "sex": "f",
+   "source": "community",
+   "text": "If you want to know about the comings and goings of caravans and merchants here in Splintertree Post, then I am fortunately the $r you are looking for.  Unfortunately for you though, I don't like people.\n\nIf you want something, make it quick.",
+   "time": 1792140751,
+   "title": null,
+   "wanted": null,
+   "zone": "Ashenvale"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "12724": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 119369,
+   "name": "Pixel",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "12737": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Mastok Wrilehiss",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2288",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
