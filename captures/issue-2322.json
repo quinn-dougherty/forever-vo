@@ -1,0 +1,39 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "3338": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 949470,
+   "name": "Sergra Darkthorn",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2322",
+ "quests": {
+  "844-progress": {
+   "build": "70425",
+   "class": "Mage",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Sergra Darkthorn",
+   "npc": "3338",
+   "questID": 844,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "Have you collected the plainstrider beaks?",
+   "time": 1792083500,
+   "title": "Plainstrider Menace",
+   "wanted": null,
+   "zone": "The Barrens"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
