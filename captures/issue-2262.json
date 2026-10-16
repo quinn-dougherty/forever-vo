@@ -1,0 +1,79 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "251904|202faeeb": {
+   "build": "70425",
+   "class": "Druid",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Sania Silverstream",
+   "npc": "251904",
+   "questID": null,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "Greetings, $c. Do you come seeking the blessings of the Windlord?",
+   "time": 1792118358,
+   "title": null,
+   "wanted": null,
+   "zone": "Zephras Isle"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "251904": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478494,
+   "name": "Sania Silverstream",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2262",
+ "quests": {
+  "92529-accept": {
+   "build": "70425",
+   "class": "Druid",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Sania Silverstream",
+   "npc": "251904",
+   "questID": 92529,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "It gladdens my heart that you wish to serve Al'Akir. Our current trials as a people stem from our own complacency. We grew prideful and took the bounty of the winds for granted. The stagnation that followed is the reason the spirits of the wind abandoned us.\r\n\r\nOnly through acts of contrition may we feel the wind's caress once more. If you seek the fellowship of like-minded shen'dorei, go to Falaath Village and find Missionary Jasaan there. I will mark you so that the faithful will know you as a recruit.",
+   "time": 1792118359,
+   "title": "Falaath Village",
+   "wanted": null,
+   "zone": "Zephras Isle"
+  },
+  "93036-complete": {
+   "build": "70425",
+   "class": "Druid",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Sania Silverstream",
+   "npc": "251904",
+   "questID": 93036,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "Greetings child, my name is Sania Silverstream and I am a junior priestess in the Order of the Al'Aketh. Do you wish to learn more of our sovereign, the Windlord Al'Akir?\r\n\r\nThere is always room at the Windlord's table for the righteous and the repentant.",
+   "time": 1792118182,
+   "title": "Infiltrating the Cult",
+   "wanted": null,
+   "zone": "Zephras Isle"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
