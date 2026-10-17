@@ -284,8 +284,21 @@ class Item:
         self.others = others or {}
         self.catalog = catalog
         self.config = catalog.config
+        self.raw_text = entry.get("text") or ""
+        self.event = entry.get("event") or (BOOK_EVENT if kind == "books" else "gossip")
+        self.speaker_key = (
+            None if kind == "books" else entry.get("npc")
+        )  # "288" or "-123" (game object)
+        # A line in a voice of its own ([voices.lines]): words that reach the
+        # player through an item or an object but are somebody's (the Eye of
+        # Burning Shadow, 832-accept). The pack keys the line to no speaker, so
+        # it fell to the narrator and [voices.speakers] could not name it
+        lines = self.config.voices.lines
+        self.pinned_voice = (
+            lines.get(self.base_name) if lines and kind != "books" else None
+        )
         # A book has no speaker: the narrator reads every page
-        self.voice = (
+        self.voice = self.pinned_voice or (
             self.config.voices.narrator
             if kind == "books"
             else voice_for_npc(
@@ -295,11 +308,6 @@ class Item:
                 speaker=entry.get("npc"),
             )
         )
-        self.raw_text = entry.get("text") or ""
-        self.event = entry.get("event") or (BOOK_EVENT if kind == "books" else "gossip")
-        self.speaker_key = (
-            None if kind == "books" else entry.get("npc")
-        )  # "288" or "-123" (game object)
 
     @property
     def subfolder(self) -> str:
@@ -351,13 +359,15 @@ class Item:
         the NPC record keeps every sex it is known as (known_sexes). The line's own
         file is in the voice its record resolves to; this is the other one, which
         the addon plays when the unit in front of the player is that sex. None
-        for a speaker seen as one sex, a narrator, a pinned voice, a named clip,
-        and a voice whose other sex has no clip of its own (a fallback to
-        another sex, or the narrator, would be worse than the one it has)."""
+        for a speaker seen as one sex, a narrator, a pinned voice (speaker or
+        line), a named clip, and a voice whose other sex has no clip of its own
+        (a fallback to another sex, or the narrator, would be worse than the
+        one it has)."""
         sexes = set(known_sexes(self.npc))
         if (
             not {"m", "f"} <= sexes
             or self.is_narrator
+            or self.pinned_voice
             or str(self.speaker_key) in self.config.voices.speakers
         ):
             return None
@@ -387,8 +397,8 @@ class Item:
         keeps every speaker it was captured from (`speakers`); this is the rest,
         which the addon plays when one of them is in front of the player. None
         for a narrator's line: its file keeps the stage directions a speaker's
-        leaves out."""
-        if self.kind != "quests" or self.is_narrator:
+        leaves out. None for a line pinned to one voice ([voices.lines])."""
+        if self.kind != "quests" or self.is_narrator or self.pinned_voice:
             return {}
         out: dict[str, str | None] = {}
         for key in sorted(self.entry.get("speakers") or {}, key=int):
@@ -1406,13 +1416,15 @@ def speaker_int(key: str | None) -> int | None:
 
 
 def unclipped_speakers(catalog: VoiceCatalog) -> dict[str, str]:
-    """The [voices.speakers] and [voices.sound_sets] entries whose voice would
-    borrow another's clip: a typo, or a voice not built yet. An archetype falling
-    back to its own race is fine, since that is how every other speaker of it is
-    read. Keyed as the TOML spells them, `[voices.speakers] 248200` and so on."""
+    """The [voices.speakers], [voices.lines] and [voices.sound_sets] entries
+    whose voice would borrow another's clip: a typo, or a voice not built yet.
+    An archetype falling back to its own race is fine, since that is how every
+    other speaker of it is read. Keyed as the TOML spells them,
+    `[voices.speakers] 248200` and so on."""
     voices = catalog.config.voices
     pinned = {
         **{f"[voices.speakers] {k}": v for k, v in voices.speakers.items()},
+        **{f"[voices.lines] {k}": v for k, v in voices.lines.items()},
         **{f"[voices.sound_sets] {k}": v for k, v in voices.sound_sets.items()},
     }
     return {

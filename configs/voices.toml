@@ -107,9 +107,9 @@ voljin = ["warchief_voljin"]  # Legion and Battle for Azeroth, long speeches
 # (#319). Keyed like the pack's gossip (creature ID, negative for game
 # objects); any voice name the generator resolves (race, archetype, species,
 # npc-<displayID>). Changing an entry restages exactly that speaker's files.
-# Per speaker, never per line, and for the cases the data cannot fix: pin from
-# the audition page ("Always read ... in"), and generate.py warns about a
-# voice with no clip of its own. Fizzlefuse (#352) is a goblin whose only
+# Per speaker ([voices.lines] below is per line), and for the cases the data
+# cannot fix: pin from the audition page ("Always read ... in"), and
+# generate.py warns about a voice with no clip of its own. Fizzlefuse (#352) is a goblin whose only
 # model readings came out tauren and orc, read before 0.1.7 fixed the capture.
 [voices.speakers]
 "248200" = "goblin-male"
@@ -123,6 +123,18 @@ voljin = ["warchief_voljin"]  # Legion and Battle for Azeroth, long speeches
 "15192" = "bloodelf-male"
 "10321" = "bloodelf-male"
 "14822" = "troll-female-old"
+
+# One line always in one voice, for words that reach the player through an
+# item or a game object but are somebody's: the pack keys such a line to no
+# speaker, so it fell to the narrator and [voices.speakers] cannot name it.
+# Keyed by the line's file name (<questID>-<event>, <speaker>-<hash>) like
+# [lines]; any voice the generator resolves. The narrator still reads the
+# line's stage directions, as parts, and the line gets no other-sex or
+# other-speaker files. Changing an entry restages exactly that line's files.
+# The Eye of Burning Shadow (832) carries the Burning Blade's orders to
+# Gazz'uz; the voice behind it is a shady orc's.
+[voices.lines]
+"832-accept" = "orc-male-shady"
 
 # NPCSounds set -> voice, for a creature whose display the client tables give no
 # race and no species clip covers: the set Blizzard cast it with still says who it

@@ -176,6 +176,11 @@ class VoiceSources(Strict):
 
 
 _SPEAKER_KEY = re.compile(r"-?[1-9][0-9]*")
+# A line's whole-line file name: <questID>-<event> or <speaker>-<hash> (obj<id>
+# for a game object, unknown for no speaker), as the pack and [lines] spell it
+_LINE_NAME = re.compile(
+    r"(?:\d+-(?:accept|progress|complete)|(?:\d+|obj\d+|unknown)-[0-9a-f]{8})"
+)
 _VOICE_NAME = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
 _FOLDER_NAME = re.compile(r"[a-z0-9_-]+")
 
@@ -208,6 +213,9 @@ class Voices(Strict):
     speakers: dict[
         str, str
     ] = {}  # speaker key -> voice, for the few whose captured model is wrong
+    lines: dict[
+        str, str
+    ] = {}  # line file name -> voice, for words an item or object carries that are someone's
     sound_sets: dict[
         str, str
     ] = {}  # NPCSounds set -> voice, for a display with no race and no species clip
@@ -234,6 +242,24 @@ class Voices(Strict):
                 raise ValueError(
                     f"[voices.speakers] {key} = {voice!r} is not a voice name "
                     '(lowercase words joined by "-", like "goblin-male")'
+                )
+        return value
+
+    @field_validator("lines")
+    @classmethod
+    def _line_voices(cls, value: dict[str, str]) -> dict[str, str]:
+        """Keys as the pack names a line's file (832-accept, obj123-0123abcd),
+        values shaped like a voice name, as for speakers."""
+        for key, voice in value.items():
+            if not _LINE_NAME.fullmatch(key):
+                raise ValueError(
+                    f"[voices.lines] key {key!r} is not a line's file name "
+                    "(832-accept, 5688-19cbe7de; the whole line, no m-/f-)"
+                )
+            if not _VOICE_NAME.fullmatch(voice):
+                raise ValueError(
+                    f"[voices.lines] {key} = {voice!r} is not a voice name "
+                    '(lowercase words joined by "-", like "orc-male-shady")'
                 )
         return value
 

@@ -415,8 +415,13 @@ reference reach the model.**
 
 How a speaker gets a voice (`wowdata.voice_for_npc`), first match wins:
 
+0. `[voices.lines]` pins one line by file name (`832-accept`), for words an
+   item or object carries that are somebody's: such a line has no speaker key,
+   so it fell to the narrator. `Item.pinned_voice`; the line gets narrator
+   parts for its stage directions and no other-sex or other-speaker files.
 1. `[voices.speakers]` pins (creature ID, negative for objects), for a speaker
-   the data cannot fix; `generate.py` warns about a pinned voice with no clip.
+   the data cannot fix; `generate.py` warns about a pinned voice with no clip
+   (`unclipped_speakers`, lines included).
 2. `npc-<displayID>.wav`, a named NPC's own clip.
 3. The display's race and sex (`CreatureDisplayInfoExtra`), cast as the
    archetype for its NPCSounds set where one is built (or a sibling set's,
