@@ -1,0 +1,60 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "658|003beda2": {
+   "build": "70450",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Sten Stoutarm",
+   "npc": "658",
+   "questID": null,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Ah, well aren't you a sturdy-looking one? Perhaps you can assist me with a thing or two. Not much help around here except for green apprentices, and they've other things to worry about.",
+   "time": 1792257425,
+   "title": null,
+   "wanted": null,
+   "zone": "Dun Morogh"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "658": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Sten Stoutarm",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2392",
+ "quests": {
+  "179-accept": {
+   "build": "70450",
+   "class": "Shaman",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Sten Stoutarm",
+   "npc": "658",
+   "questID": 179,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "What do we have here? You look as though you might need something to keep your hands warm, hm?\n\nI'll tell you what would help: a pair of nice, warm gloves. And, being the kind soul that I am, I'd be more than happy to provide you with a suitable pair. I've one condition, however.\n\nI need you to go get me some wolf meat. Nice arrangement, hm? You bring me some wolf meat, and I'll make sure you don't lose any digits to frostbite. Well, what do you say?",
+   "time": 1792257427,
+   "title": "Dwarven Outfitters",
+   "wanted": null,
+   "zone": "Dun Morogh"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
