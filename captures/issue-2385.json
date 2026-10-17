@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "11026|766a64ec": {
+   "build": "70450",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1453,
+   "name": "Sprite Jumpsprocket",
+   "npc": "11026",
+   "questID": null,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Ah, what a beautiful day to blow something up!",
+   "time": 1792251358,
+   "title": null,
+   "wanted": null,
+   "zone": "Stormwind City"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "11026": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 940356,
+   "name": "Sprite Jumpsprocket",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2385",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
