@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "6491|22357dc5": {
+   "build": "70450",
+   "class": "Rogue",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Spirit Healer",
+   "npc": "6491",
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "It is not yet your time. I shall aid your journey back to the realm of the living... for a price.",
+   "time": 1792176752,
+   "title": null,
+   "wanted": null,
+   "zone": "Zephras Isle"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "6491": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 126042,
+   "name": "Spirit Healer",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2416",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
