@@ -843,7 +843,7 @@ def test_a_take_stops_between_the_sentences_of_a_long_line() -> None:
 
 
 def test_a_voice_lists_every_line_when_asked_for_all(
-    monkeypatch: pytest.MonkeyPatch,
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
 ) -> None:
     from fastapi.testclient import TestClient
 
@@ -862,13 +862,20 @@ def test_a_voice_lists_every_line_when_asked_for_all(
     studio._rows = None  # no corpus behind the rows: no pins to look up
     monkeypatch.setattr(studio, "rows", lambda: rows)
     monkeypatch.setattr(studio, "moving_to", lambda voice: frozenset())
-    client = TestClient(audition.create_app(studio, addons=None))
+    monkeypatch.setattr(audition, "_git", lambda *args, **kw: "")  # the index date
+    audition._index_date.cache_clear()
+    index = tmp_path / "sound_index.json"  # the tests' own, not the repository's
+    index.write_text('{"75-accept": {"d": 1.0, "s": 9, "c": 300}}', encoding="utf-8")
+    client = TestClient(audition.create_app(studio, addons=None, sound_index=index))
 
     d = client.get("/api/lines?voice=goblin-male-zany").json()
     assert (len(d["rows"]), d["total"]) == (60, 75)  # the button's longest sixty
     d = client.get("/api/lines?voice=goblin-male-zany&limit=0").json()
     assert (len(d["rows"]), d["total"]) == (75, 75)  # choosing a voice lists them all
     assert d["rows"][0]["base"] == "75-accept"  # longest first
+    # the index seed rides along with every row, pins or no corpus
+    assert d["rows"][0]["kept"]["seed"] == 9 and d["rows"][1]["kept"] is None
+    audition._index_date.cache_clear()
 
 
 def test_write_voice_sources_keeps_gaps_and_writes_none_for_no_gap(

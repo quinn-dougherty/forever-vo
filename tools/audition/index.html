@@ -152,6 +152,15 @@
   /* a knob that departs from the voice's saved value, until it is kept or put back */
   .fields .unsaved input { border-color: var(--warn); box-shadow: 0 0 0 1px var(--warn); }
   .fields .unsaved label { color: var(--warn); }
+  /* saved settings the picked line's live pin was heard under: a faded padlock at the
+     right edge of the box (a select keeps its arrow outside it) */
+  .fields .locked input, .fields .locked select {
+    padding-right: 1.8em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23888' fill-opacity='.45' d='M4 7V5a4 4 0 0 1 8 0v2h1a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1zm2 0h4V5a2 2 0 0 0-4 0v2z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right .5em center; background-size: .95em;
+  }
+  .fields .locked select { background-position: right 1.6em center; }
+  #pin-locks { margin: 4px 0 0; }
   .fields .saved-note { color: var(--warn); }
   .fields .saved-note:empty { display: none; }
   .fields .knob-reset { font-size: 11px; padding: 0 6px; line-height: 1.5; margin-left: 4px; color: var(--warn); border-color: var(--warn); background: transparent; }
@@ -193,7 +202,9 @@
   .fields.run { grid-template-columns: minmax(0, 1fr) repeat(3, minmax(6.5em, 10em)); }
   .fields.run label.check.hint { display: flex; margin-top: 4px; font-size: 11px; color: var(--dim); }
   /* the picked line's pinned seed, filled in for it */
-  #seed-in.pinned { border-color: var(--borrow); box-shadow: 0 0 0 1px var(--borrow); color: var(--borrow); }
+  /* a run option holding the value the picked line's pin was heard under */
+  #seed-in.pinned, .fields .pinned input, .fields .pinned select { border-color: var(--borrow); box-shadow: 0 0 0 1px var(--borrow); color: var(--borrow); }
+  .fields .pinned label, .fields .pinned label.check { color: var(--borrow); }
   /* after the rule above, which it overrides: Clone from on a row of its own */
   @container (max-width: 560px) {
     .fields.run { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -393,7 +404,7 @@
   <aside>
     <h2>Find a line</h2>
     <input id="q" placeholder="quest title, NPC, words, or a base name like 415-accept" autocomplete="off">
-    <div class="row" style="margin-top:6px"><button id="random">Random line</button><button id="in-voice">All lines in this voice</button></div>
+    <div class="row" style="margin-top:6px"><button id="random">Random line</button><button id="in-voice">All lines in this voice</button><button id="pinned-lines" title="Every line with a seed pinned in [lines], live or lapsed, by voice">Pinned lines</button></div>
     <ul id="results"></ul>
     <p class="note">Every word must match. Pick a line to load its spoken text and voice; free text below works too. The random button draws a quest line spoken in the selected voice.</p>
 
@@ -471,6 +482,7 @@
         <div><label for="pitch">Pitch, semitones</label><input id="pitch" autocomplete="off" value="0"><div class="hint">&minus;12&ndash;12; 0 as generated, down is negative</div></div>
         <div><label for="speed" title="Varispeed: pace and pitch together, one resample">Speed</label><input id="speed" autocomplete="off" value="1.0"><div class="hint">0.5&ndash;2.0; tape-style, slower is lower</div></div>
       </div>
+      <div id="pin-locks" class="hint"></div>
     </div>
     <!-- run what is set above; the saved resolution beside it says what the pack would use -->
     <div class="actions">
@@ -541,12 +553,15 @@
         seed instead of each from its own &mdash; an experiment, since the accent comes from
         the reference every chunk already shares.</p>
       <p>Every take has a <b>seed</b>; the same seed, text, settings and chunk length make
-        the same take again on this machine. <b>Pin this take</b> keeps a perfect take's
-        seed for its line in <code>[lines]</code>, and the pack's file is drawn from it
-        &mdash; only for a take of the line's own text under the voice's saved settings. The
-        pack is built on another GPU, where the seed draws a different take, though always
-        the same one; the pin stops applying when the line's text or the voice's settings
-        change.</p>
+        the same take again on this machine. Every file generated since 2026-10-07 keeps
+        the seed it was drawn with (the <b>index seed</b> under a picked line, from
+        <code>sound_index.json</code>) and is drawn from it again until rerolled.
+        <b>Pin this take</b> overrides it: a perfect take's seed for its line in
+        <code>[lines]</code>, and the pack's file is drawn from it &mdash; only for a take of
+        the line's own text under the voice's saved, committed settings. The pack is built on
+        another GPU, where a seed draws a different take, though always the same one; the pin
+        stops applying when the line's text or the voice's settings change, and the file then
+        keeps its index seed.</p>
       <p class="warn">Not an accent control. Four settings pairs over eight takes of
         goblin-male moved its accent not at all, while changing the source clips took the
         same voice from &ldquo;sounds like a gnome&rdquo; to level with the shipped pack.</p>
@@ -667,6 +682,7 @@ function applyState(s) {
   $("s-bulk").textContent = s.bulk_service; $("s-bulk").className = s.bulk_service === "active" ? "warn" : "";
   $("s-config").textContent = s.config_path;
   showPronunciations(s.pronunciations);
+  setTimeout(markPinLocks, 0);  // once the voice list below is in place
   const voice = $("voice"), ref = $("reference");
   const keepVoice = voice.value, keepRef = ref.value;
   voice.innerHTML = voiceOptions(s);
@@ -1063,12 +1079,42 @@ function markKnobs() {
       : "";
   }
 }
-for (const [id] of KNOBS) $(id).addEventListener("input", markKnobs);
+for (const [id] of KNOBS) $(id).addEventListener("input", () => { markKnobs(); markPinned(); });
+$("reference").addEventListener("change", markPinned);
+$("chunk-chars").addEventListener("input", markPinned);
+$("same-seed").addEventListener("change", markPinned);
+$("pin-locks").addEventListener("click", ev => {
+  const line = ev.target.closest("a.pinned-line"), all = ev.target.closest("a.pinned-all");
+  if (!line && !all) return;
+  ev.preventDefault();
+  if (all) { listPinnedLines(); return; }
+  $("q").value = line.dataset.base;
+  $("q").dispatchEvent(new Event("input"));
+});
+
+// The lines pinned in the chosen voice hold only under its saved knobs, clone-from and
+// clip picks (the pin's `heard`): the fields carry a lock while any does, and the
+// note says which lines. Trying other values is fine; Keep these settings or a new
+// pick lapses the pins, which the server then says.
+function markPinLocks() {
+  const box = $("pin-locks");
+  if (!state || !box) return;
+  const voice = $("voice").value, held = (state.pinned || {})[voice] || [];
+  // the lock marks the fields a pinned picked line holds under; the note below
+  // lists the voice's pinned lines either way
+  const locked = !!(current && current.pin && current.pin.live && current.voice === voice);
+  for (const id of [...KNOBS.map(([id]) => id), "reference"]) $(id).parentElement.classList.toggle("locked", locked);
+  if (!held.length) { box.innerHTML = ""; return; }
+  const shown = held.slice(0, 6).map(b => `<a href="#" class="badge pinned-line" data-base="${esc(b)}" title="find this line">${esc(b)}</a>`).join(" ") +
+    (held.length > 6 ? ` <a href="#" class="pinned-all" title="list every pinned line">and ${held.length - 6} more</a>` : "");
+  box.innerHTML = `<span title="A pin is heard under the voice's saved knobs, clone-from and clip picks. Keep these settings or a new clip pick changes them, and the pin then stands aside: the line falls back to its index seed until a take under the new settings is pinned.">` +
+    `${locked ? "&#x1F512; " : ""}${held.length} line${held.length === 1 ? "" : "s"} pinned under ${esc(voice)}'s saved settings and clips: Keep or a new pick lapses ${held.length === 1 ? "it" : "them"}</span> ${shown}`;
+}
 document.querySelector(".fields.knobs").addEventListener("click", ev => {
   const b = ev.target.closest("button.knob-reset");
   if (!b) return;
   $(b.dataset.knob).value = b.dataset.saved;
-  markKnobs();
+  markKnobs(); markPinned();  // the saved value is the pin's under a live pin
 });
 // Who is read in the chosen voice, most lines first, each linked to wowhead. Loaded
 // once per voice; a species voice nobody is cast on yet lists who would move to it.
@@ -1152,7 +1198,9 @@ function renderResults(rows) {
     `<li data-i="${i}">` +
     (r.pack_url ? `<button class="play" title="play the file in ${esc(r.pack || "the pack")}">▶</button>` : "") +
     `<div><div class="t">${esc(r.title)} <span class="badge">${r.base}</span>` +
-    (r.exists ? `<span class="badge">${esc(r.pack || "")}</span>` : '<span class="badge warn">no file</span>') + `</div>` +
+    (r.exists ? `<span class="badge">${esc(r.pack || "")}</span>` : '<span class="badge warn">no file</span>') +
+    (r.pin ? (r.pin.live ? `<span class="badge" title="a seed pinned in [lines]">pinned</span>`
+                         : `<span class="badge warn" title="pinned in [lines] under other settings or text: the pin is not used">pin lapsed</span>`) : "") + `</div>` +
     `<div class="m">${esc(r.speaker || "")} · ${r.voice} · ${esc(r.raw.slice(0, 90))}${r.raw.length > 90 ? "…" : ""}</div></div></li>`).join("");
   const items = $("results").querySelectorAll("li");
   items.forEach(li => {
@@ -1212,6 +1260,20 @@ async function listVoiceLines(quiet) {
 }
 $("in-voice").addEventListener("click", () => listVoiceLines(false));
 
+// Every pinned line, live or lapsed, by voice: the lock note under the knobs lists
+// the chosen voice's; this lists them all, so a lapsed pin is found without knowing
+// which line it was on
+async function listPinnedLines() {
+  try {
+    const d = await api("/api/lines?pinned=1");
+    $("q").value = "";
+    renderResults(d.rows);
+    const lapsed = d.rows.filter(r => r.pin && !r.pin.live).length;
+    toast(d.rows.length ? `${d.rows.length} pinned line${d.rows.length === 1 ? "" : "s"}${lapsed ? `, ${lapsed} lapsed` : ""}` : "no pinned lines", d.rows.length ? "ok" : "warn");
+  } catch (e) { toast(e.message, "warn"); }
+}
+$("pinned-lines").addEventListener("click", listPinnedLines);
+
 $("random").addEventListener("click", async () => {
   try {
     const row = await api(`/api/random?voice=${encodeURIComponent($("voice").value)}`);
@@ -1226,7 +1288,12 @@ function pick(row, li) {
   current = row;
   $("results").querySelectorAll("li").forEach(x => x.classList.remove("active")); li.classList.add("active");
   $("text").value = row.spoken;
-  if (state.voices.includes(row.voice)) $("voice").value = row.voice;
+  if (state.voices.includes(row.voice) && $("voice").value !== row.voice) {
+    // the knobs follow the voice, as choosing it in the list does: left on the
+    // voice before, they read "not saved" against this one
+    $("voice").value = row.voice;
+    loadVoiceSettings();
+  }
   // the pack's file plays from the card's top right, beside the title; wowhead links
   // the quest (its ID leads the base name, after an m-/f- branch) and the speaker
   const quest = row.subfolder === "Quests" ? (row.base.replace(/^[mf]-/, "").match(/^(\d+)-/) || [])[1] : null;
@@ -1249,33 +1316,68 @@ function pick(row, li) {
   showLinePin();
   fillFromPin();
   showResolved();
+  markPinLocks();
   schedulePreview();
 }
 
-// [lines]: the line's pinned seed, if any, and whether it still applies
+// The index seed: what sound_index.json (in git, following the machine that builds
+// the pack) says drew the line's file. Every generated file keeps its seed and is
+// drawn from it again until rerolled; a pin in [lines] overrides it. Whether the
+// audio playing in the card was drawn from it depends on where that audio is from.
+function indexSeedNote() {
+  const k = current.kept;
+  if (!k) return "";
+  const when = current.index_date ? ` · index of ${current.index_date}` : "";
+  const audio = current.drawn ? "the file playing was drawn from it"
+    : current.pack_url ? `the file playing is ${esc(current.pack || "")}${current.pack_version ? ` ${esc(current.pack_version)}` : ""}, a release: not necessarily this seed's take`
+    : "no file here";
+  const pinnedHere = current.pin && current.pin.live && current.pin.seed === k.seed;
+  const cap = !k.capped ? ""
+    : pinnedHere ? ` · <span class="warn" title="Every try of a chunk ran to the 40 s token cap, so the file holds babble, and a pinned take is never drawn again.">ran into the token cap; pinned, so kept as is: unpin or pin another</span>`
+    : ` · <span class="warn" title="Every try of a chunk ran to the 40 s token cap, so the file holds babble; the next generate run draws it from a new seed.">ran into the token cap on the builder; it will be rerolled</span>`;
+  return `<span title="${esc(INDEX_SEED_NOTE)}">Index seed <b>${k.seed}</b> · chunks of ${k.chunk_chars}${k.same_seed ? " · same seed" : ""}${when} · ${audio}</span>${cap}` +
+    ` <a href="#" id="kept-load" title="Put the index seed, its chunk length and Same seed in the run options: on the machine that builds the pack it draws the pack's take again, here a close one">load into run</a>`;
+}
+const INDEX_SEED_NOTE = "Every generated file keeps the seed it was drawn with in sound_index.json and is " +
+  "drawn from it again until rerolled (generate.py --reroll). Pin this take overrides it for this line. " +
+  "The index follows the machine that builds the pack; the audio in the card is only that seed's " +
+  "take when it is the working folder's current copy.";
+
+// [lines]: the line's pinned seed, if any, and whether it still applies, over the index seed
 function showLinePin() {
   const box = $("line-pin");
   if (!box || !current) return;
-  const p = current.pin;
+  const p = current.pin, k = current.kept;
   if (current.parts) {
     box.innerHTML = `<span title="The speaker's words are split between several parts with the narrator's stage directions between them, and the addon plays the parts, so no one take is what players hear.">narration splits the speaker's words: can't be pinned</span>`;
     return;
   }
-  if (!p) { box.innerHTML = ""; return; }
-  box.innerHTML = (p.live
-      ? `Pinned: seed <b>${p.seed}</b> · chunks of ${p.chunk_chars}${p.same_seed ? " · same seed" : ""}`
-      : `<span class="warn" title="The line's text or the voice's settings changed since the take was pinned, so the seed would draw another take: the pin is not used.">pinned under other settings (seed ${p.seed}); not used</span>`) +
-    `<a href="#" id="pin-load" title="Put the pin's seed, chunk length and Same seed in the run options">load into run</a>` +
-    `<a href="#" id="pin-drop" title="Remove the pin from [lines]. The file it drew stays until something else changes the line.">unpin</a>`;
-  $("pin-load").addEventListener("click", e => { e.preventDefault(); useSeed(p.seed, p.chunk_chars, p.same_seed); seedFromPin = true; markPinnedSeed(); });
-  $("pin-drop").addEventListener("click", async e => {
-    e.preventDefault();
-    try {
-      await api(`/api/pin-seed/${encodeURIComponent(current.base)}`, { method: "DELETE" });
-      current.pin = null; showLinePin(); fillFromPin(); schedulePreview();
-      toast("Unpinned. The file it drew stays until something else changes the line.", "ok");
-    } catch (err) { toast(err.message, "warn"); }
-  });
+  const kept = indexSeedNote();
+  if (!p) {
+    box.innerHTML = kept;
+  } else {
+    const drawn = k && k.seed === p.seed && k.chunk_chars === p.chunk_chars && !!k.same_seed === !!p.same_seed;
+    box.innerHTML = (p.live
+        ? `Pinned: seed <b>${p.seed}</b> · chunks of ${p.chunk_chars}${p.same_seed ? " · same seed" : ""}` +
+          ` · <span title="The pin was heard under ${esc(current.voice)}'s saved knobs, clone-from and clip picks, and holds only while they stay: Keep these settings or a new pick lapses it.">&#x1F512; holds under ${esc(current.voice)}'s saved settings</span>` +
+          (drawn ? ` · <span title="The index records this seed for the file: the machine that builds the pack has drawn it.">the builder's file is drawn from it</span>`
+                 : ` · <span class="warn" title="The index still records another seed for the file: the next generate run on the machine that builds the pack draws it from the pin.">not yet drawn</span>`)
+        : `<span class="warn" title="The line's text or the voice's settings changed since the take was pinned, so the seed would draw another take: the pin is not used.">pinned under other settings (seed ${p.seed}); not used</span>`) +
+      `<a href="#" id="pin-load" title="Put the pin's seed, chunk length and Same seed in the run options">load into run</a>` +
+      `<a href="#" id="pin-drop" title="Remove the pin from [lines]. The file it drew stays, and its seed stays the index seed, until something else changes the line.">unpin</a>` +
+      (kept ? `<div>${kept}</div>` : "");
+    $("pin-load").addEventListener("click", e => { e.preventDefault(); useSeed(p.seed, p.chunk_chars, p.same_seed); seedFromPin = true; loadHeard(p); markPinnedSeed(); });
+    $("pin-drop").addEventListener("click", async e => {
+      e.preventDefault();
+      try {
+        await api(`/api/pin-seed/${encodeURIComponent(current.base)}`, { method: "DELETE" });
+        current.pin = null; showLinePin(); fillFromPin(); schedulePreview();
+        toast("Unpinned. The file it drew stays, and its seed stays the index seed, until something else changes the line.", "ok");
+      } catch (err) { toast(err.message, "warn"); }
+    });
+  }
+  const load = $("kept-load");
+  if (load) load.addEventListener("click", e => { e.preventDefault(); useSeed(k.seed, k.chunk_chars, k.same_seed); });
 }
 
 // --- Chunk preview ------------------------------------------------------------
@@ -1296,8 +1398,16 @@ async function previewChunks() {
   $("chunk-preview").innerHTML =
     `<span title="Each chunk is one model call; a take's marks number them the same way. The text is shown respelled, as the model hears it.">` +
     `${n} chunk${n === 1 ? "" : "s"} at ${r.chars} characters, as the model hears it</span>` +
-    (r.pinned_chars && r.pinned_chars !== r.chars ? ` · <span class="warn">this line is pinned at ${r.pinned_chars}</span>` : "") +
+    // the chunk length a seed belongs with matters only while the Seed box holds that seed
+    (r.line_chars && r.line_chars !== r.chars && seedInBoxIs(r.from)
+      ? ` · <span class="warn">${r.from === "pin" ? "this line is pinned at" : "the index seed was drawn at"} ${r.line_chars}</span>` : "") +
     (n > 1 ? `<div class="bands">` + r.chunks.map((c, i) => `<span class="band b${i % 2}"><b>${i + 1}</b>${esc(c)}</span>`).join(" ") + `</div>` : "");
+}
+// Whether the Seed box holds the picked line's pinned seed, or its index seed
+function seedInBoxIs(from) {
+  if (!current || $("seed-in").value === "") return false;
+  const s = +$("seed-in").value;
+  return from === "pin" ? !!(current.pin && s === current.pin.seed) : !!(current.kept && s === current.kept.seed);
 }
 $("text").addEventListener("input", schedulePreview);
 schedulePreview();  // the text the page opens with
@@ -1350,6 +1460,7 @@ $("voice").addEventListener("change", () => {
   $("takes-body").innerHTML = ""; $("progress").textContent = "";
   loadVoiceSettings();
   showResolved();
+  markPinLocks();
   listVoiceLines(true);
   showSpeakerPin();
   if (clipsVoice && $("voice").value !== clipsVoice) {
@@ -1459,9 +1570,12 @@ function onEvent(ev) {
   keep.addEventListener("click", async () => {
     busy(keep, true);
     try {
-      applyState(await api("/api/keep-tuning", { method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ voice, exaggeration: ev.exaggeration, cfg_weight: ev.cfg_weight, tempo: ev.tempo || 1, pitch: ev.pitch || 0, speed: ev.speed || 1, reference: ev.reference }) }));
+      const r = await api("/api/keep-tuning", { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ voice, exaggeration: ev.exaggeration, cfg_weight: ev.cfg_weight, tempo: ev.tempo || 1, pitch: ev.pitch || 0, speed: ev.speed || 1, reference: ev.reference }) });
+      applyState(r);
       toast(`Kept for ${voice}. The next generate run restages that voice's files.`, "ok");
+      if (r.warning) toast(r.warning, "warn");
+      if (current) { const again = await api(`/api/lines?q=${encodeURIComponent(current.base)}&limit=1`); if (again.rows[0] && again.rows[0].base === current.base) { current = again.rows[0]; showLinePin(); fillFromPin(); } }
       if (voice === $("voice").value) loadVoiceSettings();  // the knobs now read as saved
     } catch (e) { toast(e.message, "warn"); }
     busy(keep, false);
@@ -1481,13 +1595,16 @@ function onEvent(ev) {
       "speaker's part; one whose words narration splits cannot be pinned.\n\n" +
       "On this machine the seed makes this exact take. On the CUDA machine that builds the " +
       "pack it makes a different take, but always the same one. The pin stops applying " +
-      "when the line's text or the voice's settings change.";
+      "when the line's text or the voice's settings change; the file then keeps the seed " +
+      "that drew it (the index seed) until rerolled. The pin must be heard under committed " +
+      "settings: the page says so when configs/ has edits not yet committed.";
     pin.addEventListener("click", async () => {
       busy(pin, true);
       try {
-        await api("/api/pin-seed", { method: "POST", headers: { "Content-Type": "application/json" },
+        const r = await api("/api/pin-seed", { method: "POST", headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ session: ev.session || runSession, name: ev.name }) });
         toast(`Pinned seed ${ev.seed} to ${ev.base}. The next generate run draws its file from it.`, "ok");
+        if (r && r.warning) toast(r.warning, "warn");
         if (current && current.base === ev.base) {
           current.pin = { seed: ev.seed, chunk_chars: ev.chunk_chars || 300, same_seed: !!ev.same_seed, live: true };
           showLinePin(); fillFromPin();
@@ -1513,22 +1630,35 @@ const SEED_NOTE = "The seed this take was drawn from, each model call seeded fro
   "not. 'use this seed' puts it, the chunk length and Same seed in the run options; " +
   "Pin this take keeps it for the line's pack file.";
 
+// The knobs and clone-from a pin was heard under, into the run options: with a live
+// pin these are the voice's saved values already; with a lapsed one they are what to
+// put back to hear the pinned take
+function loadHeard(p) {
+  if (!p || !p.heard) return;
+  for (const [id, key] of KNOBS) $(id).value = `${p.heard[key] ?? (key === "tempo" || key === "speed" ? 1 : 0)}`;
+  $("reference").value = p.heard.reference || "";
+  markKnobs(); showResolved(); markPinned();
+}
 // The run options a seed belongs with; a seed locks Takes each to one
 function useSeed(seed, chunkChars, sameSeed) {
   $("seed-in").value = seed; $("chunk-chars").value = chunkChars; $("same-seed").checked = sameSeed;
   seedFromPin = false;  // a take's seed; fillFromPin marks the pin's own
   seedChanged(); markPinnedSeed(); schedulePreview();
 }
-// A picked line with a pin that holds runs from it by default: its seed, chunk length
-// and Same seed fill the run options, the Seed box outlined in blue while it is the
-// pin's. Typing over it, unpinning or picking a line without one clears that, and a
-// seed the pin put there goes with it, so it does not ride along to the next line.
+// A picked line with a pin runs from it by default: its seed, chunk length, Same seed,
+// knobs and clone-from fill the run options, each box blue while it holds the pin's
+// value. Typing over the seed, unpinning or picking a line without a pin clears the
+// seed the pin put there, so it does not ride along to the next line.
 let seedFromPin = false;
 function fillFromPin() {
   const p = current && current.pin;
-  if (p && p.live) {
+  if (p) {
+    // a pinned line runs from its pin: the seed, chunk length and Same seed, and
+    // the knobs and clone-from it was heard under, lapsed or not (a lapsed pin
+    // then plays its take under the old settings, to re-pin after a Keep)
     useSeed(p.seed, p.chunk_chars, p.same_seed);
     seedFromPin = true;
+    loadHeard(p);
   } else if (seedFromPin) {
     $("seed-in").value = ""; $("chunk-chars").value = 300; $("same-seed").checked = false;
     seedFromPin = false;
@@ -1536,10 +1666,25 @@ function fillFromPin() {
   }
   markPinnedSeed();
 }
-function markPinnedSeed() {
-  const pinned = seedFromPin && current && current.pin && +$("seed-in").value === current.pin.seed;
-  $("seed-in").classList.toggle("pinned", !!pinned);
-  $("seed-in").title = pinned ? `${current.base}'s pinned seed: generating with it draws the pinned take again` : "";
+// Every run option that holds what the picked line's pin was heard under is blue, as
+// the Seed box has been: the seed, chunk length and Same seed of the pinned draw, and
+// the knobs and clone-from of its `heard`. Blue means "this is the pin's value", live
+// or lapsed: with a lapsed pin it shows which fields to put back to hear the take.
+function markPinnedSeed() { markPinned(); }
+function markPinned() {
+  const p = current && current.pin, heard = p && p.heard;
+  const seedPinned = !!(p && $("seed-in").value !== "" && +$("seed-in").value === p.seed);
+  $("seed-in").classList.toggle("pinned", seedPinned);
+  $("seed-in").title = seedPinned ? `${current.base}'s pinned seed: generating with it draws the pinned take again` : "";
+  // the chunk length and Same seed matter to the draw only together with the seed
+  $("chunk-chars").parentElement.classList.toggle("pinned", seedPinned && +$("chunk-chars").value === p.chunk_chars);
+  $("same-seed").parentElement.classList.toggle("pinned", seedPinned && $("same-seed").checked === !!p.same_seed);
+  for (const [id, key] of KNOBS) {
+    const typed = $(id).value.split(/[,\s]+/).filter(Boolean).map(Number);
+    const match = !!heard && typed.length === 1 && Math.abs(typed[0] - Number(heard[key] ?? 0)) < 1e-9;
+    $(id).parentElement.classList.toggle("pinned", match);
+  }
+  $("reference").parentElement.classList.toggle("pinned", !!heard && ($("reference").value || null) === (heard.reference || null));
 }
 
 let takesBeforeSeed = null;  // Takes each as it was before a seed locked it to one
@@ -1550,7 +1695,7 @@ function seedChanged() {
   $("takes").disabled = seeded;
   $("takes").title = seeded ? "One take: a seed makes every take the same" : "";
 }
-$("seed-in").addEventListener("input", () => { seedFromPin = false; seedChanged(); markPinnedSeed(); });
+$("seed-in").addEventListener("input", () => { seedFromPin = false; seedChanged(); markPinnedSeed(); schedulePreview(); });
 
 // One mark per chunk of a take, where the model was called afresh: an accent that
 // switches at a mark is a chunk boundary, one that drifts between marks is the model
@@ -2169,6 +2314,7 @@ $("clips-build").addEventListener("click", async () => {
     $("clips-status").textContent = `built ${r.built}, ${r.seconds}s`;
     renderHistory(r.history, picks);
     toast(r.restage, "ok");
+    if (r.warning) toast(r.warning, "warn");
   } catch (e) { toast(e.message, "warn"); }
   busy($("clips-build"), false);
 });

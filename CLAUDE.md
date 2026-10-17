@@ -227,29 +227,51 @@ Generation details:
   only), so a call that misses its stop token babbles to the cap. `render_take`
   retries such a try and halves the chunk (`textclean.halve`) after three; it
   used to keep the longest try, so the runaway won. `ran_into_cap` in `wanted()`
-  regenerates a file that fits one chunk and is 40.0 s before tempo and speed.
-- Every `generate()` call is seeded (`derive_seed(take, chunk, try)` from a random
-  take seed); since 2026-10-07 each file's index entry keeps it (`s`, chunk length
-  `c`, `same: 1`; `index_record`). Files from before then were drawn unseeded. A
-  seed replays exactly only on the machine and libraries that drew it. The chunk
-  length (`CHUNK_CHARS`, 300; the slowest voices read about 10 characters a
-  second, so much more risks the cap) is not in the fingerprint.
-- **Seed pins** (`[lines]`, `LinePin`): one line's own whole-line file drawn from a
-  seed heard in audition. `heard` (the line's fingerprint) and `spoken`
-  (`spoken_hash` of its exact text) must still match (`VoiceCatalog.pin`, "against
-  this checkout": clips are per machine), and then `Target.fingerprint` appends
-  `seed=,chunk=,pin=PIN_VERSION` for that file, and for the line's one speaker
-  part when it says exactly the whole-line text (`pinnable_part`, `Target.pin_key`:
-  "<Sob> Oh please..." keeps its narrated sob and the pin decides the speech the
-  addon plays), never the other-sex file, alternate narrators, other parts or
-  `recipe()`. `wanted()` compares a pinned file whole
-  and an unpinned one without the pin terms (`text_current`, `strip_pin`): pinning
-  restages the file, unpinning keeps it, a pinned take is never redone for the cap.
-  Every run reports pins that no longer hold, are gone, sit on a line whose speech
-  narration splits into several parts, or are
-  progress texts outside a `--progress` run (`pin_report`). Bump `PIN_VERSION` when
-  what a seed draws changes. The pack is built on CUDA, where a ROCm seed draws a
-  different but fixed take; the owner accepted that.
+  regenerates a file whose entry says a chunk stayed capped through every try
+  (`cap`, written since 2026-10-13: how many takes in a row did) or, for an older
+  entry, that fits one chunk and is 40.0 s before tempo and speed; such a file is
+  drawn from a new seed, `CAP_RETRIES` (3) nights at most, then left as it is and
+  listed by the run (`given_up`) for a `--reroll --line` by hand: a text the model
+  cannot finish would otherwise cost up to 21 calls every night for good.
+- **Every file keeps its seed** (since 2026-10-13). Every `generate()` call is
+  seeded (`derive_seed(take, chunk, try)` from the take seed); each file's index
+  entry keeps it (`s`, chunk length `c`, `same: 1`, `cap`; `index_record`,
+  read back by `kept_seed`), and the next generation of that file replays it
+  (`seed_for`: a live `[lines]` pin, else the kept seed, else a fresh one),
+  across text and tuning changes, `--force` (a true rebuild) and a hand-deleted
+  mp3 (the index is the store). Only `--reroll` (with `--line <base>`, `--quest`
+  or `--voice`; it skips pinned lines and stops above `REROLL_LIMIT` files, after
+  `--limit`, without `--yes`) or a capped take draws anew. `--line` names one
+  line's every file (parts, `Sex/`, `Speaker/`, narrator alternates), implies
+  `--all` and `--progress` for a progress base, and fails when nothing matched.
+  The index is saved after every file (`draw_target`) and on SIGTERM, since the
+  nightly's `timeout` used to lose up to 24 seeds a shard; the handler is one-shot
+  and `save_sound_index` blocks SIGTERM, because `timeout` signals the process
+  group and `bulk.sh`'s trap forwards a second TERM milliseconds later, which
+  landed inside the final save. Files from before 2026-10-07 were drawn unseeded and
+  get a seed when something else regenerates them. A seed replays exactly only
+  on the machine and libraries that drew it. The chunk length (`CHUNK_CHARS`,
+  300; the slowest voices read about 10 characters a second, so much more risks
+  the cap) is not in the fingerprint; a kept seed replays with the `c` that drew it.
+- **Seed pins** (`[lines]`, `LinePin`) are the human override: one line's own
+  whole-line file drawn from a seed heard in audition. `heard` (the line's
+  fingerprint), `spoken` (`spoken_hash` of its exact text) and, since 2026-10-13,
+  `voice` must still match (`VoiceCatalog.pin`), and then `Target.fingerprint`
+  appends `seed=,chunk=,pin=PIN_VERSION` for that file, and for the line's one
+  speaker part when it says exactly the whole-line text (`pinnable_part`,
+  `Target.pin_key`: "<Sob> Oh please..." keeps its narrated sob and the pin
+  decides the speech the addon plays), never the other-sex file, alternate
+  narrators, other parts or `recipe()`. Book pages (`<hash>-page`) can be pinned
+  too. `wanted()` compares a pinned file whole and an unpinned one without the
+  pin terms (`text_current`, `strip_pin`): pinning restages the file, unpinning
+  keeps it, a pinned take is never redone for the cap, and a pin that lapses
+  leaves the file on its kept seed. Every run reports pins that no longer hold
+  (term by term: `pin_lapse`, which is how four banshee-female pins heard under
+  an uncommitted `reference=` were found dead), are gone, sit on a line whose
+  speech narration splits into several parts, are progress texts outside a
+  `--progress` run, or are live but not yet drawn (`pin_report`). Bump
+  `PIN_VERSION` when what a seed draws changes. The pack is built on CUDA, where
+  a ROCm seed draws a different but fixed take; the owner accepted that.
 - A quest taken in by more than one NPC (Dokimi and Marcy Baker share the
   crates of "A Sealed Crate", #948): ingest keeps every trusted speaker
   (0.1.3 on, creatures only) in the line's `speakers` (key -> mapID) and the
@@ -298,14 +320,37 @@ recipe heard is current) and tasting notes (`[voices.notes]`) into the file of
 before the file is replaced. "Pin this take" (it
 replaced "Write to pack" on 2026-10-06) writes a take's seed to `[lines]`; the
 server proves the take from its sidecar (the picked line, in its voice, its exact
-text, the fingerprint it was made under) and refuses a line whose speech narration
-splits into several parts.
+text, the fingerprint it was made under), refuses a line whose speech narration
+splits into several parts and the index seed of a capped take, and warns when
+`configs/` has uncommitted edits (the pin was heard under settings the builder
+lacks: that is how four pins went dead).
 Each take shows numbered chunk marks (where each model call starts; a click plays
 from the gap before it), its seed ("use this seed"), and Chunk length, Seed and
 "same for every chunk" are run options; a preview under the Text box (`/api/chunks`,
 the generator's own `chunk()`) shows where the chunks fall, and a picked line's
-live pin fills the Seed box. Takes and their `<take>.json` sidecars go to
-`tools/data/audition/` (gitignored).
+pin, live or lapsed, fills the Seed box and the knobs it was heard under. Under a picked line the page shows its **index
+seed** (`kept` in the payload, from `sound_index.json`, with the index's commit
+date) and says whether the audio playing was drawn from it: only the working
+folder's current copy was (`drawn`); an installed pack is a release, named with
+its version, that may be an earlier take. It is not loaded into the Seed box
+(that would lock Takes to one on every line); "load into run" does. A pin holds
+only under the voice's saved knobs, clone-from and clip picks (its `heard`): while
+the picked line's pin holds, those boxes carry a faded padlock at their right
+edge, a note lists the lines pinned in the chosen voice (`pinned` in the state,
+`Studio.live_pins`, by the line's voice and the clip's), "load into run" puts
+the pin's knobs and clone-from in place too, picking a line of another voice
+loads that voice's saved knobs (left on the voice before, they read "not
+saved"), and Keep these settings or a kept pick answers with a `warning` naming
+the pins it lapsed (`held_lines` before the write, `lapsed_since` after: the
+write forgets the corpus, so the lines are kept from before). "Pinned lines"
+(`/api/lines?pinned=1`, `&voice=` for one voice) lists every pinned line, live
+or lapsed (`pin lapsed` badge), by voice; the lock note's badges find one. A
+run option holding the picked line's pinned value is blue (`markPinned`): the
+seed, and with it the chunk length and Same seed, and each knob and clone-from
+of the pin's `heard` (`pinned_settings` decodes it, defaults filled in, as
+`pin.heard` in the payload), live or lapsed, so a lapsed pin shows what to put
+back to hear its take.
+Takes and their `<take>.json` sidecars go to `tools/data/audition/` (gitignored).
 
 ## Automation on the owner's machine (NixOS, systemd user units)
 
@@ -489,7 +534,9 @@ Tuning, `[tts]` with `[tts.voices.<voice>]` overrides (may name another clip as
 (`require_filters`). Chatterbox pulls clones toward its own mid-range:
 Varimathras needed -3 to -5 semitones. Only knobs that differ from the defaults
 join the fingerprint, so tuning one voice restages exactly its files. To redo a
-voice after rebuilding its clip by hand: `generate.py --force --voice <voice>`.
+voice after rebuilding its clip by hand: `generate.py --force --voice <voice>`
+(each file replays its kept seed under the new clip; `--reroll --voice` draws
+them anew).
 
 ## Gotchas already paid for
 
@@ -519,7 +566,8 @@ voice after rebuilding its clip by hand: `generate.py --force --voice <voice>`.
   only a book's first page was queued; `Queue:AddMany` checks every item
   before starting the first.
 - Chatterbox occasionally repeats a word or drifts voice mid-take (#805, #883);
-  a fresh take (`generate.py --force --quest <id>`) fixes it.
+  a fresh take (`generate.py --reroll --line <base>`, or `--reroll --quest <id>`)
+  fixes it; `--force` replays the same seed and gives the same take.
 
 ## Things the owner wants next
 

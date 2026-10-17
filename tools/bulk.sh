@@ -31,6 +31,8 @@ trap terminate TERM INT
 
 status=0
 for pid in "${pids[@]}"; do
-    wait "$pid" || status=$?
+    # `wait` returns early when the trap fires; wait again for the worker's own
+    # exit, which saves the seeds of the files it drew (generate.py's finally)
+    wait "$pid" || wait "$pid" || status=$?
 done
 exit "$status"

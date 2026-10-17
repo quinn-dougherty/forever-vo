@@ -77,6 +77,8 @@ from tools.config import (
     VOICES_DIR,
     Config,
     ConfigError,
+    LinePin,
+    Tts,
     VoiceSources,
     VoiceTuning,
     config_file,
@@ -1142,9 +1144,10 @@ class SoundPack:
     label: str  # what the page shows: "working folder", or the manifest's name
     priority: int
     sounds: Path
+    version: str = ""  # the release's date version, so the page can name a take's age
 
 
-PACK_FIELD = re.compile(r'^\s*(name|priority)\s*=\s*"?([^",]+)"?', re.MULTILINE)
+PACK_FIELD = re.compile(r'^\s*(name|priority|version)\s*=\s*"?([^",]+)"?', re.MULTILINE)
 
 
 def sound_packs(
@@ -1172,7 +1175,13 @@ def sound_packs(
         with contextlib.suppress(ValueError):
             priority = int(fields.get("priority", 0))
         installed.append(
-            SoundPack(folder.name, fields.get("name", folder.name), priority, sounds)
+            SoundPack(
+                folder.name,
+                fields.get("name", folder.name),
+                priority,
+                sounds,
+                fields.get("version", ""),
+            )
         )
     installed.sort(key=lambda pack: (-pack.priority, pack.label))
     return [SoundPack(PACK_NAME, "working folder", 0, working), *installed]
@@ -1247,6 +1256,64 @@ class WorkingCopies:
             return False
         seconds = self.seconds(path)
         return seconds is not None and abs(seconds - recorded) > self.TOLERANCE
+
+    def stamp(self) -> tuple[int, int] | None:
+        """The index file's version (mtime and size), after reading it."""
+        self.index()
+        return self._index_stamp
+
+    def kept(self, base: str) -> dict[str, Any] | None:
+        """The seed the index says drew the line's file (generate.kept_seed): the
+        builder's file, whether or not this machine has it."""
+        kept = generate.kept_seed(self.index().get(generate.index_key(base)))
+        if kept is None:
+            return None
+        return {
+            "seed": kept.seed,
+            "chunk_chars": kept.chunk_chars,
+            "same_seed": kept.same_seed,
+            "capped": bool(kept.capped),
+        }
+
+
+def pinned_settings(pin: LinePin, tts: Tts) -> dict[str, Any]:
+    """The knobs and clone-from a pin was heard under, read back from its `heard`:
+    the fingerprint carries only what differs from the [tts] defaults, so the rest
+    is the defaults. The page turns a run option blue while it holds this value."""
+    terms = generate.fingerprint_terms(pin.heard)
+    heard: dict[str, Any] = tts.defaults.model_dump()
+    for name, default in list(heard.items()):
+        if name not in terms:
+            continue
+        value = terms[name]
+        heard[name] = float(value) if isinstance(default, int | float) else value
+    return heard
+
+
+def lapsed_pins(gone: list[str]) -> str | None:
+    """A warning naming the pins a settings or clip write lapsed (Studio.lapsed_since);
+    None when it lapsed none."""
+    if not gone:
+        return None
+    shown = ", ".join(gone[:5]) + (
+        f" and {len(gone) - 5} more" if len(gone) > 5 else ""
+    )
+    return (
+        f"this lapses the pin on {shown}: the pinned take was heard under the old "
+        "settings, so the line falls back to its index seed until a take under the "
+        "new ones is pinned"
+    )
+
+
+@functools.lru_cache(maxsize=8)
+def _index_date(stamp: tuple[int, int] | None) -> str | None:
+    """When sound_index.json last changed in git (its commit date), so the page can
+    say how old the index seed it shows is: a contributor's checkout may lag the
+    nightly by days, and the seed it shows may since have been rerolled. Keyed on
+    the file's version (WorkingCopies.stamp), so a pull while the server runs
+    moves the date with the seeds."""
+    out = _git("log", "-1", "--format=%cs", "--", "tools/data/sound_index.json")
+    return out.strip() or None if out else None
 
 
 class Studio:
@@ -1579,6 +1646,44 @@ class Studio:
                 }
         return sorted(rows, key=lambda r: r["voice"])
 
+    def held_lines(
+        self, config: Config | None = None
+    ) -> dict[str, tuple[Item, Variant]]:
+        """The lines whose [lines] pin holds today, with their corpus entries. Taken
+        before a settings or clip write, so what the write lapsed can be told after
+        it without the corpus, which a write forgets. Empty until the corpus loads."""
+        config = config or self.config()
+        catalog = self.catalog(config)
+        held = {}
+        for base in sorted(config.lines.root):
+            line = self.line_if_loaded(base)
+            if line is not None and catalog.pin(base, line[0].voice, line[1].text):
+                held[base] = line
+        return held
+
+    def live_pins(self, config: Config | None = None) -> dict[str, list[str]]:
+        """held_lines by the voice each is read in and, when that voice borrows its
+        clip, by the clip's voice too: a pin is heard under the voice's knobs and the
+        clip's picks, so Keep these settings or a new pick on either lapses it."""
+        config = config or self.config()
+        catalog = self.catalog(config)
+        by_voice: dict[str, list[str]] = {}
+        for base, (item, _) in self.held_lines(config).items():
+            by_voice.setdefault(item.voice, []).append(base)
+            source = catalog.resolve(item.voice).source
+            if source != item.voice:
+                by_voice.setdefault(source, []).append(base)
+        return by_voice
+
+    def lapsed_since(self, held: dict[str, tuple[Item, Variant]]) -> list[str]:
+        """Which of held_lines no longer hold under the configuration as it is now."""
+        catalog = self.catalog(self.config())
+        return sorted(
+            base
+            for base, (item, variant) in held.items()
+            if catalog.pin(base, item.voice, variant.text) is None
+        )
+
     def state(self) -> dict[str, Any]:
         config = self.config()
         catalog = self.catalog(config)
@@ -1614,6 +1719,9 @@ class Studio:
             "resolved": resolved,
             "pronunciations": config.pronunciations.root,
             "speakers": config.voices.speakers,
+            # the lines whose pin holds, by the voice (and borrowed clip) it holds
+            # under: what a retune or a re-pick would lapse
+            "pinned": self.live_pins(config),
             # [lines], as written; whether each still holds is the line's to say
             "pins": {
                 base: {
@@ -2161,6 +2269,8 @@ def create_app(
                 "chunk_chars": pin.chunk_chars,
                 "same_seed": pin.same_seed,
                 "live": catalog.pin(row.base, item.voice, variant.text) is not None,
+                # the knobs and clone-from it was heard under, for the page to mark
+                "heard": pinned_settings(pin, catalog.config.tts),
             }
             if pin
             else None,
@@ -2189,11 +2299,18 @@ def create_app(
             **row.__dict__,
             "exists": found is not None,
             "pack": found.label if found else None,
+            "pack_version": found.version if found else None,
             "pack_url": f"/api/pack/{found.key}/{row.subfolder}/{row.base}.mp3"
             if found
             else None,
             # the working folder's copy is an older take (WorkingCopies)
             "stale": stale,
+            # the seed the index says drew the builder's file; the file playing
+            # here was drawn from it only when it is the working folder's own
+            # current copy: an installed pack is a release, maybe an earlier take
+            "kept": working.kept(row.base),
+            "drawn": found is not None and found.key == PACK_NAME and not stale,
+            "index_date": _index_date(working.stamp()),
             **line_pin(row, catalog),
         }
 
@@ -2208,11 +2325,30 @@ def create_app(
         return [payload(row, catalog) for row in rows]
 
     @app.get("/api/lines")
-    def lines(q: str = "", voice: str = "", limit: int = 60) -> dict[str, Any]:
+    def lines(
+        q: str = "", voice: str = "", limit: int = 60, pinned: bool = False
+    ) -> dict[str, Any]:
         """Search by words, or list one voice's own lines when `voice` is given, the
         `limit` longest of them (0 for all: the page lists a voice's every line when
-        the voice is chosen)."""
+        the voice is chosen), or, with `pinned`, every line with a [lines] pin, live
+        or lapsed (the payload's `pin.live` tells), in one voice when `voice` is
+        given too, by voice then file name."""
         rows = studio.rows()
+        if pinned:
+            pins = studio.config_cached().lines.root
+            found = sorted(
+                (
+                    row
+                    for row in rows
+                    if row.base in pins and (not voice or row.voice == voice)
+                ),
+                key=lambda row: (row.voice, row.base),
+            )
+            return {
+                "rows": payloads(found),
+                "total": len(found),
+                "voice": voice or None,
+            }
         if voice:
             _safe(voice)
             moving = studio.moving_to(voice)
@@ -2534,6 +2670,7 @@ def create_app(
         _safe(request.voice)
         if request.reference:
             _safe(request.reference)
+        held = studio.held_lines()
         write_tuning(
             studio.config_path,
             request.voice,
@@ -2545,7 +2682,11 @@ def create_app(
             request.speed,
         )
         studio.forget_corpus()
-        return studio.state()
+        state = studio.state()
+        warning = lapsed_pins(studio.lapsed_since(held))
+        if warning:
+            state["warning"] = warning
+        return state
 
     @app.post("/api/keep-pronunciation")
     def keep_pronunciation(request: KeepPronunciation) -> dict[str, Any]:
@@ -2579,8 +2720,10 @@ def create_app(
     @app.post("/api/chunks")
     def chunk_preview(request: ChunkPreview) -> dict[str, Any]:
         """How a text is cut into model calls at a chunk length, as the model hears
-        it (respelled), with the picked line's pinned length when it has a live pin.
-        Reads the config only when the file has changed: the page asks as you type."""
+        it (respelled), with the chunk length the picked line's seed goes with: its
+        live pin's, else the length that drew the pack's file (`from`: "pin" or
+        "kept"). Reads the config only when the file has changed: the page asks as
+        you type."""
         config = studio.config_cached()
         line = studio.line_if_loaded(request.base)
         if line is not None and request.text == line[1].text:
@@ -2592,11 +2735,20 @@ def create_app(
             if line is not None
             else None
         )
+        kept = working.kept(request.base) if request.base and line else None
+        line_chars, origin = (
+            (pin.chunk_chars, "pin")
+            if pin
+            else (kept["chunk_chars"], "kept")
+            if kept
+            else (None, None)
+        )
         return {
             "spoken": spoken,
             "chars": request.chars,
             "chunks": chunk(spoken, request.chars) if spoken else [],
-            "pinned_chars": pin.chunk_chars if pin else None,
+            "line_chars": line_chars,
+            "from": origin,
         }
 
     @app.post("/api/pin-seed")
@@ -2651,6 +2803,22 @@ def create_app(
                 "the take was made under other settings than the voice's saved ones: "
                 "keep its settings first, or the pack would not draw this take",
             )
+        if any(mark.get("capped") for mark in about.get("chunks") or []):
+            # A pinned take is never redone for the cap (generate.ran_into_cap)
+            raise HTTPException(
+                400,
+                "a chunk of this take ran into the token cap on every try, so it "
+                "holds babble, and a pinned take is never drawn again: pin another",
+            )
+        kept = working.kept(base)
+        if kept and kept["capped"] and kept["seed"] == about["seed"]:
+            # A checkout days behind the nightly still shows the seed the builder
+            # has since rolled away from; pinning it would bring the babble back
+            raise HTTPException(
+                400,
+                "that seed is the index seed, and its take ran into the token cap on "
+                "the machine that builds the pack: it is being drawn anew; pin another",
+            )
         write_line_pin(
             studio.config_path,
             base,
@@ -2660,9 +2828,32 @@ def create_app(
                 "same_seed": bool(about.get("same_seed")),
                 "heard": heard,
                 "spoken": generate.spoken_hash(variant.text),
+                "voice": item.voice,
             },
         )
-        return studio.state()
+        # `heard` was checked against this checkout's configs/. Four pins went dead
+        # on 2026-10-13 because the reference they were heard under was never
+        # committed: the builder's checkout never had it, so the pin never held.
+        state = studio.state()
+        if studio.config_path.resolve() != CONFIG_DIR.resolve():
+            return state  # another configs/ than the repository's: nothing to compare
+        edited = _git("status", "--porcelain", "--", "configs")
+        changed = sorted(
+            line[3:].strip() for line in (edited or "").splitlines() if line.strip()
+        )
+        if edited is None:
+            state["warning"] = (
+                "could not check configs/ for uncommitted edits (git failed): the "
+                "pin holds on the machine that builds the pack only under committed "
+                "settings"
+            )
+        elif changed and changed != ["configs/lines.toml"]:
+            state["warning"] = (
+                "this pin was heard under uncommitted edits in "
+                f"{', '.join(changed)}: commit them with the pin, or the machine "
+                "that builds the pack will not hold it"
+            )
+        return state
 
     @app.delete("/api/pin-seed/{base}")
     def unpin_seed(base: str) -> dict[str, Any]:
@@ -2944,6 +3135,7 @@ def create_app(
                 raise HTTPException(404, f"clip {fdid} is not downloaded")
             paths.append(_under(CLIP_RAW, f"{voice}/{path.name}"))
         existed = (VOICES_DIR / f"{voice}.wav").exists()
+        held = studio.held_lines()
         try:
             out = build_picked_reference(
                 voice, paths, gaps, clips=request.clips, build=request.build
@@ -2968,6 +3160,7 @@ def create_app(
             ),
             "reference_url": f"/api/clips/reference/{voice}.wav?t={int(time.time())}",
             "restage": restage_note(voice, existed, request.keep),
+            "warning": lapsed_pins(studio.lapsed_since(held)) if request.keep else None,
         }
 
     @app.post("/api/rebuild-tables")

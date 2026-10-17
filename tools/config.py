@@ -490,21 +490,29 @@ class LinePin(Strict):
     `heard` is the line's fingerprint (VoiceCatalog.fingerprint) and `spoken` a hash
     of its exact text when the take was pinned: the pin holds only while both still
     match, since the same seed under another clip, tuning or text is another take.
-    Every field is written, none defaulted, so a later change of the pack's chunk
-    length cannot quietly change what a pinned seed draws."""
+    `voice` is the voice the take was read in (pins from before 2026-10-13 have
+    none): the fingerprint holds no clip name, so a take made where an archetype's
+    clip was missing, on the plain race voice, would otherwise pin the archetype.
+    The seed fields are all written, none defaulted, so a later change of the pack's
+    chunk length cannot quietly change what a pinned seed draws.
+
+    A pin is the human override. Every generated file keeps the seed that drew it in
+    sound_index.json (`s`) and replays from it on its own; a pin that lapses leaves
+    that seed in place."""
 
     seed: int = Field(ge=0, lt=2**31)
     chunk_chars: int = Field(ge=120, le=500)
     same_seed: bool
     heard: str
     spoken: str
+    voice: str | None = None
 
 
-# A pin names a line's own whole-line file: <questID>-<event> or <speaker>-<hash>,
-# behind an m-/f- for a $g line. Parts, other-sex and alternate narrator files have
-# keys of their own and cannot be pinned.
+# A pin names a line's own whole-line file: <questID>-<event>, <speaker>-<hash> or a
+# book page's <hash>-page, behind an m-/f- for a $g line. Parts, other-sex and
+# alternate narrator files have keys of their own and cannot be pinned.
 LINE_BASE = re.compile(
-    r"^(?:[mf]-)?(?:\d+-(?:accept|progress|complete)|(?:\d+|obj\d+|unknown)-[0-9a-f]{8})$"
+    r"^(?:[mf]-)?(?:\d+-(?:accept|progress|complete)|(?:\d+|obj\d+|unknown)-[0-9a-f]{8}|[0-9a-f]{8}-page)$"
 )
 
 

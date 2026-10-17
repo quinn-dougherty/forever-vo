@@ -430,9 +430,26 @@ def pin_studio(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Any:
 
     monkeypatch.setattr(studio, "synth", lambda: FakeSynth(), raising=False)
     monkeypatch.setattr(studio, "state", lambda: {"ok": True}, raising=False)
-    client = TestClient(audition.create_app(studio, addons=None))
-    yield SimpleNamespace(client=client, studio=studio, toml=toml, variant=variant)
+    # the tests' own index, not the repository's, which the nightly changes; and no
+    # real git: the pin's uncommitted-configs check and the index's date read it
+    index = tmp_path / "sound_index.json"
+    index.write_text("{}", encoding="utf-8")
+    git_answers: dict[str, str] = {"status": "", "log": "2026-10-12\n"}
+    monkeypatch.setattr(
+        audition, "_git", lambda *args, **kw: git_answers.get(args[0], "")
+    )
+    audition._index_date.cache_clear()
+    client = TestClient(audition.create_app(studio, addons=None, sound_index=index))
+    yield SimpleNamespace(
+        client=client,
+        studio=studio,
+        toml=toml,
+        variant=variant,
+        index=index,
+        git=git_answers,
+    )
     load_config.cache_clear()
+    audition._index_date.cache_clear()
 
 
 def take_of(client: Any, **request: Any) -> dict:
@@ -473,6 +490,7 @@ def test_a_take_of_the_line_pins_and_unpins(pin_studio: Any) -> None:
     load_config.cache_clear()
     pin = load_config(pin_studio.toml).lines.root["1-accept"]
     assert (pin.seed, pin.chunk_chars, pin.same_seed) == (777, 300, False)
+    assert pin.voice == "human-male"  # the voice the take was read in
     written = (pin_studio.toml / "lines.toml").read_text(encoding="utf-8")
     # one inline table under [lines], and every comment of the file kept
     assert '"1-accept" = {seed = 777' in written or "1-accept = {seed = 777" in written
@@ -483,7 +501,8 @@ def test_a_take_of_the_line_pins_and_unpins(pin_studio: Any) -> None:
     preview = client.post(
         "/api/chunks", json={"text": LINE, "chars": 200, "base": "1-accept"}
     ).json()
-    assert preview["pinned_chars"] == 300 and preview["chunks"] == [LINE]
+    assert (preview["line_chars"], preview["from"]) == (300, "pin")
+    assert preview["chunks"] == [LINE]
     assert client.delete("/api/pin-seed/1-accept").status_code == 200
     load_config.cache_clear()
     assert "1-accept" not in load_config(pin_studio.toml).lines.root
@@ -540,7 +559,7 @@ def test_the_chunk_preview_cuts_as_the_generator_does(pin_studio: Any) -> None:
         "/api/chunks", json={"text": text, "chars": 300}
     ).json()
     assert preview["chunks"] == chunk(preview["spoken"], 300)
-    assert len(preview["chunks"]) == 2 and preview["pinned_chars"] is None
+    assert len(preview["chunks"]) == 2 and preview["line_chars"] is None
 
 
 def test_a_generated_files_entry_keeps_its_seed() -> None:
@@ -665,3 +684,400 @@ def test_a_bare_sound_is_left_unsaid_and_the_speech_joins_up() -> None:
         ("narrator", "Galgar wipes his brow."),
         ("npc", "Now go."),
     ]
+
+
+# --- every file keeps the seed that drew it -------------------------------------
+
+
+def test_kept_seed_reads_what_drew_the_file() -> None:
+    from tools.generate import KeptSeed, kept_seed
+
+    assert kept_seed({"d": 4.0, "v": "x", "t": "k", "s": 123, "c": 300}) == KeptSeed(
+        123, 300, False, False
+    )
+    assert kept_seed({"d": 4.0, "s": 5, "c": 420, "same": 1, "cap": 1}) == KeptSeed(
+        5, 420, True, True
+    )
+    early = kept_seed({"d": 4.0, "s": 5})  # before `c`: the default length
+    assert early is not None and early.chunk_chars == 300
+    # a file from before seeds, a probe, a legacy bare duration, a seed torch rejects
+    assert kept_seed({"d": 4.0, "v": "x", "t": "k"}) is None
+    assert kept_seed({"d": 4.0, "v": None}) is None
+    assert kept_seed(4.0) is None
+    assert kept_seed({"d": 4.0, "s": -1}) is None
+    assert kept_seed({"d": 4.0, "s": 2**31}) is None
+    assert kept_seed({"d": 4.0, "s": "123"}) is None
+
+
+def test_a_file_is_drawn_from_its_pin_then_its_kept_seed_then_anew() -> None:
+    from tools.generate import SeedChoice, seed_for
+
+    catalog, _ = pinned_catalog(chunk_chars=420, same_seed=True)
+    pinned = target(LINE, catalog)
+    own = target(LINE, catalog, base="2-accept")
+    kept = {"d": 4.0, "v": "human-male", "t": "k", "s": 77, "c": 300}
+    # the pin wins, whatever the index says
+    assert seed_for(pinned, kept, catalog) == SeedChoice(42, 420, True, "pinned")
+    # the seed that drew the file replays, with its chunk length and same-seed flag
+    assert seed_for(own, kept, catalog) == SeedChoice(77, 300, False, "kept")
+    assert seed_for(own, {**kept, "c": 200, "same": 1}, catalog) == SeedChoice(
+        77, 200, True, "kept"
+    )
+    new = SeedChoice(None, 300, False, "new")
+    # a reroll, a take that ran into the cap, a file from before seeds, no file
+    assert seed_for(own, kept, catalog, reroll=True) == new
+    assert seed_for(own, {**kept, "cap": 1}, catalog) == new
+    assert seed_for(own, {"d": 4.0, "v": "human-male", "t": "k"}, catalog) == new
+    assert seed_for(own, None, catalog) == new
+    # a pinned take is never redone for the cap
+    assert seed_for(pinned, {**kept, "cap": 1}, catalog).origin == "pinned"
+
+
+def test_a_take_that_stayed_capped_is_flagged_and_drawn_anew() -> None:
+    from tools.generate import index_record
+
+    catalog, _ = pinned_catalog()
+    own = target(LINE * 8, catalog, base="2-accept")  # several chunks
+    assert len(chunk(own.text)) > 1
+    capped = RenderedTake(
+        "audio",
+        50.0,
+        9,
+        [
+            ChunkMark(0.0, 40.0, LINE, 9, 3, capped=True),
+            ChunkMark(40.35, 50.0, LINE, 9, 1),
+        ],
+    )
+    record = index_record(50.0, own, capped, 300)
+    assert record["cap"] == 1 and record["s"] == 9
+    # over 40 s and in several chunks, the duration test alone would never see it
+    assert ran_into_cap(record, own, catalog)
+    assert not ran_into_cap({**record, "cap": 0}, own, catalog)
+    clean = RenderedTake("audio", 50.0, 9, [ChunkMark(0.0, 50.0, LINE, 9, 1)])
+    assert "cap" not in index_record(50.0, own, clean, 300)
+    # capped takes in a row are counted, and after CAP_RETRIES the file is left as
+    # it is and listed, rather than drawn every night for a text that never ends
+    from tools.generate import CAP_RETRIES, given_up, seed_for
+
+    again = index_record(50.0, own, capped, 300, previous=record)
+    assert again["cap"] == 2 and not given_up(again)
+    clean_record = index_record(50.0, own, clean, 300)
+    assert index_record(50.0, own, capped, 300, previous=clean_record)["cap"] == 1
+    last = {**record, "cap": CAP_RETRIES}
+    assert not ran_into_cap(last, own, catalog) and given_up(last)
+    assert seed_for(own, last, catalog).origin == "kept"  # a rebuild replays it
+    assert seed_for(own, last, catalog, reroll=True).origin == "new"
+
+
+def test_an_older_entry_is_judged_at_the_chunk_length_that_drew_it() -> None:
+    from tools.config import load_config
+
+    catalog = VoiceCatalog(load_config())
+    text = LINE * 7  # one chunk at 500, several at 300
+    assert len(chunk(text, 500)) == 1 and len(chunk(text, 300)) > 1
+    own = target(text, catalog, base="2-accept")
+    settings = catalog.resolve("human-male").settings
+    d = 40.0 / ((settings.tempo or 1.0) * (settings.speed or 1.0))
+    assert ran_into_cap({"d": d, "s": 1, "c": 500}, own, catalog)
+    assert not ran_into_cap({"d": d, "s": 1, "c": 300}, own, catalog)
+
+
+def test_a_seeded_record_outranks_a_seedless_one() -> None:
+    from tools.generate import index_rank
+
+    seeded = {"d": 4.0, "v": "x", "t": "k", "s": 1, "c": 300}
+    assert index_rank(seeded) > index_rank({"d": 4.0, "v": "x", "t": "k"})
+    assert index_rank({"d": 4.0, "v": "x", "t": "k"}) > index_rank(
+        {"d": 4.0, "v": None}
+    )
+    assert index_rank(seeded) > index_rank(4.0)
+
+
+def test_each_file_is_saved_as_it_is_drawn(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    from tools import generate
+    from tools.generate import _exit_on_signal, draw_target
+
+    monkeypatch.setattr(generate, "SOUND_INDEX", tmp_path / "sound_index.json")
+    catalog, plain = pinned_catalog()
+    own = target(LINE, catalog, base="2-accept")
+
+    class FakeSynth:
+        last_take: RenderedTake | None = None
+
+        def speak(self, text: str, voice: str, out: Path, **kwargs: Any) -> float:
+            seed = kwargs["seed"] if kwargs["seed"] is not None else 555
+            self.last_take = RenderedTake(
+                "audio", 2.0, seed, [ChunkMark(0.0, 2.0, text, seed, 1)]
+            )
+            return 2.0
+
+    synth: Any = FakeSynth()
+    sound_index: dict = {"2-accept": {"d": 4.0, "v": "human-male", "t": "k", "s": 77}}
+    dirty: set[str] = set()
+    duration, take, choice, missing = draw_target(
+        synth, own, sound_index, catalog, dirty
+    )
+    assert take is not None
+    assert (duration, take.seed, choice.origin, missing) == (2.0, 77, "kept", True)
+    on_disk = json.loads((tmp_path / "sound_index.json").read_text())
+    assert on_disk["2-accept"] == {
+        "d": 2.0,
+        "v": "human-male",
+        "t": plain.fingerprint("human-male", LINE),
+        "s": 77,
+        "c": 300,
+    }
+    assert not dirty  # nothing left for a later save to lose
+    # a reroll draws anew and the new seed is what the index then keeps
+    _, take, choice, _ = draw_target(
+        synth, own, sound_index, catalog, dirty, reroll=True
+    )
+    assert take is not None and (take.seed, choice.origin) == (555, "new")
+    assert (
+        json.loads((tmp_path / "sound_index.json").read_text())["2-accept"]["s"] == 555
+    )
+    # the nightly's SIGTERM unwinds to the loop's final save instead of killing
+    with pytest.raises(SystemExit) as stop:
+        _exit_on_signal(15, None)
+    assert stop.value.code == 143
+
+
+def test_a_pin_holds_only_in_the_voice_it_was_pinned_in() -> None:
+    catalog, _ = pinned_catalog(voice="human-male")
+    assert target(LINE, catalog).live_pin is not None
+    catalog, _ = pinned_catalog(voice="human-male-guard")
+    assert target(LINE, catalog).live_pin is None
+    catalog, _ = pinned_catalog()  # a pin from before the field holds as before
+    assert target(LINE, catalog).live_pin is not None
+
+
+def test_the_run_says_which_term_moved_from_under_a_pin() -> None:
+    from tools.generate import pin_report
+
+    _, plain = pinned_catalog()
+    fp = plain.fingerprint("human-male", LINE)
+    line = SimpleNamespace(base="1-accept", text=LINE, parts=[])
+    item: Any = SimpleNamespace(voice="human-male", variants=lambda: [line])
+    heard = fp + ("," if "+" in fp else "+") + "reference=spirithealer-female"
+    catalog, _ = pinned_catalog(heard=heard)
+    (note,) = pin_report([item], catalog)
+    assert "heard with reference=spirithealer-female, now none; text unchanged" in note
+    assert "keeps the seed that drew its file" in note
+    catalog, _ = pinned_catalog(voice="human-male-guard")
+    (note,) = pin_report([item], catalog)
+    assert "pinned in human-male-guard, the line is read in human-male" in note
+    changed = SimpleNamespace(base="1-accept", text=LINE + " Now.", parts=[])
+    moved: Any = SimpleNamespace(voice="human-male", variants=lambda: [changed])
+    catalog, _ = pinned_catalog()
+    assert "(text changed)" in pin_report([moved], catalog)[0]
+    # given the index, a live pin the pack's file is not yet drawn from is said so
+    assert (
+        pin_report([item], catalog, sound_index={"1-accept": {"s": 42, "c": 300}}) == []
+    )
+    assert "not yet drawn" in pin_report([item], catalog, sound_index={})[0]
+    assert (
+        "not yet drawn"
+        in pin_report([item], catalog, sound_index={"1-accept": {"s": 7}})[0]
+    )
+
+
+def test_reroll_names_what_it_rerolls(monkeypatch: pytest.MonkeyPatch) -> None:
+    from tools import generate
+    from tools.generate import line_of, main
+
+    with pytest.raises(SystemExit) as refused:
+        main(["--reroll", "--dry-run"])
+    assert refused.value.code == 2  # argparse's usage error
+    # a --line nothing in the run matches is said, not silently nothing to do
+    monkeypatch.setattr(generate, "ensure_picked_references", lambda *a, **k: set())
+    monkeypatch.setattr(
+        generate,
+        "load_sources",
+        lambda: {"quests": {"1": {}}, "gossip": {}, "books": {}, "npcs": {}},
+    )
+    monkeypatch.setattr(generate, "load_items", lambda *a, **k: [])
+    with pytest.raises(SystemExit) as missing:
+        main(["--reroll", "--line", "999999-accept", "--dry-run"])
+    assert "no such line" in str(missing.value)
+    assert line_of("1241-p2-complete") == "1241-complete"
+    assert line_of("m-170-p1-accept") == "m-170-accept"
+    assert line_of("2492-p1-aa6f2374") == "2492-aa6f2374"
+    assert line_of("016d57ec-p3-page") == "016d57ec-page"
+    assert line_of("1241-complete") == "1241-complete"
+
+
+def test_a_book_page_can_be_pinned() -> None:
+    from tools.config import Lines
+
+    fields = {
+        "seed": 1,
+        "chunk_chars": 300,
+        "same_seed": False,
+        "heard": "x",
+        "spoken": "y",
+    }
+    assert "016d57ec-page" in Lines.model_validate({"016d57ec-page": fields}).root
+    for key in ("1241-p2-complete", "Sex/m/1-accept", "Narrator/x/1-accept"):
+        with pytest.raises(ValueError):
+            Lines.model_validate({key: fields})
+
+
+def test_the_page_shows_the_index_seed_beside_what_is_playing(pin_studio: Any) -> None:
+    from tools import audition
+    from tools.config import load_config
+
+    client, index = pin_studio.client, pin_studio.index
+    rows = [
+        audition.LineRow(
+            "1-accept", "Quests", "t", "s", "human-male", LINE, LINE, 1, "x", "1"
+        )
+    ]
+    pin_studio.studio.rows = lambda: rows
+    index.write_text(
+        json.dumps(
+            {"1-accept": {"d": 2.0, "v": "human-male", "t": "k", "s": 77, "c": 300}}
+        )
+    )
+    (row,) = client.get("/api/lines", params={"q": "t"}).json()["rows"]
+    assert row["kept"] == {
+        "seed": 77,
+        "chunk_chars": 300,
+        "same_seed": False,
+        "capped": False,
+    }
+    assert row["index_date"] == "2026-10-12" and row["pin"] is None
+    assert not row["drawn"]  # no file here at all: the seed is the builder's
+    # the preview names the index seed's chunk length while there is no pin
+    preview = client.post(
+        "/api/chunks", json={"text": LINE, "chars": 200, "base": "1-accept"}
+    ).json()
+    assert (preview["line_chars"], preview["from"]) == (300, "kept")
+    # pinned lines are listed by voice, lapsed ones among them, and no others
+    assert client.get("/api/lines", params={"pinned": 1}).json()["rows"] == []
+    take = take_of(client, seed=77)
+    client.post(
+        "/api/pin-seed", json={"session": take["session"], "name": take["name"]}
+    )
+    (listed,) = client.get("/api/lines", params={"pinned": 1}).json()["rows"]
+    assert listed["base"] == "1-accept" and listed["pin"]["live"]
+    # the knobs and clone-from the pin was heard under, defaults filled in, so the
+    # page can mark a run option that holds the pin's value
+    saved = VoiceCatalog(load_config(pin_studio.toml)).resolve("human-male").settings
+    assert listed["pin"]["heard"] == {
+        "exaggeration": saved.exaggeration,
+        "cfg_weight": saved.cfg_weight,
+        "tempo": saved.tempo,
+        "pitch": saved.pitch,
+        "speed": saved.speed,
+        "reference": saved.reference,
+    }
+    assert (
+        client.get("/api/lines", params={"pinned": 1, "voice": "orc-male"}).json()[
+            "rows"
+        ]
+        == []
+    )
+    pin_studio.variant.text = (
+        LINE + " Now."
+    )  # the text moved: the pin lapsed, still listed
+    (listed,) = client.get("/api/lines", params={"pinned": 1}).json()["rows"]
+    assert not listed["pin"]["live"]
+    pin_studio.variant.text = LINE
+    client.delete("/api/pin-seed/1-accept")
+    # a file from before seeds, and a capped take, are said so
+    index.write_text(json.dumps({"1-accept": {"d": 2.0, "v": "human-male", "t": "k"}}))
+    (row,) = client.get("/api/lines", params={"q": "t"}).json()["rows"]
+    assert row["kept"] is None
+    index.write_text(json.dumps({"1-accept": {"d": 2.0, "s": 77, "c": 300, "cap": 1}}))
+    (row,) = client.get("/api/lines", params={"q": "t"}).json()["rows"]
+    assert row["kept"]["capped"]
+    # and the index seed cannot be pinned back while it is being rerolled
+    take = take_of(client, seed=77)
+    response = client.post(
+        "/api/pin-seed", json={"session": take["session"], "name": take["name"]}
+    )
+    assert response.status_code == 400 and "token cap" in response.json()["detail"]
+    # nor a take whose own chunk stayed capped: a pinned take is never drawn again
+    take = take_of(client, seed=79)
+    sidecar = (audition.AUDITION_DIR / take["session"] / take["name"]).with_suffix(
+        ".json"
+    )
+    about = json.loads(sidecar.read_text(encoding="utf-8"))
+    about["chunks"][0]["capped"] = True
+    sidecar.write_text(json.dumps(about), encoding="utf-8")
+    response = client.post(
+        "/api/pin-seed", json={"session": take["session"], "name": take["name"]}
+    )
+    assert response.status_code == 400 and "babble" in response.json()["detail"]
+    assert (
+        client.post(
+            "/api/pin-seed",
+            json={
+                "session": take_of(client, seed=78)["session"],
+                "name": take_of(client, seed=78)["name"],
+            },
+        ).status_code
+        == 200
+    )
+
+
+def test_a_pin_heard_under_uncommitted_settings_is_said_so(
+    pin_studio: Any, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    from tools import audition
+
+    client = pin_studio.client
+    # the check compares the repository's configs/, which the fixture's copy stands for
+    monkeypatch.setattr(audition, "CONFIG_DIR", pin_studio.toml)
+    take = take_of(client, seed=5)
+    body = {"session": take["session"], "name": take["name"]}
+    assert "warning" not in client.post("/api/pin-seed", json=body).json()
+    # the pin's own file is always edited; anything else is a setting the builder lacks
+    pin_studio.git["status"] = " M configs/lines.toml\n"
+    assert "warning" not in client.post("/api/pin-seed", json=body).json()
+    pin_studio.git["status"] = " M configs/lines.toml\n M configs/tts.toml\n"
+    warning = client.post("/api/pin-seed", json=body).json()["warning"]
+    assert "configs/tts.toml" in warning and "commit them" in warning
+    # git failing is said, not passed off as clean
+    pin_studio.git["status"] = None
+    assert "git failed" in client.post("/api/pin-seed", json=body).json()["warning"]
+    # another configs/ than the repository's has nothing to compare against
+    monkeypatch.setattr(audition, "CONFIG_DIR", pin_studio.toml / "elsewhere")
+    assert "warning" not in client.post("/api/pin-seed", json=body).json()
+
+
+def test_a_retune_says_which_pins_it_lapses(
+    pin_studio: Any, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    from tools.config import load_config
+
+    client, studio = pin_studio.client, pin_studio.studio
+    monkeypatch.setattr(studio, "forget_corpus", lambda: None, raising=False)
+    take = take_of(client, seed=5)
+    client.post(
+        "/api/pin-seed", json={"session": take["session"], "name": take["name"]}
+    )
+    load_config.cache_clear()
+    # the page learns which lines hold under the voice's settings, and its clip's
+    assert studio.live_pins()["human-male"] == ["1-accept"]
+    saved = VoiceCatalog(load_config(pin_studio.toml)).resolve("human-male").settings
+    body = {
+        "voice": "human-male",
+        "exaggeration": saved.exaggeration,
+        "cfg_weight": saved.cfg_weight,
+        "tempo": saved.tempo or 1.0,
+        "pitch": saved.pitch or 0.0,
+        "speed": saved.speed or 1.0,
+        "reference": saved.reference,
+    }
+    # keeping the same settings lapses nothing
+    assert "warning" not in client.post("/api/keep-tuning", json=body).json()
+    # a retune does, and says so by name
+    response = client.post(
+        "/api/keep-tuning", json={**body, "exaggeration": saved.exaggeration + 0.2}
+    ).json()
+    assert "1-accept" in response["warning"] and "index seed" in response["warning"]
+    load_config.cache_clear()
+    assert studio.live_pins() == {}

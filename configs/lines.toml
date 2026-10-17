@@ -1,9 +1,13 @@
 [lines]
 # A seed pinned per line, written by the audition page's "Pin this take": the line's
-# own pack file (by its file name, 415-accept, m-170-accept, 5688-19cbe7de) is drawn
-# from that seed. `heard` is the line's fingerprint and `spoken` a hash of its exact
-# text when the take was pinned; the pin stops applying when either changes, since
-# the same seed under another text or tuning is another take. The pack is built on
+# own pack file (by its file name, 415-accept, m-170-accept, 5688-19cbe7de,
+# 016d57ec-page) is drawn from that seed. This is the human override: every
+# generated file keeps the seed that drew it in tools/data/sound_index.json (`s`)
+# and is drawn from it again on its own; a pin here wins over that, and a pin that
+# lapses leaves the file on its kept seed. `heard` is the line's fingerprint,
+# `spoken` a hash of its exact text and `voice` the voice the take was read in when
+# it was pinned; the pin stops applying when any of them changes, since the same
+# seed under another text, tuning or voice is another take. The pack is built on
 # another GPU than the audition ran on, so there the seed draws a different take,
 # though always the same one.
 8190-progress = {seed = 1232072802, chunk_chars = 300, same_seed = false, heard = "d76af624+cfg_weight=0.4,clips=d76114c8,exaggeration=0.55", spoken = "f2349f592dd9f19a"}
