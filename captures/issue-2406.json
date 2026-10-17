@@ -1,0 +1,67 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "15116|19dfe25a": {
+   "build": "70450",
+   "class": "Warlock",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1454,
+   "name": "Grinkle",
+   "npc": "15116",
+   "questID": null,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "Hey Hey Hey!  I am here to promote a fabulous fishing tournament in Stranglethorn but you need to be tough enough to survive there and have enough skill in fishing to fish those waters.\n\n Come back later when you are more qualified!\r\n\r\n",
+   "time": 1792269530,
+   "title": null,
+   "wanted": null,
+   "zone": "Orgrimmar"
+  },
+  "3143|e14f5e15": {
+   "build": "70450",
+   "class": "Warlock",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Gornek",
+   "npc": "3143",
+   "questID": null,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "The Valley of Trials will temper even the weakest into a warrior worthy to join the Horde. Those who cannot rise to its tests will be left to bake in the scorching desert sun.",
+   "time": 1792267692,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "15116": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 8125066,
+   "name": "Grinkle",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3143": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 121287,
+   "name": "Gornek",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2406",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
