@@ -1,0 +1,94 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "1571|c5ceacbe": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1437,
+   "name": "Shellei Brondir",
+   "npc": "1571",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Where would you like to fly to?",
+   "time": 1792200174,
+   "title": null,
+   "wanted": null,
+   "zone": "Wetlands"
+  },
+  "2086|4eb20e0f": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1437,
+   "name": "Valstag Ironjaw",
+   "npc": "2086",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "It takes strong arms and brave hearts to keep the town of Menethil safe!",
+   "time": 1792199944,
+   "title": null,
+   "wanted": null,
+   "zone": "Wetlands"
+  },
+  "5144|c2a278c1": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1455,
+   "name": "Bink",
+   "npc": "5144",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Greetings.  I'm a $r $c trainer, and you're a $c.",
+   "time": 1792200438,
+   "title": null,
+   "wanted": null,
+   "zone": "Ironforge"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "1571": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1000764,
+   "name": "Shellei Brondir",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "2086": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Valstag Ironjaw",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "5144": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 940356,
+   "name": "Bink",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2336",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
