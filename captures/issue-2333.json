@@ -1,0 +1,94 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "11029|28ea6aca": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1455,
+   "name": "Trixie Quikswitch",
+   "npc": "11029",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "You'll need to prove your worthiness before I go giving away my secrets! I've got just the test for you...",
+   "time": 1792195755,
+   "title": null,
+   "wanted": null,
+   "zone": "Ironforge"
+  },
+  "5174|3c00750a": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1455,
+   "name": "Springspindle Fizzlegear",
+   "npc": "5174",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "The things I would teach you would turn your brain to jelly! Come back when you've learned sufficiently!",
+   "time": 1792195753,
+   "title": null,
+   "wanted": null,
+   "zone": "Ironforge"
+  },
+  "7944|9a62fac1": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1455,
+   "name": "Tinkmaster Overspark",
+   "npc": "7944",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "I am Tinkmaster Overspark, and I am the chief architect for modern gnomish engineering principles in the world today.  It is my job to ensure that the power of invention continues to shine brightest from our arclight spanners than anywhere else!\n\nAlso, if you happen to know a good schematic for radiation elimination, we just so happen to be in the market for one right about now...",
+   "time": 1792195707,
+   "title": null,
+   "wanted": null,
+   "zone": "Ironforge"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "11029": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 940356,
+   "name": "Trixie Quikswitch",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "5174": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 900914,
+   "name": "Springspindle Fizzlegear",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "7944": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 900914,
+   "name": "Tinkmaster Overspark",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2333",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
