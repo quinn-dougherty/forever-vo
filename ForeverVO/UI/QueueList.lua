@@ -2,13 +2,14 @@ local _, ns = ...
 local Queue = ns.Queue
 
 --[[
-A panel above the talking head listing what is waiting to play. Click a row
+A panel under the talking head listing what is waiting to play. Click a row
 to play it now, its X to drop it, or clear the whole queue.
 ]]
 
 local ROW_HEIGHT = 22
 local MAX_ROWS = 8
 local PANEL_WIDTH = 340
+local GAP = 4   -- between the head and the list
 
 local QueueList = {}
 ns.UI.QueueList = QueueList
@@ -21,9 +22,11 @@ function QueueList:GetFrame()
     local frame = CreateFrame("Frame", "ForeverVOQueueList", head, "TooltipBackdropTemplate")
     self.frame = frame
     frame:SetWidth(PANEL_WIDTH)
-    frame:SetPoint("BOTTOM", head, "TOP", 0, 4)
     frame:SetFrameLevel(head:GetFrameLevel() + 5)
     frame:Hide()
+    head:HookScript("OnDragStop", function()
+        self:Update()
+    end)
 
     frame.Header = frame:CreateFontString(nil, "ARTWORK")
     frame.Header:SetFontObject("GameFontNormal")
@@ -111,6 +114,23 @@ function QueueList:Toggle()
     self:Update()
 end
 
+--- Below the head, or above it when the room below is shorter than the
+--- list (the head dragged to the bottom of the screen) and the room above
+--- is not. Sized before it is placed: Update sets the height first.
+function QueueList:Anchor()
+    local head = ns.UI.TalkingHead.frame
+    local frame = self:GetFrame()
+    local room = head:Room()
+    local need = (frame:GetHeight() + GAP) * frame:GetEffectiveScale()
+    local below = not room or room.bottom >= need or room.bottom >= room.top
+    frame:ClearAllPoints()
+    if below then
+        frame:SetPoint("TOP", head, "BOTTOM", 0, -GAP)
+    else
+        frame:SetPoint("BOTTOM", head, "TOP", 0, GAP)
+    end
+end
+
 function QueueList:Update()
     local head = ns.UI.TalkingHead.frame
     if not head then
@@ -159,5 +179,6 @@ function QueueList:Update()
     frame.Empty:SetShown(shown == 0)
     frame.ClearButton:SetEnabled(total > 0)
     frame:SetHeight(40 + math.max(shown, 1) * ROW_HEIGHT + (extra > 0 and 16 or 0))
+    self:Anchor()
     frame:Show()
 end

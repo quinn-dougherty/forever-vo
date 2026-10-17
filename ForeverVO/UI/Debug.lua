@@ -312,6 +312,33 @@ local function PaintHead()
     Fill(headPanel, lines)
 end
 
+local GAP = 4   -- between the head and the panel
+
+--- Beside the head, to its left, its top level with the parchment's (the
+--- head's rect runs above its art, artTop), or to its right when the room on the
+--- left is narrower than the panel (the head dragged to the left edge of
+--- the screen) and the right is not. It follows the head as it is dragged.
+--- Sized before it is placed: PaintHead runs first.
+local function AnchorHead(host)
+    if not host.debugHooked then
+        host.debugHooked = true
+        host:HookScript("OnDragStop", function()
+            if headPanel and headPanel:IsShown() then
+                AnchorHead(host)
+            end
+        end)
+    end
+    local room = host:Room()
+    local need = (headPanel:GetWidth() + GAP) * headPanel:GetEffectiveScale()
+    local left = not room or room.left >= need or room.left >= room.right
+    headPanel:ClearAllPoints()
+    if left then
+        headPanel:SetPoint("TOPRIGHT", host, "TOPLEFT", -GAP, -host.artTop)
+    else
+        headPanel:SetPoint("TOPLEFT", host, "TOPRIGHT", GAP, -host.artTop)
+    end
+end
+
 --- Follows the talking head: shown beside it while a line plays, gone with it.
 function Debug:ShowHead(item)
     local head = ns.UI.TalkingHead
@@ -329,15 +356,13 @@ function Debug:ShowHead(item)
         host.Model:HookScript("OnModelLoaded", function()
             if headItem then
                 PaintHead()
+                AnchorHead(host)
             end
         end)
     end
     headItem = item
-    headPanel:ClearAllPoints()
-    -- above the head, flush with the portrait's left edge: beside it the frame
-    -- runs on past the button column and the panel floated off on its own
-    headPanel:SetPoint("BOTTOMLEFT", host.Portrait, "TOPLEFT", 0, 4)
     PaintHead()
+    AnchorHead(host)
     headPanel:Show()
 end
 
