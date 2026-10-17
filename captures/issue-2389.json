@@ -1,0 +1,39 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "3514": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 974343,
+   "name": "Tenaron Stormgrip",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2389",
+ "quests": {
+  "921-progress": {
+   "build": "70450",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Tenaron Stormgrip",
+   "npc": "3514",
+   "questID": 921,
+   "race": "Night Elf",
+   "sex": "f",
+   "source": "community",
+   "text": "The moonwells hold the waters of the Well of Eternity, the ancient source of magic that has wrought so many horrors upon our world.\n\nThe druids take advantage of its properties, and the Sentinels revere the wells as shrines to Elune, but sorcery is forbidden to all.",
+   "time": 1792255479,
+   "title": "Crown of the Earth",
+   "wanted": null,
+   "zone": "Teldrassil"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
