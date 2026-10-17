@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "6775": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 986648,
+   "name": "Antur Fallow",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2351",
+ "quests": {
+  "1656-accept": {
+   "build": "70450",
+   "class": "Hunter",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Antur Fallow",
+   "npc": "6775",
+   "questID": 1656,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "$N, please, I beg of you, can you help me? I have not finished my tasks here on the Mesa--I'm in the middle of my Rite of Strength--and my father asked me to deliver these furs to the inn in Bloodhoof.\n\nI'm far from rested enough to complete both my rite and this task for my father. Would you mind going on for me?\n\nThe inn is pleasant and a perfect place to rest during your long travels. I'm sure you'll agree once you see it.",
+   "time": 1792222288,
+   "title": "A Task Unfinished",
+   "wanted": null,
+   "zone": "Mulgore"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
