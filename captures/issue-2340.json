@@ -1,0 +1,94 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "2432|c5ceacbe": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1424,
+   "name": "Darla Harris",
+   "npc": "2432",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Where would you like to fly to?",
+   "time": 1792204196,
+   "title": null,
+   "wanted": null,
+   "zone": "Hillsbrad Foothills"
+  },
+  "2835|c5ceacbe": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1417,
+   "name": "Cedrik Prose",
+   "npc": "2835",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Where would you like to fly to?",
+   "time": 1792203391,
+   "title": null,
+   "wanted": null,
+   "zone": "Arathi Highlands"
+  },
+  "7312|c2a278c1": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1455,
+   "name": "Dink",
+   "npc": "7312",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Greetings.  I'm a $r $c trainer, and you're a $c.",
+   "time": 1792209638,
+   "title": null,
+   "wanted": null,
+   "zone": "Ironforge"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "2432": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1000764,
+   "name": "Darla Harris",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "2835": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Cedrik Prose",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "7312": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 900914,
+   "name": "Dink",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2340",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
