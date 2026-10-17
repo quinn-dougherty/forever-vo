@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "3339": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1100087,
+   "name": "Captain Thalo'thas Brightsun",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2404",
+ "quests": {
+  "891-progress": {
+   "build": "70450",
+   "class": "Warlock",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Captain Thalo'thas Brightsun",
+   "npc": "3339",
+   "questID": 891,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "My fleet is in peril with Captain Fairmount and her damned cannoneers blasting away from Northwatch Hold. I want her soldiers to pay as well. Fill my hand with medals from their dead and I will know that vengeance has been given to my fallen privateers.",
+   "time": 1792208566,
+   "title": "The Guns of Northwatch",
+   "wanted": null,
+   "zone": "The Barrens"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
