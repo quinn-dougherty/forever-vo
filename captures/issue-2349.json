@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "6790|c80041d2": {
+   "build": "70450",
+   "class": "Priest",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1431,
+   "name": "Innkeeper Trelayne",
+   "npc": "6790",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Welcome to my Inn, weary traveler. What can I do for you?",
+   "time": 1792214450,
+   "title": null,
+   "wanted": null,
+   "zone": "Scarlet Raven Tavern"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "6790": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1000764,
+   "name": "Innkeeper Trelayne",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2349",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
