@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "1285|ed056522": {
+   "build": "70450",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1453,
+   "name": "Thurman Mullby",
+   "npc": "1285",
+   "questID": null,
+   "race": "Night Elf",
+   "sex": "f",
+   "source": "community",
+   "text": "Best deals in all of Stormwind my friend, won't find any better. Now, what can I help you with?",
+   "time": 1792249281,
+   "title": null,
+   "wanted": null,
+   "zone": "Stormwind City"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "1285": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Thurman Mullby",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2435",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
