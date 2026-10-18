@@ -1,0 +1,121 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "658": {
+   "addon": "0.1.8",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Sten Stoutarm",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "714": {
+   "addon": "0.1.8",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Talin Keeneye",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "786": {
+   "addon": "0.1.8",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Grelin Whitebeard",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "895": {
+   "addon": "0.1.8",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Thorgas Grimson",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2471",
+ "quests": {
+  "179-progress": {
+   "build": "70450",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Sten Stoutarm",
+   "npc": "658",
+   "questID": 179,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Wolves giving you a bit of trouble? You'd do well to avoid the fangs and claws and other sharp bits, yes?",
+   "time": 1791822593,
+   "title": "Dwarven Outfitters",
+   "wanted": null,
+   "zone": "Dun Morogh"
+  },
+  "233-progress": {
+   "build": "70450",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Talin Keeneye",
+   "npc": "714",
+   "questID": 233,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Yes? Do you have something for me?",
+   "time": 1791822954,
+   "title": "Coldridge Valley Mail Delivery",
+   "wanted": null,
+   "zone": "Dun Morogh"
+  },
+  "234-progress": {
+   "build": "70450",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Grelin Whitebeard",
+   "npc": "786",
+   "questID": 234,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Is there something I can help you with?",
+   "time": 1791823008,
+   "title": "Coldridge Valley Mail Delivery",
+   "wanted": null,
+   "zone": "Dun Morogh"
+  },
+  "3108-progress": {
+   "build": "70450",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Thorgas Grimson",
+   "npc": "895",
+   "questID": 3108,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Ya made it! Good to hear! Betcha didn't have to track me to find the place either. Haha!\n\nOur profession is pretty steeped in tradition, $N. Learning the ways of the land. Learning to track a bear through the mountains. Even just surviving on wits alone takes a great deal of courage and cunning. Think you're capable?",
+   "time": 1791822639,
+   "title": "Etched Rune",
+   "wanted": null,
+   "zone": "Anvilmar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
