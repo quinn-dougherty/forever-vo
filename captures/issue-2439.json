@@ -1,0 +1,67 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "4596|b22b0c37": {
+   "build": "70450",
+   "class": "Paladin",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1458,
+   "name": "James Van Brunt",
+   "npc": "4596",
+   "questID": null,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "How is the edge of your steel? Good enough to cut through the belly of your enemy? Let me show you some things to make it even sharper.",
+   "time": 1792314290,
+   "title": null,
+   "wanted": null,
+   "zone": "Undercity"
+  },
+  "4605|e9a5758c": {
+   "build": "70450",
+   "class": "Paladin",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1458,
+   "name": "Basil Frye",
+   "npc": "4605",
+   "questID": null,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "You have learned much, more than I can teach. Go to James Van Brunt, he will teach you what I cannot.",
+   "time": 1792313996,
+   "title": null,
+   "wanted": null,
+   "zone": "Undercity"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "4596": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "James Van Brunt",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "4605": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Basil Frye",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2439",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
