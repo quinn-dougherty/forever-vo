@@ -1,0 +1,67 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "15309": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 125362,
+   "name": "Spoops",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "7311": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1022938,
+   "name": "Uthel'nay",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2481",
+ "quests": {
+  "1959-accept": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1454,
+   "name": "Uthel'nay",
+   "npc": "7311",
+   "questID": 1959,
+   "race": "Orc",
+   "sex": "f",
+   "source": "community",
+   "text": "The mages of the Undercity have noted a magical disturbance within the city, and have sent word for mages of the Horde to investigate.\n\nAnastasia Hartwell can tell you more.  Speak with her in the Magic Quarter in the Undercity.",
+   "time": 1792354636,
+   "title": "Report to Anastasia",
+   "wanted": null,
+   "zone": "Orgrimmar"
+  },
+  "8312-progress": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1454,
+   "name": "Spoops",
+   "npc": "15309",
+   "questID": 8312,
+   "race": "Orc",
+   "sex": "f",
+   "source": "community",
+   "text": "Have you finished trick-or-treating yet?  I'm sad that I can't go because I'm sick, but you helping me out makes me feel a little better...",
+   "time": 1792361640,
+   "title": "Hallow's End Treats for Spoops!",
+   "wanted": null,
+   "zone": "Orgrimmar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
