@@ -1,0 +1,106 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "1103|ffa61dcd": {
+   "build": "70450",
+   "class": "Priest",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Eldrin",
+   "npc": "1103",
+   "questID": null,
+   "race": "Human",
+   "sex": "f",
+   "source": "community",
+   "text": "So you would like to learn a few things? I would be happy to get you started!",
+   "time": 1792360211,
+   "title": null,
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "1103": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Eldrin",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "278": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1000764,
+   "name": "Sara Timberlain",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2480",
+ "quests": {
+  "83-accept": {
+   "build": "70450",
+   "class": "Priest",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Sara Timberlain",
+   "npc": "278",
+   "questID": 83,
+   "race": "Human",
+   "sex": "f",
+   "source": "community",
+   "text": "The Defias gang in Northshire wears burlap masks, but the Defias in Elwynn wear linen which I can use to make fine linen goods.\n\nBring me red linen bandanas and I'll use them to fashion something for you.\n\nDefias gang members have camps pocketed throughout Elwynn.",
+   "time": 1792360066,
+   "title": "Red Linen Goods",
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  },
+  "83-progress": {
+   "build": "70450",
+   "class": "Priest",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Sara Timberlain",
+   "npc": "278",
+   "questID": 83,
+   "race": "Human",
+   "sex": "f",
+   "source": "community",
+   "text": "I'm running low on linen, $N.  Do you have any for me?",
+   "time": 1792360190,
+   "title": "Red Linen Goods",
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  },
+  "97925-progress": {
+   "build": "70450",
+   "class": "Priest",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Eldrin",
+   "npc": "1103",
+   "questID": 97925,
+   "race": "Human",
+   "sex": "f",
+   "source": "community",
+   "text": "Come talk to me again once you've gained some skill with your profession.",
+   "time": 1792360208,
+   "title": "Camping 101: Tailoring",
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
