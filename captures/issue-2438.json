@@ -1,0 +1,114 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "254100|10e89f38": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Zephras Citizen",
+   "npc": "254100",
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "If the Al'Aketh cult isn't stopped soon, we'll all be press-ganged into joining those fanatics. I will NOT look good with a shaved head.",
+   "time": 1790796289,
+   "title": null,
+   "wanted": null,
+   "zone": "Zephras Isle"
+  },
+  "257019|1a6886aa": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Nyassa Swiftdraught",
+   "npc": "257019",
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "Ah, hello. You look as though you have a question for me.",
+   "time": 1790796576,
+   "title": null,
+   "wanted": null,
+   "zone": "Zephras Isle"
+  },
+  "257019|a3b7de8e": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Nyassa Swiftdraught",
+   "npc": "257019",
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "Another Alchemist, hmm. I doubt your skill is as great as my own so perhaps I can train you in a few proper techniques.",
+   "time": 1790798986,
+   "title": null,
+   "wanted": null,
+   "zone": "Zephras Isle"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "251903": {
+   "addon": "0.1.7",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478487,
+   "name": "Rathiril Sunlance",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "254100": {
+   "addon": "0.1.7",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478487,
+   "name": "Zephras Citizen",
+   "sex": 3,
+   "sexes": "mf"
+  },
+  "257019": {
+   "addon": "0.1.7",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478494,
+   "name": "Nyassa Swiftdraught",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2438",
+ "quests": {
+  "92596-accept": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": true,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Rathiril Sunlance",
+   "npc": "251903",
+   "questID": 92596,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "The aura of arcane energy that surrounds you is strong, even for a $c such as yourself. \r\n\r\nCome, let us sit and speak some on the nature of the arcane and the plight of our homeland.",
+   "time": 1790799181,
+   "title": "The High Order",
+   "wanted": null,
+   "zone": "Zephras Isle"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
