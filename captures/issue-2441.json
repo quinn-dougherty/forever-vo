@@ -1,0 +1,121 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "1333|877c4b1d": {
+   "build": "70450",
+   "class": "Rogue",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1453,
+   "name": "Gerik Koen",
+   "npc": "1333",
+   "questID": null,
+   "race": "Human",
+   "sex": "f",
+   "source": "community",
+   "text": "I sell only the best gear, tested and true. And the prices are set, so if you want to haggle then go find a Goblin.",
+   "time": 1792304552,
+   "title": null,
+   "wanted": null,
+   "zone": "Stormwind City"
+  },
+  "249363|595011e8": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Yala Windwatcher",
+   "npc": "249363",
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "The Wind Spirits have left us. \r\n\r\nNow, only mindless echoes remain. Be wary, however. These winds are neither kind, nor gentle.",
+   "time": 1792298496,
+   "title": null,
+   "wanted": null,
+   "zone": "Zephras Isle"
+  },
+  "251361|d8b5b5c2": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Rorian the Dayseeker",
+   "npc": "251361",
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "What do you need of me, child of Zephras?",
+   "time": 1792301669,
+   "title": null,
+   "wanted": null,
+   "zone": "Zephras Isle"
+  },
+  "251379|e154a23f": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Dorii Brightwhisper",
+   "npc": "251379",
+   "questID": null,
+   "race": "High Order Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "The followers of the old Highborne ways have never been more hungry to gain knowledge and reclaim what we've lost. If you would seek to wield the power of the arcane and have the aptitude, I can help you take your next steps.",
+   "time": 1792301717,
+   "title": null,
+   "wanted": null,
+   "zone": "Zephras Isle"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "1333": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Gerik Koen",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "249363": {
+   "addon": "0.1.10",
+   "creatureType": "Not specified",
+   "modelFileID": 7478494,
+   "name": "Yala Windwatcher",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "251361": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478487,
+   "name": "Rorian the Dayseeker",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "251379": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478494,
+   "name": "Dorii Brightwhisper",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2441",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
