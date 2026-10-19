@@ -1,0 +1,78 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "3309|2f8d506f": {
+   "build": "70450",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1454,
+   "name": "Karus",
+   "npc": "3309",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Besides the Grunts outside, my brothers and I fought at the battle of Hyjal. Any who seek to steal from the bank must face us first.",
+   "time": 1792277378,
+   "title": null,
+   "wanted": null,
+   "zone": "Orgrimmar"
+  },
+  "3309|6b36598f": {
+   "build": "70450",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1454,
+   "name": "Karus",
+   "npc": "3309",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "I guarantee this bank's security with my own blood, is that good enough for you?",
+   "time": 1792277270,
+   "title": null,
+   "wanted": null,
+   "zone": "Orgrimmar"
+  },
+  "3309|ae78a458": {
+   "build": "70450",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1454,
+   "name": "Karus",
+   "npc": "3309",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Would you rather trust your goods with a goblin?",
+   "time": 1792277377,
+   "title": null,
+   "wanted": null,
+   "zone": "Orgrimmar"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "3309": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 121287,
+   "name": "Karus",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2487",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
