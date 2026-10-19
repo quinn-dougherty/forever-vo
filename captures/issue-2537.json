@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "11835": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Theodore Griffs",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2537",
+ "quests": {
+  "95216-complete": {
+   "build": "70450",
+   "class": "Warrior",
+   "differs": true,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1458,
+   "name": "Theodore Griffs",
+   "npc": "11835",
+   "questID": 95216,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "You killed it??\r\n\r\nHmmph. Lucky for you this should be enough ichor to reverse engineer its properties. You do not wish to be an enemy of the Royal Apothecary Society.\r\n\r\nGet out of my sight!",
+   "time": 1792448470,
+   "title": "The New Plague",
+   "wanted": true,
+   "zone": "Undercity"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
