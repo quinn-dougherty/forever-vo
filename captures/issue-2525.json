@@ -1,0 +1,95 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "2086|4eb20e0f": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1437,
+   "name": "Valstag Ironjaw",
+   "npc": "2086",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "It takes strong arms and brave hearts to keep the town of Menethil safe!",
+   "time": 1792435655,
+   "title": null,
+   "wanted": null,
+   "zone": "Wetlands"
+  },
+  "2104|fe329646": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1437,
+   "name": "Captain Stoutfist",
+   "npc": "2104",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Menethil Harbor enjoys a bit of peace these days, thanks to the mountaineers.  But we must be ever watchful of new threats from our enemies.",
+   "time": 1792435716,
+   "title": null,
+   "wanted": null,
+   "zone": "Wetlands"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "2086": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Valstag Ironjaw",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "2104": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Captain Stoutfist",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "270844": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 921844,
+   "name": "Sylessa Duskwhisper",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2525",
+ "quests": {
+  "98208-progress": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1437,
+   "name": "Sylessa Duskwhisper",
+   "npc": "270844",
+   "questID": 98208,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Have you been to the wreckage? It is a most somber sight.",
+   "time": 1792435802,
+   "title": "Bloom of the Heavens",
+   "wanted": null,
+   "zone": "Wetlands"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
