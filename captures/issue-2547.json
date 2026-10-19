@@ -1,0 +1,95 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "10856|8ebce631": {
+   "build": "70450",
+   "class": "Paladin",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Argent Quartermaster Hasana",
+   "npc": "10856",
+   "questID": null,
+   "race": "Undead",
+   "sex": "f",
+   "source": "community",
+   "text": "Join the fight against evil!  Accept a commission within the Argent Dawn today!",
+   "time": 1792131025,
+   "title": null,
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "10856": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1018060,
+   "name": "Argent Quartermaster Hasana",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "246393": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Jorin Croge",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3293": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 119376,
+   "name": "Rezlak",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2547",
+ "quests": {
+  "834-progress": {
+   "build": "70450",
+   "class": "Paladin",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Rezlak",
+   "npc": "3293",
+   "questID": 834,
+   "race": "Undead",
+   "sex": "f",
+   "source": "community",
+   "text": "I'm great at what I do, don't get me wrong, but this is ridiculous! What am I supposed to do, build sand castles?",
+   "time": 1792311861,
+   "title": "Winds in the Desert",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "91316-progress": {
+   "build": "70450",
+   "class": "Paladin",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Jorin Croge",
+   "npc": "246393",
+   "questID": 91316,
+   "race": "Undead",
+   "sex": "f",
+   "source": "community",
+   "text": "They say location is everything. While this fortress may look imposing perched upon these bluffs, it's turning out to be quite the challenge to stay supplied this far from proper civilization. An unfortunate oversight on our part.",
+   "time": 1792317928,
+   "title": "Making Repairs",
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
