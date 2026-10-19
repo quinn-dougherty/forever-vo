@@ -1,0 +1,60 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "11860|ae16ea2b": {
+   "build": "70450",
+   "class": "Priest",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1442,
+   "name": "Maggran Earthbinder",
+   "npc": "11860",
+   "questID": null,
+   "race": "Undead",
+   "sex": "f",
+   "source": "community",
+   "text": "I am afraid that I am no longer gentle or humble. Age and countless battles have hardened my skin and soul. Perhaps that is why Cairne assigned me to Sun Rock Retreat... the gentle winds and warm sun does ease the pain.",
+   "time": 1792422417,
+   "title": null,
+   "wanted": null,
+   "zone": "Stonetalon Mountains"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "11860": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 122055,
+   "name": "Maggran Earthbinder",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2506",
+ "quests": {
+  "6282-progress": {
+   "build": "70450",
+   "class": "Priest",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1442,
+   "name": "Maggran Earthbinder",
+   "npc": "11860",
+   "questID": 6282,
+   "race": "Undead",
+   "sex": "f",
+   "source": "community",
+   "text": "Do not be weary of Charred Vale; many evil creatures reside in those hills. Stay strong $N, and you shall prevail over this threat to our people. Go now and strike hard - our children shall never know of the evil of what was.",
+   "time": 1792422422,
+   "title": "Harpies Threaten",
+   "wanted": null,
+   "zone": "Stonetalon Mountains"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
