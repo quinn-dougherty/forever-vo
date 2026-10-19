@@ -1,0 +1,113 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "1496|54d7bdcd": {
+   "build": "70450",
+   "class": "Warlock",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Deathguard Dillinger",
+   "npc": "1496",
+   "questID": null,
+   "race": "Undead",
+   "sex": "f",
+   "source": "community",
+   "text": "Take it, then. It seems Zygand is too busy for the agonizing trip here to retrieve it himself.",
+   "time": 1792357229,
+   "title": null,
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  },
+  "1496|5d6f0b28": {
+   "build": "70450",
+   "class": "Warlock",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Deathguard Dillinger",
+   "npc": "1496",
+   "questID": null,
+   "race": "Undead",
+   "sex": "f",
+   "source": "community",
+   "text": "What are you looking for?",
+   "time": 1792357227,
+   "title": null,
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  },
+  "3143|e14f5e15": {
+   "build": "70450",
+   "class": "Priest",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Gornek",
+   "npc": "3143",
+   "questID": null,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "The Valley of Trials will temper even the weakest into a warrior worthy to join the Horde. Those who cannot rise to its tests will be left to bake in the scorching desert sun.",
+   "time": 1792187777,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "6491|22357dc5": {
+   "build": "70450",
+   "class": "Warlock",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Spirit Healer",
+   "npc": "6491",
+   "questID": null,
+   "race": "Undead",
+   "sex": "f",
+   "source": "community",
+   "text": "It is not yet your time. I shall aid your journey back to the realm of the living... for a price.",
+   "time": 1792183469,
+   "title": null,
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "1496": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Deathguard Dillinger",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3143": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Gornek",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "6491": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 126042,
+   "name": "Spirit Healer",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2538",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
