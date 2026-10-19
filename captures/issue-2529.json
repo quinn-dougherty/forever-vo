@@ -1,0 +1,75 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "16227|c5ceacbe": {
+   "build": "70450",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Bragok",
+   "npc": "16227",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Where would you like to fly to?",
+   "time": 1792435296,
+   "title": null,
+   "wanted": null,
+   "zone": "The Barrens"
+  },
+  "6791|60c5da07": {
+   "build": "70450",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Innkeeper Wiley",
+   "npc": "6791",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Come in, come in. Just don't sit too close to the stove. It hasn't exploded yet today, but just to be safe I think you should sit elsewhere.",
+   "time": 1792440933,
+   "title": null,
+   "wanted": null,
+   "zone": "The Barrens"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "16227": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 124224,
+   "name": "Bragok",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "267310": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 121287,
+   "name": "Gur'ak",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "6791": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 8125066,
+   "name": "Innkeeper Wiley",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2529",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
