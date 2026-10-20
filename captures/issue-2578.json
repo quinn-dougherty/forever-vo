@@ -1,0 +1,67 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "3142|99ae9589": {
+   "build": "70450",
+   "class": "Shaman",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Orgnil Soulscar",
+   "npc": "3142",
+   "questID": null,
+   "race": "Orc",
+   "sex": "f",
+   "source": "community",
+   "text": "Hail.  Be brief, for we both have much to do.",
+   "time": 1792489852,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "6928|7161de72": {
+   "build": "70450",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Innkeeper Grosk",
+   "npc": "6928",
+   "questID": null,
+   "race": "Orc",
+   "sex": "f",
+   "source": "community",
+   "text": "If we are to make these new lands ours then we must have places to rest our battle weary bodies. Lay your axe by the fire and share the stories of your mighty battles.",
+   "time": 1792489883,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "3142": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Orgnil Soulscar",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "6928": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Innkeeper Grosk",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2578",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
