@@ -1,0 +1,87 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "2980|e775a01e": {
+   "build": "70450",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Grull Hawkwind",
+   "npc": "2980",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Greetings, $N, and welcome to Camp Narache. News of your arrival spread quickly among the tribe.",
+   "time": 1791334876,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "3059|4711dbab": {
+   "build": "70450",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Harutt Thunderhorn",
+   "npc": "3059",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "No matter how much one learns, there is always more to know.",
+   "time": 1791334932,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "2980": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Grull Hawkwind",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3059": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Harutt Thunderhorn",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2611",
+ "quests": {
+  "750-progress": {
+   "build": "70450",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Grull Hawkwind",
+   "npc": "2980",
+   "questID": 750,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "If you can provide pelts for the tribe I will pass word along to my father, Chief Hawkwind, of your generous deeds.",
+   "time": 1791334877,
+   "title": "The Hunt Continues",
+   "wanted": null,
+   "zone": "Mulgore"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
