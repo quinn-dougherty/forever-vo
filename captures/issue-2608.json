@@ -1,0 +1,39 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {},
+ "npcs": {
+  "5769": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Arch Druid Hamuul Runetotem",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2608",
+ "quests": {
+  "98435-complete": {
+   "build": "70450",
+   "class": "Druid",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1456,
+   "name": "Arch Druid Hamuul Runetotem",
+   "npc": "5769",
+   "questID": 98435,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Ah, no wonder there is such joy running through the streams of Mulgore. You have done a great service today. The wells provide much for not only our people, but to the wildlife we depend on for food, clothing, and companionship.\r\n\r\nIt is my humble pleasure to honor Mull's request. Please, accept this token of my gratitude.",
+   "time": 1792497766,
+   "title": "Thunderhorn's Report",
+   "wanted": null,
+   "zone": "Thunder Bluff"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
