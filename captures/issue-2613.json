@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "3310|cc0cf280": {
+   "build": "70450",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1454,
+   "name": "Doras",
+   "npc": "3310",
+   "questID": null,
+   "race": "Windshaper Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "You haven't lived until you've looked down on the world from the back of a wind rider.",
+   "time": 1792538886,
+   "title": null,
+   "wanted": null,
+   "zone": "Orgrimmar"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "3310": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Doras",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2613",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
