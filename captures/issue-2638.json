@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "2456|105cd232": {
+   "build": "70450",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1453,
+   "name": "Newton Burnside",
+   "npc": "2456",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "No one's ever stolen anything out of here. Not in the whole history of... the whole history!",
+   "time": 1792593100,
+   "title": null,
+   "wanted": null,
+   "zone": "Stormwind City"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "2456": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 119940,
+   "name": "Newton Burnside",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2638",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
