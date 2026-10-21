@@ -1,0 +1,87 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "10216|f0576b7b": {
+   "build": "70450",
+   "class": "Druid",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1439,
+   "name": "Gubber Blump",
+   "npc": "10216",
+   "questID": null,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "Hi there.  I'm Gubber Blump.",
+   "time": 1792570608,
+   "title": null,
+   "wanted": null,
+   "zone": "Darkshore"
+  },
+  "4200|c2e88775": {
+   "build": "70450",
+   "class": "Druid",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1439,
+   "name": "Laird",
+   "npc": "4200",
+   "questID": null,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "Although the coast of Darkshore is more dangerous than that of Teldrassil, many fishers find profit here.",
+   "time": 1792571068,
+   "title": null,
+   "wanted": null,
+   "zone": "Darkshore"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "10216": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Gubber Blump",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "4200": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 974343,
+   "name": "Laird",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2634",
+ "quests": {
+  "1138-accept": {
+   "build": "70450",
+   "class": "Druid",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1439,
+   "name": "Gubber Blump",
+   "npc": "10216",
+   "questID": 1138,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "I love crab.  Crabs are the fruit of the sea!  You can bake it, barbecue it, boil it, and broil it.  They're pan fried, deep fried, and stir fried.  There's crab salad, crab soup, crab stew, pepper crab, lemon crab, whipper root crab, and Ironforge surprise crab.  That's... that's about it.\n\nI'm here fishing right now, so I can't get any fine crab chunks.  You can pick them out of reef crawlers and encrusted tide crawlers.  You can make a lot with it.  You can bake it, barbecue it, boil it...",
+   "time": 1792570611,
+   "title": "Fruit of the Sea",
+   "wanted": null,
+   "zone": "Darkshore"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
