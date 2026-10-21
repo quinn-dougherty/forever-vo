@@ -1,0 +1,95 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "274770|0d812247": {
+   "build": "70450",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Slizzy Kreeg",
+   "npc": "274770",
+   "questID": null,
+   "race": "Windshaper Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "Watch your step. This little beast has been through enough.\r\n\r\nIt may have been left for dead, but soon it will begin its training. Once it is broken and battle-hardened, we will ride into battles as one, striking fear into the hearts of our enemies.",
+   "time": 1792540731,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "6491|22357dc5": {
+   "build": "70450",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Spirit Healer",
+   "npc": "6491",
+   "questID": null,
+   "race": "Windshaper Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "It is not yet your time. I shall aid your journey back to the realm of the living... for a price.",
+   "time": 1792541314,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "274770": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 949470,
+   "name": "Slizzy Kreeg",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "3190": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1022938,
+   "name": "Rhinag",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "6491": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 126042,
+   "name": "Spirit Healer",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2617",
+ "quests": {
+  "812-progress": {
+   "build": "70450",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Rhinag",
+   "npc": "3190",
+   "questID": 812,
+   "race": "Windshaper Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "I'm almost glad I can't return to Sen'jin as I am now. My weakness and stupidity would surely be mocked.",
+   "time": 1792540873,
+   "title": "Need for a Cure",
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
