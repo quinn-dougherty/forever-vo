@@ -1,0 +1,67 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "5884|f341dff7": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Mai'ah",
+   "npc": "5884",
+   "questID": null,
+   "race": "Troll",
+   "sex": "m",
+   "source": "community",
+   "text": "Greetings, $c.  Are you here to learn of the hidden arts?",
+   "time": 1792686351,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "6491|22357dc5": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Spirit Healer",
+   "npc": "6491",
+   "questID": null,
+   "race": "Troll",
+   "sex": "m",
+   "source": "community",
+   "text": "It is not yet your time. I shall aid your journey back to the realm of the living... for a price.",
+   "time": 1792686320,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "5884": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1018060,
+   "name": "Mai'ah",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "6491": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 126042,
+   "name": "Spirit Healer",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2674",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
