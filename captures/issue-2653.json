@@ -1,0 +1,113 @@
+{
+ "addon": "0.1.9",
+ "books": {},
+ "gossip": {
+  "276171|1e85fa3a": {
+   "build": "70450",
+   "class": "Druid",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Oura Stormspinner",
+   "npc": "276171",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "We shen'dorei have need of additional cloth to replenish our supplies. Any donations you make would be put to good use, and surely raise your esteem with the Windshapers.",
+   "time": 1792644954,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "8359|6fec0ef7": {
+   "build": "70450",
+   "class": "Druid",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1456,
+   "name": "Ahanu",
+   "npc": "8359",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Greetings.  If you are here for leather goods, then you will find my wares well crafted.",
+   "time": 1792644034,
+   "title": null,
+   "wanted": null,
+   "zone": "Thunder Bluff"
+  }
+ },
+ "npcs": {
+  "269068": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 986648,
+   "name": "Eylah Sunhorn",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "276171": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478494,
+   "name": "Oura Stormspinner",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "8359": {
+   "addon": "0.1.9",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Ahanu",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2653",
+ "quests": {
+  "97485-complete": {
+   "build": "70450",
+   "class": "Druid",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1456,
+   "name": "Eylah Sunhorn",
+   "npc": "269068",
+   "questID": 97485,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "You have done well, friend.\r\n\r\nI thank you for taking the time to perform one of our time-honored traditions, $N. I hope that as you travel you will find plenty of occasions you wish to give thanks for.\r\n\r\nShould you ever wish to perform the ritual again, you should be able to repurchase the components I sent you to collect.\r\n\r\nGo with An'she's warmth.",
+   "time": 1792643956,
+   "title": "Traditions of the Bluff",
+   "wanted": null,
+   "zone": "Thunder Bluff"
+  },
+  "99196-progress": {
+   "build": "70450",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Oura Stormspinner",
+   "npc": "276171",
+   "questID": 99196,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "The Windshapers are currently accepting donations for wool cloth.\r\n\r\nA donation of sixty pieces of wool cloth will net you full recognition by the Windshapers for your generosity. \n\nIf you have the sixty pieces of wool cloth on you and are ready to donate them, I'm able to take them from you now.",
+   "time": 1792644956,
+   "title": "A Donation of Wool",
+   "wanted": null,
+   "zone": "Mulgore"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
