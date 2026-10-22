@@ -1,0 +1,67 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "2457|2237a3b1": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1453,
+   "name": "John Burnside",
+   "npc": "2457",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Welcome to the Bank of Stormwind. We offer financial accounts and safety deposit boxes for valuable items. Do you already have an account with us sir?",
+   "time": 1792675775,
+   "title": null,
+   "wanted": null,
+   "zone": "Stormwind City"
+  },
+  "3841|ab4871bb": {
+   "build": "70450",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1439,
+   "name": "Caylais Moonfeather",
+   "npc": "3841",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "The Hippogryph is a noble beast, proud and swift.  They are an honor to train, and can quickly take their rider a great distance.",
+   "time": 1792676929,
+   "title": null,
+   "wanted": null,
+   "zone": "Darkshore"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "2457": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "John Burnside",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3841": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 921844,
+   "name": "Caylais Moonfeather",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2669",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
