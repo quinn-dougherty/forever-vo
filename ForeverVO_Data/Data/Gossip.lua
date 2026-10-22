@@ -213,6 +213,7 @@ pack.gossip = {
 		{ f="341-8dd007ae", h="8dd007ae", t="I don't have much time for idle talk, CAL.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=13.414, v="human-male-standard", s={ ["f"]=10.045 } },
 		{ f="341-a80917b6", h="a80917b6", t="I don't have much time for idle talk, DJINNE.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=13.077, v="human-male-standard", s={ ["f"]=10.489 } },
 		{ f="341-ad9a602f", h="ad9a602f", t="I don't have much time for idle talk, PRO.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=13.726, v="human-male-standard", s={ ["f"]=9.289 } },
+		{ f="341-d4423011", h="d4423011", t="I don't have much time for idle talk, JUSTPLAYIN.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=12.969, v="human-male-standard", s={ ["f"]=11.543 } },
 		{ f="341-f2cb4ae5", h="f2cb4ae5", t="I don't have much time for idle talk, WAYLANDER.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=11.484, v="human-male-standard", s={ ["f"]=11.069 } },
 		{ f="341-f53a9fc6", h="f53a9fc6", t="I don't have much time for idle talk, SINKWINE.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=13.801, v="human-male-standard", s={ ["f"]=10.045 } },
 	},
@@ -1075,6 +1076,7 @@ pack.gossip = {
 		{ f="1496-bc428669", h="bc428669", t="Morganus the stable master can be found out in front of the stables strangely enough.", d=6.320, v="scourge-male-warrior" },
 		{ f="1496-bff3d364", h="bff3d364", t="That would be Shelene Rhobart.  Take the road southeast out of Brill then head east at the intersection.  She's at a camp along the side of the road.", d=9.960, v="scourge-male-warrior" },
 		{ f="1496-cba2e53b", h="cba2e53b", t="Look inside the Gallows' End Tavern's main dining room for Austil de Mon.  The tavern is on the southeast edge of Brill.", d=8.880, v="scourge-male-warrior" },
+		{ f="1496-ccfca24c", h="ccfca24c", t="If you're willing to risk yourself over the Light, then you can speak with Shari Stilwell near the stables. She can entertain your insanity.", d=10.440, v="scourge-male-warrior" },
 		{ f="1496-d67fe744", h="d67fe744", t="The Rogue Trainer's name is Marion Call.  You can find her upstairs in the reading room at the Gallows' End Tavern at the town's southeast edge.", d=10.480, v="scourge-male-warrior" },
 		{ f="1496-d821d003", h="d821d003", t="Sorry friend, we don't have one of those here in Brill.  You'll have to head to the Undercity for that.  The Undercity is underneath the Ruins of Lordaeron to the south of Brill.  From the back of the ruins take the elevator down and then speak to one of the Undercity Guardians to find your way further.", d=20.120, v="scourge-male-warrior" },
 		{ f="1496-dc5df42b", h="dc5df42b", t="Black, grey and dark purple are the prescribed colors.  See to it that you don't stray onto the wrong side of fashion street friend.  Bowen Brisboise can help to see that you don't.  You'll find him inside Cold Hearth Manor on the other side of the bridge to the southwest of town.", d=21.320, v="scourge-male-warrior" },
@@ -1167,6 +1169,7 @@ pack.gossip = {
 		{ f="1652-bc428669", h="bc428669", t="Morganus the stable master can be found out in front of the stables strangely enough.", d=5.840, v="scourge-male-warrior" },
 		{ f="1652-bff3d364", h="bff3d364", t="That would be Shelene Rhobart.  Take the road southeast out of Brill then head east at the intersection.  She's at a camp along the side of the road.", d=10.240, v="scourge-male-warrior" },
 		{ f="1652-cba2e53b", h="cba2e53b", t="Look inside the Gallows' End Tavern's main dining room for Austil de Mon.  The tavern is on the southeast edge of Brill.", d=10.040, v="scourge-male-warrior" },
+		{ f="1652-ccfca24c", h="ccfca24c", t="If you're willing to risk yourself over the Light, then you can speak with Shari Stilwell near the stables. She can entertain your insanity.", d=10.720, v="scourge-male-warrior" },
 		{ f="1652-d67fe744", h="d67fe744", t="The Rogue Trainer's name is Marion Call.  You can find her upstairs in the reading room at the Gallows' End Tavern at the town's southeast edge.", d=23.720, v="scourge-male-warrior" },
 		{ f="1652-d821d003", h="d821d003", t="Sorry friend, we don't have one of those here in Brill.  You'll have to head to the Undercity for that.  The Undercity is underneath the Ruins of Lordaeron to the south of Brill.  From the back of the ruins take the elevator down and then speak to one of the Undercity Guardians to find your way further.", d=20.920, v="scourge-male-warrior" },
 		{ f="1652-dc5df42b", h="dc5df42b", t="Black, grey and dark purple are the prescribed colors.  See to it that you don't stray onto the wrong side of fashion street friend.  Bowen Brisboise can help to see that you don't.  You'll find him inside Cold Hearth Manor on the other side of the bridge to the southwest of town.", d=21.520, v="scourge-male-warrior" },
@@ -3702,6 +3705,7 @@ pack.gossip = {
 		{ f="3702-5ae56d71", h="5ae56d71", t="Hello $r, it is a pleasure to make your acquaintance.  ", d=4.283, v="nightelf-female-standard" },
 	},
 	[3703] = {
+		{ f="3703-27687fdd", h="27687fdd", t="I do not offer apprentice training. Look for the tauren Waldor in the Wailing Caverns, here in the Barrens. He can assist you with whatever you need.", d=13.640, v="tauren-male-elder" },
 		{ f="3703-5e0cfa89", h="5e0cfa89", t="I cannot aid you with further lessons: your skills have surpassed mine. Go and see the tauren Una in the northwestern shops of Thunder Bluff's central plateau. She offers more advanced training.", d=15.800, v="tauren-male-elder" },
 		{ f="3703-61b74186", h="61b74186", t="The strongest hides come from those kodo that have laid themselves to rest in this wasteland.", d=7.800, v="tauren-male-elder" },
 		{ f="3703-a0a64f07", h="a0a64f07", t="This blue leather does draw the eye, I know. You see, we have a great many eager recruits running around here, hunting and slaying with more enthusiasm than wisdom. One must take precautions.", d=15.600, v="tauren-male-elder" },
@@ -4145,6 +4149,9 @@ pack.gossip = {
 	},
 	[4456] = {
 		{ f="4456-0be64368", h="0be64368", t="No, Longears isn't my real name.  And I'm not going to tell you what it is, so don't ask.", d=6.680, v="bloodelf-female" },
+	},
+	[4485] = {
+		{ f="4485-21cdc0a3", h="21cdc0a3", t="The days grow long, and still no end to the conflicts of these lands can be seen. It takes no spell caster to know that much. Take up a blade while you can, $c. War can come to our doors at any time, and if I'm not mistaken, you look to be one who revels in it.", d=25.880, v="orc-male-guard" },
 	},
 	[4488] = {
 		{ f="4488-541d5ec8", h="541d5ec8", t="Now, answer me this, $N: Which creature became the Lich King before spreading the plague across Lordaeron?", d=9.920, v="scourge-male-standard" },
@@ -4701,7 +4708,7 @@ pack.gossip = {
 	},
 	[5479] = {
 		{ f="5479-08830bac", h="08830bac", t="Through rigorous retraining I have had to break many students of all they had previously learned so that I might teach them anew.  The service I offer becomes increasingly difficult to perform each time it is done.  It is for that reason that it becomes increasingly expensive with each retraining.  Do you desire that I break you of the talents you have learned?", d=19.120, v="human-male-official" },
-		{ f="5479-2fd50a65", h="2fd50a65", t="I can tell just by the way you're standing that you're no warrior.  $B$BWhy don't you go do something safe, like read a book.", d=6.515, v="human-male-official" },
+		{ f="5479-2fd50a65", h="2fd50a65", t="I can tell just by the way you're standing that you're no warrior.    Why don't you go do something safe, like read a book.", d=6.515, v="human-male-official" },
 		{ f="5479-7a171557", h="7a171557", t="Stormwind is the pillar of the human race, maintained through strength of will and the edge of a sturdy blade.", d=6.065, v="human-male-official" },
 		{ f="5479-c3d2f0f0", h="c3d2f0f0", t="Stormwind is the pillar of the human race, maintained through strength of will and the edge of a sturdy blade.", d=6.330, v="human-male-official" },
 	},
@@ -5094,7 +5101,7 @@ pack.gossip = {
 		{ f="5693-0bbecdf9", h="0bbecdf9", t="It is wise that you humble yourself before me KRUDUS in your desire for more $c knowledge.", d=8.000, v="scourge-male-standard" },
 	},
 	[5694] = {
-		{ f="5694-f9a7a324", h="f9a7a324", t="The flow of magic is unpredictable and chaotic, of late. What, I wonder, could be the cause of this?", d=6.524, v="human-male-official" },
+		{ f="5694-f9a7a324", h="f9a7a324", t="The flow of magic is unpredictable and chaotic, of late. What, I wonder, could be the cause of this?", d=6.524, v="human-male-official", s={ ["f"]=5.252 } },
 	},
 	[5695] = {
 		{ f="5695-01a530ff", h="01a530ff", t="Even I have my limitations! Go talk to Lavinia Crowe in Undercity if you wish to further your training.", d=8.480, v="scourge-male-warrior" },
@@ -8412,6 +8419,7 @@ pack.gossip = {
 	[11868] = {
 		{ f="11868-25f6be64", h="25f6be64", t="Ansekhwa, the tauren weapon master, is on Thunder Bluff's lower rise.  He can train one and two-handed maces, staves and guns.    Hanashi, standing next to me here, can instruct in the use of bows, one and two-handed axes, staves and all manner of thrown weapons.    Archibald, the undead weapon master in the War Quarter of the Undercity, can teach the use of crossbows, daggers, one and two-handed swords and polearms.", d=37.790, v="orc-male-guard" },
 		{ f="11868-48da0bbc", h="48da0bbc", t="Here to learn how to wield a new weapon, or just to waste my time?", d=8.760, v="orc-male-guard" },
+		{ f="11868-a3056c62", h="a3056c62", t="Ansekhwa, the tauren weapon master, is on Thunder Bluff's lower rise.  He can train one and two-handed maces, staves and guns.    Hanashi, standing next to me here, can instruct in the use of bows, one and two-handed axes, staves and all manner of thrown weapons.    Archibald, the undead weapon master in the War Quarter of the Undercity, can teach the use of crossbows, daggers, one and two-handed swords and polearms.", d=35.950, v="orc-male-guard" },
 		{ f="11868-a545ee73", h="a545ee73", t="Ansekhwa, the tauren weapon master, is on Thunder Bluff's lower rise.  He can train one and two-handed maces, staves and guns.    Hanashi, standing next to me here, can instruct in the use of bows, one and two-handed axes, staves and all manner of thrown weapons.    Archibald, the undead weapon master in the War Quarter of the Undercity, can teach the use of crossbows, daggers, one and two-handed swords and polearms.", d=34.590, v="orc-male-guard" },
 	},
 	[11869] = {
@@ -11686,6 +11694,7 @@ pack.gossip = {
 	},
 	[267007] = {
 		{ f="267007-0135d8e6", h="0135d8e6", t="Nothing like spending a day down at Crystal Lake fishing. Arnold Leland is the man that taught me. You can usually find him out on the dock in the Canal District just fishing the day away.     Oh, and don't believe any of the stories he tells you about monsters in the canals either.", d=13.308, v="human-female", s={ ["m"]=15.205 } },
+		{ f="267007-1c1c215e", h="1c1c215e", t="The Bank of Stormwind is located in the Trade District just northwest of the city gates. Here, let me show you on your map.", d=7.053, v="human-female", s={ ["m"]=8.081 } },
 		{ f="267007-31050836", h="31050836", t="Well, you can find Theridan or Maldryn by the moonwell in the Park.  Just head to the western area of Stormwind, north of the Mage District, but west of the Cathedral Square.", d=8.767, v="human-female", s={ ["m"]=11.099 } },
 		{ f="267007-37e215b2", h="37e215b2", t="Which class trainer are you looking for?", d=2.117, v="human-female", s={ ["m"]=3.029 } },
 		{ f="267007-4e0ec384", h="4e0ec384", t="Which profession trainer are you looking for?", d=2.163, v="human-female", s={ ["m"]=2.623 } },
@@ -11897,6 +11906,9 @@ pack.gossip = {
 	[270513] = {
 		{ f="270513-e6b98502", h="e6b98502", t="Greetings, $c.    I can show you how to weave magic about yourself to change the appearance of your equipment, if you so desire. Do you wish to utilize my services?", d=10.280, v="nightelf-male" },
 	},
+	[270542] = {
+		{ f="270542-1caffe50", h="1caffe50", t="<The horse paws at the ground with one hoof and watches you.>", d=4.560, v="narrator", n={ [1]=4.160 } },
+	},
 	[270581] = {
 		{ f="270581-e6b98502", h="e6b98502", t="Greetings, $c.    I can show you how to weave magic about yourself to change the appearance of your equipment, if you so desire. Do you wish to utilize my services?", d=14.560, v="nightelf-female" },
 	},
@@ -12095,5 +12107,8 @@ pack.gossip = {
 	[277055] = {
 		{ f="277055-74f9b051", h="74f9b051", t="Welcome to my barbershop! We offer cuts, colorings, and more.    We can groom facial hair, perform piercings, reshape tusks and horns, and even modify undead features!    Have a seat and we'll get to work.", d=15.560, v="tauren-female", s={ ["m"]=17.000 } },
 		{ f="277055-98eee030", h="98eee030", t="Welcome, friend, to the barbershop! Come for a cut? A coloring? Something else, perhaps?    We can groom facial hair, perform piercings, reshape tusks and horns, and even modify undead features!    Have a seat and we'll get right to work. You're only moments away from a new, more attractive you...", d=20.320, v="tauren-female", s={ ["m"]=22.640 } },
+	},
+	[277311] = {
+		{ f="277311-84420816", h="84420816", t="<The haggard-looking man mutters to himself incoherently.>", P={ { d=3.200, n=true } }, nP={ [1]={ [1]=4.040 } } },
 	},
 }
