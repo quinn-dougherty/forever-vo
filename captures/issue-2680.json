@@ -1,0 +1,63 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "-4141": {
+   "isObject": true,
+   "name": "Unknown"
+  },
+  "3338": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 949470,
+   "name": "Sergra Darkthorn",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2680",
+ "quests": {
+  "901-progress": {
+   "build": "70532",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": true,
+   "mapID": 1413,
+   "name": "Unknown",
+   "npc": "-4141",
+   "questID": 901,
+   "race": "Tauren",
+   "sex": "f",
+   "source": "community",
+   "text": "The console lights are dimmed and the gauges and dials all read at their zero positions, everything idling.",
+   "time": 1792678507,
+   "title": "Samophlange",
+   "wanted": null,
+   "zone": "The Barrens"
+  },
+  "903-progress": {
+   "build": "70532",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Sergra Darkthorn",
+   "npc": "3338",
+   "questID": 903,
+   "race": "Tauren",
+   "sex": "f",
+   "source": "community",
+   "text": "How goes your hunt, $N?  Have you found the prowlers?",
+   "time": 1792679023,
+   "title": "Prowlers of the Barrens",
+   "wanted": null,
+   "zone": "The Barrens"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
