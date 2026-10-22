@@ -1,0 +1,95 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "11857|00001505": {
+   "build": "70450",
+   "class": "Hunter",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Makaba Flathoof",
+   "npc": "11857",
+   "questID": null,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": " ",
+   "time": 1792588841,
+   "title": null,
+   "wanted": null,
+   "zone": "The Barrens"
+  },
+  "11864|00001505": {
+   "build": "70450",
+   "class": "Hunter",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1442,
+   "name": "Tammra Windfield",
+   "npc": "11864",
+   "questID": null,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": " ",
+   "time": 1792589795,
+   "title": null,
+   "wanted": null,
+   "zone": "Stonetalon Mountains"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "11857": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Makaba Flathoof",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "11864": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 986648,
+   "name": "Tammra Windfield",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "3387": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Jorn Skyseer",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2646",
+ "quests": {
+  "882-progress": {
+   "build": "70450",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Jorn Skyseer",
+   "npc": "3387",
+   "questID": 882,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "$N, have you bested Ishamuhale?",
+   "time": 1792590151,
+   "title": "Ishamuhale",
+   "wanted": null,
+   "zone": "The Barrens"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
