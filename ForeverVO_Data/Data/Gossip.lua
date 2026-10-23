@@ -211,6 +211,7 @@ pack.gossip = {
 		{ f="341-680c0572", h="680c0572", t="I don't have much time for idle talk, CODEY.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=13.360, v="human-male-standard", s={ ["f"]=9.973 } },
 		{ f="341-7ee1dc44", h="7ee1dc44", t="I don't have much time for idle talk, MIKE.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=13.193, v="human-male-standard", s={ ["f"]=9.863 } },
 		{ f="341-8dd007ae", h="8dd007ae", t="I don't have much time for idle talk, CAL.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=13.414, v="human-male-standard", s={ ["f"]=10.045 } },
+		{ f="341-a470c4e8", h="a470c4e8", t="I don't have much time for idle talk, SENIRAH.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=13.010, v="human-male-standard", s={ ["f"]=11.728 } },
 		{ f="341-a80917b6", h="a80917b6", t="I don't have much time for idle talk, DJINNE.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=13.077, v="human-male-standard", s={ ["f"]=10.489 } },
 		{ f="341-ad9a602f", h="ad9a602f", t="I don't have much time for idle talk, PRO.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=13.726, v="human-male-standard", s={ ["f"]=9.289 } },
 		{ f="341-d4423011", h="d4423011", t="I don't have much time for idle talk, JUSTPLAYIN.  I've got to get this bridge rebuilt before the rains come.  I've finished every project on-time and under budget and I'm not about to start slipping now.", d=12.969, v="human-male-standard", s={ ["f"]=11.543 } },
@@ -1460,6 +1461,7 @@ pack.gossip = {
 		{ f="1744-bc428669", h="bc428669", t="Morganus the stable master can be found out in front of the stables strangely enough.", d=9.800, v="scourge-male-warrior" },
 		{ f="1744-bff3d364", h="bff3d364", t="That would be Shelene Rhobart.  Take the road southeast out of Brill then head east at the intersection.  She's at a camp along the side of the road.", d=9.640, v="scourge-male-warrior" },
 		{ f="1744-cba2e53b", h="cba2e53b", t="Look inside the Gallows' End Tavern's main dining room for Austil de Mon.  The tavern is on the southeast edge of Brill.", d=11.640, v="scourge-male-warrior" },
+		{ f="1744-ccfca24c", h="ccfca24c", t="If you're willing to risk yourself over the Light, then you can speak with Shari Stilwell near the stables. She can entertain your insanity.", d=9.920, v="scourge-male-warrior" },
 		{ f="1744-d67fe744", h="d67fe744", t="The Rogue Trainer's name is Marion Call.  You can find her upstairs in the reading room at the Gallows' End Tavern at the town's southeast edge.", d=9.800, v="scourge-male-warrior" },
 		{ f="1744-d821d003", h="d821d003", t="Sorry friend, we don't have one of those here in Brill.  You'll have to head to the Undercity for that.  The Undercity is underneath the Ruins of Lordaeron to the south of Brill.  From the back of the ruins take the elevator down and then speak to one of the Undercity Guardians to find your way further.", d=17.960, v="scourge-male-warrior" },
 		{ f="1744-dc5df42b", h="dc5df42b", t="Black, grey and dark purple are the prescribed colors.  See to it that you don't stray onto the wrong side of fashion street friend.  Bowen Brisboise can help to see that you don't.  You'll find him inside Cold Hearth Manor on the other side of the bridge to the southwest of town.", d=18.920, v="scourge-male-warrior" },
@@ -3287,6 +3289,7 @@ pack.gossip = {
 	},
 	[3347] = {
 		{ f="3347-2953edc2", h="2953edc2", t="Another student, eh? All right. I'll see what I can do to help you out.", d=5.687, v="orc-male-standard" },
+		{ f="3347-4d1ed081", h="4d1ed081", t="You're talking to the wrong orc. I don't train novices. Talk to young Whuut over there... and use small words.", d=7.351, v="orc-male-standard" },
 		{ f="3347-9cc6e14a", h="9cc6e14a", t="I'm busy, $N. Tell Whuut to handle whatever it is. That young pup has been stewing all day long. He spends much more time like that, and he's going to hurt something.", d=12.182, v="orc-male-standard" },
 		{ f="3347-f0e2667b", h="f0e2667b", t="I'm honored to meet you, $N, but your skill at potions is greater than my own. Go see Doctor Herbert Halsey, an undead in the Apothecarium of the Undercity. He can help you from now on.", d=13.643, v="orc-male-standard" },
 		{ f="3347-f72c7045", h="f72c7045", t="You're talking to the wrong orc. I don't train novices. Talk to young Whuut over there... and use small words.", d=8.550, v="orc-male-standard" },
@@ -4803,8 +4806,8 @@ pack.gossip = {
 		{ f="5501-f9b860f0", h="f9b860f0", t="I cannot train a $c such as yourself.", d=4.566, v="nightelf-male-warrior" },
 	},
 	[5502] = {
-		{ f="5502-bb901712", h="bb901712", t="Another Herbalist, hmm. I doubt your skill is as great as my own so perhaps I can train you in a few proper techniques.", d=9.253, v="nightelf-female-standard" },
-		{ f="5502-fb513610", h="fb513610", t="I hope that your interruption is for a good cause, I was in the middle of some important work.", d=6.263, v="nightelf-female-standard" },
+		{ f="5502-bb901712", h="bb901712", t="Another Herbalist, hmm. I doubt your skill is as great as my own so perhaps I can train you in a few proper techniques.", d=9.253, v="nightelf-female-standard", s={ ["m"]=8.920 } },
+		{ f="5502-fb513610", h="fb513610", t="I hope that your interruption is for a good cause, I was in the middle of some important work.", d=6.263, v="nightelf-female-standard", s={ ["m"]=5.680 } },
 	},
 	[5503] = {
 		{ f="5503-01ed62ab", h="01ed62ab", t="Made by the finest craftsmen in all of Teldrassil, carried by hand from Kalimdor to Azeroth as a sign of the growing alliance between the people of the Great Tree and the humans of this land. If there is anything you require, you have but to ask.", d=17.738, v="nightelf-female-standard" },
@@ -5007,6 +5010,7 @@ pack.gossip = {
 	[5624] = {
 		{ f="5624-00a6a8e7", h="00a6a8e7", t="Warrior trainers fight good.  You find them in War Quarter on outer ring of Undercity.", d=7.233, v="npc-10699" },
 		{ f="5624-00d342d3", h="00d342d3", t="James Van Brunt in War Quarter on inner ring.", d=3.992, v="npc-10699" },
+		{ f="5624-046ba7ad", h="046ba7ad", t="Think him in Royal Quarter. Kurden Bloodclaw is little orc.", d=7.374, v="npc-10699" },
 		{ f="5624-06e0eb18", h="06e0eb18", t="Us know where they are!  Skull building in Magic Quarter on outer ring of city.", d=9.277, v="npc-10699" },
 		{ f="5624-072251a6", h="072251a6", t="Graham Van Talen in Rogues' Quarter on outer ring of Undercity.", d=5.859, v="npc-10699" },
 		{ f="5624-0c7d0821", h="0c7d0821", t="Lady stitch us up and bandage when we get hit.  You find her in inner ring of Rogues' Quarter.", d=10.433, v="npc-10699" },
@@ -5558,7 +5562,7 @@ pack.gossip = {
 		{ f="6566-0deb5cc3", h="0deb5cc3", t="With the sanction of Lord Varimathras, the Deathstalkers' numbers grow. More blades to strike at our enemies when they least expect it.", d=11.520, v="scourge-female-warrior" },
 	},
 	[6568] = {
-		{ f="6568-56a81353", h="56a81353", t="If tailoring is your thing, Vizzklick will most definitely have your supplies. Take a look around, $n, and let me know if you wish to purchase something!", d=7.872, v="goblin-male-zany" },
+		{ f="6568-56a81353", h="56a81353", t="If tailoring is your thing, Vizzklick will most definitely have your supplies. Take a look around, $N, and let me know if you wish to purchase something!", d=7.872, v="goblin-male-zany" },
 		{ f="6568-c872e7de", h="c872e7de", t="Grab your things, $n! I've just gotten word from Nilith Lokrav in the Searing Gorge that the Undermarket has set up operations in the heart of the Cauldron. Find Nilith Lokrav in the Searing Gorge and get the low down!", d=12.771, v="goblin-male-zany" },
 	},
 	[6569] = {
@@ -6728,7 +6732,7 @@ pack.gossip = {
 		{ f="7783-e5f28cf5", h="e5f28cf5", t="Tragically, it was Thrall's wisdom that finally sealed the bond between the demon lord and his minions. It was Trebor's regiment that served as the catalyst to unite the demon lord, the shadowsworn sects and the ogres. The lure of nearly unlimited power and the granting of immortal shock troops to each respective leader sealed the deal in blood. ", d=27.142, v="nightelf-male-warrior" },
 	},
 	[7804] = {
-		{ f="7804-5b9a1535", h="5b9a1535", t="Split in two to form the one. The twin blades are bound to Zul'Farrak.$B$BSul'thraze reborn when the twins are found.", d=9.536, v="nightelf-male-warrior" },
+		{ f="7804-5b9a1535", h="5b9a1535", t="Split in two to form the one. The twin blades are bound to Zul'Farrak.  Sul'thraze reborn when the twins are found.", d=9.536, v="nightelf-male-warrior" },
 		{ f="7804-b6dff793", h="b6dff793", t="Sul'thraze... the first time I heard the word uttered I was around your age. It meant nothing to me then, as it means nothing to you now. It was not until a warband of trolls coming from Zul'Farrak laid waste to the land that I understood... and feared.  Many will tell you that the Splitblade of Suffering does not exist. That it's a myth; a rumor started to scare children 'straight.' But believe me, $r, it exists.  <Trenton loses focus as he runs his hand across the jagged scar on his face.>", d=33.687, v="nightelf-male-warrior", P={ { d=35.950 }, { d=5.000, n=true } }, nP={ [1]={ [2]=6.320 } } },
 	},
 	[7823] = {
@@ -7096,6 +7100,7 @@ pack.gossip = {
 	},
 	[9076] = {
 		{ f="9076-6b8ae11d", h="6b8ae11d", t="Be advised, $g Jackson : Princess; - I am in no mood for any comment that you think is cute or funny.  I am here to make sure that the Arch Druid's research proceeds as planned, and my orders are to weed out all non-hackers who do not pack the gear to serve in my beloved Cenarion Circle.", d=16.667, v="tauren-male-warrior", g=true },
+		{ f="9076-71ac4a4e", h="71ac4a4e", t="Be advised, Jackson - I am in no mood for any comment that you think is cute or funny.  I am here to make sure that the Arch Druid's research proceeds as planned, and my orders are to weed out all non-hackers who do not pack the gear to serve in my beloved Cenarion Circle.", d=14.729, v="tauren-male-warrior" },
 	},
 	[9077] = {
 		{ f="9077-29d5f228", h="29d5f228", t="And modest too... Perhaps it is your time, then, $n.$B$BAre you prepared to enter the fortress of the Blackrock orcs? To wreak havoc? To tear asunder the foundation of the mountain citadel?", d=15.880, v="orc-male-guard" },
@@ -10861,6 +10866,7 @@ pack.gossip = {
 		{ f="251902-1e4f0028", h="1e4f0028", t="In all of our years dealing with the wind spirits, at no point did they speak of the Windlord as a figure of reverence. They acknowledged the existence of a being named Al'Akir, but they avoided invoking his name, almost as if they feared him.     Even if this Al'Akir is an all-powerful \"Windlord\" or ruler of the wind elementals, my centuries of communion with the spirits has convinced me that at the very least he is not universally loved amongst the denizens of Skywall. I fear that attempting to treat with Al'Akir could merely hasten our doom.", d=37.260, v="skyborne-female" },
 		{ f="251902-243962a6", h="243962a6", t="The Cult? They are zealots and killers. They believe that we are being punished for some unspecific sin. The reality is that those that lead them are opportunists leftover from a dubious order of so-called \"Priests\" of Al'Akir, the Windlord.     They now find themselves in a position to weaponize the fear of our people to consolidate their own power... and they have been quick to do so.", d=26.510, v="skyborne-female" },
 		{ f="251902-5443b09c", h="5443b09c", t="La secte ? C’est un ramassis de zélotes et d’assassins. À les écouter, nous subissons un châtiment lié à un péché bien précis. Mais en vérité, les leaders de cette secte sont des opportunistes provenant d’un ordre douteux, les « prêtres » d’Al’Akir, le seigneur des Vents.    Ces lâches se servent de la peur des gens pour consolider leur propre pouvoir… avec beaucoup de succès.", d=29.710, v="skyborne-female" },
+		{ f="251902-6c3d52fe", h="6c3d52fe", t="Greetings, child. I am Illaya Amberwind and I am the Elder Windshaper here on Zephras Isle. It's always nice to meet young new faces that make their way down from the grove.    Don't let this old $c hold you up, no doubt you've got many adventures to see to. Do feel free to stop by later if you'd like.", d=20.070, v="skyborne-female" },
 		{ f="251902-70d67c67", h="70d67c67", t="Many disagree on this point. I believe that simple communication is the key. The songs of the wind rang so clearly to us when the spirits were still here. Since they left, it's grown quiet and our power as windshapers has weakened.     However, there are those of us who can still hear something. A hushed tone. Fragments of a melody. Those that can still hear and see into the elemental planes must grow in strength. I believe that is the key to our salvation.", d=33.910, v="skyborne-female" },
 		{ f="251902-757bd9b5", h="757bd9b5", t="Salutations, mon enfant. Je suis Illaya Ambrevent, l’ancienne Sculpte-vent de l’île de Zéphras. C’est toujours un plaisir de croiser de nouveaux visages en provenance du bosquet.    Mais l’aventure vous appelle, et je ne vous retiens pas plus longtemps. Revenez donc me voir quand vous aurez un moment.", d=26.640, v="skyborne-female" },
 		{ f="251902-9162c2da", h="9162c2da", t="Where to begin? Our home is failing. The wards have fallen and the three provinces have begun to drift apart. There was a time not long ago when the spires of Shen'dramar were visible from the western watchtower. No longer. The anchor pylons are weakening, and if the chains finally break...", d=21.480, v="skyborne-female" },
@@ -11266,6 +11272,7 @@ pack.gossip = {
 	},
 	[256655] = {
 		{ f="256655-0c543544", h="0c543544", t="Cooking is a life long pursuit and I see we share the same passion!", d=6.253, v="orc-male" },
+		{ f="256655-3b48d638", h="3b48d638", t="Dirge Quikcleave of Gadgetzan is a master of the culinary arts.  To better yourself you will need to seek him out.", d=9.133, v="orc-male" },
 	},
 	[256657] = {
 		{ f="256657-5ac8f650", h="5ac8f650", t="Orcs don't kill humans. Weapons do. And I make weapons.", d=5.160, v="orc-female" },
@@ -11619,7 +11626,7 @@ pack.gossip = {
 	},
 	[263646] = {
 		{ f="263646-53fff4bc", h="53fff4bc", t="I am sorry, $c, but you are not experienced enough yet to enter Darkspear Islands.", d=7.680, v="troll-male" },
-		{ f="263646-fb408f08", h="fb408f08", t="Well, well...are you ready to fight for the Horde in Darkspear Islands?", d=5.640, v="troll-male" },
+		{ f="263646-fb408f08", h="fb408f08", t="Well, well... are you ready to fight for the Horde in Darkspear Islands?", d=5.640, v="troll-male" },
 	},
 	[263647] = {
 		{ f="263647-53fff4bc", h="53fff4bc", t="I am sorry, $c, but you are not experienced enough yet to enter Darkspear Islands.", d=9.040, v="troll-male" },
@@ -11764,6 +11771,7 @@ pack.gossip = {
 		{ f="267322-83e0509a", h="83e0509a", t="Hello, $N! Have you considered taking up a tradeskill?    I would be happy to answer any questions you might have, or point you toward the local trainers.    If this feels overwhelming, that's okay! You can always return here or visit trainers in capital cities to get started on your crafting journey at any time.", d=20.430, v="orc-female" },
 	},
 	[267323] = {
+		{ f="267323-466d697a", h="466d697a", t="Professions are divided between two main categories: primary and secondary.    You are limited to a maximum of two primary professions at a time. You can abandon your skill in a primary profession at any time; however, the wealth of knowledge you gathered for it will be lost. If you choose to return to your original profession, you will need to train from the basics and seek out recipes you previously acquired to refamiliarize yourself with them.    Secondary professions do not have such a limit. These skills tend to err towards self-sufficiency with your basic survival needs. You are free to train any or all of these, but may find fewer opportunities to turn a profit.", d=50.780, v="scourge-male" },
 		{ f="267323-58cf691f", h="58cf691f", t="I am glad you asked!    Professions are skills pertaining to crafting, gathering, and general survival. There are many to choose from, with each offering their own unique benefits and economic opportunities. Whether you seek wealth, an opportunity to stock your guild's warehouse with useful items, or simply enjoy the satisfaction of wearing equipment crafted by your own hand, there's a profession for that.    Crafting recipes can be learned from trainers, such as those around here, and numerous other sources across Azeroth. Once learned, you can craft as many of that item as you wish, provided you can acquire the necessary materials.", d=46.420, v="scourge-male" },
 		{ f="267323-83e0509a", h="83e0509a", t="Hello, $N! Have you considered taking up a tradeskill?    I would be happy to answer any questions you might have, or point you toward the local trainers.    If this feels overwhelming, that's okay! You can always return here or visit trainers in capital cities to get started on your crafting journey at any time.", d=25.030, v="scourge-male" },
 		{ f="267323-b3334d4d", h="b3334d4d", t="Of course! Which profession would you like me to guide you towards?    I will mark your map with the location of a local trainer of your choice. Remember that you can visit trainers in capital cities for more thorough training.", d=13.880, v="scourge-male" },
@@ -11916,7 +11924,7 @@ pack.gossip = {
 		{ f="270582-e6b98502", h="e6b98502", t="Greetings, $c.    I can show you how to weave magic about yourself to change the appearance of your equipment, if you so desire. Do you wish to utilize my services?", d=13.160, v="troll-female" },
 	},
 	[270637] = {
-		{ f="270637-3e0b4d08", h="3e0b4d08", t="So many Wildhammer lives lost... whole families erased...", d=5.080, v="dwarf-male" },
+		{ f="270637-3e0b4d08", h="3e0b4d08", t="So many Wildhammer lives lost... whole families erased...", d=5.080, v="dwarf-male", s={ ["f"]=4.720 } },
 	},
 	[271322] = {
 		{ f="271322-706c4394", h="706c4394", t="Are the Dark Irons gone?", d=1.833, v="human-female" },
@@ -12105,10 +12113,13 @@ pack.gossip = {
 		{ f="277042-893a469d", h="893a469d", t="Welcome to my barbershop! We offer cuts, colorings, and more.    We can groom facial hair, perform piercings, ink $r tattoos, anything you might need.    Have a seat and we'll get to work.", d=12.840, v="nightelf-male", s={ ["f"]=13.520 } },
 	},
 	[277055] = {
-		{ f="277055-74f9b051", h="74f9b051", t="Welcome to my barbershop! We offer cuts, colorings, and more.    We can groom facial hair, perform piercings, reshape tusks and horns, and even modify undead features!    Have a seat and we'll get to work.", d=15.560, v="tauren-female", s={ ["m"]=17.000 } },
-		{ f="277055-98eee030", h="98eee030", t="Welcome, friend, to the barbershop! Come for a cut? A coloring? Something else, perhaps?    We can groom facial hair, perform piercings, reshape tusks and horns, and even modify undead features!    Have a seat and we'll get right to work. You're only moments away from a new, more attractive you...", d=20.320, v="tauren-female", s={ ["m"]=22.640 } },
+		{ f="277055-74f9b051", h="74f9b051", t="Welcome to my barbershop! We offer cuts, colorings, and more.    We can groom facial hair, perform piercings, reshape tusks and horns, and even modify undead features!    Have a seat and we'll get to work.", d=17.720, v="scourge-male", s={ ["f"]=16.120 } },
+		{ f="277055-98eee030", h="98eee030", t="Welcome, friend, to the barbershop! Come for a cut? A coloring? Something else, perhaps?    We can groom facial hair, perform piercings, reshape tusks and horns, and even modify undead features!    Have a seat and we'll get right to work. You're only moments away from a new, more attractive you...", d=21.120, v="scourge-male", s={ ["f"]=21.520 } },
 	},
 	[277311] = {
 		{ f="277311-84420816", h="84420816", t="<The haggard-looking man mutters to himself incoherently.>", P={ { d=3.200, n=true } }, nP={ [1]={ [1]=4.040 } } },
+	},
+	[278680] = {
+		{ f="278680-fe2e6e48", h="fe2e6e48", t="What can I do for ya?", d=1.720, v="goblin-female" },
 	},
 }
