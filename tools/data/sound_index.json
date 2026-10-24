@@ -35368,6 +35368,27 @@
   "t": "710193e3+cfg_weight=0.3,clips=b50759e2,exaggeration=0.7",
   "v": "dwarf-male-grim"
  },
+ "27305-3d2da9f9": {
+  "c": 300,
+  "d": 5.387506,
+  "s": 1100931338,
+  "t": "3d2da9f9+cfg_weight=0.3,clips=2a9f3a90,exaggeration=0.7,tempo=1.1",
+  "v": "human-female"
+ },
+ "27305-4d0813e6": {
+  "c": 300,
+  "d": 3.384263,
+  "s": 2019564114,
+  "t": "40828f86+cfg_weight=0.3,clips=2a9f3a90,exaggeration=0.7,tempo=1.1",
+  "v": "human-female"
+ },
+ "27305-8baf521d": {
+  "c": 300,
+  "d": 5.788685,
+  "s": 1583945679,
+  "t": "8baf521d+cfg_weight=0.3,clips=2a9f3a90,exaggeration=0.7,tempo=1.1",
+  "v": "human-female"
+ },
  "2733-10e876c3": {
   "c": 300,
   "d": 7.8,
@@ -171629,6 +171650,13 @@
   "s": 1752517317,
   "t": "f32c06a3+clips=e08e20a9",
   "v": "troll-male-dark"
+ },
+ "Speaker/7315/1698-accept": {
+  "c": 300,
+  "d": 14.262676,
+  "s": 333022595,
+  "t": "371b42a4+cfg_weight=0.4,clips=f4429bcb,exaggeration=0.25,speed=0.99",
+  "v": "nightelf-male-warrior"
  },
  "a00fcf8f-page": {
   "d": 20.6,

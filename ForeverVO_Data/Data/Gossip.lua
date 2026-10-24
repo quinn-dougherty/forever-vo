@@ -10602,6 +10602,11 @@ pack.gossip = {
 	[17804] = {
 		{ f="17804-3955e9f1", h="3955e9f1", t="Greetings, citizen. I ask that you move along if you have nothing to ask of me.", d=5.616, v="human-male-warrior" },
 	},
+	[27305] = {
+		{ f="27305-3d2da9f9", h="3d2da9f9", t="Do not lose hope, my son.  With faith, we will march  through this darkness and once again see the dawn.", d=5.388, v="human-female" },
+		{ f="27305-4d0813e6", h="4d0813e6", t="May the Light purge your infection, brave $N.", d=3.384, v="human-female" },
+		{ f="27305-8baf521d", h="8baf521d", t="Do not lose hope, my daughter.  With faith, we will march  through this darkness and once again see the dawn.", d=5.789, v="human-female" },
+	},
 	[28989] = {
 		{ f="28989-0a03e13c", h="0a03e13c", t="I'm hoping to open my very own shop soon! In the meantime, would you like to buy anything?    Every bit counts towards funding my dream!", d=8.840, v="bloodelf-female" },
 	},
