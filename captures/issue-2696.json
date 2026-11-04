@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "658|003beda2": {
+   "build": "70790",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Sten Stoutarm",
+   "npc": "658",
+   "questID": null,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Ah, well aren't you a sturdy-looking one? Perhaps you can assist me with a thing or two. Not much help around here except for green apprentices, and they've other things to worry about.",
+   "time": 1793835012,
+   "title": null,
+   "wanted": null,
+   "zone": "Dun Morogh"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "658": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Sten Stoutarm",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2696",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
