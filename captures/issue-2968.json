@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "5941|c2467ddc": {
+   "build": "70790",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Lau'Tiki",
+   "npc": "5941",
+   "questID": null,
+   "race": "Troll",
+   "sex": "m",
+   "source": "community",
+   "text": "I can teach you fishing skills.",
+   "time": 1793909032,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "5941": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1022938,
+   "name": "Lau'Tiki",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2968",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
