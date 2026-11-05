@@ -1,0 +1,78 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "3143": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Gornek",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2772",
+ "quests": {
+  "3082-accept": {
+   "build": "70790",
+   "class": "Hunter",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Gornek",
+   "npc": "3143",
+   "questID": 3082,
+   "race": "Troll",
+   "sex": "m",
+   "source": "community",
+   "text": "Ah, while you were gone a tablet came for you, $N.\n\nRead it when you have time. If I'm not mistaken, it came from the $c trainer Jen'shan. She would have words with you when you're ready.",
+   "time": 1793868364,
+   "title": "Etched Tablet",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "788-complete": {
+   "build": "70790",
+   "class": "Hunter",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Gornek",
+   "npc": "3143",
+   "questID": 788,
+   "race": "Troll",
+   "sex": "m",
+   "source": "community",
+   "text": "Hmmm, not bad, $N. But don't let it get to your head...you'll fight tougher than boars in your career.\n\nNonetheless, you've proven yourself well, and your next trial will be against a considerably more dangerous opponent, so you'll need some extra protection.",
+   "time": 1793868337,
+   "title": "Cutting Teeth",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "789-accept": {
+   "build": "70790",
+   "class": "Hunter",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Gornek",
+   "npc": "3143",
+   "questID": 789,
+   "race": "Troll",
+   "sex": "m",
+   "source": "community",
+   "text": "Powerful warrior and awkward novice alike have fallen to the venomous sting of the scorpid. You will find large numbers of scorpids northwest of here. Bring me ten of their tails as proof of your prowess in battle.\n\nThe antidote for their sting is actually made from venom extracted from their stingers. We keep large quantities of antidote for scorpid venom on hand to heal young bloods just like you...\n\nBut I'm sure you won't be needing any of that, will you?",
+   "time": 1793868359,
+   "title": "Sting of the Scorpid",
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
