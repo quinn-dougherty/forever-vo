@@ -1,0 +1,60 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "247229|55b52cc4": {
+   "build": "70790",
+   "class": "Priest",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Daniel",
+   "npc": "247229",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "What does Brother Paxton need now?",
+   "time": 1793835185,
+   "title": null,
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "247229": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Daniel",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2865",
+ "quests": {
+  "91741-accept": {
+   "build": "70790",
+   "class": "Priest",
+   "differs": null,
+   "event": "accept",
+   "isObject": true,
+   "mapID": 1429,
+   "name": "Unknown",
+   "npc": null,
+   "questID": 91741,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "<One of the kobolds dropped this book. It looks like the kobold might have tried to eat it.\r\n\r\nBrother Paxton inside the abbey has a small library he maintains. The book must have come from there.>",
+   "time": 1793834457,
+   "title": "Nibbled-On Book",
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
