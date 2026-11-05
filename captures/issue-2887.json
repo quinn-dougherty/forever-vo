@@ -1,0 +1,98 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "1569|e2fc85be": {
+   "build": "70790",
+   "class": "Mage",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Shadow Priest Sarvis",
+   "npc": "1569",
+   "questID": null,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "No other race on Azeroth has suffered as much as our people, $c. To laugh in the face of death has become second nature for all of us.",
+   "time": 1793893709,
+   "title": null,
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "1569": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 121768,
+   "name": "Shadow Priest Sarvis",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2887",
+ "quests": {
+  "363-complete": {
+   "build": "70790",
+   "class": "Mage",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Shadow Priest Sarvis",
+   "npc": "1569",
+   "questID": 363,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "Another of the walking dead, hm? Must have been quite a shock, waking up in the crypt with only the cold and Mordo to greet you...\n\nI see the confusion on your face. Let me try to explain our... situation... to you.\n\nWe have been freed from the control of the Lich King by our new leader, Lady Sylvanas. The Dark Lady guides us in our war against the hated Scourge and the holdouts of humanity who dog our every step.",
+   "time": 1793893692,
+   "title": "Rude Awakening",
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  },
+  "364-accept": {
+   "build": "70790",
+   "class": "Mage",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Shadow Priest Sarvis",
+   "npc": "1569",
+   "questID": 364,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "We Forsaken are at war with the Lich King's army of the Scourge: necromantically raised armies of the $r, foul beasts of the north, and tormented spectres.\n\nThe northern part of the village has become overrun with the Mindless Ones, and they must be destroyed. Destroy them, show them no mercy, our former brothers and sisters as they might be. The Fallen are nothing but The Lich King's slaves.",
+   "time": 1793893694,
+   "title": "The Mindless Ones",
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  },
+  "364-progress": {
+   "build": "70790",
+   "class": "Mage",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Shadow Priest Sarvis",
+   "npc": "1569",
+   "questID": 364,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "You will not go far in this new life if you are unable to kill even the weakest of zombies, $N. Do not return until you have success to report.",
+   "time": 1793893710,
+   "title": "The Mindless Ones",
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
