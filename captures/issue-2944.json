@@ -1,0 +1,94 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "2948": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Mull Thunderhorn",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3065": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Yaw Sharpmane",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3067": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Pyall Silentstride",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2944",
+ "quests": {
+  "748-progress": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Mull Thunderhorn",
+   "npc": "2948",
+   "questID": 748,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Do you have the paws and talons, $N?",
+   "time": 1793898866,
+   "title": "Poison Water",
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "96130-progress": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Yaw Sharpmane",
+   "npc": "3065",
+   "questID": 96130,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Have you found the big wolf?",
+   "time": 1793900076,
+   "title": "Chakuyak",
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "96661-progress": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Pyall Silentstride",
+   "npc": "3067",
+   "questID": 96661,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "A good campfire is the foundation to any good camp.",
+   "time": 1793896819,
+   "title": "Camping 101: Cooking",
+   "wanted": null,
+   "zone": "Mulgore"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
