@@ -1,0 +1,115 @@
+{
+ "addon": "0.1.10",
+ "books": {
+  "b76f9f9f": {
+   "build": "70790",
+   "class": "Hunter",
+   "differs": null,
+   "event": "page",
+   "isObject": null,
+   "mapID": 1411,
+   "name": null,
+   "npc": null,
+   "page": 1,
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Ya be in good hands now, mon. Jen'shan know you be lookin' to learn da ways of da $c, and she be ready to teach you... if you be ready to listen.\n\nCome find me in da Valley of Trials. Jen'shan start your trainin' and show you just how powerful da ways of da $c is.\n\n-Jen'shan, $C Trainer",
+   "time": 1793886921,
+   "title": "Etched Parchment",
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "3143": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Gornek",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3145": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 949470,
+   "name": "Zureetha Fargaze",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "3154": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1018060,
+   "name": "Jen'shan",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2899",
+ "quests": {
+  "3087-accept": {
+   "build": "70790",
+   "class": "Hunter",
+   "differs": true,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Gornek",
+   "npc": "3143",
+   "questID": 3087,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Ah, while you were gone a parchment came for you, $N.\n\nRead it when you have time. If I'm not mistaken, it came from the $c trainer Jen'shan. She would have words with you when you're ready.",
+   "time": 1793886913,
+   "title": "Etched Parchment",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "3087-progress": {
+   "build": "70790",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Jen'shan",
+   "npc": "3154",
+   "questID": 3087,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Ah, so you come at last. Good. Jen'shan be waitin' for you.\n\nMany tink it be an easy path, but Jen'shan tell you dat not true. Mastering da beasts of Durotar and beyond take as much skill as masterin' the arcane arts or speakin' to our ancestors.\n\nFirin' a bow or rifle may not be as dangerous to you as castin' a spell, but it sure be as dangerous to your enemy.",
+   "time": 1793887014,
+   "title": "Etched Parchment",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "792-progress": {
+   "build": "70790",
+   "class": "Hunter",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Zureetha Fargaze",
+   "npc": "3145",
+   "questID": 792,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "To prove yourself against the Burning Blade, you must first defeat its Vile Familiars.  Return to me when you have done this.",
+   "time": 1793887009,
+   "title": "Vile Familiars",
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
