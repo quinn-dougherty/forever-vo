@@ -67,7 +67,7 @@ local commands = {
     report = { "Copy a link that opens a GitHub issue about the line that is playing", function()
         ns.Report:Show(ns.Report:Current())
     end },
-    welcome = { "Show the welcome message again", function() ns.Welcome:Show(true) end },
+    welcome = { "Show the welcome message again", function() ns.Welcome:Show() end },
     debug  = { "Toggle debug messages", function()
         ns.db.debug = not ns.db.debug
         ns.Print("debug", ns.db.debug and "on" or "off")

@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.11
+
+- We're no longer working on Forever Voiceover. Please download
+  [Spoken](https://www.curseforge.com/wow/addons/spoken) instead. The login
+  window says so and carries the link, which is also under **Switch to
+  Spoken** on the addon's page in Options; **Don't Show This Again** stops
+  the window. It no longer asks you to send lines or calls for volunteers,
+  and `/fvo export` still works.
+- The queue list and the debug panel keep clear of each other and of the
+  screen edge, and the queue count sits on the queue button.
+
 ## 0.1.10
 
 - Forever Voiceover is looking for volunteers. The login window links to the

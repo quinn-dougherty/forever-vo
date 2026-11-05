@@ -380,7 +380,6 @@ function Capture:Pending()
     return questCount, gossip, books
 end
 
--- Before Welcome's handler counts what there is to send: Capture.lua loads first.
 ns.OnLogin(function()
     Capture:Refresh()
 end)

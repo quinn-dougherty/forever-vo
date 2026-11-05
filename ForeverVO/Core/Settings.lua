@@ -253,20 +253,16 @@ ns.OnInit(function()
     -- The addon's own page: the ways to help the project, where a player looking
     -- to opt back in lands first, then the versions a bug report asks for
     layout:AddInitializer(CreateSettingsListSectionHeaderInitializer("Contribute"))
-    local send = ButtonRow(layout, function() return ns.Export:SendLabel() end,
+    ButtonRow(layout, function() return ns.Export:SendLabel() end,
         "Copy a link that opens a GitHub issue with the quest and NPC lines you have heard since your last export that the voice pack does not have yet. The same as /fvo export.",
         function() ns.Export:Show(false) end,
         function() return ns.Export:HasLines(false) end)
-    -- Under Send, indented and small as Blizzard draws a sub-option: it turns
-    -- off the login window that offers the same export
-    local _, optOut = Checkbox(category, "crowdsourceOptOut", "Opt out of crowdsourcing", "Stop the window at login that offers to send quests and NPC lines the voice pack does not have yet. Clear it to be asked again. /fvo export works either way.")
-    optOut:SetParentInitializer(send)
     ButtonRow(layout, function() return "Report Bug" end,
         "Say what went wrong and copy a link that opens a GitHub issue with your addon and voice pack versions filled in.",
         function() ns.Report:ShowGeneral() end)
-    ButtonRow(layout, function() return "Call for Volunteers" end,
-        "Show the link to the call for volunteers on GitHub: tuning voices for the voice packs and looking after the addon.",
-        function() ns.Welcome:ShowVolunteers() end)
+    ButtonRow(layout, function() return "Switch to Spoken" end,
+        "Forever Voiceover is no longer worked on. Show the link to Spoken.",
+        function() ns.Welcome:Show() end)
     layout:AddInitializer(VersionsInitializer())
 
     -- What to voice

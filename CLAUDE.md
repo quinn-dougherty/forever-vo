@@ -83,7 +83,9 @@ own recordings).
 - The login window (`Core/Welcome.lua`) is a plain frame, not a StaticPopup:
   StaticPopups from addons taint the gamepad UI path and froze the client (#44).
   It shows once per run of the client (`welcomeShownAt`, the client's start
-  time from `time() - GetSessionTime()`).
+  time from `time() - GetSessionTime()`) and, since 2026-11-05, only says the
+  project has stopped and links Spoken, to every player until they tick Don't
+  Show This Again (`spokenNoticeDismissed`).
 - Voice pack format is documented at the top of `ForeverVO/Core/Packs.lua`.
   Quests are keyed by ID and event; gossip by speaker key (creature ID,
   negative for game objects) plus a text hash, with a Jaccard fuzzy fallback.
