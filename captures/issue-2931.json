@@ -1,0 +1,86 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "251361": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478487,
+   "name": "Rorian the Dayseeker",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "251389": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478487,
+   "name": "Akeri Duskblade",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2931",
+ "quests": {
+  "92483-accept": {
+   "build": "70790",
+   "class": "Rogue",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Rorian the Dayseeker",
+   "npc": "251361",
+   "questID": 92483,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "While you were away dealing with our vuldren problem, our resident $c trainer--Akeri Duskblade--has requested to speak with you. He left this note, so read that first, then seek him out inside the watchtower, here in the village.\r\n\r\nHe's a shady fellow, but then again, so are you. I think you'll get along well.",
+   "time": 1793838466,
+   "title": "At Home in the Shadows",
+   "wanted": true,
+   "zone": "Zephras Isle"
+  },
+  "92483-complete": {
+   "build": "70790",
+   "class": "Rogue",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Akeri Duskblade",
+   "npc": "251389",
+   "questID": 92483,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "I almost did not hear you approach me, young $c.\r\n\r\nAlmost.\r\n\r\nAlmost won't be good enough when you leave Thendal Grove. You must be a slender blade, silent and steady. Ever vigilant and ever mindful of your surroundings. You might have what it takes to survive the dangers of Zephras. You also might end up with your throat slit in a ditch. Ultimately that's entirely up to you.\r\n\r\nSpeak with me again if you wish to take your next steps.",
+   "time": 1793838489,
+   "title": "At Home in the Shadows",
+   "wanted": true,
+   "zone": "Zephras Isle"
+  },
+  "92483-progress": {
+   "build": "70790",
+   "class": "Rogue",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Akeri Duskblade",
+   "npc": "251389",
+   "questID": 92483,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "<Akeri eyes you suspiciously.>",
+   "time": 1793838489,
+   "title": "At Home in the Shadows",
+   "wanted": null,
+   "zone": "Zephras Isle"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
