@@ -1,0 +1,59 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "1269": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 119159,
+   "name": "Razzle Sprysprocket",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2835",
+ "quests": {
+  "412-complete": {
+   "build": "70790",
+   "class": "Mage",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Razzle Sprysprocket",
+   "npc": "1269",
+   "questID": 412,
+   "race": "Gnome",
+   "sex": "f",
+   "source": "community",
+   "text": "These Gyromechanic Gears and Restabilization Cogs are in perfect accordance with Ozzie's schematics for the Recombobulation Device.  Once I add some hydrolubricant to the inner combustion pistons, adjust the crank-o-ratchet and increase of the viscosity of the electrogum gel, the gnomish race will be as good as new.",
+   "time": 1793885118,
+   "title": "Operation Recombobulation",
+   "wanted": null,
+   "zone": "Dun Morogh"
+  },
+  "412-progress": {
+   "build": "70790",
+   "class": "Mage",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Razzle Sprysprocket",
+   "npc": "1269",
+   "questID": 412,
+   "race": "Gnome",
+   "sex": "f",
+   "source": "community",
+   "text": "The Recombobulator will be up and running as soon as we have sufficient Restabilization Cogs and Gyromechanic Gears.",
+   "time": 1793885116,
+   "title": "Operation Recombobulation",
+   "wanted": null,
+   "zone": "Dun Morogh"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
