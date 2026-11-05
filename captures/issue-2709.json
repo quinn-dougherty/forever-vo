@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "1518": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Apothecary Johaan",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2709",
+ "quests": {
+  "367-progress": {
+   "build": "70790",
+   "class": "Paladin",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Apothecary Johaan",
+   "npc": "1518",
+   "questID": 367,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "Have you collected 5 vials of darkhound blood yet, $N? Time is fleeting!",
+   "time": 1793841024,
+   "title": "A New Plague",
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
