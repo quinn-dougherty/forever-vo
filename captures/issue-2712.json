@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "2079|26ba7149": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Conservator Ilthalaine",
+   "npc": "2079",
+   "questID": null,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "Ah, the beauty of Shadowglen never ceases to delight my senses!",
+   "time": 1793841986,
+   "title": null,
+   "wanted": null,
+   "zone": "Teldrassil"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "2079": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 974343,
+   "name": "Conservator Ilthalaine",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2712",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
