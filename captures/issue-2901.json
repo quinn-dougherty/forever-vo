@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "6928|7161de72": {
+   "build": "70790",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Innkeeper Grosk",
+   "npc": "6928",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "If we are to make these new lands ours then we must have places to rest our battle weary bodies. Lay your axe by the fire and share the stories of your mighty battles.",
+   "time": 1793892568,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "6928": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 121287,
+   "name": "Innkeeper Grosk",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2901",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
