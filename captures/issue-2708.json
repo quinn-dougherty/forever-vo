@@ -1,0 +1,87 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "263399|b37c4e4d": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Sam Sarsaparilla",
+   "npc": "263399",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Howdy there, traveler!",
+   "time": 1793840997,
+   "title": null,
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "241": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Remy \"Two Times\"",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "263399": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Sam Sarsaparilla",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2708",
+ "quests": {
+  "99129-complete": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Remy \"Two Times\"",
+   "npc": "241",
+   "questID": 99129,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "I've been warning the guards about the murlocs. They won't listen.\r\n\r\nI have a few ideas on how to get back at those critters. I'll need your help getting what I need for it though.",
+   "time": 1793841022,
+   "title": "A Man About a Murloc",
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  },
+  "99130-accept": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Remy \"Two Times\"",
+   "npc": "241",
+   "questID": 99130,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "I've got a few ideas on how to deal with murlocs. And one of those also helps some others in the process.\r\n\r\nThere's a weed often found on farms in the area called duskweed, and in large quantities the petals are toxic to most animals. If we make some murloc bait with the plant, hopefully that can train those creatures to stay away.\r\n\r\nAnd some farmers get their fields cleared in the process. Truly a win-win... truly a win-win.",
+   "time": 1793841024,
+   "title": "An Enticing Offer",
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
