@@ -1,0 +1,141 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "197|877c25a9": {
+   "build": "70790",
+   "class": "Paladin",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Marshal McBride",
+   "npc": "197",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Hey, citizen!  You look like a stout one.  We guards are spread a little thin out here, and I could use your help...",
+   "time": 1793879782,
+   "title": null,
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  },
+  "247227|0371bf6f": {
+   "build": "70790",
+   "class": "Paladin",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Riley Peltskinner",
+   "npc": "247227",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Care to learn how to gather leather from slain beasts? Or do you need some new tools?",
+   "time": 1793879301,
+   "title": null,
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  },
+  "247229|83e0509a": {
+   "build": "70790",
+   "class": "Paladin",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Daniel",
+   "npc": "247229",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Hello, $N! Have you considered taking up a tradeskill?\r\n\r\nI would be happy to answer any questions you might have, or point you toward the local trainers.\r\n\r\nIf this feels overwhelming, that's okay! You can always return here or visit trainers in capital cities to get started on your crafting journey at any time.",
+   "time": 1793879010,
+   "title": null,
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  },
+  "925|837f02f9": {
+   "build": "70790",
+   "class": "Paladin",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Brother Sammuel",
+   "npc": "925",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "May the Light protect you this day.",
+   "time": 1793879930,
+   "title": null,
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "197": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Marshal McBride",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "247227": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1000764,
+   "name": "Riley Peltskinner",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "247229": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Daniel",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "925": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Brother Sammuel",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2815",
+ "quests": {
+  "91741-accept": {
+   "build": "70790",
+   "class": "Paladin",
+   "differs": null,
+   "event": "accept",
+   "isObject": true,
+   "mapID": 1429,
+   "name": "Unknown",
+   "npc": null,
+   "questID": 91741,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "<One of the kobolds dropped this book. It looks like the kobold might have tried to eat it.\r\n\r\nBrother Paxton inside the abbey has a small library he maintains. The book must have come from there.>",
+   "time": 1793879567,
+   "title": "Nibbled-On Book",
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
