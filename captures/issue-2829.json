@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "251968|88447c8b": {
+   "build": "70790",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Ayessa Dawnsinger",
+   "npc": "251968",
+   "questID": null,
+   "race": "Windshaper Skyborne",
+   "sex": "m",
+   "source": "community",
+   "text": "Greetings, I am Ayessa Dawnsinger, the current Grand Skyseer of the Windshapers. What may I do for you?",
+   "time": 1793884123,
+   "title": null,
+   "wanted": null,
+   "zone": "Zephras Isle"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "251968": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478494,
+   "name": "Ayessa Dawnsinger",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2829",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
