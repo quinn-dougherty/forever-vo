@@ -1,0 +1,95 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "1215|ca38a19f": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Alchemist Mallory",
+   "npc": "1215",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "You've made a good start, but you still have a great deal to learn, $N.",
+   "time": 1793872930,
+   "title": null,
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  },
+  "1694|dfb1c97a": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Loslor Rudge",
+   "npc": "1694",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Welcome to Steelgrill's Depot!",
+   "time": 1793871576,
+   "title": null,
+   "wanted": null,
+   "zone": "Dun Morogh"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "1215": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Alchemist Mallory",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "1376": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Beldin Steelgrill",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "1694": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 878772,
+   "name": "Loslor Rudge",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2807",
+ "quests": {
+  "400-progress": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Beldin Steelgrill",
+   "npc": "1376",
+   "questID": 400,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Hm?  You look a little young to be a siege engine pilot.  But no matter...do you need something fixed?\n\nWell take a number and get comfortable.  I'm working on a couple engines right now and won't have time for another job for at least a few days.\n\nOr, were you here for something else...?",
+   "time": 1793871560,
+   "title": "Tools for Steelgrill",
+   "wanted": null,
+   "zone": "Dun Morogh"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
