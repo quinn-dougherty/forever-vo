@@ -1,0 +1,94 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "2155": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 921844,
+   "name": "Sentinel Shayla Nightbreeze",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "275683": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 921844,
+   "name": "Sentinel Eralya Leafshadow",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "7316": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 921844,
+   "name": "Sister Aquinne",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2938",
+ "quests": {
+  "490-progress": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Sentinel Shayla Nightbreeze",
+   "npc": "2155",
+   "questID": 490,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "Teldrassil cannot thrive with corruption tainting the land. Drive the Gnarlpine from this forest, once and for all.",
+   "time": 1793900773,
+   "title": "Bounty: Gnarlpine Furbolg",
+   "wanted": null,
+   "zone": "Teldrassil"
+  },
+  "98391-complete": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1457,
+   "name": "Sister Aquinne",
+   "npc": "7316",
+   "questID": 98391,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "I am glad you arrived so quickly. The Sisterhood requires your aid.",
+   "time": 1793895631,
+   "title": "The Sisterhood of Elune",
+   "wanted": null,
+   "zone": "Darnassus"
+  },
+  "99046-complete": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Sentinel Eralya Leafshadow",
+   "npc": "275683",
+   "questID": 99046,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "Elune's grace... I shall not die... alone...",
+   "time": 1793896374,
+   "title": "The Lost Runner",
+   "wanted": null,
+   "zone": "Teldrassil"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
