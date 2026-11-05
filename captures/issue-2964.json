@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "823": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Deputy Willem",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2964",
+ "quests": {
+  "5261-accept": {
+   "build": "70790",
+   "class": "Paladin",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Deputy Willem",
+   "npc": "823",
+   "questID": 5261,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Eagan Peltskinner is looking for someone to hunt wolves for him.  That's good news, because we're seeing a lot more wolves in Northshire Valley lately.\n\nIf you're interested then speak with Eagan.  He's around the side of the abbey, to the left.",
+   "time": 1793908968,
+   "title": "Eagan Peltskinner",
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
