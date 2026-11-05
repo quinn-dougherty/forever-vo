@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "3139": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 121287,
+   "name": "Gar'Thok",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2920",
+ "quests": {
+  "837-complete": {
+   "build": "70790",
+   "class": "Shaman",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Gar'Thok",
+   "npc": "3139",
+   "questID": 837,
+   "race": "Troll",
+   "sex": "m",
+   "source": "community",
+   "text": "I will pass along word that the quilboars have been removed from their lairs, and that their structures may be set to fire. The removal of the Razormane from Durotar brings us closer to fully securing the borders of our new homeland.",
+   "time": 1793900264,
+   "title": "Encroachment",
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
