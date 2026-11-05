@@ -1,0 +1,118 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "267287|83e0509a": {
+   "build": "70790",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Sylassa Moonglow",
+   "npc": "267287",
+   "questID": null,
+   "race": "Night Elf",
+   "sex": "f",
+   "source": "community",
+   "text": "Hello, $N! Have you considered taking up a tradeskill?\r\n\r\nI would be happy to answer any questions you might have, or point you toward the local trainers.\r\n\r\nIf this feels overwhelming, that's okay! You can always return here or visit trainers in capital cities to get started on your crafting journey at any time.",
+   "time": 1793879387,
+   "title": null,
+   "wanted": null,
+   "zone": "Teldrassil"
+  },
+  "267333|0371bf6f": {
+   "build": "70790",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Terunne Bearshaper",
+   "npc": "267333",
+   "questID": null,
+   "race": "Night Elf",
+   "sex": "f",
+   "source": "community",
+   "text": "Care to learn how to gather leather from slain beasts? Or do you need some new tools?",
+   "time": 1793879477,
+   "title": null,
+   "wanted": null,
+   "zone": "Teldrassil"
+  },
+  "3596|b86d1736": {
+   "build": "70790",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Ayanna Everstride",
+   "npc": "3596",
+   "questID": null,
+   "race": "Night Elf",
+   "sex": "f",
+   "source": "community",
+   "text": "Welcome to the Cenarion Circle, $c.",
+   "time": 1793879882,
+   "title": null,
+   "wanted": null,
+   "zone": "Teldrassil"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "-654846": {
+   "isObject": true,
+   "name": "Unknown"
+  },
+  "267287": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 921844,
+   "name": "Sylassa Moonglow",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "267333": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 974343,
+   "name": "Terunne Bearshaper",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3596": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 921844,
+   "name": "Ayanna Everstride",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2830",
+ "quests": {
+  "96630-accept": {
+   "build": "70790",
+   "class": "Hunter",
+   "differs": null,
+   "event": "accept",
+   "isObject": true,
+   "mapID": 1438,
+   "name": "Unknown",
+   "npc": "-654846",
+   "questID": 96630,
+   "race": "Night Elf",
+   "sex": "f",
+   "source": "community",
+   "text": "<The journal appears to be quite plain, detailing the life and adventures of someone you've never heard of.\r\n\r\nThere are multiple entries mentioning camping. It seems to be quite... fun.>",
+   "time": 1793879859,
+   "title": "The Adventurer",
+   "wanted": null,
+   "zone": "Teldrassil"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
