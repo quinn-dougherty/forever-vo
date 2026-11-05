@@ -1,0 +1,115 @@
+{
+ "addon": "0.1.10",
+ "books": {
+  "c2f55c0f": {
+   "build": "70790",
+   "class": "Warlock",
+   "differs": null,
+   "event": "page",
+   "isObject": null,
+   "mapID": 1420,
+   "name": null,
+   "npc": null,
+   "page": 1,
+   "questID": null,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "An awful predicament to find ourselves in, isn't it, $N? Plagued by the Foul Prince. Ostracized and spurned by our own loved ones. We finally have our own will thanks to the beautiful Sylvanas, but what does that afford us now? Slaves to a different master is still a slave, or so I say.\n\nBut what if we were the masters? Yes, you know what I mean, don't you?\n\nWe are even more separated from the rest of the Forsaken, $N. And that is why we must speak further. Find me in the church in Deathknell.",
+   "time": 1793887952,
+   "title": "Tainted Scroll",
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  }
+ },
+ "gossip": {
+  "1569|e2fc85be": {
+   "build": "70790",
+   "class": "Warlock",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Shadow Priest Sarvis",
+   "npc": "1569",
+   "questID": null,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "No other race on Azeroth has suffered as much as our people, $c. To laugh in the face of death has become second nature for all of us.",
+   "time": 1793887921,
+   "title": null,
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  },
+  "2126|db7f8bbb": {
+   "build": "70790",
+   "class": "Warlock",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Maximillion",
+   "npc": "2126",
+   "questID": null,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "It is wise that you humble yourself before me $N in your desire for more $c knowledge.",
+   "time": 1793888055,
+   "title": null,
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  },
+  "5749|721fd095": {
+   "build": "70790",
+   "class": "Warlock",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Kayla Smithe",
+   "npc": "5749",
+   "questID": null,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "Want to make your demons more powerful?  It'll cost you, but you've come to the right place.",
+   "time": 1793888160,
+   "title": null,
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "1569": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Shadow Priest Sarvis",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "2126": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Maximillion",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "5749": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 997378,
+   "name": "Kayla Smithe",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2861",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
