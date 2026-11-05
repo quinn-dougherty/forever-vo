@@ -1,0 +1,67 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "196": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 119940,
+   "name": "Eagan Peltskinner",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "951": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 119940,
+   "name": "Brother Paxton",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2777",
+ "quests": {
+  "33-progress": {
+   "build": "70790",
+   "class": "Priest",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Eagan Peltskinner",
+   "npc": "196",
+   "questID": 33,
+   "race": "Human",
+   "sex": "f",
+   "source": "community",
+   "text": "Hey $N.  I'm getting hungry...did you get that tough wolf meat?",
+   "time": 1793868943,
+   "title": "Wolves Across the Border",
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  },
+  "91741-progress": {
+   "build": "70790",
+   "class": "Priest",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Brother Paxton",
+   "npc": "951",
+   "questID": 91741,
+   "race": "Human",
+   "sex": "f",
+   "source": "community",
+   "text": "What's that you got there? It looks like one of my books.",
+   "time": 1793869172,
+   "title": "Nibbled-On Book",
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
