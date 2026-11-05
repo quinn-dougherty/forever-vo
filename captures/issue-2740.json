@@ -1,0 +1,133 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "2980|e775a01e": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Grull Hawkwind",
+   "npc": "2980",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Greetings, $N, and welcome to Camp Narache. News of your arrival spread quickly among the tribe.",
+   "time": 1793850600,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "3059|4711dbab": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Harutt Thunderhorn",
+   "npc": "3059",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "No matter how much one learns, there is always more to know.",
+   "time": 1793850651,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "2980": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Grull Hawkwind",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "2981": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Chief Hawkwind",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3059": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Harutt Thunderhorn",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2740",
+ "quests": {
+  "3091-progress": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Harutt Thunderhorn",
+   "npc": "3059",
+   "questID": 3091,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Ah, at last, you've arrived, $c. I did not lie in my note, $N. We are a special breed also, not unlike the druids or shamans of our tribe. You are just as important. We are the ones called upon to defend our borders, to hunt the centaur, and to go to war.",
+   "time": 1793850649,
+   "title": "Simple Note",
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "747-progress": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Grull Hawkwind",
+   "npc": "2980",
+   "questID": 747,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Providing meat and feathers for the tribe is the first step in proving yourself as a hunter before the Chief.",
+   "time": 1793850590,
+   "title": "The Hunt Begins",
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "753-progress": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Chief Hawkwind",
+   "npc": "2981",
+   "questID": 753,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "You look as though you have returned from the plains. Do you have any word from Greatmother Hawkwind?",
+   "time": 1793850634,
+   "title": "A Humble Task",
+   "wanted": null,
+   "zone": "Mulgore"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
