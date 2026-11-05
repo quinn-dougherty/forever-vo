@@ -1,0 +1,67 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "1243|e3f843f4": {
+   "build": "70790",
+   "class": "Rogue",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Hegnar Rumbleshot",
+   "npc": "1243",
+   "questID": null,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "Hegnar Rumbleshot, at your service!",
+   "time": 1793876951,
+   "title": null,
+   "wanted": null,
+   "zone": "Dun Morogh"
+  },
+  "836|b62f5856": {
+   "build": "70790",
+   "class": "Rogue",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Durnan Furcutter",
+   "npc": "836",
+   "questID": null,
+   "race": "Dwarf",
+   "sex": "m",
+   "source": "community",
+   "text": "I sell the finest cloth and leather garb this side of the valley!",
+   "time": 1793876265,
+   "title": null,
+   "wanted": null,
+   "zone": "Anvilmar"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "1243": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 118355,
+   "name": "Hegnar Rumbleshot",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "836": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 118355,
+   "name": "Durnan Furcutter",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2881",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
