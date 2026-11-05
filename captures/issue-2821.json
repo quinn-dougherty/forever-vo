@@ -1,0 +1,121 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "265810|550c4a52": {
+   "build": "70790",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Kaga Wildhoof",
+   "npc": "265810",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Greetings, traveler.",
+   "time": 1793879967,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "267330|0371bf6f": {
+   "build": "70790",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Nawka Wildsong",
+   "npc": "267330",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Care to learn how to gather leather from slain beasts? Or do you need some new tools?",
+   "time": 1793879686,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "3062|1605f087": {
+   "build": "70790",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Meela Dawnstrider",
+   "npc": "3062",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "The spirits have guided you to me. How may I be of service?",
+   "time": 1793879428,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "5888|254df436": {
+   "build": "70790",
+   "class": "Shaman",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Seer Ravenfeather",
+   "npc": "5888",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "The earth calls to you, SLAVON. Go to it, and know that your brethren are proud of you and all you will accomplish.",
+   "time": 1793879642,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "265810": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 986648,
+   "name": "Kaga Wildhoof",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "267330": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 986648,
+   "name": "Nawka Wildsong",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "3062": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 986648,
+   "name": "Meela Dawnstrider",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "5888": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 986648,
+   "name": "Seer Ravenfeather",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2821",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
