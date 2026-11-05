@@ -1,0 +1,113 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "1651": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Lee Brown",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "383": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Jason Mathers",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "6306": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1000764,
+   "name": "Helene Peltskinner",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2724",
+ "quests": {
+  "91751-progress": {
+   "build": "70790",
+   "class": "Rogue",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Helene Peltskinner",
+   "npc": "6306",
+   "questID": 91751,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Any luck with those wolf pelts?",
+   "time": 1793846361,
+   "title": "Rough Wolf Pelts",
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  },
+  "97920-progress": {
+   "build": "70790",
+   "class": "Rogue",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Lee Brown",
+   "npc": "1651",
+   "questID": 97920,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "I can teach you once you've gained some skill as a fisherman.",
+   "time": 1793846307,
+   "title": "Camping 101: Fishing",
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  },
+  "99127-progress": {
+   "build": "70790",
+   "class": "Rogue",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Jason Mathers",
+   "npc": "383",
+   "questID": 99127,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Any catches to speak of?",
+   "time": 1793843549,
+   "title": "A Net Disaster",
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  },
+  "99143-progress": {
+   "build": "70790",
+   "class": "Rogue",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Lee Brown",
+   "npc": "1651",
+   "questID": 99143,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "What did you find? Anything interesting?",
+   "time": 1793846300,
+   "title": "Bottles and Baubles",
+   "wanted": null,
+   "zone": "Elwynn Forest"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
