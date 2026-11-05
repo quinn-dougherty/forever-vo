@@ -1,0 +1,59 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "3054": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Zarlman Two-Moons",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2731",
+ "quests": {
+  "767-complete": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Zarlman Two-Moons",
+   "npc": "3054",
+   "questID": 767,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "I sensed you would be coming to me, $c. I can always recognize one who is trying to pass the Rites of the Earthmother.",
+   "time": 1793848154,
+   "title": "Rite of Vision",
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "771-accept": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Zarlman Two-Moons",
+   "npc": "3054",
+   "questID": 771,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "In order to pass through the Rite of Vision, you must gather the reagents needed to make the Water of the Seers.\n\nI will need well stones, which can be found around the water wells in Mulgore. With those I will combine Ambercorn, which fall beneath the mighty trees in our land.\n\nThese reagents contain magical elements, and when brewed and consumed before the tribal fire, will cause you to encounter a vision. Follow it, and it will lead you to the next step of this holy quest.",
+   "time": 1793848158,
+   "title": "Rite of Vision",
+   "wanted": null,
+   "zone": "Mulgore"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
