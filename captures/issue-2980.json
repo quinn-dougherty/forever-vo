@@ -1,0 +1,115 @@
+{
+ "addon": "0.1.10",
+ "books": {
+  "c2f55c0f": {
+   "build": "70790",
+   "class": "Warlock",
+   "differs": null,
+   "event": "page",
+   "isObject": null,
+   "mapID": 1420,
+   "name": null,
+   "npc": null,
+   "page": 1,
+   "questID": null,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "An awful predicament to find ourselves in, isn't it, $N? Plagued by the Foul Prince. Ostracized and spurned by our own loved ones. We finally have our own will thanks to the beautiful Sylvanas, but what does that afford us now? Slaves to a different master is still a slave, or so I say.\n\nBut what if we were the masters? Yes, you know what I mean, don't you?\n\nWe are even more separated from the rest of the Forsaken, $N. And that is why we must speak further. Find me in the church in Deathknell.",
+   "time": 1793908966,
+   "title": "Tainted Scroll",
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  }
+ },
+ "gossip": {
+  "1569|e2fc85be": {
+   "build": "70790",
+   "class": "Warlock",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Shadow Priest Sarvis",
+   "npc": "1569",
+   "questID": null,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "No other race on Azeroth has suffered as much as our people, $c. To laugh in the face of death has become second nature for all of us.",
+   "time": 1793908917,
+   "title": null,
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  },
+  "2126|db7f8bbb": {
+   "build": "70790",
+   "class": "Warlock",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Maximillion",
+   "npc": "2126",
+   "questID": null,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "It is wise that you humble yourself before me $N in your desire for more $c knowledge.",
+   "time": 1793909598,
+   "title": null,
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  },
+  "244808|942bf955": {
+   "build": "70790",
+   "class": "Warlock",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Aramis Hammerhand",
+   "npc": "244808",
+   "questID": null,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "You may not be a paladin, but you may yet find solace in the light should you seek it.",
+   "time": 1793909592,
+   "title": null,
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "1569": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Shadow Priest Sarvis",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "2126": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Maximillion",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "244808": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Aramis Hammerhand",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2980",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
