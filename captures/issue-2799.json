@@ -1,0 +1,122 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "3171|9d35dc4d": {
+   "build": "70790",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Thotar",
+   "npc": "3171",
+   "questID": null,
+   "race": "Troll",
+   "sex": "m",
+   "source": "community",
+   "text": "I train and guide young hunters in the traditions passed down many generations.",
+   "time": 1793875012,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "5943|a28d29e1": {
+   "build": "70790",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Rawrk",
+   "npc": "5943",
+   "questID": null,
+   "race": "Troll",
+   "sex": "m",
+   "source": "community",
+   "text": "I can train you in First Aid techniques.",
+   "time": 1793875656,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "6928|7161de72": {
+   "build": "70790",
+   "class": "Hunter",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Innkeeper Grosk",
+   "npc": "6928",
+   "questID": null,
+   "race": "Troll",
+   "sex": "m",
+   "source": "community",
+   "text": "If we are to make these new lands ours then we must have places to rest our battle weary bodies. Lay your axe by the fire and share the stories of your mighty battles.",
+   "time": 1793874963,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "3139": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Gar'Thok",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3171": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Thotar",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "5943": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Rawrk",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "6928": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Innkeeper Grosk",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2799",
+ "quests": {
+  "837-complete": {
+   "build": "70790",
+   "class": "Hunter",
+   "differs": null,
+   "event": "complete",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Gar'Thok",
+   "npc": "3139",
+   "questID": 837,
+   "race": "Troll",
+   "sex": "m",
+   "source": "community",
+   "text": "I will pass along word that the quilboars have been removed from their lairs, and that their structures may be set to fire. The removal of the Razormane from Durotar brings us closer to fully securing the borders of our new homeland.",
+   "time": 1793875003,
+   "title": "Encroachment",
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
