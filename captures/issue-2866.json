@@ -1,0 +1,149 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "11866|f3b1497b": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1457,
+   "name": "Ilyenia Moonfire",
+   "npc": "11866",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "The grace with which I fight is not something I can teach you, but I can teach you the use of various weapons.",
+   "time": 1793890355,
+   "title": null,
+   "wanted": null,
+   "zone": "Darnassus"
+  },
+  "1430|0c543544": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "Tomas",
+   "npc": "1430",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Cooking is a life long pursuit and I see we share the same passion!",
+   "time": 1793890812,
+   "title": null,
+   "wanted": null,
+   "zone": "Lion's Pride Inn"
+  },
+  "4089|1c27b384": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1457,
+   "name": "Sildanair",
+   "npc": "4089",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Greetings.  Do you seek instruction in art of war?",
+   "time": 1793890316,
+   "title": null,
+   "wanted": null,
+   "zone": "Darnassus"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "11866": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 921844,
+   "name": "Ilyenia Moonfire",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "1430": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "Tomas",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3517": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 974343,
+   "name": "Rellian Greenspyre",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3608": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 921844,
+   "name": "Aldia",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "4089": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 921844,
+   "name": "Sildanair",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2866",
+ "quests": {
+  "87288-progress": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Aldia",
+   "npc": "3608",
+   "questID": 87288,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "It is good to see you again! Are you here to trade?",
+   "time": 1793889815,
+   "title": "Soft Saber Pelts",
+   "wanted": null,
+   "zone": "Teldrassil"
+  },
+  "922-progress": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1457,
+   "name": "Rellian Greenspyre",
+   "npc": "3517",
+   "questID": 922,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Hello...\n\nAnd how may I help you?",
+   "time": 1793890525,
+   "title": "Rellian Greenspyre",
+   "wanted": null,
+   "zone": "Darnassus"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
