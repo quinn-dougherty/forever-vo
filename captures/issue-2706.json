@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "3595": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 921844,
+   "name": "Shanda",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2706",
+ "quests": {
+  "97979-progress": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Shanda",
+   "npc": "3595",
+   "questID": 97979,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "There are few joys so great as basking in Mother Moon's light.",
+   "time": 1793840766,
+   "title": "The Goddess Provides",
+   "wanted": null,
+   "zone": "Teldrassil"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
