@@ -1,0 +1,94 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "1992": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 123698,
+   "name": "Tarindrella",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "2082": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 120791,
+   "name": "Gilshalan Windwalker",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "267333": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 120791,
+   "name": "Terunne Bearshaper",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2954",
+ "quests": {
+  "459-progress": {
+   "build": "70790",
+   "class": "Rogue",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Tarindrella",
+   "npc": "1992",
+   "questID": 459,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "Satisfy my suspicions, $N.  Bring to me 8 Fel Moss.",
+   "time": 1793906980,
+   "title": "The Woodland Protector",
+   "wanted": null,
+   "zone": "Teldrassil"
+  },
+  "916-progress": {
+   "build": "70790",
+   "class": "Rogue",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Gilshalan Windwalker",
+   "npc": "2082",
+   "questID": 916,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "Did you gather the venom sacs, $N?",
+   "time": 1793906922,
+   "title": "Webwood Venom",
+   "wanted": null,
+   "zone": "Teldrassil"
+  },
+  "97977-progress": {
+   "build": "70790",
+   "class": "Rogue",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Tarindrella",
+   "npc": "1992",
+   "questID": 97977,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "Don't worry about any larger totems you might find. I wouldn't know what to do with them if you found a way to get them!",
+   "time": 1793907014,
+   "title": "Nature's Call",
+   "wanted": null,
+   "zone": "Teldrassil"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
