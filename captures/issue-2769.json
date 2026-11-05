@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "251361": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 7478487,
+   "name": "Rorian the Dayseeker",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2769",
+ "quests": {
+  "92485-accept": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 2521,
+   "name": "Rorian the Dayseeker",
+   "npc": "251361",
+   "questID": 92485,
+   "race": "High Order Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "While you were away dealing with our vuldren problem, our resident $c trainer--Xyton Silverwind--left this note for you. Read it as soon as you can, and then seek out Silverwind on the ground floor of this great tree just behind me.\r\n\r\nHeed his words and his counsel, he can teach you much.",
+   "time": 1793851862,
+   "title": "A Student of Nature",
+   "wanted": true,
+   "zone": "Zephras Isle"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
