@@ -1,0 +1,59 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "3519": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 921844,
+   "name": "Sentinel Arynia Cloudsbreak",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2879",
+ "quests": {
+  "98392-accept": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Sentinel Arynia Cloudsbreak",
+   "npc": "3519",
+   "questID": 98392,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "These belts... look closely at the leather, $N. Do you see the taint running through the fibers?\r\n\r\nI have a suspicion as to its origin, but we will need further proof to be sure.\r\n\r\nVenture back out into the harpies' nests to the west and take out their leaders. If their necklaces carry the same darkness as these belts, we'll have our answer.",
+   "time": 1793891059,
+   "title": "Darkness in the Glade",
+   "wanted": null,
+   "zone": "Teldrassil"
+  },
+  "98392-progress": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Sentinel Arynia Cloudsbreak",
+   "npc": "3519",
+   "questID": 98392,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "Have you wrested the amulets from the harpies' leaders?",
+   "time": 1793891108,
+   "title": "Darkness in the Glade",
+   "wanted": null,
+   "zone": "Teldrassil"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
