@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "1499": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Magistrate Sevren",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2950",
+ "quests": {
+  "358-progress": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Magistrate Sevren",
+   "npc": "1499",
+   "questID": 358,
+   "race": "Undead",
+   "sex": "f",
+   "source": "community",
+   "text": "Is your task complete?  Have you destroyed those dog-things and drained them of their ichor?",
+   "time": 1793904905,
+   "title": "Graverobbers",
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
