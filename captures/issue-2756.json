@@ -1,0 +1,106 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "4047|550c4a52": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1454,
+   "name": "Zor Lonetree",
+   "npc": "4047",
+   "questID": null,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "Greetings, traveler.",
+   "time": 1793859707,
+   "title": null,
+   "wanted": null,
+   "zone": "Orgrimmar"
+  },
+  "4949|9a2b62b8": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1454,
+   "name": "Thrall",
+   "npc": "4949",
+   "questID": null,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "All members of the Horde are equal in my eyes, $N. We have all suffered many burdens, and if it were not for wisdom and honor, then we would be no better than the Scourge or my people while our blood was tainted by the demon Mannoroth.\n\nIt is your duty to aid the Horde and to defend our way of life. But it is also your duty to know when quarter and compassion should be given to friend and foe alike.\n\nUnderstand this well. This is the new Horde, not some demon-spawned army who lack freewill.",
+   "time": 1793859642,
+   "title": null,
+   "wanted": null,
+   "zone": "Orgrimmar"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "4047": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 121287,
+   "name": "Zor Lonetree",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "4949": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 121287,
+   "name": "Thrall",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2756",
+ "quests": {
+  "1061-accept": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1454,
+   "name": "Zor Lonetree",
+   "npc": "4047",
+   "questID": 1061,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "The spirits of the Stonetalon Mountains are angered, for goblins and their servants are plundering and burning the land.  So the land has cried out, and those who listen for such things... have heard.\n\nSeereth Stonebreak, a promising shaman of the Horde, was sent to Stonetalon.  She reports massive deforestation at the hands of the goblins, and requests aid.\n\nMeet Seereth in Stonetalon.  To reach her, follow the road west of the Barrens' Crossroads.  She is camped near the Greatwood Vale.",
+   "time": 1793859708,
+   "title": "The Spirits of Stonetalon",
+   "wanted": null,
+   "zone": "Orgrimmar"
+  },
+  "93739-progress": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1454,
+   "name": "Thrall",
+   "npc": "4949",
+   "questID": 93739,
+   "race": "Windshaper Skyborne",
+   "sex": "f",
+   "source": "community",
+   "text": "Lok-tar, $N.",
+   "time": 1793859644,
+   "title": "Exploring the Horde",
+   "wanted": null,
+   "zone": "Orgrimmar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
