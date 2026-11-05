@@ -1,0 +1,87 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "3598|1c27b384": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Kyra Windblade",
+   "npc": "3598",
+   "questID": null,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Greetings.  Do you seek instruction in art of war?",
+   "time": 1793887876,
+   "title": null,
+   "wanted": null,
+   "zone": "Teldrassil"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "2080": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 974343,
+   "name": "Denalan",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3598": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 921844,
+   "name": "Kyra Windblade",
+   "sex": 3,
+   "sexes": "f"
+  }
+ },
+ "origin": "issue-2853",
+ "quests": {
+  "918-progress": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Denalan",
+   "npc": "2080",
+   "questID": 918,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Do you have the seeds?  I am eager to plant them.",
+   "time": 1793886920,
+   "title": "Timberling Seeds",
+   "wanted": null,
+   "zone": "Teldrassil"
+  },
+  "919-progress": {
+   "build": "70790",
+   "class": "Warrior",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Denalan",
+   "npc": "2080",
+   "questID": 919,
+   "race": "Human",
+   "sex": "m",
+   "source": "community",
+   "text": "Hello, $N.  Have you found any sprouts near the waters?",
+   "time": 1793886921,
+   "title": "Timberling Sprouts",
+   "wanted": null,
+   "zone": "Teldrassil"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
