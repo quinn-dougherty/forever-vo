@@ -1,0 +1,67 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "2980|e775a01e": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Grull Hawkwind",
+   "npc": "2980",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Greetings, $N, and welcome to Camp Narache. News of your arrival spread quickly among the tribe.",
+   "time": 1793835893,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "3060|d1e27715": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Gart Mistrunner",
+   "npc": "3060",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "$N, how may I further your training in the eyes of the Earth Mother?",
+   "time": 1793836027,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "2980": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Grull Hawkwind",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3060": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Gart Mistrunner",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2698",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
