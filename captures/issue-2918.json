@@ -1,0 +1,121 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "1992|05f55f8a": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "greeting",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Tarindrella",
+   "npc": "1992",
+   "questID": null,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "Only in Nature do we find purity.",
+   "time": 1793871253,
+   "title": null,
+   "wanted": null,
+   "zone": "Teldrassil"
+  },
+  "2079|26ba7149": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Conservator Ilthalaine",
+   "npc": "2079",
+   "questID": null,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "Ah, the beauty of Shadowglen never ceases to delight my senses!",
+   "time": 1793872272,
+   "title": null,
+   "wanted": null,
+   "zone": "Teldrassil"
+  },
+  "3595|c159e43e": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Shanda",
+   "npc": "3595",
+   "questID": null,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "Elune be with you, $c.",
+   "time": 1793870041,
+   "title": null,
+   "wanted": null,
+   "zone": "Teldrassil"
+  },
+  "3597|a2527c6f": {
+   "build": "70790",
+   "class": "Druid",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1438,
+   "name": "Mardant Strongoak",
+   "npc": "3597",
+   "questID": null,
+   "race": "Night Elf",
+   "sex": "m",
+   "source": "community",
+   "text": "Welcome, my brother.  If you are here to train, then I would be delighted to train you.\n\nThere will be a time soon where the call of the Emerald Dream will take hold in you.  You will hibernate for many years and walk amongst the purest of forms.  It is there and then that your ultimate training will take place.",
+   "time": 1793869552,
+   "title": null,
+   "wanted": null,
+   "zone": "Teldrassil"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "1992": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 123698,
+   "name": "Tarindrella",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "2079": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 974343,
+   "name": "Conservator Ilthalaine",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3595": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 921844,
+   "name": "Shanda",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "3597": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 974343,
+   "name": "Mardant Strongoak",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2918",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
