@@ -1,0 +1,67 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "658": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 118355,
+   "name": "Sten Stoutarm",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "916": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 118355,
+   "name": "Solm Hargrin",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2710",
+ "quests": {
+  "179-progress": {
+   "build": "70790",
+   "class": "Rogue",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Sten Stoutarm",
+   "npc": "658",
+   "questID": 179,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Wolves giving you a bit of trouble? You'd do well to avoid the fangs and claws and other sharp bits, yes?",
+   "time": 1793841152,
+   "title": "Dwarven Outfitters",
+   "wanted": null,
+   "zone": "Dun Morogh"
+  },
+  "3113-progress": {
+   "build": "70790",
+   "class": "Rogue",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1426,
+   "name": "Solm Hargrin",
+   "npc": "916",
+   "questID": 3113,
+   "race": "Gnome",
+   "sex": "m",
+   "source": "community",
+   "text": "Glad to see you got my note and came over. Sorry about pretendin' it was a memorandum from your higher-ups... no offense intended. I just knew the two of us, along with others of our kind, gotta stick together.\n\nNot many think it's the best thing in the world to have your kind and my kind holed up in the same city, but I think we can work things out just fine. What do you think?",
+   "time": 1793841334,
+   "title": "Encrypted Memorandum",
+   "wanted": null,
+   "zone": "Anvilmar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
