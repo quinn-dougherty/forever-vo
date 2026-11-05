@@ -1,0 +1,141 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "3222|5d6f0b28": {
+   "build": "70790",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Brave Wildrunner",
+   "npc": "3222",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "What are you looking for?",
+   "time": 1793902055,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "5939|a28d29e1": {
+   "build": "70790",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Vira Younghoof",
+   "npc": "5939",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "I can train you in First Aid techniques.",
+   "time": 1793902004,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "6747|e013de07": {
+   "build": "70790",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Innkeeper Kauth",
+   "npc": "6747",
+   "questID": null,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "As the wind on the plains, you are always welcome here.",
+   "time": 1793902016,
+   "title": null,
+   "wanted": null,
+   "zone": "Mulgore"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "2993": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Baine Bloodhoof",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3222": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Brave Wildrunner",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "5939": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 986648,
+   "name": "Vira Younghoof",
+   "sex": 3,
+   "sexes": "f"
+  },
+  "6747": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 968705,
+   "name": "Innkeeper Kauth",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2926",
+ "quests": {
+  "1656-progress": {
+   "build": "70790",
+   "class": "Shaman",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Innkeeper Kauth",
+   "npc": "6747",
+   "questID": 1656,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "Yes, young one? What can Kauth do for you?\n\nThe journey here from the Mesa can be a tremendous burden for some, but a welcome sight for others. Which is it for you, I wonder?",
+   "time": 1793902012,
+   "title": "A Task Unfinished",
+   "wanted": null,
+   "zone": "Mulgore"
+  },
+  "763-progress": {
+   "build": "70790",
+   "class": "Shaman",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1412,
+   "name": "Baine Bloodhoof",
+   "npc": "2993",
+   "questID": 763,
+   "race": "Tauren",
+   "sex": "m",
+   "source": "community",
+   "text": "What brings you to my village, $c?",
+   "time": 1793902086,
+   "title": "Rites of the Earthmother",
+   "wanted": null,
+   "zone": "Mulgore"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
