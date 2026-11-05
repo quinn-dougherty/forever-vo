@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "1740": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Deathguard Saltain",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2741",
+ "quests": {
+  "3902-progress": {
+   "build": "70790",
+   "class": "Paladin",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Deathguard Saltain",
+   "npc": "1740",
+   "questID": 3902,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "Have you managed to scavenge up some useful items for us?  There is no shame in reusing that which has been tossed aside.  No one is going to give us any handouts - we Forsaken will fend for ourselves!",
+   "time": 1793852459,
+   "title": "Scavenging Deathknell",
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
