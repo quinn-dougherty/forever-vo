@@ -1,0 +1,118 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "3173|1605f087": {
+   "build": "70790",
+   "class": "Shaman",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Swart",
+   "npc": "3173",
+   "questID": null,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "The spirits have guided you to me. How may I be of service?",
+   "time": 1793898056,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "-61934": {
+   "isObject": true,
+   "name": "Unknown"
+  },
+  "3173": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 121287,
+   "name": "Swart",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "5900": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 122560,
+   "name": "Telf Joolam",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "5907": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 121287,
+   "name": "Kranal Fiss",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2922",
+ "quests": {
+  "1525-progress": {
+   "build": "70790",
+   "class": "Shaman",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Telf Joolam",
+   "npc": "5900",
+   "questID": 1525,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "I have enough ingredients for a sapta of fire if you can find the reagent pouch and some fire tar. The Burning Blade fanatics carry the proper components for most of their spells in those pouches, and usually have enough of the items I need that we will not have to search much farther for anything else.\n\nThe saptas are always made from ingredients that are closely tied to their respective elements. It makes our work easier because of the warlocks' ties to fire.",
+   "time": 1793897405,
+   "title": "Call of Fire",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "1526-progress": {
+   "build": "70790",
+   "class": "Shaman",
+   "differs": null,
+   "event": "progress",
+   "isObject": true,
+   "mapID": 1411,
+   "name": "Unknown",
+   "npc": "-61934",
+   "questID": 1526,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "The brazier stands about a third your height, and looks normal, save for the inscriptions along its smooth metal rails. The metal shows no signs of wear from the weather, and the bowl seated at the top of it feels cool to the touch.",
+   "time": 1793897556,
+   "title": "Call of Fire",
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "1527-progress": {
+   "build": "70790",
+   "class": "Shaman",
+   "differs": null,
+   "event": "progress",
+   "isObject": null,
+   "mapID": 1413,
+   "name": "Kranal Fiss",
+   "npc": "5907",
+   "questID": 1527,
+   "race": "Orc",
+   "sex": "m",
+   "source": "community",
+   "text": "Yes, $N? What do you have there?",
+   "time": 1793897945,
+   "title": "Call of Fire",
+   "wanted": null,
+   "zone": "The Barrens"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
