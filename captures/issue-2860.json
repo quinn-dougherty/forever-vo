@@ -1,0 +1,40 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {},
+ "locale": "enUS",
+ "npcs": {
+  "253": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 1011653,
+   "name": "William Pestle",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2860",
+ "quests": {
+  "112-accept": {
+   "build": "70790",
+   "class": "Priest",
+   "differs": null,
+   "event": "accept",
+   "isObject": null,
+   "mapID": 1429,
+   "name": "William Pestle",
+   "npc": "253",
+   "questID": 112,
+   "race": "Human",
+   "sex": "f",
+   "source": "community",
+   "text": "I can make an invisibility liquor for Maybell, so she can slip away from the Maclure Vineyards and go to Tommy Joe.  But to make the Liquor, I need some crystal kelp.\n\nAlthough the kelp usually grows in the ocean... sometimes murlocs collect it.  See if the murlocs near Crystal Lake have any.  Crystal Lake is just east of Goldshire.",
+   "time": 1793889858,
+   "title": "Collecting Kelp",
+   "wanted": null,
+   "zone": "Lion's Pride Inn"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
