@@ -1,0 +1,115 @@
+{
+ "addon": "0.1.10",
+ "books": {
+  "50e9a347": {
+   "build": "70790",
+   "class": "Paladin",
+   "differs": null,
+   "event": "page",
+   "isObject": null,
+   "mapID": 1420,
+   "name": null,
+   "npc": null,
+   "page": 1,
+   "questID": null,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "Welcome back, $N. \r\n\r\nI understand all too well the shock that one feels when finding themselves in the situation you now find yourself in. The fact that you have made it this far sets you apart from many other newly risen paladins.\r\n\r\nYou will find that the hardest part about your new life will be in rediscovering what you lost in life...and enduring the pain it causes you.\r\n\r\nSpeak with me in Deathknell, and I will help you find the resolve to take your first steps.\r\n\r\n-Aramis Hammerhand, $C Trainer",
+   "time": 1793842233,
+   "title": "Consecrated Scroll",
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  }
+ },
+ "gossip": {
+  "1569|e2fc85be": {
+   "build": "70790",
+   "class": "Paladin",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Shadow Priest Sarvis",
+   "npc": "1569",
+   "questID": null,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "No other race on Azeroth has suffered as much as our people, $c. To laugh in the face of death has become second nature for all of us.",
+   "time": 1793843249,
+   "title": null,
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  },
+  "244808|3f8410df": {
+   "build": "70790",
+   "class": "Paladin",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Aramis Hammerhand",
+   "npc": "244808",
+   "questID": null,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "Welcome back to the light, friend. Do you require training?",
+   "time": 1793843386,
+   "title": null,
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  },
+  "267325|924a66d4": {
+   "build": "70790",
+   "class": "Paladin",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1420,
+   "name": "Walter Mason",
+   "npc": "267325",
+   "questID": null,
+   "race": "Undead",
+   "sex": "m",
+   "source": "community",
+   "text": "How can I help you?",
+   "time": 1793843620,
+   "title": null,
+   "wanted": null,
+   "zone": "Tirisfal Glades"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "1569": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Shadow Priest Sarvis",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "244808": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Aramis Hammerhand",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "267325": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 959310,
+   "name": "Walter Mason",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2793",
+ "quests": {},
+ "source": "community",
+ "version": 2
+}
