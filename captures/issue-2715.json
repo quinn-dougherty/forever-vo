@@ -1,0 +1,87 @@
+{
+ "addon": "0.1.10",
+ "books": {},
+ "gossip": {
+  "12776|721fd095": {
+   "build": "70790",
+   "class": "Warlock",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Hraug",
+   "npc": "12776",
+   "questID": null,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "Want to make your demons more powerful?  It'll cost you, but you've come to the right place.",
+   "time": 1793843144,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  },
+  "3156|031480cd": {
+   "build": "70790",
+   "class": "Warlock",
+   "differs": null,
+   "event": "gossip",
+   "isObject": null,
+   "mapID": 1411,
+   "name": "Nartok",
+   "npc": "3156",
+   "questID": null,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "You know enough to be dangerous, but you still look like you need training to me $N.",
+   "time": 1793843150,
+   "title": null,
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "locale": "enUS",
+ "npcs": {
+  "12776": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Hraug",
+   "sex": 2,
+   "sexes": "m"
+  },
+  "3156": {
+   "addon": "0.1.10",
+   "creatureType": "Humanoid",
+   "modelFileID": 917116,
+   "name": "Nartok",
+   "sex": 2,
+   "sexes": "m"
+  }
+ },
+ "origin": "issue-2715",
+ "quests": {
+  "96652-accept": {
+   "build": "70790",
+   "class": "Warlock",
+   "differs": null,
+   "event": "accept",
+   "isObject": true,
+   "mapID": 1411,
+   "name": "Unknown",
+   "npc": null,
+   "questID": 96652,
+   "race": "Troll",
+   "sex": "f",
+   "source": "community",
+   "text": "<The journal appears to be quite plain, detailing the life and adventures of someone you've never heard of.\r\n\r\nThere are multiple entries mentioning camping. It seems to be quite... fun.>",
+   "time": 1793843090,
+   "title": "The Adventurer",
+   "wanted": null,
+   "zone": "Durotar"
+  }
+ },
+ "source": "community",
+ "version": 2
+}
